@@ -1,0 +1,144 @@
+
+\documentclass[xcolor=dvipsnames]{beamer} 
+\usecolortheme[named=Blue]{structure} 
+\usetheme[height=10.5mm]{Rochester} 
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+\usepackage{bm}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+%\graphicspath{ {/home/ben/PhD/Armidale_Updates/2014_03_14/Figures/} }
+\begin{document}
+
+\begin{frame} %1
+% \frametitle{Addressing Common Challenges in Spatial Modeling of Ecologies and Environments}
+%\begin{center}
+\textbf{\huge Introduction to R}\\
+a language and environment for statistical computing and graphics %
+%\end{center}
+
+\begin{figure}
+\includegraphics[width = 0.35\textwidth]{/home/ben/Presents_Intro_to_R/Introductory_Slides_Source/Images/R_logo.png}
+\end{figure}
+\small Ben R. Fitzpatrick\\
+\tiny PhD Candidate, Statistical Science, Mathematical Sciences School, Queensland University of Technology
+\newline
+\begin{columns}
+\begin{column}{3cm}
+\tiny 0000-0003-1916-0939
+\end{column}
+\begin{column}{3cm}
+\tiny github.com/brfitzpatrick/
+\end{column}
+\begin{column}{3cm}
+\tiny @benrfitzpatrick
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame} 
+\frametitle{The Plan}
+\framesubtitle{A 2 Day Course}
+
+\begin{table}[h!]
+\begin{tabular}{ |p{2cm}|p{4cm}|}
+\multicolumn{2}{ c }{\textbf{Day 1}} \\
+\hline
+Session                       & Topic                         \\ 
+\hline
+\multirow{2}{*}{Morning I}    & Why R?                        \\
+                              & First Steps with R            \\ 
+\hline
+\multicolumn{2}{c}{Tea/Coffee/Stretch/Help Installing Software}  \\
+\hline
+\multirow{2}{*}{Morning II}   & Exercise 1 \\
+                              &  (Linear Modelling) \\ 
+\hline
+\multicolumn{2}{c}{Lunch Break}  \\ 
+\hline
+\multirow{2}{*}{Afternoon I}  & Graphics with `ggplot2'       \\
+                              & Exercise 2 (2D graphics)      \\ 
+\hline
+\multicolumn{2}{c}{Tea/Coffee/Stretch}  \\ 
+\hline
+\multirow{2}{*}{Afternoon II} & Graphics with `ggplot2'       \\
+                              & Exercise 3 (2D graphics)     \\ \hline
+\multicolumn{2}{c}{End of Day 1}  \\ 
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame} 
+\frametitle{The Plan}
+\framesubtitle{A 2 Day Course}
+
+\begin{table}[h!]
+\begin{tabular}{ |p{2cm}|p{4cm}| }
+\multicolumn{2}{ c }{\textbf{Day 2}} \\
+\hline
+Session                       & Topic                        \\ 
+\hline
+\multirow{2}{*}{Morning I}    & Introduction to              \\
+                              & Programming in R                             \\ 
+\hline
+\multicolumn{2}{c}{Tea/Coffee/Stretch}  \\ 
+\hline
+\multirow{2}{*}{Morning II}   & Exercise 4             \\
+                              & (Programming in R)    \\ 
+\hline
+\multicolumn{2}{c}{Lunch Break}  \\ 
+\hline
+\multirow{2}{*}{Afternoon I}  & Collaboration \& Version     \\
+                              & Control with GitHub          \\
+\hline                   
+\multicolumn{2}{c}{Tea/Coffee/Stretch}  \\ 
+\hline
+\multirow{2}{*}{Afternoon II} & Collaborative Exercise      \\
+                              & Integrating Topics Covered  \\\hline 
+\multicolumn{2}{c}{End of Day 2 \& End of Course}  \\ 
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame} 
+\frametitle{What is R?}
+\framesubtitle{Area of Native Pasture on UNE SMART Farm, NSW, Australia}
+\begin {figure}
+%                                    trim = l    b    r    t  
+\includegraphics[height = 0.95\textheight, trim = 0mm 0mm 0mm 0mm, clip = TRUE]{/home/ben/PhD/Workshops/ACEMS-AIMS-2015/Talk/Images/B1_Aerial_Photo_Soil_Cores_V1.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Why Use R?}
+%\framesubtitle{Area of Native Pasture on UNE SMART Farm, NSW, Australia}
+%\begin {figure}
+%%%\includegraphics[height = 0.95\textheight]{/home/ben/PhD/Workshops/ACEMS-AIMS-2015/Talk/Images/B2_Aerial_Photo_Soil_Cores_V1.pdf}
+%\end{figure}
+\end{frame}
+
+
+\begin{frame} 
+\frametitle{Ways to Use R}
+
+\end{frame}
+
+
+\begin{frame} 
+\frametitle{Image Credits}
+R Foundation, from http://www.r-project.org - Originally from http://developer.r-project.org/Logo/Rlogo.svg, modified to simpler SVG format.
+%
+\end{frame}
+
+
+\end{document}
