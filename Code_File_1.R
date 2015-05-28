@@ -19,16 +19,66 @@
 #    <ben.r.fitzpatrick@gmail.com>
 
 
-# Code File for Quneensland University of Technology: Bayesian Research and Applications Group's Introduction to R Course
-# Course prepared and presented by Ben R. Fitzpatrick (ben.r.fitzpatrick@gmail.com) 7th of March 2012
+# Hello, this is an R code file (notice the .R extension).
+# In this course we will be using the RStudio Integrated Development Environment
+# to author R scripts and interact with the R program.
+# If you have not done so already please:
+#    1) download and install R from <http://cran.r-project.org/>
+#    2) download and install RStudion from <http://rstudio.org/>
+#    3) open RStudio
+#    4) from the RStudio File Menue select 'Open File'
+#    5) select this .R file to open it with RStudio
+#    6) continue with to work through the code below in RStudio
 
-# R is all about the free sharing of code with the proper acknowledgement of authorship so feel free share it (just don't delete my name from it ;) and only add yours if you've improved it)
+# Any text on a line after the hash symbol # R treats as a comment.
+# R will not attempt to evaluate comments and thus they will not cause errors
+# if you attempt to run code that contains comments.
 
-#Hello, this is an R code file (notice the .R extension) so for best results please open it in R (File: Open Script) or in a program that communicates with R when both are installed on your computer e.g. RStudio (http://rstudio.org/), Notepad++ (http://notepad-plus-plus.org/), the Emacs Speaks Statistics (ESS) mode of XEmacs or GNU Emacs23 etc. (http://ess.r-project.org/), or the proprietary re-write of R available from http://www.revolutionanalytics.com/
+# Once you have this file open in RStudio please send the non-commented lines to
+# R by placing the cursor on the appropriate line then clicking the 'Run' button
 
-#Once you have this file open somewhere you can send commands from it to R please send the non-commented lines to R to follow the exercises (you can send the comments to but all that will do is display their text in the console)
+# The Run button is located in the top right of the upper right hand panein the
+# default RStudio window, it looks like a white box with a green arrow pointing
+# to the right of the white box and has the word 'Run' written on it.
+# Please try to run the following line of code:
 
-# everything after a # R treats as a comment, simply displays and does not try to evaluate
+print(c('Hello world.')) 
+
+# This is the traditional start to any coding lesson.
+# Notice how we have instructed RStudio to send the above print( ) command to
+# the R process for execution and the result of executing the command has been
+# displayed in the 'Console' pane of the RStudio window below the 'Script' pane
+# of the RStudio window.
+
+
+# You can also execute multiple lines code by highlighting them with the mouse
+# (or keyboard) then clicking the 'Run' button again.
+# Try executing the following two lines of code by highlighting them then
+# clicking the 'Run' button:
+
+print(c('Hello world.'), quote = FALSE)
+print(c('Hello'), quote = FALSE)
+print(c('World'), quote = FALSE)
+
+# If you are doing a lot of typing and prefer not to reach for the mouse so much
+# you can execute a line of code by placing the cursor on it with the arrow keys
+# on you keyboard the holding the 'Control' (or 'Command') key on your keyboard
+# and with the 'Control'/'Command' key depressed pressing the 'Return'/'Enter'
+# key
+
+# Try executing this comment line.
+# Note how the R process simply displays the text without producing and error as
+# it will if you try to evaluate the following line which is written in the
+# English language rather than the R language:
+
+Executing this line will produce an Error since this line isn't in the R language
+
+
+
+
+# Theto follow the exercises (you can send the comments to but all that will do is display their text in the console)
+
+
 
 # Basics of command line computing in R
 
