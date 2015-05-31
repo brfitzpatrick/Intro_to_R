@@ -71,41 +71,100 @@ print(c('World'), quote = FALSE)
 # it will if you try to evaluate the following line which is written in the
 # English language rather than the R language:
 
-Executing this line will produce an Error since this line isn't in the R language
+Executing this line will produce an Error
+
+# The above error was produced as the above line was not in the R language
+
+################################################################################
+#                                                                              #
+#                  The Basics of Command Line Computing in R                   #
+#                                                                              #
+################################################################################
 
 
+################################################################################
+#                                                                              #
+#                     Simple Mathematical Operations in R:                     #
+#                                                                              #
+################################################################################
 
+# Addition:
+2+3
 
-# Theto follow the exercises (you can send the comments to but all that will do is display their text in the console)
+# Subtraction:
+2-3
 
-
-
-# Basics of command line computing in R
-
-2+3 #simple arithmetic
+# Multiplication:
 2*3
 
-x <- 2 # assign variable 'x' the value of 2, <- is like an arrow: 'put 2 in x'
+# Division:
+6/2
+
+# Indicies:
+2^3
+8^(1/3)
+
+# The Order of Operations in Implemented as per BIMDAS.
+2*3-1
+2*(3-1)
+
+# So far this is just like a simple calculator program run on the commandline.
+# The next level of complexity arrises from the ability to store values as named
+# objects.
+
+################################################################################
+#                                                                              #
+#                         Creating and Naming Objects                          #
+#                                                                              #
+################################################################################
+
+# For example, we can store the value 2 as the object x.
+# To be precise, we are creating the object 'x' and storing a value in it with
+# the following single line of code:
+
+x <- 2
+
+# One way to remember this syntax is to think of the assignment operator
+# <- like an arrow that 'put's 2 into x'
 
 x
 
-#note this is one of the couple of instances in R where a space makes an impact on the meaning
+# Note: this is one of the instances in R where a space has an impact on the
+# meaning:
+
+# Is x less than -3?
+x < -3
+
+# Why not? Because x has the values of 2 stored in it.
+x
+
+# However we can overwrite the contents of x by using the assignment operator
+
+x <- 3
+
+x
+
+# The difference between <- and < - is something syntax highlighting
+# (as provided by an Integrated Development Environment such as RStudio)
+# can make apparent in having the assignment operator <- displayed as a
+# different colour to < -
+
+x <- 3
 
 x < -3
 
-x
+# It is good practise and will make your code more readable if you use <-
+# for assigning values and save = for supplying information to the arguments of
+# functions.  Setting good coding habits now will save you time later.
 
-x <- -3
+# Let's now create an object called 'y' and assign it the value of 2
 
-x
-
-# one of the many mistakes syntax highlighting as provided by an Integrated Development Environment (e.g. RStudio, Notepad++, ESS etc.) can  help you avoid as the assignment symbol <- should display as a different colour to < - in any decent IDE for R
-
-# it is good practise and will make your code more readable if you use <- for assignment and save = for supplying information to the arguments of functions
-
-y <- 3
+y <- 2
 
 y
+
+# We can then use the object names 'x' and 'y' as surrogates for the values they
+# contain.
 
 x*y
 
@@ -113,137 +172,287 @@ x/y
 
 x*(x+(x^2))
 
-# paren matching (click/move cursor next to a bracket and it's matched bracket is highlighted) is also a very handy feature provided by good IDEs
-# neither paren matching nor syntax highlighting are available at the R console in R Base on Windows or at the Linux/Unix terminal
-#try it here:
+# This may seem a little unnecessary for single values but later we will see
+# that in addition to storing a single number in an object we can store a
+# vector in an object or indeed a matrix or dataframe.
 
-z <- x*(x+(x^2))
+# This is a good time to pause and appreciate the benefits of an IDE that makes
+# clear which open bracket ( is matched with which closed bracket ) through a
+# feature called 'paren matching'.
+# In the line of code below position the cursor next to a bracket and it's 
+# matched bracket is highlighted.
+
+z <- (x*(x+(x^2))/3+y)^2
 
 z
 
-ls() # list the variables you have defined this R session
+# Paren matching becomes increasingly useful as you write increasing complex
+# commands and functions.
 
-# see also the workspace window in RStudio
+# So far in this tutorial we have created three objects:
+x
+y
+z
 
-# to save the workspace so we can have all our named assignments (custom variables, dataframes, functions etc.) next time we open R
+# You can see the list of objects you have created in the upper right hand pane
+# of the RStudio window under the 'Environment' Tab.
 
-# via the RStudio menu or...
+# You can also use the ls() command to have R display the list of object you
+# have created within this R session:
 
-save.image(file='/home/ben/PhD/My_R_Course/Day_1/BRAG_R_Course_Day_1.R') # Naturally you will want to a supply a file path that reflects the file structure on your computer
+ls()
 
-#close R 
+################################################################################
+#                                                                              #
+#                       Saving and Loading Workspaces                          #
+#                                                                              #
+################################################################################
 
-rm(list=ls())   # or clear the workspace
+# Should you wish to close R and be able to open it again at a later date and
+# have these same objects available for use you need to save your R 'Workspace'
+# prior to closing R (or RStudio which ammounts to the same thing).
 
-ls() # see all your assignment have been cleared
+# To save the workspace via the RStudio menu select open the 'Environment' Tab
+# in the upper right hand pane of the RStudio window and click the 'Save' button
+# (the 'Save' button resembels a blue upside down, floppy disk).
+# Clicking the 'Save' button will open the 'Save Workspace' Dialogue Box in
+# which you may choose where in your computer's file structure you would like to
+# save the workspace.  I suggest creating a folder for this course and inside
+# that folder another folder called 'Workspaces'.
 
-# open it again and load the workspace either with the RStudio menu or
+# We can also use the save.image( ) command to save the workspace.
+# Naturally you will want to a supply a file path that reflects the file
+# structure on your computer:
 
-load(file='/home/ben/PhD/My_R_Course/Day_1/BRAG_R_Course_Day_1.R')
+save.image(file='~/Intro_to_R/Workspaces/Day_1.RData')
 
-ls()   # and they're back
+# On machines running MS Windows the file path will likely start with a C://
+# Most operating systems allow you to view the file path of a file or folder
+# by examining the properties of that file or folder.
 
-# Data Classes and Data Manipulation in R base:
+# Once you have saved the Workspace in a location which you can remember please
+# close RStudio (which also closes R).
 
-# assigning a vector of numbers to the letter 'a'
+# When you reopen RStudio the last workspace you created will be loaded by
+# default (see the Environment pane for the list of variable loaded).
 
-a <- c(1,2,3,2,1) #think 'c' for column 
+# To clear this list of variables you can click the broom shaped 'Clear' button
+# in the Environment pane or you can execute the following command:
+
+rm(list=ls())
+
+# Once you have cleared the Workspace there will be no assigned objects and you
+# should see the 'Environment is Empty' message displayed in the middle of the
+# Environemtn pane.
+# Similarly the ls() command should return and empty string represented as
+# 'character(0)'
+
+ls()
+
+# We may now practise loading a previously saved Workspace.
+# In the 'Environment' pane of the RStudio window click the 'Load Workspace'
+# button (this button resembles a yellow manilla folder with a green arrow
+# emerging from it and pointing to the right).
+# This will open the 'Load Workspace' dialogue box through which you may
+# navigate to the location in which you save the above, select this workspace,
+# then load it.
+
+# Alternatively this same operation may be achieved with the load command:
+
+load(file='~/Intro_to_R/Workspaces/Day_1.RData')
+
+# Note the the previously defined objects: x, y and z are now available again
+# and are listed in the Environment.
+
+# If we no longer want 'z' we can remove it with the rm( ) command as follows:
+
+rm('z')
+
+ls()
+
+################################################################################
+#                                                                              #
+#               Data Classes and Data Manipulation in R base core              #
+#                                                                              #
+################################################################################
+
+# Four useful object classes in R are: Vectors, Matrices, Dataframes, and Lists.
+
+
+# The simplest way to think of a vector vector is as a collection of elements in
+# a particular order.
+# In R there are multiple types of vectors.
+
+# Numeric vectors contain numbers.
+# For statistical purposes a numeric vector might contain observations from a
+# numeric variable.
+a <- c(1, 2, 3, 2, 1, 3) # think 'c' for concatenate
 
 a
 
-# yes I know R prints it out as a row but that's just to save space
-
-# if you 'bind' two of these 'c'olumns together ...
-
-b <- seq(from=1,to=5,by=1)
-
-cbind(a,b) 
-
-# ... you can see that R does actually treat them as columns
-
-# so we have defined to vectors
-
 class(a)
 
-class(b)   #  numeric vectors to be precise
-   
-c <- cbind(a,b)
+# some functions will output a numeric vector such as the function to make a
+# sequence of numbers seq( )
+
+b <- seq(from = 1, to = 6, by = 1)
+
+b
+
+class(b)
+
+# Character vectors contain letters or words.
+# For statistical purposes a character vector could store the observations of a
+# categorical variable.
+
+c <- c('a', 'a', 'b', 'b', 'c', 'd')
 
 c
 
 class(c)
 
-# and binding two vectors together makes a matrix
+d <- c('apple', 'apple', 'banana', 'banana', 'orange', 'pear')
 
-#just as
+d
 
-
-d <- matrix(data= c(1,2,3,4,5,6,7,8,9,10),byrow=FALSE,nrow=5) # create a 5x2 matrix from the data supplied to the data argument (as a vector) filling the matrix by column
-
-
-class(d)
-
-e <- matrix(data= c(1,2,3,4,5,6,7,8,9,10),byrow=TRUE,nrow=5) # create a 5x2 matrix from the data supplied to the data argument (as a vector) filling the matrix by row
-
-t(e) # transpose a matrix with t()
-
-# matrix operations require the %% symbols around the operation e.g. %*% otherwise non-matrix operations are carried out (by element)
-
-d*e
-
-sm <- d%*%t(e) # matrix multiplication
-
-sm
-
-g <- var(sm)  # "If the argument to var() is an n-by-p matrix the value is a p-by-p sample covariance matrix got by regarding the rows as independent p-variate sample vectors." - http://cran.r-project.org/doc/manuals/R-intro.html
-
-g
-
-diag(g) # extract the diagonal of a matrix as a vector
-
- cov(sm) # another way of getting the covariance matrix
-
-cov(sm)-var(sm) # the same...
-
-#whereas if the object supplied to var() is a numeric vector you get the variance of the numbers listed therein
+# The var( ) command will return the variance of matrix supplied to it
 
 var(a)
 
-a+b # vector addition
+# vector addition
+a+b 
 
-a*b # multiplication of the elements of two vectors
+# multiplication of the elements of two vectors
+a*b
 
-plot(a,b) # a simple plot
+# a simple plot
+plot(a, b)
 
 # this is a good time to point out that all functions in R have arguments
 
 ?plot # and see the arguments section of the page
 
-#but I didn't use them above when I wrote plot(a,b)
+# but I didn't use them above when I wrote plot(a,b)
 
-# this is because if you don't specify which arguments you are providing information for R will assume you are doing it in the order they are listed in the help file
+# this is because if you don't specify which arguments you are providing
+# information for R will either assuming you are doing so in the order in which
+# these arguments are listed in the help file or guess which arguments are best
+# suited by which inputs
+# this can be risky...
 
-#that is:
+plot(a, b, main='x and y arguments not specified by name')
 
-plot(a,b,main='x and y arguments not specified by name')
+plot(x = b, y = a, main='x and y arguments specified by name')
 
-dev.new() # opens a new plotting device (if you have your setup such that plots display in a new window ...this call won't work in RStudio instead use the arrow buttons above the plot to move between the plots in the order you created them)
+# when you specify the arguments by name you can do so in order you like
+plot(main = 'x and y arguments specified by name out of order', y = b, x = a)
 
-plot(x=a,y=b,main='x and y arguments specified by name')
-
-dev.new()
-
-plot(main='x and y arguments specified by name out of order',y=b,x=a) # when you specify the arguments by name you can do so in order you like
-
-dev.off()  # close the current graphics device 
-
-graphics.off() # close all open graphics devices
-
-f <- c('green','green','red','red','red')
+f <- c('blue','green','yellow','orange','red')
 
 class(f) # a character vector
 
 a+f # doesn't work ...doesn't make sense to add '1' to 'green' etc
+
+plot(y = b, x = a, col = f, pch = 1)
+plot(y = b, x = a, col = f, pch = 2, cex = 2)
+plot(y = b, x = a, col = f, pch = 3, cex = 5)
+
+# the following command runs across two lines so you will need to execute both
+# of these lines to complete the command:
+plot(y = b, x = a, col = f, pch = 19, cex = 2, xlab = 'x axis title',
+     ylab = 'ylab title')
+
+
+
+# Matrices are rectangular arrays with numbers of characters in the rows and
+# columns
+
+# if you 'bind' two or more 'c'olumns of equal length together you create a
+# matrix
+
+mat.1 <- cbind(a, b)
+
+mat.1
+
+class(mat.1)
+
+# We can find the dimensions of a matrix with the dim( ) command:
+
+dim(mat.1)
+
+mat.2 <- cbind(c, d)
+
+mat.2
+
+# We can also bind matrices of the appropriate dimensions together to create
+# larger matrices:
+
+mat.3 <- cbind(mat.1, mat.1)
+
+mat.3
+
+# The matrix( ) command also creates a matrix directly from a vector of numbers
+# supplied to the 'data' argument and the appropriate dimension supplied to
+# either the 'nrow' or 'ncol' argument.  The 'byrow' argument takes a logical
+# value i.e. either a TRUE or FALSE value and determines whether the data are
+# populated into the matrix row by row or column by column.
+
+# The command belwo will create a 5x2 matrix from the data supplied filling the
+# matrix column by column
+mat.4 <- matrix(data = seq(from = 1, to = 10, by = 1), byrow = FALSE, nrow = 5)
+mat.4
+
+class(mat.4)
+dim(mat.4)
+
+# To demonstrate the difference between filling by columns and filling by rows
+# the command below creates a matrix with the same data and dimensions as mat.4
+# but fills the data into the matrix row by:
+
+mat.5 <- matrix(data = seq(from = 1, to = 10, by = 1), byrow = TRUE, nrow = 5) 
+
+# Transpose a matrix with t( ) command
+t(mat.5) 
+
+# Matrix operations require the %% symbols around the operator
+# e.g. %*% performs matrix multiplication whereas a simple *  performs
+# non-matrix (i.e. element by element) multiplication
+
+mat.4 * mat.5
+
+sm <- mat.4%*%t(mat.5) # matrix multiplication
+
+sm
+
+# "If the argument to var() is an n-by-p matrix the value is a p-by-p
+#  sample covariance matrix got by regarding the rows as independent
+#  p-variate sample vectors."
+#  - http://cran.r-project.org/doc/manuals/R-intro.html
+
+cov.sm <- var(sm)  
+
+cov.sm
+
+diag(sm) # extract the diagonal of a matrix as a vector
+
+cov(sm) # another way of getting the covariance matrix
+
+# we can check that this is indeed the case by doing an element by element
+# substraction:
+cov(sm)-var(sm) 
+
+
+Mat.6 <- cbind(mat.1, mat.2)
+Mat.6[,1]
+mean(Mat.6[,1])
+
+# numbers have been converted to characters
+
+# a dataframe allows us to have numeric variables in some column and character
+# variables in other columns
+
+Data <- data.frame(mat.1, mat.2)
+mean(Data$a)
 
 Data <- data.frame(a,b,f) # create a dataframe (a collection of named columns of numbers or factor levels) and unlike a matrix it can have a some columns of  factor levels as words and some columns of numbers
 
@@ -535,6 +744,5 @@ lines(x=pred.at,y=m6.pred.green,col='green')
 #                           #
 #############################
 
-#Thanks for reading chances are I'll be running this course again in the future so if you have questions or comments about this material please get in touch: ben.r.fitzpatrick@gmail.com
 
-#The next module in this series is an introduction to R graphics with 'ggplot2' and 'rgl'
+# End of Module 1
