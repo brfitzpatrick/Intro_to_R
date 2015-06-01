@@ -76,3 +76,35 @@ Ex2.Data <- data.frame(y, x1, x2)
 write.csv(x = Ex2.Data, row.names = FALSE, file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data.csv')
 
 
+###########
+#
+#  Data V2
+#  
+
+n = 500
+
+x1 <- seq(from = -1, to = 1, length.out = n)
+
+x2 <- seq(from = -1, to = 1, length.out = n)
+
+Full.Comb <- expand.grid(x1, x2)
+
+colnames(Full.Comb) <- c('x1', 'x2')
+
+dim(Full.Comb)
+head(Full.Comb)
+
+Sample = Full.Comb[sample(x = 1:nrow(Full.Comb), size = 500, replace = FALSE),]
+
+beta <- c(-4.90, -4.40,  1.90,  2.50, -2.75,  3.50)
+
+y <- beta[1] + beta[1]*X$x1 + beta[2]*X$x2.2 + beta[3]*X$x1.3 + beta[4]*X$x2.2 + beta[5]*X$x2.4 + beta[6]*X$x1*X$x2
+
+summary(y)
+
+y <- y + rnorm(n = n, mean = 0, sd = 2.5)
+
+Ex2.Data.v2 <- data.frame(y, Sample)
+
+write.csv(x = Ex2.Data.v2, row.names = FALSE, file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data_v2.csv')
+
