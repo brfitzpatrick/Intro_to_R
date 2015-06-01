@@ -1,3 +1,33 @@
+#     This the second R Code File for the Introduction to R Course available at
+#     git@github.com:brfitzpatrick/Intro_to_R 
+#     Copyright (C) 2015  Ben R. Fitzpatrick.
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    The course author may be contacted by email at 
+#    <ben.r.fitzpatrick@gmail.com>
+
+################################################################################
+#                                                                              #
+#                   Code File to Accompany Course Module 2                     #
+#                                                                              #
+#                          Linear Regression in R                              #
+#                                                                              #
+################################################################################
+
+
+
 
 #Getting Help within R
 
@@ -238,10 +268,12 @@ lines(x=pred.at,y=m6.pred.green,col='green')
 #if direction=c('forward') only additions to the model are considered at each step
 #if direction=c('backward') only deletions from the model are considered each step
 
-#############################
-#                           #
-#   End of Exercise 1       #
-#            &              #
-# End of BRAG_Intro_to_R.R  #
-#                           #
-#############################
+################################################################################
+#                                                                              #
+#                End of Code File to Accompany Course Module 2                 #
+#                                                                              #
+#                          Linear Regression in R                              #
+#                                                                              #
+################################################################################
+
+
