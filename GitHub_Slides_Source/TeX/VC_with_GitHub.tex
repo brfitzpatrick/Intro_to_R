@@ -1,0 +1,66 @@
+
+\documentclass[xcolor=dvipsnames]{beamer} 
+\usecolortheme[named=Blue]{structure} 
+\usetheme[height=10.5mm]{Rochester} 
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+\usepackage{bm}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+%\graphicspath{ {/home/ben/PhD/Armidale_Updates/2014_03_14/Figures/} }
+\begin{document}
+
+\begin{frame} %1
+% \frametitle{Addressing Common Challenges in Spatial Modeling of Ecologies and Environments}
+%\begin{center}
+\textbf{\huge GitHub Version Control for R}\\
+%\end{center}
+
+\begin{figure}
+%\includegraphics[width = 0.35\textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/GitHub-Mark-120px-plus.png}
+\begin{columns}
+\begin{column}{5cm}
+\begin{center}
+\includegraphics[width = 0.8\textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/GitHub-Mark_Big.pdf}
+\end{center}
+\end{column} 
+\begin{column}{5cm}
+\begin{center}
+\includegraphics[width = 0.8\textwidth]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/R_logo.png}
+\end{center}
+\end{column} 
+\end{columns}
+
+\end{figure}
+\small Ben R. Fitzpatrick\\
+\tiny PhD Candidate, Statistical Science, Mathematical Sciences School, Queensland University of Technology
+\newline
+\begin{columns}
+\begin{column}{3cm}
+\tiny 0000-0003-1916-0939
+\end{column}
+\begin{column}{3cm}
+\tiny github.com/brfitzpatrick/
+\end{column}
+\begin{column}{3cm}
+\tiny @benrfitzpatrick
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Version Control with GitHub}
+%\framesubtitle{A 2 Day Course}
+
+\end{frame}
+
+\end{document}
