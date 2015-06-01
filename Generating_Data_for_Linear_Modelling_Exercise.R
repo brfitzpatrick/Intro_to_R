@@ -108,3 +108,8 @@ Ex2.Data.v2 <- data.frame(y, Sample)
 
 write.csv(x = Ex2.Data.v2, row.names = FALSE, file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data_v2.csv')
 
+##
+#
+# Make some nice hills and valleys by calculating normal densities at (x1, x2) from a mixture of normal distributions
+
+
