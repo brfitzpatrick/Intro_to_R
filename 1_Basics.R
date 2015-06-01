@@ -1,5 +1,5 @@
 #     This the first R Code File for the Introduction to R Course available at
-#     git@github.com:brfitzpatrick/Presents_Intro_to_R 
+#     git@github.com:brfitzpatrick/Intro_to_R 
 #     Copyright (C) 2015  Ben R. Fitzpatrick.
 #
 #    This program is free software: you can redistribute it and/or modify
