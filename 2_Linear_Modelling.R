@@ -1,3 +1,110 @@
+#     This the second R Code File for the Introduction to R Course available at
+#     git@github.com:brfitzpatrick/Intro_to_R 
+#     Copyright (C) 2015  Ben R. Fitzpatrick.
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    The course author may be contacted by email at 
+#    <ben.r.fitzpatrick@gmail.com>
+
+################################################################################
+#                                                                              #
+#                   Code File to Accompany Course Module 2                     #
+#                                                                              #
+#                          Linear Regression in R                              #
+#                                                                              #
+################################################################################
+
+# Read in the data
+
+Data <- read.csv(file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data_v2.csv')
+
+head(Data)
+
+install.packages('ggplot2')
+library(ggplot2)
+
+p <- ggplot(aes(x = x1, y = x2, colour = y), data = Data)
+
+p + geom_point(alpha = 0.5)
+
+X <- data.frame(x1 = Data$x1,
+                x2 = Data$x2,
+                x1.2 = Data$x1^2,
+                x2.2 = Data$x2^2,
+                x1.3 = Data$x1^3,
+                x2.3 = Data$x2^3,
+                x1.4 = Data$x1^4,
+                x2.4 = Data$x2^4,
+                x1x2 = Data$x1*Data$x2)
+
+install.packages('leaps')
+library(leaps)
+
+
+m1.lm = lm(Data$y ~ +1, data = X)
+
+m2.lm = lm(Data$y ~ ., data = X)
+
+summary(m2.lm)
+head(X)
+
+m.select <- step(object = m1.lm, scope = list(lower = m1.lm, upper = m2.lm), direction = 'both', steps = 1e5)
+
+library('leaps')
+
+m.best <- regsubsets(x = X, y = y, method = 'exhaustive', nvmax = 10)
+
+## 
+
+Pred.at.df <- expand.grid(seq(from = min(X$x1), to = max(X$x1), length.out = 500),seq(from = min(X$x2), to = max(X$x2), length.out = 500))
+
+colnames(Pred.at.df) <- c('x1','x2')
+
+Pred.at.df.full <- data.frame(x1 = Pred.at.df$x1,
+                x2 = Pred.at.df$x2,
+                x1.2 = Pred.at.df$x1^2,
+                x2.2 = Pred.at.df$x2^2,
+                x1.3 = Pred.at.df$x1^3,
+                x2.3 = Pred.at.df$x2^3,
+                x1.4 = Pred.at.df$x1^4,
+                x2.4 = Pred.at.df$x2^4,
+                x1x2 = Pred.at.df$x1*Pred.at.df$x2)
+
+Obj <- predict(object = m.select, newdata = Pred.at.df.full)
+
+head(Obj)
+
+Y.Pred <- data.frame(y = Obj, x1 = Pred.at.df.full$x1, x2 = Pred.at.df.full$x2)
+
+head(Y.Pred)
+
+summary(Data$y)
+
+scale.limits = c(-15,4)
+
+p2 <- ggplot(aes(x = x1, y = x2, fill = y), data = Y.Pred)
+p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits) + coord_equal()  + geom_point(colour = 'black', size = 3, data = Data) + geom_point(aes(colour = y), size = 2, data = Data) + scale_colour_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits )
+
+p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)))
+
+summary(Data$y)
+
+dev.new()
+par(mfcol = c(2,2))
+plot(m.select)
+
 
 #Getting Help within R
 
@@ -238,10 +345,12 @@ lines(x=pred.at,y=m6.pred.green,col='green')
 #if direction=c('forward') only additions to the model are considered at each step
 #if direction=c('backward') only deletions from the model are considered each step
 
-#############################
-#                           #
-#   End of Exercise 1       #
-#            &              #
-# End of BRAG_Intro_to_R.R  #
-#                           #
-#############################
+################################################################################
+#                                                                              #
+#                End of Code File to Accompany Course Module 2                 #
+#                                                                              #
+#                          Linear Regression in R                              #
+#                                                                              #
+################################################################################
+
+
