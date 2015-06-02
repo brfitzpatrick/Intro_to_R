@@ -1,5 +1,5 @@
 #     This the first R Code File for the Introduction to R Course available at
-#     git@github.com:brfitzpatrick/Presents_Intro_to_R 
+#     git@github.com:brfitzpatrick/Intro_to_R 
 #     Copyright (C) 2015  Ben R. Fitzpatrick.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@
 # to author R scripts and interact with the R program.
 # If you have not done so already please:
 #    1) download and install R from <http://cran.r-project.org/>
-#    2) download and install RStudion from <http://rstudio.org/>
+#    2) download and install RStudio from <http://rstudio.org/>
 #    3) open RStudio
 #    4) from the RStudio File Menue select 'Open File'
 #    5) select this .R file to open it with RStudio
@@ -44,7 +44,7 @@
 # Once you have this file open in RStudio please send the non-commented lines to
 # R by placing the cursor on the appropriate line then clicking the 'Run' button
 
-# The Run button is located in the top right of the upper right hand panein the
+# The Run button is located in the top right of the upper right hand pane in the
 # default RStudio window, it looks like a white box with a green arrow pointing
 # to the right of the white box and has the word 'Run' written on it.
 # Please try to run the following line of code:
@@ -69,9 +69,9 @@ print(c('World'), quote = FALSE)
 
 # If you are doing a lot of typing and prefer not to reach for the mouse so much
 # you can execute a line of code by placing the cursor on it with the arrow keys
-# on you keyboard the holding the 'Control' (or 'Command') key on your keyboard
+# on you keyboard then holding the 'Control' (or 'Command') key on your keyboard
 # and with the 'Control'/'Command' key depressed pressing the 'Return'/'Enter'
-# key
+# key.
 
 # Try executing this comment line.
 # Note how the R process simply displays the text without producing and error as
@@ -139,7 +139,6 @@ x < -3
 x
 
 # However we can overwrite the contents of x by using the assignment operator
-
 x <- 3
 
 x
@@ -148,6 +147,7 @@ x
 # (as provided by an Integrated Development Environment such as RStudio)
 # can make apparent in having the assignment operator <- displayed as a
 # different colour to < -
+# ... except that RStudio doesn't seem to do this anymore...
 
 x <- 3
 
@@ -276,7 +276,7 @@ ls()
 #                                                                              #
 ################################################################################
 
-# Four useful object classes in R are: Vectors, Matrices, Dataframes, and Lists.
+# Three useful object classes in R are: Vectors, Matrices and Dataframes.
 
 
 # The simplest way to think of a vector vector is as a collection of elements in
