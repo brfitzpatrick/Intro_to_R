@@ -28,16 +28,15 @@
 
 # Read in the data
 
-Data <- read.csv(file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data_v2.csv')
 
-head(Data)
 
-install.packages('ggplot2')
-library(ggplot2)
+setwd('~/Intro_to_R/Data/Linear_Modelling/')
 
-p <- ggplot(aes(x = x1, y = x2, colour = y), data = Data)
+Data <- read.csv(file = 'Multiple_Regression_Data.csv')
 
-p + geom_point(alpha = 0.5)
+p <- ggplot(aes(x = x1, y = x2, colour = y), data = Data) + coord_equal()
+
+p + geom_point() + scale_colour_gradientn(colours = rev(rainbow(start = 0, end = 0.7, n = 1e3)))
 
 X <- data.frame(x1 = Data$x1,
                 x2 = Data$x2,
@@ -49,24 +48,14 @@ X <- data.frame(x1 = Data$x1,
                 x2.4 = Data$x2^4,
                 x1x2 = Data$x1*Data$x2)
 
-install.packages('leaps')
-library(leaps)
-
-
 m1.lm = lm(Data$y ~ +1, data = X)
 
 m2.lm = lm(Data$y ~ ., data = X)
 
-summary(m2.lm)
-head(X)
-
 m.select <- step(object = m1.lm, scope = list(lower = m1.lm, upper = m2.lm), direction = 'both', steps = 1e5)
 
-library('leaps')
-
-m.best <- regsubsets(x = X, y = y, method = 'exhaustive', nvmax = 10)
-
-## 
+par(mfcol = c(2,2))
+plot(m.select)
 
 Pred.at.df <- expand.grid(seq(from = min(X$x1), to = max(X$x1), length.out = 500),seq(from = min(X$x2), to = max(X$x2), length.out = 500))
 
@@ -84,26 +73,333 @@ Pred.at.df.full <- data.frame(x1 = Pred.at.df$x1,
 
 Obj <- predict(object = m.select, newdata = Pred.at.df.full)
 
-head(Obj)
-
 Y.Pred <- data.frame(y = Obj, x1 = Pred.at.df.full$x1, x2 = Pred.at.df.full$x2)
 
-head(Y.Pred)
+scale.limits = range(Data$y)
 
-summary(Data$y)
-
-scale.limits = c(-15,4)
-
-p2 <- ggplot(aes(x = x1, y = x2, fill = y), data = Y.Pred)
+p2 <- ggplot(aes(x = x1, y = x2, fill = y), data = Y.Pred) + coord_equal()
+p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)))
 p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits) + coord_equal()  + geom_point(colour = 'black', size = 3, data = Data) + geom_point(aes(colour = y), size = 2, data = Data) + scale_colour_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits )
 
-p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)))
+### End New Code
 
-summary(Data$y)
+## Next up adding rgl surface & points plot
+##  rgl confidence surfaces  i.e. edit the following to work:
 
-dev.new()
-par(mfcol = c(2,2))
-plot(m.select)
+library('rgl')
+with(Data, rgl.spheres(x = x1, z = x2, y = y/max(abs(y)), radius = 0.005, color = 'cyan', alpha = 0.5))
+axes3d(color = 'white',alpha = 1)
+title3d(xlab = 'x1', ylab = 'y', zlab = 'x2', color = 'white', size = 11)
+
+#####################
+#                   #
+#       Add a       #
+#  semi-transparent #
+#   green plane to  #
+#   represent the   #
+#  predictions from #
+#  the linear model #
+#                   #
+#####################
+
+
+####
+
+n.pred = 1e4
+pred.at.x1 <- seq(from = min(Data$x1), to = max(Data$x1), length.out = sqrt(n.pred))
+pred.at.x2 <- seq(from = min(Data$x2), to = max(Data$x2), length.out = sqrt(n.pred))
+
+# make a function that accepts pred.at.x1, pred.at.x2, n.pred as arguments and returns pred.mat
+pred.at.df <- expand.grid(pred.at.x1, pred.at.x2)
+head(pred.at.df)
+colnames(pred.at.df) <- c('x1', 'x2')
+Pred.at.df.full <- data.frame(x1 = pred.at.df$x1,
+                x2 = pred.at.df$x2,
+                x1.2 = pred.at.df$x1^2,
+                x2.2 = pred.at.df$x2^2,
+                x1.3 = pred.at.df$x1^3,
+                x2.3 = pred.at.df$x2^3,
+                x1.4 = pred.at.df$x1^4,
+                x2.4 = pred.at.df$x2^4,
+                x1x2 = pred.at.df$x1*pred.at.df$x2)
+
+pred.mat <- matrix(data = NA, nrow = length(pred.at.x1), ncol = length(pred.at.x2))
+
+for(i in 1:length(pred.at.x1)){
+
+    for(j in 1:length(pred.at.x2)){
+
+        pred.mat[i,j] <- predict(object = m.select, newdata = Pred.at.df.full[Pred.at.df.full$x1 == pred.at.x1[i] & Pred.at.df.full$x2 == pred.at.x2[j], ])}}
+
+
+rgl.surface(x = pred.at.x1, z = pred.at.x2, y = pred.mat/max(abs(Data$y)), alpha = 0.25, col = 'green')
+
+
+#####################
+#                   #
+#  Add a vertical   #
+#  white lines to   #
+#    represent      #
+#  residuals from   #
+#    the fitted     #
+#      model        #
+#                   #
+#####################
+
+for(i in 1:nrow(X)){
+    lines3d(x = c(X[i,'x1'],X[i,'x1']), z = c(X[i,'x2'],X[i,'x2']), y =  c(predict(object = m.select, newdata = X[i, ]), Data[i,'y'])/max(abs(Data$y)), col = 'white')}
+
+
+
+### Edited to here
+## Next add in 95% confidence interval
+
+
+
+
+for(i in 1:n.bs){
+    Data.bs = Data[sample(x = 1:nrow(Data), size = nrow(Data), replace = TRUE),]
+    m.i = lm(y ~ x + z, data = Data.bs)
+    pred.y.bs[,i] <- predict(object = m.i, newdata = pred.at.df)} # requires ~ 45 sec
+
+# ... any questions so far?
+
+dim(pred.y.bs)
+pred.y.bs.stats <- data.frame(matrix(data = NA, nrow = n.pred, ncol = 2))
+colnames(pred.y.bs.stats) <- c('lower', 'upper')
+head(pred.y.bs.stats)
+for(i in 1:nrow(pred.y.bs)){
+    pred.y.bs.stats[i,] <- quantile(x = pred.y.bs[i,], prob = c(0.025, 0.975))}
+pred.y.bs.stats <- data.frame(pred.at.df, pred.y.bs.stats)
+dim(pred.y.bs.stats)
+bs.L.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        bs.L.pred.mat[i,j] <- pred.y.bs.stats[pred.y.bs.stats$x == pred.at.x[i] & pred.y.bs.stats$z == pred.at.z[j],'lower']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = bs.L.pred.mat, alpha = 0.25, col = 'blue')
+
+
+
+###
+
+
+
+#####################
+#                   #
+#      Exercise     #
+#                   #
+
+
+
+
+## Change this to prediction and confidence intervals
+
+#####################
+#
+# Bootstrap the data
+# and refit the model
+# to each boostrap
+# resampling of
+# the data
+# predicting at our
+# prediction grid
+# with each of these
+# model then calculate
+# the bounds of intervals
+# containing 95% of the
+# predictions at each of
+# these locations in
+# the prediction grid
+# (values of the explanatory
+# variable x and z)
+# plot the bounds of these
+# intervals as red and blue
+# surfaces
+#
+#####################
+
+n.pred = 1e4
+pred.at.x = seq(from = -200, to = 200, length = sqrt(n.pred))
+pred.at.z <- pred.at.x
+pred.at.df <- expand.grid(pred.at.x, pred.at.z)
+head(pred.at.df)
+colnames(pred.at.df) <- c('x', 'z')
+n.bs = 1e4
+pred.y.bs <- matrix(data = NA, nrow = n.pred, ncol = n.bs)
+for(i in 1:n.bs){
+    Data.bs = Data[sample(x = 1:nrow(Data), size = nrow(Data), replace = TRUE),]
+    m.i = lm(y ~ x + z, data = Data.bs)
+    pred.y.bs[,i] <- predict(object = m.i, newdata = pred.at.df)} # requires ~ 45 sec
+
+# ... any questions so far?
+
+dim(pred.y.bs)
+pred.y.bs.stats <- data.frame(matrix(data = NA, nrow = n.pred, ncol = 2))
+colnames(pred.y.bs.stats) <- c('lower', 'upper')
+head(pred.y.bs.stats)
+for(i in 1:nrow(pred.y.bs)){
+    pred.y.bs.stats[i,] <- quantile(x = pred.y.bs[i,], prob = c(0.025, 0.975))}
+pred.y.bs.stats <- data.frame(pred.at.df, pred.y.bs.stats)
+dim(pred.y.bs.stats)
+bs.L.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        bs.L.pred.mat[i,j] <- pred.y.bs.stats[pred.y.bs.stats$x == pred.at.x[i] & pred.y.bs.stats$z == pred.at.z[j],'lower']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = bs.L.pred.mat, alpha = 0.25, col = 'blue')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = bs.L.pred.mat, alpha = 0.5, col = 'white', front = c('line'), back = 'line')
+bs.U.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        bs.U.pred.mat[i,j] <- pred.y.bs.stats[pred.y.bs.stats$x == pred.at.x[i] & pred.y.bs.stats$z == pred.at.z[j],'upper']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = bs.U.pred.mat, alpha = 0.25, col = 'red')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = bs.U.pred.mat, alpha = 0.5, col = 'white', front = c('line'), back = 'line')
+
+#######################
+#                     #
+# Specify the point   #
+# of view numerically #
+#                     #
+#######################
+
+view3d(theta = 45, phi = 15, zoom = 1)
+view3d(theta = 45, phi = 15, zoom = 0.75)
+view3d(theta = 45, phi = 15, zoom = 0.5)
+view3d(theta = 45, phi = 15, zoom = 0.25)
+
+view3d(theta = 45, phi = 15, zoom = 0.25)
+view3d(theta = 45, phi = 20, zoom = 0.25)
+view3d(theta = 45, phi = 25, zoom = 0.25)
+view3d(theta = 45, phi = 30, zoom = 0.25)
+view3d(theta = 45, phi = 45, zoom = 0.25)
+
+view3d(theta = 45, phi = 45, zoom = 0.25)
+view3d(theta = 40, phi = 45, zoom = 0.25)
+view3d(theta = 35, phi = 45, zoom = 0.25)
+view3d(theta = 30, phi = 45, zoom = 0.25)
+
+########################
+#                      #
+#    Write out the     #
+#  individual frames   #
+#    for animation     #
+#  setting up vectors  #
+#   of point of view   #
+#  control parameters  #
+#  to use throughout   #
+# during the animation #
+#                      #
+########################
+
+fps <- 25
+sec <- 20
+n.frame = fps * sec
+theta.v = seq(from = 0 , to = 360, length.out = n.frame)
+zoom.v = c(seq(from = 0.75, to = 0.25, length.out = n.frame/2), seq(from = 0.25, to = 0.75, length.out = n.frame/2))
+setwd('/home/ben/PhD/BRAG_Visualisation_Course/rgl_talk/3D_LM_Demo/Frames_1_AA/')
+rgl.light(viewpoint.rel = TRUE)
+for(i in 1:length(theta.v)){
+    view3d(theta = theta.v[i], phi = 5, zoom = zoom.v[i])
+    rgl.snapshot(filename = paste(i,'.png',sep = ''))}
+
+# Open the frames as layers in GIMP
+# GIMP = GNU Image Manipulation Program
+# www.gimp.org
+# Use the GAP = GIMP Animation Package
+# to covert the frames into a video format
+# .avi is the default format
+
+#####################
+#                   #
+#      Exercise     #
+#                   #
+#####################
+#                   #
+# Create Surfaces   #
+# from the bounds   #
+# of 95% Prediction #
+#  and Confidence   #
+#   Intervals       #
+# and Graphically   #
+# compare the two   #
+#                   #
+#####################
+
+Pred.Int <- predict(object = m.select, newdata = pred.at.df, interval = 'prediction', level = 0.95)
+open3d(antialias = 4)
+rgl.bg()
+with(Data, rgl.spheres(x = x, y = y, z = z, radius = 1.5))
+axes3d(color = 'white',alpha = 1)
+title3d(xlab = 'x', ylab = 'y', zlab = 'z', color = 'white', size = 11)
+head(Pred.Int.df)
+Pred.Int.df <- data.frame(pred.at.df, Pred.Int)
+head(Pred.Int.df)
+PI.L.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        PI.L.pred.mat[i,j] <- Pred.Int.df[Pred.Int.df$x == pred.at.x[i] & Pred.Int.df$z == pred.at.z[j],'lwr']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.L.pred.mat, alpha = 0.25, col = 'blue')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.L.pred.mat, alpha = 0.5, col = 'white', front = c('line'), back = 'line')
+PI.U.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        PI.U.pred.mat[i,j] <- Pred.Int.df[Pred.Int.df$x == pred.at.x[i] & Pred.Int.df$z == pred.at.z[j],'upr']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.U.pred.mat, alpha = 0.25, col = 'blue')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.U.pred.mat, alpha = 0.5, col = 'white', front = c('line'), back = 'line')
+Conf.Int <- predict(object = m.select, newdata = pred.at.df, interval = 'confidence', level = 0.95)
+Conf.Int.df <- data.frame(pred.at.df, Conf.Int)
+CI.L.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        CI.L.pred.mat[i,j] <- Conf.Int.df[Conf.Int.df$x == pred.at.x[i] & Conf.Int.df$z == pred.at.z[j],'lwr']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.L.pred.mat, alpha = 0.25, col = 'blue')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.L.pred.mat, alpha = 0.5, col = 'white', front = c('line'), back = 'line')
+CI.U.pred.mat <- matrix(data = NA, nrow = length(pred.at.x), ncol = length(pred.at.z))
+for(i in 1:length(pred.at.x)){
+    for(j in 1:length(pred.at.z)){
+        CI.U.pred.mat[i,j] <- Conf.Int.df[Conf.Int.df$x == pred.at.x[i] & Conf.Int.df$z == pred.at.z[j],'upr']}}
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.U.pred.mat, alpha = 0.25, col = 'blue')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.U.pred.mat, alpha = 0.5, col = 'white', front = c('line'), back = 'line')
+
+#####################
+#                   #
+#    Graphically    #
+#    Compare the    #
+#  Three Interavls  #
+#      we have      #
+# Calculated today  #
+#                   #
+#####################
+
+open3d(antialias = 4)
+rgl.bg()
+rgl.light(viewpoint.rel = TRUE)
+with(Data, rgl.spheres(x = x, y = y, z = z, radius = 5))
+axes3d(color = 'white',alpha = 1)
+title3d(xlab = 'x', ylab = 'y', zlab = 'z', color = 'white', size = 11)
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.L.pred.mat, col = 'blue', alpha = 0.225, front = c('line'), back = 'line')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.U.pred.mat, col = 'blue',alpha = 0.225, front = c('line'), back = 'line')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.L.pred.mat, col = 'green',alpha = 0.225, front = c('line'), back = 'line')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.U.pred.mat, col = 'green',alpha = 0.225, front = c('line'), back = 'line')
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.L.pred.mat, col = 'blue', alpha = 0.225)
+rgl.surface(x = pred.at.x, z = pred.at.z, y = CI.U.pred.mat, col = 'blue',alpha = 0.225)
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.L.pred.mat, col = 'green',alpha = 0.225)
+rgl.surface(x = pred.at.x, z = pred.at.z, y = PI.U.pred.mat, col = 'green',alpha = 0.225)
+
+fps <- 25
+sec <- 20
+n.frame = fps * sec
+theta.v = seq(from = 0 , to = 360, length.out = n.frame)
+zoom.v = c(seq(from = 0.75, to = 0.15, length.out = n.frame/2), seq(from = 0.15, to = 0.75, length.out = n.frame/2))
+setwd('/home/ben/PhD/BRAG_Visualisation_Course/rgl_talk/3D_LM_Demo/Frame_95CI_cf_95PI/')
+
+for(i in 1:length(theta.v)){
+    view3d(theta = theta.v[i], phi = 5, zoom = zoom.v[i])
+    rgl.snapshot(filename = paste(i,'.png',sep = ''))}
+
+
+
+
+
 
 
 #Getting Help within R
@@ -201,17 +497,17 @@ with(Data,plot(x,y,col=as.character(f)))
 
 #let's start with a simple linear regression
 
-m1 <- with(Data,lm(y~x)) 
+m.select <- with(Data,lm(y~x)) 
 
-abline(m1) # add the line predicted by m1 to the plot
+abline(m.select) # add the line predicted by m.select to the plot
 
-summary(m1)
+summary(m.select)
 
 dev.new() # open a new plot device
 
 par(mfcol=c(2,2)) # set up a 2 by 2 plot panel
 
-plot(m1) # produce diagnostics plots for the model 'm1'
+plot(m.select) # produce diagnostics plots for the model 'm.select'
 
 
 #now suppose we want to see if a quadratic is better fit
@@ -250,7 +546,7 @@ m2.pred <- predict(object=m2,newdata=data.frame(x=pred.at,x.2=pred.at^2)) # pred
 
 with(Data,plot(x,y,col=as.character(f)))
 
-abline(m1)
+abline(m.select)
 
 lines(x=pred.at,y=m2.pred,col='blue') # adding these point predictions to the plot
 
@@ -290,7 +586,7 @@ m6.pred.green <- predict(object=m6,newdata=data.frame(x=pred.at,x.2=pred.at^2,f=
 
 lines(x=pred.at,y=m6.pred.green,col='green',lty=3) # adding these point predictions to the plot
 
-legend(x='bottomleft',lty=c(1,1,1,1,2,2,3,3),col=c('black','blue','green','red','green','red','green','red'),legend=c('m1','m2','m4.green','m4.red','m5.green','m5.red','m6.green','m6.red')) # adding a legend to the plot
+legend(x='bottomleft',lty=c(1,1,1,1,2,2,3,3),col=c('black','blue','green','red','green','red','green','red'),legend=c('m.select','m2','m4.green','m4.red','m5.green','m5.red','m6.green','m6.red')) # adding a legend to the plot
 
 #the plot is a little crowded so let's make a panel
 
@@ -300,7 +596,7 @@ par(mfrow=c(2,3)) # 2x2 panel of plots filled 'by-row'
 
 with(Data,plot(x,y,col=as.character(f),main='Linear Model')) #1st item in panel
 
-abline(m1)
+abline(m.select)
 
 with(Data,plot(x,y,col=as.character(f),main='Quadratic Model'))
 
@@ -332,10 +628,10 @@ lines(x=pred.at,y=m6.pred.green,col='green')
 ?nls     
 
 ##
-# which of m1 to m6 is best?
+# which of m.select to m6 is best?
 # one way to answer this question is with stepwise variable selection using the Akike Information Criterion (AIC)
 
- step(object=m1,scope=list(lower=m1,upper=m6),direction=c('both')) # stepwise variable selection with the AIC as the criterion used to choose between models
+ step(object=m.select,scope=list(lower=m.select,upper=m6),direction=c('both')) # stepwise variable selection with the AIC as the criterion used to choose between models
 
 #essentially what this is doing is starting with the model provided as the 'object' argument and taking the model provided as 'lower' as the simplest model and the model provided as 'upper' as the most complex model
 #then looking at all possible variable additions and deletions from the model
