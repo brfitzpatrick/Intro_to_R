@@ -89,22 +89,28 @@ Executing this line will produce an Error
 ################################################################################
 
 # Addition:
+
 2+3
 
 # Subtraction:
+
 2-3
 
 # Multiplication:
+
 2*3
 
 # Division:
+
 6/2
 
 # Indicies:
+
 2^3
 8^(1/3)
 
 # The Order of Operations in Implemented as per BIMDAS.
+
 2*3-1
 2*(3-1)
 
@@ -133,12 +139,15 @@ x
 # meaning:
 
 # Is x less than -3?
+
 x < -3
 
 # Why not? Because x has the values of 2 stored in it.
+
 x
 
 # However we can overwrite the contents of x by using the assignment operator
+
 x <- 3
 
 x
@@ -190,6 +199,7 @@ z
 # commands and functions.
 
 # So far in this tutorial we have created three objects:
+
 x
 y
 z
@@ -286,6 +296,7 @@ ls()
 # Numeric vectors contain numbers.
 # For statistical purposes a numeric vector might contain observations from a
 # numeric variable.
+
 a <- c(1, 2, 3, 2, 1, 3) # think 'c' for concatenate, or combine
 
 mean(a)
@@ -328,17 +339,20 @@ summary(factor(d))
 var(a)
 
 # vector addition
+
 a
 b
 a+b 
 
 # multiplication of the elements of two vectors
+
 a*b
 t(b)
 
 t(a)%*%b
 
 # a simple plot
+
 plot(a, b)
 plot(x = a, y = b)
 plot(x = b, y = a)
@@ -356,18 +370,19 @@ plot(y = a, x = b)
 # suited by which inputs
 # this can be risky...
 
-plot(a, b, main='x and y arguments not specified by name')
+plot(a, b, main = 'x and y arguments not specified by name')
 
-plot(x = b, y = a, main='x and y arguments specified by name')
+plot(x = b, y = a, main = 'x and y arguments specified by name')
 
 # when you specify the arguments by name you can do so in order you like
+
 plot(main = 'x and y arguments specified by name out of order', y = b, x = a)
 
 f <- c('red','yellow','orange','green','blue','violet')
 
 class(f) # a character vector
 a
-a+f # doesn't work ...doesn't make sense to add '1' to 'green' etc
+a+f # doesn't work since it doesn't make sense to add '1' to 'green' etc
 
 plot(y = b, x = a, col = f, pch = 1)
 
@@ -383,6 +398,7 @@ plot(y = b, x = a, col = f, pch = 3, cex = 5)
 
 # the following command runs across two lines so you will need to execute both
 # of these lines to complete the command:
+
 plot(y = b, x = a, col = f, pch = 19, cex = 2, xlab = 'x axis title',
      ylab = 'ylab title')
 
@@ -423,6 +439,7 @@ mat.3
 
 # The command belwo will create a 5x2 matrix from the data supplied filling the
 # matrix column by column
+
 mat.4 <- matrix(data = seq(from = 1, to = 10, by = 1), byrow = FALSE, nrow = 5)
 mat.4
 
@@ -441,18 +458,23 @@ mat.5
 # bracket [ ] based subsetting syntax.
 
 # To access the contents of the first column of mat.5 use:
+
 mat.5[,1]
 
 # To access the contents of the second column of mat.5 use:
+
 mat.5[,2]
 
 # To access the contents of the first row of mat.5 use:
+
 mat.5[1,]
 
 # To access the contents of the fourth row of mat.5 use:
+
 mat.5[4,]
 
 # To access the contents of rows 1 to 4 of mat.5 use:
+
 1:4
 mat.5[1:4,]
 
@@ -461,6 +483,7 @@ mat.5[1:4,1]
 mat.2[1:3,'c']
 
 # Transpose a matrix with t( ) command
+
 mat.5
 t(mat.5) 
 
@@ -484,25 +507,32 @@ cov.sm <- var(sm)
 cov.sm
 
 # Another way of getting the covariance matrix is with the cov( ) command
+
 cov(sm)
 
 # We can check that this is indeed the case by doing an element by element
 # substraction:
+
 cov(sm)-var(sm) 
 
 # Extract the diagonal of a matrix as a vector with the diag( ) command:
+
 diag(sm) 
 
 # Recall that mat.1 contains numbers
+
 mat.1
 
 # while mat.2 contains characters.
+
 mat.2
 
 # Thus it makes sense to calculate the column means of mat.1
+
 colMeans(mat.1)
 
 # but is does not makes sense to try and calculate the column means of mat.2
+
 colMeans(mat.2)
 
 # We can still combine mat.1 and mat.2 into a new matrix
@@ -511,10 +541,12 @@ mat.6 <- cbind(mat.1, mat.2)
 
 mat.6
 class(mat.6)
+
 # However note that quote marks are displayed around the number now.
 # This is R telling us that it  is interpreting these numbers as characters now.
 # Matrices in R can contain either number or characters (not both).
-# Subsequently we can no longer calculate the means of any of the columns 
+# Subsequently we can no longer calculate the means of any of the columns
+
 mean(mat.6[,1])
 
 # If we wish to have a object which is like a matrix with numbers in some
@@ -527,6 +559,7 @@ Data
 # We can access the columns of a Dataframe by name using the $ operator
 
 # To access the column called 'a' from the Dataframe called 'Data' use:
+
 Data[,'a']
 Data[,1]
 Data$a
@@ -536,7 +569,8 @@ Data$1 # we need to use column names with the $ syntax
 
 mean(Data$a)
 
-# We can also create a dataframe from a collections of vectors: 
+# We can also create a dataframe from a collections of vectors:
+
 a
 b
 f
