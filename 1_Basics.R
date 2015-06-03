@@ -1,5 +1,5 @@
-#     This the first R Code File for the Introduction to R Course available at
-#     git@github.com:brfitzpatrick/Intro_to_R 
+#     This is the first R Code File for the Introduction to R Course available at
+#     https://github.com/brfitzpatrick/Intro_to_R
 #     Copyright (C) 2015  Ben R. Fitzpatrick.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -63,7 +63,7 @@ print(c('Hello world.'))
 # Try executing the following two lines of code by highlighting them then
 # clicking the 'Run' button:
 
-print(c('Hello world.'), quote = FALSE)
+print(x = c('Hello world.'), quote = FALSE)
 print(c('Hello'), quote = FALSE)
 print(c('World'), quote = FALSE)
 
@@ -197,7 +197,7 @@ z
 # You can see the list of objects you have created in the upper right hand pane
 # of the RStudio window under the 'Environment' Tab.
 
-# You can also use the ls() command to have R display the list of object you
+# You can also use the ls() command to have R display the list of objects you
 # have created within this R session:
 
 ls()
@@ -266,7 +266,7 @@ load(file='~/Intro_to_R/Workspaces/Day_1.RData')
 
 # If we no longer want 'z' we can remove it with the rm( ) command as follows:
 
-rm('z')
+rm(z)
 
 ls()
 
@@ -286,9 +286,10 @@ ls()
 # Numeric vectors contain numbers.
 # For statistical purposes a numeric vector might contain observations from a
 # numeric variable.
-a <- c(1, 2, 3, 2, 1, 3) # think 'c' for concatenate
+a <- c(1, 2, 3, 2, 1, 3) # think 'c' for concatenate, or combine
 
-a
+mean(a)
+var(a)
 
 class(a)
 
@@ -299,6 +300,8 @@ b <- seq(from = 1, to = 6, by = 1)
 
 b
 
+1:6
+
 class(b)
 
 # Character vectors contain letters or words.
@@ -307,26 +310,39 @@ class(b)
 
 c <- c('a', 'a', 'b', 'b', 'c', 'd')
 
-c
+summary(c)
+
+c.f <- factor(c)
+
+summary(c.f)
 
 class(c)
+class(c.f)
 
 d <- c('apple', 'apple', 'banana', 'banana', 'orange', 'pear')
 
-d
+summary(factor(d))
 
 # The var( ) command will return the variance of matrix supplied to it
 
 var(a)
 
 # vector addition
+a
+b
 a+b 
 
 # multiplication of the elements of two vectors
 a*b
+t(b)
+
+t(a)%*%b
 
 # a simple plot
 plot(a, b)
+plot(x = a, y = b)
+plot(x = b, y = a)
+plot(y = a, x = b)
 
 # this is a good time to point out that all functions in R have arguments
 
@@ -350,10 +366,18 @@ plot(main = 'x and y arguments specified by name out of order', y = b, x = a)
 f <- c('red','yellow','orange','green','blue','violet')
 
 class(f) # a character vector
-
+a
 a+f # doesn't work ...doesn't make sense to add '1' to 'green' etc
 
 plot(y = b, x = a, col = f, pch = 1)
+
+plot(1:21,1:21,pch=1:21,cex=3)
+
+plot(y = b, x = a, pch = 19, xlim = c(1,4), ylim = c(1,6))
+par(new = TRUE)
+plot(y = b, x = a, pch = 20, col = f, xlim = c(1,4), ylim = c(1,6))
+
+
 plot(y = b, x = a, col = f, pch = 2, cex = 2)
 plot(y = b, x = a, col = f, pch = 3, cex = 5)
 
@@ -367,6 +391,8 @@ plot(y = b, x = a, col = f, pch = 19, cex = 2, xlab = 'x axis title',
 
 # if you 'bind' two or more 'c'olumns of equal length together you create a
 # matrix
+a
+b
 
 mat.1 <- cbind(a, b)
 
@@ -407,7 +433,7 @@ dim(mat.4)
 # the command below creates a matrix with the same data and dimensions as mat.4
 # but fills the data into the matrix row by:
 
-mat.5 <- matrix(data = seq(from = 1, to = 10, by = 1), byrow = TRUE, nrow = 5) 
+mat.5 <- matrix(data = seq(from = 1, to = 10, by = 1), byrow = TRUE, ncol = 2) 
 
 mat.5
 
@@ -420,7 +446,6 @@ mat.5[,1]
 # To access the contents of the second column of mat.5 use:
 mat.5[,2]
 
-
 # To access the contents of the first row of mat.5 use:
 mat.5[1,]
 
@@ -428,17 +453,23 @@ mat.5[1,]
 mat.5[4,]
 
 # To access the contents of rows 1 to 4 of mat.5 use:
+1:4
 mat.5[1:4,]
 
+mat.5[1:4,1]
+
+mat.2[1:3,'c']
+
 # Transpose a matrix with t( ) command
+mat.5
 t(mat.5) 
 
 # Matrix operations require the %% symbols around the operator
 # e.g. %*% performs matrix multiplication whereas a simple *  performs
 # non-matrix (i.e. element by element) multiplication
 
-mat.4 * mat.5
-
+mat.4 * mat.5 # element by element multiplication
+mat.4%*%t(mat.5) # matrix multiplication
 sm <- mat.4%*%t(mat.5) 
 
 sm
@@ -479,7 +510,7 @@ colMeans(mat.2)
 mat.6 <- cbind(mat.1, mat.2)
 
 mat.6
-
+class(mat.6)
 # However note that quote marks are displayed around the number now.
 # This is R telling us that it  is interpreting these numbers as characters now.
 # Matrices in R can contain either number or characters (not both).
@@ -496,15 +527,19 @@ Data
 # We can access the columns of a Dataframe by name using the $ operator
 
 # To access the column called 'a' from the Dataframe called 'Data' use:
+Data[,'a']
+Data[,1]
 Data$a
-
+Data$1 # we need to use column names with the $ syntax
 # We can then calculate the mean of the entries in this column as they have been
 # retained as numbers
 
 mean(Data$a)
 
-
 # We can also create a dataframe from a collections of vectors: 
+a
+b
+f
 Data <- data.frame(a, b, f)
 Data
 
@@ -517,6 +552,9 @@ Data
 # dataframe as follows
 
 plot(x = Data$x1, y = Data$x2, col = Data$point.colour, pch = 19, cex = 2)
+
+plot(x = Data$x1, y = Data$x2, col = Data$point.colour, pch = 19, cex = 2, 
+     xlab = 'x1', ylab = 'x2')
 
 # If all the objects to be plotted are in the same dataframe we can encase the
 # plot command within a with( ) command which tells plot( ) to look for all the
@@ -570,8 +608,17 @@ Laptops <- edit(Laptops)
 # Use the mouse or arrow keys to move between cells
 # input values with the keyboard
 
-Laptops
 
+Laptops$OS <- factor(Laptops$OS)
+summary(Laptops)
+class(Laptops$OS)
+plot(x = Laptops$Table, y = Laptops$Screen)
+plot(x = Laptops$Table, y = Laptops$Screen, col = Laptops$OS, pch = 19, cex = 2)
+with(Laptops, plot(x = Table, y = Screen, col = OS, cex = 2))
+
+with(Laptops, plot(x = OS, y = Screen))
+
+ls()
 # We can get summary statistics for each of the columns in our new dataframe
 # with the summary( ) command
 
