@@ -1,5 +1,5 @@
 #     This an R Code File for the Introduction to R Course available at
-#     git@github.com:brfitzpatrick/Intro_to_R 
+#     https://github.com/brfitzpatrick/Intro_to_R
 #     Copyright (C) 2015  Ben R. Fitzpatrick.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -26,62 +26,7 @@
 #                                                                              #
 ################################################################################
 
-# Aim for y = b0 + b1*x1 + b2*x2^2 + b3*x1^3 + b4*x2^2 + b5*x2^4 + b6*x1*x2
-
-n <- 500
-
-x1 <- seq(from = -1, to = 1, length.out = n)
-
-x2 <- seq(from = -1, to = 1, length.out = n) + rnorm(n = n, mean = 0, sd = 3)
-
-x2 <- x2/(max(abs(x2)))
-
-summary(x1)
-
-summary(x2)
-
-beta <- sample(x = seq(from = -5, to = 5, by = 0.05), size = 6, replace = TRUE)
-
-beta
-
-X <- data.frame(x1,
-                x2,
-                x1.2 = x1^2,
-                x2.2 = x2^2,
-                x1.3 = x1^3,
-                x2.3 = x2^3,
-                x1.4 = x1^4,
-                x2.4 = x2^4,
-                x1x2 = x1*x2)
-
-y <- beta[1] + beta[1]*X$x1 + beta[2]*X$x2.2 + beta[3]*X$x1.3 + beta[4]*X$x2.2 + beta[5]*X$x2.4 + beta[6]*X$x1*X$x2
-
-summary(y)
-
-y <- y + rnorm(n = n, mean = 0, sd = 3.5)
-
-m1.lm = lm(y ~ +1, data = X)
-
-m2.lm = lm(y ~ ., data = X)
-
-summary(m2.lm)
-head(X)
-
-step(object = m1.lm, scope = list(lower = m1.lm, upper = m2.lm), direction = 'both', steps = 1e5)
-
-# beta: -4.90 -4.40  1.90  2.50 -2.75  3.50
-
-Ex2.Data <- data.frame(y, x1, x2)
-
-write.csv(x = Ex2.Data, row.names = FALSE, file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data.csv')
-
-
-###########
-#
-#  Data V2
-#  
-
-n = 500
+n = 5000
 
 x1 <- seq(from = -1, to = 1, length.out = n)
 
@@ -91,25 +36,40 @@ Full.Comb <- expand.grid(x1, x2)
 
 colnames(Full.Comb) <- c('x1', 'x2')
 
-dim(Full.Comb)
-head(Full.Comb)
+Sample = Full.Comb[sample(x = 1:nrow(Full.Comb), size = 2000, replace = FALSE),]
 
-Sample = Full.Comb[sample(x = 1:nrow(Full.Comb), size = 500, replace = FALSE),]
+X <- data.frame(x1   = Sample$x1,
+                x2   = Sample$x2,
+                x1.2 = Sample$x1^2,
+                x2.2 = Sample$x2^2,
+                x1.3 = Sample$x1^3,
+                x2.3 = Sample$x2^3,
+                x1.4 = Sample$x1^4,
+                x2.4 = Sample$x2^4,
+                x1x2 = Sample$x1* Sample$x2)
 
-beta <- c(-4.90, -4.40,  1.90,  2.50, -2.75,  3.50)
+beta <- c(-1, 1,  4,  2, -2,  -1, 3)
 
-y <- beta[1] + beta[1]*X$x1 + beta[2]*X$x2.2 + beta[3]*X$x1.3 + beta[4]*X$x2.2 + beta[5]*X$x2.4 + beta[6]*X$x1*X$x2
+y <- beta[1] +
+     beta[2]*X$x1 +
+     beta[3]*X$x1.2 +
+     beta[4]*X$x1.3 +
+     beta[5]*X$x2.2 +
+     beta[6]*X$x2.4 +
+     beta[7]*X$x1*X$x2
 
-summary(y)
+y <- y + rnorm(n = length(y), mean = 0, sd = 0.75)
 
-y <- y + rnorm(n = n, mean = 0, sd = 2.5)
+Data <- data.frame(y, Sample)
 
-Ex2.Data.v2 <- data.frame(y, Sample)
+setwd('~/Intro_to_R/Data/Linear_Modelling/')
 
-write.csv(x = Ex2.Data.v2, row.names = FALSE, file = '~/Intro_to_R/Data/Linear_Modelling/Ex2_Data_v2.csv')
+write.csv(x = Data, row.names = FALSE, file = 'Multiple_Regression_Data.csv')
 
-##
-#
-# Make some nice hills and valleys by calculating normal densities at (x1, x2) from a mixture of normal distributions
-
-
+################################################################################
+#                                                                              #
+#               End of Code File to Generate the Data for Module 2             #
+#                                                                              #
+#                          Linear Regression in R                              #
+#                                                                              #
+################################################################################
