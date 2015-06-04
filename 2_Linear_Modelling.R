@@ -43,9 +43,123 @@ Data <- read.csv(file = 'Multiple_Regression_Data.csv')
 
 library('ggplot2')
 
-p <- ggplot(aes(x = x1, y = x2, colour = y), data = Data) + coord_equal()
+summary(Data)
 
+p1 <- ggplot(aes(x = x1, y = y), data = Data)
+p1 + geom_point() #+ geom_smooth()
+p1 + geom_point(alpha = 0.5)
+p1 <- p1 + geom_point(alpha = 0.5)
+
+
+p2 <- ggplot(aes(x = x2, y = y), data = Data)
+p2 + geom_point() #+ geom_smooth()
+p2 + geom_point(alpha = 0.5) #+ geom_smooth()
+
+## Let's start with independent variable 'x1' alone
+
+model.1 <- lm(y ~ x1, data = Data)
+model.1
+class(model.1)
+summary(model.1)
+
+par(mfcol = c(2,2))
+plot(model.1)
+
+
+model.1
+coef(model.1)
+coef(model.1)[1]
+coef(model.1)[2]
+
+p1 + geom_abline(intercept = coef(model.1)[1], slope = coef(model.1)[2], colour = 'blue')
+
+# Let's calculate a 95% confidence band for the fit from model.1
+
+# First we need to set up a vector of x1 values at which to conduct the calculations
+
+x1.seq <- with(Data, seq(from = min(x1), to = max(x1), length.out = 500))
+
+Pred.seq <- data.frame(x1 = x1.seq)
+
+
+Pred.m1 <- predict(object = model.1, newdata = Pred.seq, interval = 'confidence', level = 0.95)
+
+head(Pred.m1)
+
+Pred.m1 <- data.frame(x1 = x1.seq, Pred.m1)
+
+head(Pred.m1)
+
+colnames(Pred.m1) <- c('x1', 'y', 'lwr', 'upr')
+
+p1 + geom_line(aes(x = x1, y = y), colour = 'blue', data = Pred.m1)
+
+p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), data = Pred.m1)
+
+
+p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'blue', alpha = 0.5, data = Pred.m1)
+
+
+p1 <- p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'blue', alpha = 0.5, data = Pred.m1)
+p1 <- p1 + geom_line(aes(x = x1, y = y), colour = 'blue', data = Pred.m1)
+p1
+
+# Let's try adding a quadratic term for x1
+
+Data.2 <- data.frame(Data, x1.2 = Data$x1^2)
+
+model.2 <- lm(y ~ x1 + x1.2, data = Data.2)
+
+par(mfcol = c(2,2))
+plot(model.2)
+plot(model.1)
+# so we have an improvement
+
+summary(model.2)
+
+head(Pred.seq)
+
+Pred.seq <- data.frame(Pred.seq, x1.2 = Pred.seq$x1^2)
+
+Pred.m2 <- predict(object = model.2, newdata = Pred.seq, interval = 'confidence', level = 0.95)
+
+head(Pred.m2)
+
+Pred.m2 <- data.frame(x1 = x1.seq, Pred.m2)
+
+colnames(Pred.m2) <- c('x1', 'y', 'lwr', 'upr')
+
+p1 + geom_line(aes(x = x1, y = y), colour = 'green', data = Pred.m2)
+
+p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'green', alpha = 0.5, data = Pred.m2)
+
+p1 <- p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'green', alpha = 0.5, data = Pred.m2)
+
+# Your turn - fit a new model with uses x1 as linear, quadratic and cubic terms
+# then repeat the above steps:
+#    1) produce the diagnostic plots
+#    2) calculate a 95% confidence band for the fit
+#    3) add the predicted values and the confidence band to the fit using a different colour
+
+# Recall that the second independent variable 'x2' also seemed to be influencing the dependent variable y
+
+p2 + geom_point(alpha = 0.5)
+
+
+# If you'd like some more practice try doing all of the above again for x2
+
+# Let's now look at linear models that use both 'x1' and 'x2'
+
+# First of all let's plot x1, x2 and y together:
+
+p <- ggplot(aes(x = x1, y = x2, colour = y), data = Data) + coord_equal()
+p + geom_point()
+p + geom_point() + scale_colour_gradientn(colours = heat.colors(n = 1e3))
 p + geom_point() + scale_colour_gradientn(colours = rev(rainbow(start = 0, end = 0.7, n = 1e3)))
+
+# We've seen above the polynomial terms are useful for predicting y from the covariate x1
+# Let's now create a dataframe containing polynomial terms up to order four for each covariate
+# along with a linear interaction term:
 
 X <- data.frame(x1 = Data$x1,
                 x2 = Data$x2,
@@ -107,8 +221,18 @@ p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start =
 
 p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits) + coord_equal()  + geom_point(colour = 'black', size = 3, data = Data) + geom_point(aes(colour = y), size = 2, data = Data) + scale_colour_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits )
 
-library('rgl')
 
+################################################################################
+#                                                                              #
+# 3 Dimensional plots are useful in this scenario for displaying the bounds of #
+#            confidence or prediction regions around the fit                   #
+#                                                                              #
+################################################################################
+
+# for 3D ploting we are going to use the R package 'rgl' :
+
+library('rgl')
+open3d(antialias = 4, bg = list(color = 'black'))
 with(Data, rgl.spheres(x = x1, z = x2, y = y/max(abs(y)), radius = 0.005, color = 'cyan', alpha = 0.5))
 axes3d(color = 'white',alpha = 1)
 title3d(xlab = 'x1', ylab = 'y', zlab = 'x2', color = 'white', size = 11)
