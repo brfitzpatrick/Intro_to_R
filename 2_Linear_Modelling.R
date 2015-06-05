@@ -35,28 +35,45 @@ install.packages('ggplot2')
 
 install.packages('rgl')
 
-# Read in the data
+library('ggplot2')
+library('rgl')
 
+# ggplot2 has a great documentation website http://docs.ggplot2.org/current/
+
+# Read in the data
+# Navigate to and Select the 'Multiple_Regression_Data.csv' in the dialogue box
+# the following command opens:
+Data <- read.csv(file = file.choose())
+
+# this can also be done by setting the working directory to wherever on you
+# harddrive you saved the course files:
 setwd('~/Intro_to_R/Data/Linear_Modelling/')
 
 Data <- read.csv(file = 'Multiple_Regression_Data.csv')
 
-library('ggplot2')
-
+# View a summary of the data
 summary(Data)
 
+# Plot the data
 p1 <- ggplot(aes(x = x1, y = y), data = Data)
-p1 + geom_point() #+ geom_smooth()
+p1
+# Note the error as we have yet to request anything be drawn having only set
+# the coordinate systems
+# to produce a scatter plot use the 'points' geometry
+
+p1 + geom_point(alpha = 0.5)
+p1
+
+p1 + geom_point()
 p1 + geom_point(alpha = 0.5)
 p1 <- p1 + geom_point(alpha = 0.5)
-
+p1
 
 p2 <- ggplot(aes(x = x2, y = y), data = Data)
-p2 + geom_point() #+ geom_smooth()
-p2 + geom_point(alpha = 0.5) #+ geom_smooth()
+p2 + geom_point()
+p2 + geom_point(alpha = 0.5)
 
 ## Let's start with independent variable 'x1' alone
-
 model.1 <- lm(y ~ x1, data = Data)
 model.1
 class(model.1)
@@ -65,12 +82,11 @@ summary(model.1)
 par(mfcol = c(2,2))
 plot(model.1)
 
-
 model.1
 coef(model.1)
 coef(model.1)[1]
 coef(model.1)[2]
-
+p1
 p1 + geom_abline(intercept = coef(model.1)[1], slope = coef(model.1)[2], colour = 'blue')
 
 # Let's calculate a 95% confidence band for the fit from model.1
@@ -78,9 +94,9 @@ p1 + geom_abline(intercept = coef(model.1)[1], slope = coef(model.1)[2], colour 
 # First we need to set up a vector of x1 values at which to conduct the calculations
 
 x1.seq <- with(Data, seq(from = min(x1), to = max(x1), length.out = 500))
-
+summary(x1.seq)
 Pred.seq <- data.frame(x1 = x1.seq)
-
+head(Pred.seq)
 
 Pred.m1 <- predict(object = model.1, newdata = Pred.seq, interval = 'confidence', level = 0.95)
 
@@ -91,14 +107,15 @@ Pred.m1 <- data.frame(x1 = x1.seq, Pred.m1)
 head(Pred.m1)
 
 colnames(Pred.m1) <- c('x1', 'y', 'lwr', 'upr')
+p1
 
 p1 + geom_line(aes(x = x1, y = y), colour = 'blue', data = Pred.m1)
 
 p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), data = Pred.m1)
 
-
 p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'blue', alpha = 0.5, data = Pred.m1)
 
+p1
 
 p1 <- p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'blue', alpha = 0.5, data = Pred.m1)
 p1 <- p1 + geom_line(aes(x = x1, y = y), colour = 'blue', data = Pred.m1)
@@ -107,7 +124,7 @@ p1
 # Let's try adding a quadratic term for x1
 
 Data.2 <- data.frame(Data, x1.2 = Data$x1^2)
-
+head(Data.2)
 model.2 <- lm(y ~ x1 + x1.2, data = Data.2)
 
 par(mfcol = c(2,2))
@@ -120,7 +137,7 @@ summary(model.2)
 head(Pred.seq)
 
 Pred.seq <- data.frame(Pred.seq, x1.2 = Pred.seq$x1^2)
-
+head(Pred.seq)
 Pred.m2 <- predict(object = model.2, newdata = Pred.seq, interval = 'confidence', level = 0.95)
 
 head(Pred.m2)
@@ -128,7 +145,7 @@ head(Pred.m2)
 Pred.m2 <- data.frame(x1 = x1.seq, Pred.m2)
 
 colnames(Pred.m2) <- c('x1', 'y', 'lwr', 'upr')
-
+p1
 p1 + geom_line(aes(x = x1, y = y), colour = 'green', data = Pred.m2)
 
 p1 + geom_ribbon(aes(x = x1, ymin = lwr, ymax = upr), fill = 'green', alpha = 0.5, data = Pred.m2)
@@ -153,8 +170,10 @@ p2 + geom_point(alpha = 0.5)
 # First of all let's plot x1, x2 and y together:
 
 p <- ggplot(aes(x = x1, y = x2, colour = y), data = Data) + coord_equal()
-p + geom_point()
-p + geom_point() + scale_colour_gradientn(colours = heat.colors(n = 1e3))
+p + geom_point(size = 6)
+
+p + geom_point(size = 6) + scale_colour_gradientn(colours = rev(heat.colors(n = 1e3)))
+
 p + geom_point() + scale_colour_gradientn(colours = rev(rainbow(start = 0, end = 0.7, n = 1e3)))
 
 # We've seen above the polynomial terms are useful for predicting y from the covariate x1
@@ -171,14 +190,21 @@ X <- data.frame(x1 = Data$x1,
                 x2.4 = Data$x2^4,
                 x1x2 = Data$x1*Data$x2)
 
+choose(10,2)
+
 m1.lm = lm(Data$y ~ +1, data = X)
 
 m2.lm = lm(Data$y ~ ., data = X)
+
+summary(m1.lm)
+summary(m2.lm)
 
 # which of model is best?
 # one way to answer this question is with stepwise variable selection using the Akike Information Criterion (AIC)
 
 m.select <- step(object = m1.lm, scope = list(lower = m1.lm, upper = m2.lm), direction = 'both', steps = 1e5)
+
+m.select
 
 #essentially what this is doing is starting with the model provided as the 'object' argument and taking the model provided as 'lower' as the simplest model and the model provided as 'upper' as the most complex model
 #then looking at all possible variable additions and deletions from the model
@@ -191,8 +217,11 @@ m.select <- step(object = m1.lm, scope = list(lower = m1.lm, upper = m2.lm), dir
 
 par(mfcol = c(2,2))
 plot(m.select)
-
+summary(Data$y)
 Pred.at.df <- expand.grid(seq(from = min(X$x1), to = max(X$x1), length.out = 500),seq(from = min(X$x2), to = max(X$x2), length.out = 500))
+
+head(Pred.at.df)
+dim(Pred.at.df)
 
 colnames(Pred.at.df) <- c('x1','x2')
 
@@ -210,14 +239,21 @@ y.hat <- predict(object = m.select, newdata = Pred.at.df.full)
 
 Prediction <- data.frame(y = y.hat, x1 = Pred.at.df.full$x1, x2 = Pred.at.df.full$x2)
 
+head(Prediction)
 range(Data$y)
 range(Prediction$y)
 
 scale.limits = range(Data$y)
 
 p2 <- ggplot(aes(x = x1, y = x2, fill = y), data = Prediction) + coord_equal()
+p2 + geom_raster() + scale_fill_gradientn(colours = heat.colors(n = 1e3))
 
-p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)))
+p2 <- p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)),limits = scale.limits)
+
+p2 <- p2 + geom_point(colour = 'black', size = 3, data = Data)
+
+p2 + geom_point(aes(colour = y), size = 2, data = Data) + scale_colour_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits)
+
 
 p2 + geom_raster() + scale_fill_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits) + coord_equal()  + geom_point(colour = 'black', size = 3, data = Data) + geom_point(aes(colour = y), size = 2, data = Data) + scale_colour_gradientn(colours = rev(rainbow(n = 1e3, start = 0, end = 0.7)), limits = scale.limits )
 
@@ -278,7 +314,7 @@ for(i in 1:length(n1e2.pred.at.x1)){
         n1e4.upr.mat[i,j] <- pred.ij[,'upr']}}
 
 
-rgl.surface(x = n1e2.pred.at.x1, z = n1e2.pred.at.x2, y = n1e4.pred.mat/max(abs(Data$y)), alpha = 0.25, col = 'green')
+rgl.surface(x = n1e2.pred.at.x1, z = n1e2.pred.at.x2, y = n1e4.fit.mat/max(abs(Data$y)), alpha = 0.25, col = 'green')
 
 ##############################
 #                            #
@@ -349,11 +385,9 @@ n.frame = fps * sec
 theta.v = seq(from = 0 , to = 360, length.out = n.frame)
 zoom.v = c(seq(from = 0.75, to = 0.25, length.out = n.frame/2), seq(from = 0.25, to = 0.75, length.out = n.frame/2))
 setwd('~/Animation/MLR_80pc_Pred_Int/Frames/')
-open3d(antialias = 4)
-rgl.bg()
 rgl.light(viewpoint.rel = TRUE)
 for(i in 1:length(theta.v)){
-    view3d(theta = theta.v[i], phi = 5, zoom = zoom.v[i])
+    view3d(theta = theta.v[i], phi = 5, zoom = zoom.v[i])}
     rgl.snapshot(filename = paste(i,'.png',sep = ''))}
 
 # Open the frames as layers in GIMP
