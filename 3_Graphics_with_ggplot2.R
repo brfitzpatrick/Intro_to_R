@@ -308,17 +308,17 @@ Polygon.df$Value = rep(1,nrow(Polygon.df))
 
 U.p <- U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
 
-U.p <- U.p + geom_path(data = Polygon.df, col = 'red')
+U.p <- U.p + geom_path(data = Polygon.df, col = 'green')
 
-U.p <- U.p + geom_polygon(data = Polygon.df, fill = 'red', alpha = 0.5)
+U.p + geom_polygon(data = Polygon.df, fill = 'green', alpha = 0.5)
 
-U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25, y = median(Polygon.df[,2]), label = 'An area in the desert...', colour = 'red', hjust = 0)
+U.p + annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'green', hjust = 0)
 
-U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25, y = median(Polygon.df[,2]), label = 'An area in the desert...', colour = 'red', hjust = 0, size = 8)
+U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25, y = median(Polygon.df[,2]), label = 'An area in the desert...', colour = 'green', hjust = 0, size = 8)
 
-PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]), length.out = 50)
+PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]), length.out = 25)
 
-PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]), length.out = 50)
+PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]), length.out = 25)
 
 PG <- expand.grid(PG.x, PG.y)
 
@@ -326,9 +326,45 @@ PG$Value <- rep(1,nrow(PG))
 
 PG$Member <- point.in.polygon(point.x = PG[,1], point.y = PG[,2], pol.x = Polygon.df[,1], pol.y = Polygon.df[,2])
 
-colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value')
+unique(PG$Member)
 
-U.p + geom_point(aes(colour = Member), size = 1, data = PG) + scale_colour_gradient2(high = 'red', low = 'green') # needs a little works on the scale
+PG$Member.Factor <- factor(levels =  c('In','Out'), x = vector(mode = 'character', length = nrow(PG)))
+
+PG[PG$Member == 1, 'Member.Factor'] <- 'In'
+
+PG[PG$Member == 0, 'Member.Factor'] <- 'Out'
+
+summary(PG$Member.Factor)
+
+colnames(PG)
+
+colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value', 'Member', 'Member.Factor')
+
+U.p + geom_point(colour = 'black', size = 2, data = PG) +
+      geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
+      scale_colour_manual(values = c('green', 'red'))
+
+U.p + geom_point(colour = 'black', size = 2, data = PG) +
+      geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
+      scale_colour_manual(values = c('green', 'red')) +
+      xlim(0, 1600)
+
+
+U.p + geom_point(colour = 'black', size = 2, data = PG) +
+      geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
+      scale_colour_manual(values = c('green', 'red')) +
+      xlim(0, 1000) +
+      ylim(450, 1050) +
+      annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0) +
+     geom_path(data = PG[PG$Member.Factor == 'In',], colour = 'green') # strike
+
+
+      ylim(c(min(PG[,1]), max(PG[,1])))          
+
+          
+      ylim(PG[,2])
+
+# needs a little works on the scale
 
 Small.Polygon <- drawPoly()
 
