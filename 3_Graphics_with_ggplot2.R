@@ -362,8 +362,10 @@ Desert.rst <- raster(x = '~/Intro_to_R/Data/Graphics_with_ggplot2/landsat_image.
 
 
 plot(Desert.rst, col = grey(level = 1:1e4/1e4))
-par(new = TRUE)
 Polygon <- drawPoly(sp = FALSE)
+par(new = TRUE)
+plot(Polygon)
+
 
 class(Polygon)
 
@@ -387,7 +389,7 @@ U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
 
 Polygon.df <- data.frame(Polygon)
 
-colnames(Polygon.df) <- colnames(Desert.df) <- c('Pixels_East', 'Pixels_North')
+colnames(Polygon.df) <- c('Pixels_East', 'Pixels_North')
 
 Polygon.df$Value = rep(1,nrow(Polygon.df))
 
@@ -451,15 +453,13 @@ U.p <- U.p + geom_point(colour = 'black', size = 2, data = PG) +
       ylim(450, 1050) +
       annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0)
 
+U.p
+
 U.p + geom_path(data = PG[PG$Member.Factor == 'In',], colour = 'green')
 
 # what else might a path geometry be good for (outside a spatial context...) ?
 
- xlim(0, 750) +
-      ylim(450, 1050) +
-
 getwd()
+setwd('/home/ben/Documents/')
 ggsave(plot = U.p, filename = 'desert.pdf' , width = 16,
        height = 9, units = 'in')
-
-
