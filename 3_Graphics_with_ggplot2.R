@@ -27,7 +27,7 @@
 ################################################################################
 
 # Hello and welcome to the code file to accompany Module III of this course.
-# You will notice that this code file is a mess (sorry about that) but I'll talk
+# You will notice that this code file is a mess (sorry about that) I'll talk
 # you all through it and will upload a neater, more clearly annotated  version
 # to the repository with edits inspired by how the module goes when I
 # demonstrate it live.  
@@ -37,7 +37,7 @@
 
 ## ggplot2 is exceptionally well documented online
 
-# here is a introductory tutorial by it's author Hadely Wickham:
+# here is an introductory tutorial by it's author Hadely Wickham:
 # <http://rpubs.com/hadley/ggplot-intro>
 
 # comprensive manual page style help files for each element of ggplot2 may be
@@ -50,10 +50,10 @@
 # Here is a quick introductory example to demonstrate the power of the grammar
 # of graphics on the 'diamonds' data which are included in the 'ggplot2' package
 
+# It all begins with loading the 'ggplot2' package (this loads all the functions
+# and data from the package into memory making them available for use in R)
 
 library('ggplot2')
-
-
 
 # first I maps a variable, 'carat', to an aethetic, here the horizontal axis:
 
@@ -85,12 +85,22 @@ p + coord_polar(theta = 'x')
 
 # Now for some details
 # let's load the 'crabs' dataframe that comes with the MASS package:
+
 library(MASS)
 attach(crabs)
 summary(crabs)
 ?crabs
 
-
+################################################################################
+################################################################################
+###                                                                          ###
+###                                                                          ###
+###                    Introducing the Grammar of Graphics                   ###
+###                             with Scatter Plots                           ###
+###                                                                          ###
+###                                                                          ###
+################################################################################
+################################################################################
 
 # Let's start with a scatter plot of carapace width against carapace length
 
@@ -115,8 +125,6 @@ clcw.sp + geom_point()
 # both axes to have the same scale
 
 clcw.sp + geom_point() + coord_equal()
-
-
 
 # I have a few plans for additional arguments we'll pass to the points geometry
 # so we wont store that in clcw.sp just yet but we'll store the specification
@@ -145,6 +153,7 @@ clcw.sp + geom_point(aes(colour = sp))
 clcw.sp + geom_point(aes(colour = sp)) + labs(colour = 'Species')
 
 # if we check 
+
 ?crabs
 
 # we see the sp = B represents the blue species and sp = O represents the
@@ -162,8 +171,6 @@ clcw.sp +
     geom_point(aes(colour = sp)) +
     labs(colour = 'Species') +
      scale_colour_manual(values = c("#008B8B", "#ffa500"))
-
-###
 
 clcw.sp +
     geom_point(aes(colour = sp)) +
@@ -233,9 +240,6 @@ Crabs.2$Species <- factor(Crabs.2$Species)
 summary(Crabs.2)
 
 class(Crabs.2$sex)
-class(Crabs.2$Sex)
-######################
-
 
 clcw.sp2 <- ggplot(aes(x = CL, y = CW), data = Crabs.2)
 clcw.sp2 <- clcw.sp2 + coord_equal()
@@ -257,7 +261,6 @@ setwd('~/Desktop')
 ggsave(plot = clcw.sp2, filename = 'clcw.jpg' , width = 10, height = 10,
        units = 'cm', dpi = 600)
 
-
 clcw.sp2 <- clcw.sp2 + theme_bw()
 clcw.sp2
 
@@ -267,10 +270,15 @@ ggsave(plot = clcw.sp2, filename = 'clcw.png' , width = 10, height = 10,
 ggsave(plot = clcw.sp2, filename = 'clcw.pdf' , width = 10, height = 10,
        units = 'cm')
 
-?crabs
-
-### Ploting frequency
-
+################################################################################
+################################################################################
+###                                                                          ###
+###                                                                          ###
+###                     Distributions of Single Variable                     ###
+###                     Histograms and Denisty Estimates                     ###
+###                                                                          ###
+################################################################################
+################################################################################
 
 cw.p <- ggplot(aes(x = CW), data = crabs)
 cw.p + geom_histogram()
@@ -278,27 +286,40 @@ cw.p + geom_density()
 cw.p + geom_density(aes(colour = sp))
 cw.p + geom_density(aes(colour = sp, linetype = sex))
 
-cw.p + geom_histogram(aes( y = ..density..), fill = 'grey', colour = 'black') + geom_density(aes(colour = sp, linetype = sex), size = 1.5)
+cw.p +
+    geom_histogram(aes( y = ..density..), fill = 'grey', colour = 'black') +
+    geom_density(aes(colour = sp, linetype = sex), size = 1.5)
 
-cw.p + geom_histogram(aes( y = ..density..), fill = 'grey', colour = 'black') + geom_density(aes(colour = sp, linetype = sex), size = 1.5) + facet_grid(sp ~ sex)
+cw.p +
+    geom_histogram(aes( y = ..density..), fill = 'grey', colour = 'black') +
+    geom_density(aes(colour = sp, linetype = sex), size = 1.5) +
+    facet_grid(sp ~ sex)
 
+################################################################################
+################################################################################
+###                                                                          ###
+###                                                                          ###
+###               Exercise Exploring Possumn Skull Morphology                ###
+###                            with Scatter Plots                            ###
+###                                                                          ###
+###                                                                          ###
+################################################################################
+################################################################################
 
-
-scale_colour_manual(values = c("cyan3", "orange"), labels = c('Blue', 'Orange'))
-
-###
+# the DAAG package includes a some data on possum skull morphology
 library(DAAG)
+# you may need to install the DAAG package
 install.packages('DAAG')
 library('DAAG')
 attach(possum)
 ?possum
 
-####### 
-#######  Your Turn 
-#######  Please Make some scatter plots to explore the
-#######  Possum's data
-#######
-#######
+# Please Make some scatter plots to explore the Possum skull data:
+#   i) Try using point shape and colour to convey additional information of your
+#      scatter plot
+#  ii) Try faceting to create small multiples of subplots whereby subsets of the 
+#      data are displayed in different pannels of the plot
+# iii) Practise saving a copy of your finalised plot.
 
 
 
@@ -324,20 +345,41 @@ attach(possum)
 
 
 
+
+
+
+
+
+
+
+
+# Don't look at these until you have had a go at the exercise yourself!
 
 possum.p <- ggplot(aes(x = belly, y = chest, shape = sex), data = possum)
 possum.p + geom_point(alpha = 0.25)
 possum.p + geom_jitter() + facet_wrap(~ sex)
-
 
 possum.p <- ggplot(aes(x = hdlngth, y = skullw, shape = sex), data = possum)
 possum.p + geom_point(alpha = 0.25)
 possum.p + geom_jitter() + facet_wrap(~ sex)
 
 possum.p <- ggplot(aes(x = sex, y = skullw, shape = sex), data = possum)
-possum.p + geom_boxplot(outlier.size = 0) + geom_point(position = position_jitter(width = 0.3, height = 0)) + coord_flip()
+possum.p +
+    geom_boxplot(outlier.size = 0) +
+    geom_point(position = position_jitter(width = 0.3, height = 0)) +
+    coord_flip()
 
-###
+################################################################################
+################################################################################
+###                                                                          ###
+###                                                                          ###
+###                                                                          ###
+###                      Visualising Satellite Imagery                       ### 
+###                                                                          ###
+###                                                                          ###
+###                                                                          ###
+################################################################################
+################################################################################
 
 # for some geospatial visualisations I'm going to use another package 'raster'
 # to do the majority of the work but illustrate that 'ggplot2' is capable of
@@ -351,21 +393,17 @@ possum.p + geom_boxplot(outlier.size = 0) + geom_point(position = position_jitte
 # 'ggplot2' can produce nice geostatial visualisations in a timely fashion
 
 library('raster')
-setwd('/home/ben/Downloads/')
-
-# should try and get a geotiff so we can have coordinates in eastings and northings...later this demonstrates the main ideas for now...
 
 Desert.rst <- raster(x = file.choose())
 # and select '~Intro_2_R/Data/landsat_image.png' from the dialoguge box
 # or just use
-Desert.rst <- raster(x = '~/Intro_to_R/Data/Graphics_with_ggplot2/landsat_image.png')
-
+setwd('~/Intro_to_R/Data/Graphics_with_ggplot2/')
+Desert.rst <- raster(x = 'landsat_image.png')
 
 plot(Desert.rst, col = grey(level = 1:1e4/1e4))
 Polygon <- drawPoly(sp = FALSE)
 par(new = TRUE)
 plot(Polygon)
-
 
 class(Polygon)
 
@@ -378,13 +416,17 @@ summary(Desert.rst)
 class(Desert.rst)
 coordinates(Desert.rst)
 
-Desert.df <- data.frame(coordinates(Desert.rst), extract(x = Desert.rst, y = coordinates(Desert.rst)))
+Desert.df <- data.frame(coordinates(Desert.rst),
+                        extract(x = Desert.rst, y = coordinates(Desert.rst)))
 
 head(Desert.df)
 
 colnames(Desert.df) <- c('Pixels_East', 'Pixels_North', 'Value')
 
-U.p <- ggplot(aes(x = Pixels_East, y = Pixels_North, fill = Value), data = Desert.df) + coord_equal()
+U.p <- ggplot(aes(x = Pixels_East, y = Pixels_North, fill = Value),
+              data = Desert.df) +
+                  coord_equal()
+
 U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
 
 Polygon.df <- data.frame(Polygon)
@@ -393,30 +435,39 @@ colnames(Polygon.df) <- c('Pixels_East', 'Pixels_North')
 
 Polygon.df$Value = rep(1,nrow(Polygon.df))
 
-
-U.p <- U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
+U.p <- U.p + geom_raster() +
+             scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
 
 U.p <- U.p + geom_path(data = Polygon.df, col = 'green')
 
 U.p + geom_polygon(data = Polygon.df, fill = 'green', alpha = 0.5)
 
-U.p + annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'green', hjust = 0)
+U.p + annotate(geom = 'text', x = min(Polygon.df[,1]),
+               y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
+               colour = 'green', hjust = 0)
 
-U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25, y = median(Polygon.df[,2]), label = 'An area in the desert...', colour = 'green', hjust = 0, size = 8)
+U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25,
+                      y = median(Polygon.df[,2]),
+                      label = 'An area in the desert...',
+                      colour = 'green', hjust = 0, size = 8)
 
-PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]), length.out = 25)
+PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]),
+            length.out = 25)
 
-PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]), length.out = 25)
+PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]),
+            length.out = 25)
 
 PG <- expand.grid(PG.x, PG.y)
 
 PG$Value <- rep(1,nrow(PG))
 
-PG$Member <- point.in.polygon(point.x = PG[,1], point.y = PG[,2], pol.x = Polygon.df[,1], pol.y = Polygon.df[,2])
+PG$Member <- point.in.polygon(point.x = PG[,1], point.y = PG[,2],
+                              pol.x = Polygon.df[,1], pol.y = Polygon.df[,2])
 
 unique(PG$Member)
 
-PG$Member.Factor <- factor(levels =  c('In','Out'), x = vector(mode = 'character', length = nrow(PG)))
+PG$Member.Factor <- factor(levels =  c('In','Out'),
+                           x = vector(mode = 'character', length = nrow(PG)))
 
 PG[PG$Member == 1, 'Member.Factor'] <- 'In'
 
@@ -426,7 +477,8 @@ summary(PG$Member.Factor)
 
 colnames(PG)
 
-colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value', 'Member', 'Member.Factor')
+colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value', 'Member',
+                  'Member.Factor')
 
 U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
@@ -443,15 +495,18 @@ U.p + geom_point(colour = 'black', size = 2, data = PG) +
       scale_colour_manual(values = c('green', 'red')) +
       xlim(0, 750) +
       ylim(450, 1050) +
-      annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0)
-
+      annotate(geom = 'text', x = min(Polygon.df[,1]),
+               y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
+               colour = 'black', hjust = 0)
 
 U.p <- U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
       scale_colour_manual(values = c('green', 'red')) +
       xlim(0, 750) +
       ylim(450, 1050) +
-      annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0)
+      annotate(geom = 'text', x = min(Polygon.df[,1]),
+               y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
+               colour = 'black', hjust = 0)
 
 U.p
 
@@ -463,3 +518,11 @@ getwd()
 setwd('/home/ben/Documents/')
 ggsave(plot = U.p, filename = 'desert.pdf' , width = 16,
        height = 9, units = 'in')
+
+################################################################################
+#                                                                              #
+#               End of Code File to Accompany Course Module 3                  #
+#                                                                              #
+#                         Graphics with 'ggplot2'                              #
+#                                                                              #
+################################################################################
