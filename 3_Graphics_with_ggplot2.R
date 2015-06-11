@@ -1,3 +1,15 @@
+## ggplot2 is exceptionally well documented online
+
+# here is a introductory tutorial by it's author Hadely Wickham:
+# <http://rpubs.com/hadley/ggplot-intro>
+
+# comprensive manual page style help files for each element of ggplot2 may be
+# found here:
+# <http://docs.ggplot2.org/current/>
+
+# honestly you don't really need me to learn this stuff but seeing as we're all
+# together in this nice place...
+
 ###
 
 
@@ -29,7 +41,8 @@ p + coord_polar(theta = 'x')
 # we can make two very different graphs depicting the frequency with which
 # different carat dimonds were of the different cut classes
 
-# note how little additional code was required for these transformations...
+# note how little additional code was required for these transformations, such
+# is the power of the grammar of graphics
 
 # Now for some details
 # let's load the 'crabs' dataframe that comes with the MASS package:
@@ -213,7 +226,7 @@ ggsave(plot = clcw.sp2, filename = 'clcw.png' , width = 10, height = 10,
 ggsave(plot = clcw.sp2, filename = 'clcw.pdf' , width = 10, height = 10,
        units = 'cm')
 
-
+?crabs
 
 
 
@@ -253,3 +266,71 @@ possum.p + geom_jitter() + facet_wrap(~ sex)
 
 possum.p <- ggplot(aes(x = sex, y = skullw, shape = sex), data = possum)
 possum.p + geom_boxplot(outlier.size = 0) + geom_point(position = position_jitter(width = 0.3, height = 0)) + coord_flip()
+
+
+
+###
+
+library('raster')
+setwd('/home/ben/Documents/')
+Desert.rst <- raster(x = 'Desert_Crop2.png')
+
+plot(Desert.rst, col = grey(level = 1:1e4/1e4))
+par(new = TRUE)
+Polygon <- drawPoly(sp = FALSE)
+
+class(Polygon)
+
+head(Polygon)
+
+summary(Polygon)
+
+summary(Desert.rst)
+
+class(Desert.rst)
+coordinates(Desert.rst)
+
+Desert.df <- data.frame(coordinates(Desert.rst), extract(x = Desert.rst, y = coordinates(Desert.rst)))
+
+head(Desert.df)
+
+colnames(Desert.df) <- c('Pixels_East', 'Pixels_North', 'Value')
+
+U.p <- ggplot(aes(x = Pixels_East, y = Pixels_North, fill = Value), data = Desert.df) + coord_equal()
+U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
+
+Polygon.df <- data.frame(Polygon)
+
+colnames(Polygon.df) <- colnames(Desert.df) <- c('Pixels_East', 'Pixels_North')
+
+Polygon.df$Value = rep(1,nrow(Polygon.df))
+
+
+U.p <- U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
+
+U.p <- U.p + geom_path(data = Polygon.df, col = 'red')
+
+U.p <- U.p + geom_polygon(data = Polygon.df, fill = 'red', alpha = 0.5)
+
+U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25, y = median(Polygon.df[,2]), label = 'An area in the desert...', colour = 'red', hjust = 0)
+
+U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25, y = median(Polygon.df[,2]), label = 'An area in the desert...', colour = 'red', hjust = 0, size = 8)
+
+PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]), length.out = 50)
+
+PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]), length.out = 50)
+
+PG <- expand.grid(PG.x, PG.y)
+
+PG$Value <- rep(1,nrow(PG))
+
+PG$Member <- point.in.polygon(point.x = PG[,1], point.y = PG[,2], pol.x = Polygon.df[,1], pol.y = Polygon.df[,2])
+
+colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value')
+
+U.p + geom_point(aes(colour = Member), size = 1, data = PG) + scale_colour_gradient2(high = 'red', low = 'green') # needs a little works on the scale
+
+Small.Polygon <- drawPoly()
+
+
+class(Small.Polygon)
