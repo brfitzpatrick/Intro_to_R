@@ -452,12 +452,14 @@ U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25,
                       colour = 'green', hjust = 0, size = 8)
 
 PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]),
-            length.out = 25)
+            length.out = 500)
 
 PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]),
-            length.out = 25)
+            length.out = 500)
 
-PG <- expand.grid(PG.x, PG.y)
+PG.full <- expand.grid(PG.x, PG.y)
+
+PG <- PG.full[sample(x = 1:nrow(PG.full), size = 25), ]
 
 PG$Value <- rep(1,nrow(PG))
 
