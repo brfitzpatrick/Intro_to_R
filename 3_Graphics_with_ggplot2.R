@@ -1,3 +1,40 @@
+#     This the third R Code File for the Introduction to R Course available at
+#     https://github.com/brfitzpatrick/Intro_to_R
+#     Copyright (C) 2015  Ben R. Fitzpatrick.
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    The course author may be contacted by email at 
+#    <ben.r.fitzpatrick@gmail.com>
+
+################################################################################
+#                                                                              #
+#                   Code File to Accompany Course Module 3                     #
+#                                                                              #
+#                           Graphics with 'ggplot2'                            #
+#                                                                              #
+################################################################################
+
+# Hello and welcome to the code file to accompany Module III of this course.
+# You will notice that this code file is a mess (sorry about that) but I'll talk
+# you all through it and will upload a neater, more clearly annotated  version
+# to the repository with edits inspired by how the module goes when I
+# demonstrate it live.  
+# Thanks for you patience and thank you to my faithful testers!
+
+# To begin at the beginning:
+
 ## ggplot2 is exceptionally well documented online
 
 # here is a introductory tutorial by it's author Hadely Wickham:
@@ -7,18 +44,16 @@
 # found here:
 # <http://docs.ggplot2.org/current/>
 
-# honestly you don't really need me to learn this stuff but seeing as we're all
-# together in this nice place...
-
-###
-
-
-# Some simple examples:
+# so honestly you don't really need me to learn this stuff but seeing as we're
+# all here in this nice place...
 
 # Here is a quick introductory example to demonstrate the power of the grammar
-# of graphics
+# of graphics on the 'diamonds' data which are included in the 'ggplot2' package
+
 
 library('ggplot2')
+
+
 
 # first I maps a variable, 'carat', to an aethetic, here the horizontal axis:
 
@@ -41,6 +76,10 @@ p + coord_polar(theta = 'x')
 # we can make two very different graphs depicting the frequency with which
 # different carat dimonds were of the different cut classes
 
+# if you like coordinate systems check out the 2D projections of the spherical
+# earth in this example:
+## <http://docs.ggplot2.org/current/coord_map.html>
+
 # note how little additional code was required for these transformations, such
 # is the power of the grammar of graphics
 
@@ -50,6 +89,8 @@ library(MASS)
 attach(crabs)
 summary(crabs)
 ?crabs
+
+
 
 # Let's start with a scatter plot of carapace width against carapace length
 
@@ -228,7 +269,18 @@ ggsave(plot = clcw.sp2, filename = 'clcw.pdf' , width = 10, height = 10,
 
 ?crabs
 
+### Ploting frequency
 
+
+cw.p <- ggplot(aes(x = CW), data = crabs)
+cw.p + geom_histogram()
+cw.p + geom_density()
+cw.p + geom_density(aes(colour = sp))
+cw.p + geom_density(aes(colour = sp, linetype = sex))
+
+cw.p + geom_histogram(aes( y = ..density..), fill = 'grey', colour = 'black') + geom_density(aes(colour = sp, linetype = sex), size = 1.5)
+
+cw.p + geom_histogram(aes( y = ..density..), fill = 'grey', colour = 'black') + geom_density(aes(colour = sp, linetype = sex), size = 1.5) + facet_grid(sp ~ sex)
 
 
 
@@ -239,21 +291,39 @@ library(DAAG)
 install.packages('DAAG')
 library('DAAG')
 attach(possum)
+?possum
 
-# case = observation number
-# site = one of seven locations where possums were trapped
-# Pop = a factor which classifies the sites as Vic Victoria, other New South Wales or Queensland
-# sex = a factor with levels f female, m male 
-# age = age
-# hdlngth = head length
-# skullw = skull width
-# totlngth = total length
-# taill = tail length
-# footlgth = foot length
-# earconch = ear conch length
-# eye = distance from medial canthus to lateral canthus of right eye
-# chest = chest girth (in cm)
-# belly = belly girth (in cm) 
+####### 
+#######  Your Turn 
+#######  Please Make some scatter plots to explore the
+#######  Possum's data
+#######
+#######
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 possum.p <- ggplot(aes(x = belly, y = chest, shape = sex), data = possum)
 possum.p + geom_point(alpha = 0.25)
@@ -267,13 +337,29 @@ possum.p + geom_jitter() + facet_wrap(~ sex)
 possum.p <- ggplot(aes(x = sex, y = skullw, shape = sex), data = possum)
 possum.p + geom_boxplot(outlier.size = 0) + geom_point(position = position_jitter(width = 0.3, height = 0)) + coord_flip()
 
-
-
 ###
 
+# for some geospatial visualisations I'm going to use another package 'raster'
+# to do the majority of the work but illustrate that 'ggplot2' is capable of
+# visualising raster imagery once you convert the imagery into 'long' format
+# if you're going to be doing lots of geospatial modelling and visualisation
+# it may well be easier to work with the base graphics functions provided by
+# with the 'raster' package which will avoid the necessity to transform all the
+# rasters to long format which as rasters get bigger gets increasingly
+# computationall expensive and annoying
+# However for small to medium sized rasters (relative to your computers' RAM)
+# 'ggplot2' can produce nice geostatial visualisations in a timely fashion
+
 library('raster')
-setwd('/home/ben/Documents/')
-Desert.rst <- raster(x = 'Desert_Crop2.png')
+setwd('/home/ben/Downloads/')
+
+# should try and get a geotiff so we can have coordinates in eastings and northings...later this demonstrates the main ideas for now...
+
+Desert.rst <- raster(x = file.choose())
+# and select '~Intro_2_R/Data/landsat_image.png' from the dialoguge box
+# or just use
+Desert.rst <- raster(x = '~/Intro_to_R/Data/Graphics_with_ggplot2/landsat_image.png')
+
 
 plot(Desert.rst, col = grey(level = 1:1e4/1e4))
 par(new = TRUE)
@@ -353,20 +439,27 @@ U.p + geom_point(colour = 'black', size = 2, data = PG) +
 U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
       scale_colour_manual(values = c('green', 'red')) +
-      xlim(0, 1000) +
+      xlim(0, 750) +
       ylim(450, 1050) +
-      annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0) +
-     geom_path(data = PG[PG$Member.Factor == 'In',], colour = 'green') # strike
+      annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0)
 
 
-      ylim(c(min(PG[,1]), max(PG[,1])))          
+U.p <- U.p + geom_point(colour = 'black', size = 2, data = PG) +
+      geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
+      scale_colour_manual(values = c('green', 'red')) +
+      xlim(0, 750) +
+      ylim(450, 1050) +
+      annotate(geom = 'text', x = min(Polygon.df[,1]), y = min(Polygon.df[,2])-25, label = 'An area in the desert...', colour = 'black', hjust = 0)
 
-          
-      ylim(PG[,2])
+U.p + geom_path(data = PG[PG$Member.Factor == 'In',], colour = 'green')
 
-# needs a little works on the scale
+# what else might a path geometry be good for (outside a spatial context...) ?
 
-Small.Polygon <- drawPoly()
+ xlim(0, 750) +
+      ylim(450, 1050) +
+
+getwd()
+ggsave(plot = U.p, filename = 'desert.pdf' , width = 16,
+       height = 9, units = 'in')
 
 
-class(Small.Polygon)
