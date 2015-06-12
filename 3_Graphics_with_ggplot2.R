@@ -53,28 +53,20 @@
 # It all begins with loading the 'ggplot2' package (this loads all the functions
 # and data from the package into memory making them available for use in R)
 
+# Here is a quick example to demonstrate the power of the grammar of graphics:
+
 library('ggplot2')
 
-# first I maps a variable, 'carat', to an aethetic, here the horizontal axis:
+px <- ggplot(aes(x = cut, fill = cut), data = diamonds) + geom_bar(width = 1)
 
-p <- ggplot(aes(x = carat), data = diamonds)
+# A bar chart:
+px
 
-# next I add on a geometry and map a second variable, 'cut', to a second
-# aethetic, the colour filling the bars, setting all outlines to be black
-# (rather than coloured by 'cut' or another variable)
+# A coxcomb plot:
+px + coord_polar()
 
-p <- p + geom_bar(aes(fill = cut), colour = 'black')
-
-p # an we have histogram
-
-# now by swithing the coordinate system
-
-p + coord_polar(theta = 'y')
-
-p + coord_polar(theta = 'x')
-
-# we can make two very different graphs depicting the frequency with which
-# different carat dimonds were of the different cut classes
+# Something else:
+px + coord_polar(theta = 'y')
 
 # if you like coordinate systems check out the 2D projections of the spherical
 # earth in this example:
@@ -139,7 +131,7 @@ clcw.sp + geom_point()
 # same scale
 
 # next up we can make the axis labels more informative:
-clcw.sp <- clcw.sp +  labs(x = 'Carapace Width (mm)', y = 'Carapace Length (mm)')
+clcw.sp <- clcw.sp + labs(x = 'Carapace Width (mm)', y = 'Carapace Length (mm)')
 
 clcw.sp + geom_point()
 
@@ -170,7 +162,7 @@ clcw.sp +
 clcw.sp +
     geom_point(aes(colour = sp)) +
     labs(colour = 'Species') +
-     scale_colour_manual(values = c("#008B8B", "#ffa500"))
+    scale_colour_manual(values = c("#008B8B", "#ffa500"))
 
 clcw.sp +
     geom_point(aes(colour = sp)) +
@@ -180,8 +172,11 @@ clcw.sp +
 clcw.sp +
     geom_point(aes(colour = sp)) +
     labs(colour = 'Species') +
-+ scale_colour_manual(values = c("cyan3", "orange"), labels = c('Blue', 'Orange'))
+   scale_colour_manual(values = c("cyan3", "orange"), labels = c('Blue', 'Orange'))
 
+
+head(crabs)
+tail(crabs)
 
 clcw.sp <- clcw.sp +
               labs(colour = 'Species') +
@@ -221,7 +216,8 @@ clcw.sp +
 
 clcw.sp +
     geom_point(alpha = 0.5, size = 3) +
-    facet_grid(sex ~ sp)
+    facet_grid(sex ~ sp) +
+    theme_bw()
 
 # It's acutally easier to create new factors than to change facet labels
 
@@ -248,11 +244,13 @@ clcw.sp2 <- clcw.sp2 +
 
 clcw.sp2 + 
     geom_point(alpha = 0.5, size = 2) +
-    facet_grid(Sex ~ Species)
+    facet_grid(Sex ~ Species) + 
+    theme_bw()
 
 clcw.sp2 <- clcw.sp2 +
                geom_point(alpha = 0.25, size = 2) +
-               facet_grid(Sex ~ Species)
+               facet_grid(Sex ~ Species) +
+              theme_bw()
 
 clcw.sp2
 
@@ -261,8 +259,6 @@ setwd('~/Desktop')
 ggsave(plot = clcw.sp2, filename = 'clcw.jpg' , width = 10, height = 10,
        units = 'cm', dpi = 600)
 
-clcw.sp2 <- clcw.sp2 + theme_bw()
-clcw.sp2
 
 ggsave(plot = clcw.sp2, filename = 'clcw.png' , width = 10, height = 10,
        units = 'cm', dpi = 600)
@@ -281,7 +277,7 @@ ggsave(plot = clcw.sp2, filename = 'clcw.pdf' , width = 10, height = 10,
 ################################################################################
 
 cw.p <- ggplot(aes(x = CW), data = crabs)
-cw.p + geom_histogram()
+cw.p + geom_histogram(fill = 'grey', colour = 'black')
 cw.p + geom_density()
 cw.p + geom_density(aes(colour = sp))
 cw.p + geom_density(aes(colour = sp, linetype = sex))
@@ -321,36 +317,24 @@ attach(possum)
 #      data are displayed in different pannels of the plot
 # iii) Practise saving a copy of your finalised plot.
 
+summary(possum)
+# Are longer possums fatter?
+p2 <- ggplot(aes(x = totlngth, y = belly), data = possum )
+p2 + geom_point(alpha = 0.25, size = 4) + facet_grid(Pop ~ sex) + theme_bw() + geom_smooth() + theme(text = element_text(size = 18)) + labs(x = 'Total Length (cm)', y = 'Belly Circumference (cm)', title = 'Possums')
+p2 + geom_jitter(alpha = 0.25, size = 4)
+p2
 
+# Are older possums longer? Is gender correlated with the shapes of these length at age curves?
+p3 <- ggplot(aes(x = age, y = totlngth), data = possum)
+p3 + geom_point(alpha = 0.25, size = 4) + facet_wrap( ~ sex) + theme_bw() + geom_smooth() + theme(text = element_text(size = 18)) + labs(x = 'Age (yrs)', y = 'Total Length (cm)', title = 'Possums')
 
+# What was the gender balance in size classes like at different sites?
 
+p4 <- ggplot(aes(x = totlngth), data = possum)
+p4 + geom_histogram()
+p4 + geom_histogram(aes(fill = sex), colour = 'black', breaks = with(possum, seq(from = min(totlngth), to = max(totlngth), length.out = 10)))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+p4 + geom_histogram(aes(fill = sex), colour = 'black', breaks = with(possum, seq(from = min(totlngth), to = max(totlngth), length.out = 10))) + facet_wrap( ~ Pop)
 
 
 # Don't look at these until you have had a go at the exercise yourself!
@@ -392,29 +376,43 @@ possum.p +
 # However for small to medium sized rasters (relative to your computers' RAM)
 # 'ggplot2' can produce nice geostatial visualisations in a timely fashion
 
+# 
+library('ggplot2')
 library('raster')
-
+# you may need to install it
+# and install the rgdal package
+# this bit needs a different IDE
 Desert.rst <- raster(x = file.choose())
 # and select '~Intro_2_R/Data/landsat_image.png' from the dialoguge box
 # or just use
 setwd('~/Intro_to_R/Data/Graphics_with_ggplot2/')
 Desert.rst <- raster(x = 'landsat_image.png')
 
+# for the polygon drawing below to work we need to get R to open an external
+# graphics device normally we'd use dev.new() for a platform independent way
+# to do this however RStudio and dev.new() don't play nicely together so
+
+# on MS Windows systems try:
+windows()
+
+# on MacOS systems try:
+quartz()
+
+# or
+x11()
+
+# on GNU+Linux systems running X11 try
+x11()
+
 plot(Desert.rst, col = grey(level = 1:1e4/1e4))
+
+# now lets use the mouse to mark out a polygon on the plot
 Polygon <- drawPoly(sp = FALSE)
-par(new = TRUE)
-plot(Polygon)
+# once you've marked out the polygon either right click or right click and
+# select 'close'
 
-class(Polygon)
-
-head(Polygon)
-
-summary(Polygon)
-
-summary(Desert.rst)
-
-class(Desert.rst)
-coordinates(Desert.rst)
+# Next we need take the data from raster object Desert.rst and transcribe it
+# into a long data format dataframe
 
 Desert.df <- data.frame(coordinates(Desert.rst),
                         extract(x = Desert.rst, y = coordinates(Desert.rst)))
@@ -438,6 +436,10 @@ Polygon.df$Value = rep(1,nrow(Polygon.df))
 U.p <- U.p + geom_raster() +
              scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
 
+U.p
+
+U.p + geom_path(data = Polygon.df, col = 'green')
+
 U.p <- U.p + geom_path(data = Polygon.df, col = 'green')
 
 U.p + geom_polygon(data = Polygon.df, fill = 'green', alpha = 0.5)
@@ -450,6 +452,11 @@ U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25,
                       y = median(Polygon.df[,2]),
                       label = 'An area in the desert...',
                       colour = 'green', hjust = 0, size = 8)
+U.p
+
+# I don't have any coordinates to annotate this aerial image with so I'm going
+# to generate some below (don't worry too much about this code unless you want
+# to the point of this example is to show how to mark points on a raster). 
 
 PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]),
             length.out = 500)
@@ -482,6 +489,9 @@ colnames(PG)
 colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value', 'Member',
                   'Member.Factor')
 
+# Adding the points onto the raster
+
+
 U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
       scale_colour_manual(values = c('green', 'red'))
@@ -495,8 +505,8 @@ U.p + geom_point(colour = 'black', size = 2, data = PG) +
 U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
       scale_colour_manual(values = c('green', 'red')) +
-      xlim(0, 750) +
-      ylim(450, 1050) +
+      xlim(0, 1000) +
+      ylim(300, 1050) +
       annotate(geom = 'text', x = min(Polygon.df[,1]),
                y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
                colour = 'black', hjust = 0)
@@ -520,6 +530,23 @@ getwd()
 setwd('/home/ben/Documents/')
 ggsave(plot = U.p, filename = 'desert.pdf' , width = 16,
        height = 9, units = 'in')
+
+################################################################################
+#                                                                              #
+# We now have an hour for you to experiment with visualising some data of your #
+#     own wiht 'ggplot2'. Don't forget <http://docs.ggplot2.org/current/>      #
+#            and feel free to raise you hand if you need some help.            #
+#                                                                              #
+# If you didn't bring any data there's plenty online so why not pick some that #
+#                    interests you from the list hosted at                     #
+#             <http://mran.revolutionanalytics.com/documents/data/>            #
+#                                                                              #
+################################################################################
+
+
+
+
+
 
 ################################################################################
 #                                                                              #
