@@ -1,0 +1,66 @@
+\documentclass[xcolor=dvipsnames]{beamer} 
+\usecolortheme[named=Blue]{structure} 
+\usetheme[height=10.5mm]{Rochester} 
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+\usepackage{bm}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+%\graphicspath{ {/home/ben/PhD/Armidale_Updates/2014_03_14/Figures/} }
+\begin{document}
+
+\begin{frame} %1
+% \frametitle{Addressing Common Challenges in Spatial Modeling of Ecologies and Environments}
+%\begin{center}
+\textbf{\huge Introduction to R}\\
+Capstone Collaborative Exercise
+%\end{center}
+
+\begin{figure}
+\includegraphics[width = 0.35\textwidth]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/R_logo.png}
+\end{figure}
+\small Ben R. Fitzpatrick\\
+\tiny PhD Candidate, Statistical Science, Mathematical Sciences School, Queensland University of Technology
+\newline
+\begin{columns}
+\begin{column}{3cm}
+\tiny 0000-0003-1916-0939
+\end{column}
+\begin{column}{3cm}
+\tiny github.com/brfitzpatrick/
+\end{column}
+\begin{column}{3cm}
+\tiny @benrfitzpatrick
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame} 
+\frametitle{}
+\begin{itemize}
+\item Please form small groups
+\item Together I'd like you to collaboratively conduct and exploratory analysis of some data
+\item Please write neat, well annotated code and share this code with your group memebers via a GitHub repository
+\item at the end of the course each group will present their methods and code along with their results and interpretation 
+\end{itemize}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Image Credits}
+R Foundation, from http://www.r-project.org - Originally from http://developer.r-project.org/Logo/Rlogo.svg, modified to simpler SVG format.
+%
+\end{frame}
+
+
+\end{document}
