@@ -650,3 +650,16 @@ system.time(sl2.sp3 <- ptv.sp3(v=seq(1e5,1e5+100,1)))[3]/1000 #    sec per eleme
 #(you don't have to make it into an external animation an animation within R is also fine for our purposes here)
 
 
+# If you'd like more exercises to learn R programming by doing:
+
+# Project Euler has a great series problems designed to be solved with mathematics and programming.
+
+# 'The problems range in difficulty and for many the experience is inductive chain learning. That is, by solving one problem it will expose you to a new concept that allows you to undertake a previously inaccessible problem. So the determined participant will slowly but surely work his/her way through every problem.'
+
+# <https://projecteuler.net/>
+
+# R is a full programming language and so you should be able to solve any of the problems by programming in R
+
+# Remember you've got Wikipedia and Wolfram MathWorld if you need to look up any maths concepts to do a problem
+
+# 
