@@ -27,60 +27,65 @@
 ################################################################################
 
 # Hello and welcome to the code file to accompany Module II of this course.
-# You will notice that this code file is a mess (sorry about that) I'll talk
-# you all through it and will upload a neater, more clearly annotated  version
-# to the repository with edits inspired by how the module goes when I
-# demonstrate it live.  
-# Thanks for you patience and thank you to my faithful testers!
+# The grammar of graphics inspired R package 'ggplot2' is exceptionally well
+# documented online.
 
-# To begin at the beginning:
-
-## ggplot2 is exceptionally well documented online
-
-# here is an introductory tutorial by it's author Hadely Wickham:
+# Here is an introductory tutorial by the author of `ggplot2 Hadely Wickham:
 # <http://rpubs.com/hadley/ggplot-intro>
 
-# comprensive manual page style help files for each element of ggplot2 may be
-# found here:
+# Comprensive manual page style help files for each component of 'ggplot2' may
+# be found here:
 # <http://docs.ggplot2.org/current/>
 
-# so honestly you don't really need me to learn this stuff but seeing as we're
-# all here in this nice place...
+# In this module I will attempt to introduce the key concept necessary to use
+# `ggplot2'.
 
-# Here is a quick introductory example to demonstrate the power of the grammar
-# of graphics on the 'diamonds' data which are included in the 'ggplot2' package
-
-# It all begins with loading the 'ggplot2' package (this loads all the functions
-# and data from the package into memory making them available for use in R)
-
-# Here is a quick example to demonstrate the power of the grammar of graphics:
+# It all begins with loading the 'ggplot2' package, this loads all the functions
+# and data from the package into memory making them available for use in R:
 
 library('ggplot2')
 
+# Before we begin formally here is a quick example to demonstrate the
+# flexibility and concieseness of a ploting syntax based on the the grammar of
+# graphics.
+# (This example uses the 'diamonds' data which are included in the 'ggplot2'
+# package:
+
+# Don't worry too much about the syntax just yet, but instead notice how with
+# the line of code below a create a plot object and assign it a name:
+
 px <- ggplot(aes(x = cut, fill = cut), data = diamonds) + geom_bar(width = 1)
 
-# A bar chart:
+# Executing the named plot object produces a bar chart:
 px
 
-# A coxcomb plot:
+# Changing the coordinate system produces a coxcomb plot:
 px + coord_polar()
 
-# Something else:
+# then changine which variable is mapped to angle in the polar coordinate system
+# produces a different plot again:
+
 px + coord_polar(theta = 'y')
 
-# if you like coordinate systems check out the 2D projections of the spherical
-# earth in this example:
+# Note how little additional code was required for these transformations...
+
+# Each of these plots would have had to be produced separately in R base
+# graphics i.e. we could not have simply altered the coordinate system of a bar
+# plot and produced a coxcomb plot.
+
+# If you like coordinate systems check out the 2D projections of the spherical
+# Earth in this example:
 ## <http://docs.ggplot2.org/current/coord_map.html>
 
-# note how little additional code was required for these transformations, such
-# is the power of the grammar of graphics
-
-# Now for some details
-# let's load the 'crabs' dataframe that comes with the MASS package:
+# Now let's begin the formal introduction.
+# We'll use the 'crabs' dataframe that comes with the MASS package:
 
 library(MASS)
+
 attach(crabs)
+
 summary(crabs)
+
 ?crabs
 
 ################################################################################
@@ -96,30 +101,44 @@ summary(crabs)
 
 # Let's start with a scatter plot of carapace width against carapace length
 
-# First we define a plotting object, let's call it clcw.sp
-# We maps two variables to two different aesthetics of the plot nameley
+# First we define a plotting object, let's call it clcw.sp.
+# To do this we first define which columns of the data will be mapped to spatial
+# coordinates in the plot.  Spatial coordinates are one of the 'aethetics' of a
+# plot produced with ggplot2 - when we map column of a dataframe to particular
+# 'aesthetics' of a plot with the ggplot command we need to do so via a comma
+# separated list with the aes( ) component of the ggplot( ) command.
+# Below we map the column named 'CL' from the dataframe 'crabs' to horizontal
+# spatial coordinates in the plot and we map column named 'CW', also from the
+# dataframe 'crabs' to vertical coordinates of the plot. 
 
 clcw.sp <- ggplot(aes(x = CL, y = CW), data = crabs)
 
-# so far we have only specified which variables to maps the spatial coordinates
-# in the plot, CL on the horizontal and CW on the vertical axis
-# until we specify a geometry nothing will be drawn
+# So far we have only specified which variables to maps the spatial coordinates
+# in the plot.  Until we specify a geometry nothing will be drawn.
 
 clcw.sp
 
-# Let's request the points geometry be drawn
+# Let's request the points geometry be drawn (i.e. one point will be a drawn at
+# the coordinates represented by each row in the dataframe crabs when we take
+# the column 'CL' as the horizontal coordinates of the points and column 'CW' as
+# vertical coordinates of the points).
 
 clcw.sp + geom_point()
 
 # this produces a scatter plot
 
+# ggplot2 includes quite a few geometries that can be added to plots.
+# each geometry has a help page with examples on the
+# <http://docs.ggplot2.org/current/coord_map.html>
+
 # now as the vertical and horizontal axes have the same units (mm) we may want
-# both axes to have the same scale
+# both axes to have the same scale (i.e. have one unit of CL map to the same
+# spatial displacement (horizontally) as as one unit of CW maps to vertically).
 
 clcw.sp + geom_point() + coord_equal()
 
 # I have a few plans for additional arguments we'll pass to the points geometry
-# so we wont store that in clcw.sp just yet but we'll store the specification
+# so we won't store that in clcw.sp just yet but we'll store the specification
 # that the horiztonal and vertical axes should have the same scale
 
 clcw.sp <- clcw.sp + coord_equal()
@@ -127,7 +146,7 @@ clcw.sp <- clcw.sp + coord_equal()
 clcw.sp # still no geometry stored yet as we are still experimenting with it
 
 clcw.sp + geom_point()
-# but we have stored the specification that the coordinates shouhld be on the
+# but we have stored the specification that the coordinates should be on the
 # same scale
 
 # next up we can make the axis labels more informative:
@@ -136,9 +155,26 @@ clcw.sp <- clcw.sp + labs(x = 'Carapace Width (mm)', y = 'Carapace Length (mm)')
 clcw.sp + geom_point()
 
 # ok now let's add some more information to plot using colour to represent the
-# species of the crab being measured 
+# species of the crab being measured.
+# point colour is another aesthetic to which we may map a column in the data
+# (in this case the column containing the one letter code representing the
+# crabs' sex) as such the mapping of 'sp' to 'colour' occurs within the
+# aes( ) component of the point geometry as we are only mapping 'sp' values to
+# the colour of the points
 
 clcw.sp + geom_point(aes(colour = sp))
+
+# if we had say both point and line geometries in the plot then using
+# '+ geom_point(aes(colour = sp))' would map 'sp' to the colour of the points
+# alone e.g.
+
+clcw.sp + geom_point(aes(colour = sp)) + geom_line()
+
+# had we wanted to have 'sp' mapped to the colour of every geometry drawn we
+# would have need to make this mapping global by including it in the original
+# aes( ) component of the ggplot(aes( ) ) command where we specified which
+# columns to map to spatial positioning as a global mapping that would be
+# applied to all subsequent geometries which we added to the plot 
 
 # now we will update the labels to include a more informative colour label
 
@@ -148,17 +184,29 @@ clcw.sp + geom_point(aes(colour = sp)) + labs(colour = 'Species')
 
 ?crabs
 
-# we see the sp = B represents the blue species and sp = O represents the
-# organge species so we may wish to colour the points accordingly
+# we see that values of 'B' in the column 'sp' represent the blue form of this
+# species and values of 'O' in this column represent the orange form of this
+# species so we may wish to colour the points accordingly
 # to this we need manually specify the scale by which the categorical variable
 # sp is mapped to the colour aesthetic
+# in ggplot2 'scales' control the mapping of column in the data (variables) to
+# 'aesthetics' of the plot
 
 clcw.sp +
     geom_point(aes(colour = sp)) +
     labs(colour = 'Species') +
     scale_colour_manual(values = c("cyan3", "orange"))
 
-# for complete control you can use rgb hex values to specify colour:
+# Scrolling down <http://docs.ggplot2.org/current/coord_map.html> will take you
+# to the section that lists help pages on 'scales'
+
+# A long list of named colours available for use in R may be found at:
+# <http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf>
+
+# If you have three or more levels of a variable you wish to depict on a graph
+# via a discrete colour scale you may find <http://colorbrewer2.org/> useful
+
+# you may specify colour by hex values directly:
 clcw.sp +
     geom_point(aes(colour = sp)) +
     labs(colour = 'Species') +
@@ -169,31 +217,41 @@ clcw.sp +
     labs(colour = 'Species') +
     scale_colour_manual(values = c("cyan3", "orange"))
 
+# You may also update the what is printed next to each colour in the legend with
+# the 'labels' argument of the scale command:
+
 clcw.sp +
     geom_point(aes(colour = sp)) +
     labs(colour = 'Species') +
-   scale_colour_manual(values = c("cyan3", "orange"), labels = c('Blue', 'Orange'))
+    scale_colour_manual(values = c("cyan3", "orange"),
+                        labels = c('Blue', 'Orange'))
 
-
-head(crabs)
-tail(crabs)
+# this all looks good so lets add the additional lables and the scale
+# specification to the features of plot stored in the plot object clcw.sp
 
 clcw.sp <- clcw.sp +
               labs(colour = 'Species') +
               scale_colour_manual(values = c("cyan3", "orange"), labels = c('Blue', 'Orange'))
 
-
 clcw.sp + geom_point(aes(colour = sp))
 
-# Now let's map the crab sex to the aesthetic controlling point shape
+# Now let's map the crab sex to the aesthetic of the points whic controls the
+# shape of the points
 
 clcw.sp + geom_point(aes(colour = sp, shape = sex))
 
-# There's quite a bit of overlap among the data so we could se the  points to be
-# semitransparent
+# There's quite a bit of overlap among the data so we could set the  points to
+# be semitransparent
 
 clcw.sp + geom_point(aes(colour = sp, shape = sex), alpha = 0.5)
 
+# note I could have mapped another variable to the transparency by assigning
+# some variable to 'alpha' within the aes( ) component but instead I am setting
+# all points to have the same alpha of 0.5 (i.e. be 50% transparent) by equating
+# alpha with a single number outside the aes( ) component of the command
+
+# similarly I can set all the points to be a particular size by setting 'size'
+# equal to a single number outside the aes( ) component of the command
 # with semitransparent points we can have them a bit bigger
 
 clcw.sp + geom_point(aes(colour = sp, shape = sex), alpha = 0.25, size = 3)
@@ -208,11 +266,31 @@ clcw.sp +
     geom_point(aes(colour = sp, shape = sex), alpha = 0.5, size = 3) +
     facet_wrap( ~ sp)
 
+# what we have done here is create two subsets of the data one for the rows
+# where sp = B (i.e. the blue crabs) and another for the rows where sp = O
+# i.e. the orange crabs
+# two otherwise identical plots have been produced side by side one of which
+# plots the subset of the data where sp = B (the blue crabs) and the other where
+# sp = O (the orange crabs)
+
+# we can also facet by two categorical variable here 'sp' and 'sex':
+
 clcw.sp +
     geom_point(aes(colour = sp, shape = sex), alpha = 0.5, size = 3) +
     facet_grid(sex ~ sp)
 
-# the mapping of species to colour and sex to shape is now redundant
+# which results in four plots each containing the data from a different unique
+# subset of the full dataframe where these subsets were defined by the 4 unique
+# combinations of crab colour form and sex
+
+# the mapping of species to colour and sex to shape is now redundant (i.e. we
+# represented this information by both the faceting and by characteristics of
+# the points)
+
+# if we were restricted to black and white or grey scale graphics (as is often
+# the case with graphics for journal articles) we can still have the values of
+# all four of the variables 'CL', 'CW', 'sp' and 'sex' for each crab conveyed by
+# a black and white plot via the use of faceting
 
 clcw.sp +
     geom_point(alpha = 0.5, size = 3) +
@@ -253,6 +331,14 @@ clcw.sp2 <- clcw.sp2 +
               theme_bw()
 
 clcw.sp2
+
+# Once we have plot we are happy with we will often want to save it to an
+# external file
+# The ggsave( ) command gives us control over the file format, resolution and
+# dimensions of the plot produced.
+
+# Setting the working directory with the setwd( ) command allows us to specify
+# where this file will be created
 
 setwd('~/Desktop')
 
@@ -310,12 +396,70 @@ library('DAAG')
 attach(possum)
 ?possum
 
-# Please Make some scatter plots to explore the Possum skull data:
+# Please make some histograms & density plots to explore the Possum skull data:
+#   i) Try using the colour filling the bars of the histograms to convey
+#      additional information about the proportions of observations in each bin
+#      that had particular levels of a categorical variable associated with them
+#  ii) Try faceting to create small multiples of subplots whereby subsets of the 
+#      data are displayed in different pannels of the plot
+# iii) Practise saving a copy of your finalised plot.
+
+# Please make some scatter plots to explore the Possum skull data:
 #   i) Try using point shape and colour to convey additional information of your
 #      scatter plot
 #  ii) Try faceting to create small multiples of subplots whereby subsets of the 
 #      data are displayed in different pannels of the plot
 # iii) Practise saving a copy of your finalised plot.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Here are some examples but please try to make your own graphs before running these
 
 summary(possum)
 # Are longer possums fatter?
@@ -365,31 +509,56 @@ possum.p +
 ################################################################################
 ################################################################################
 
-# for some geospatial visualisations I'm going to use another package 'raster'
-# to do the majority of the work but illustrate that 'ggplot2' is capable of
-# visualising raster imagery once you convert the imagery into 'long' format
+# ggplot2 is capable of geospatial visualisations (e.g. of raster data such as
+# georeferenced satellite imagery or elevation data and of spatial polygons
+# e.g. statistical local areas)
+
+# For this geospatial visualisation example I'm going to use another package
+# 'raster' (which in turn uses functions from the 'rgdal' package) to do the
+# majority of the work but I will visualise the results with 'ggplot2'
+
+# 'ggplot2' is capable of visualising raster imagery once you convert the
+# imagery into 'long' format which in the case of a raster equates to a
+# dataframe with columns for the coordinates and value of each pixel and pixels
+# are listed as subsequent rows
+
 # if you're going to be doing lots of geospatial modelling and visualisation
 # it may well be easier to work with the base graphics functions provided by
 # with the 'raster' package which will avoid the necessity to transform all the
 # rasters to long format which as rasters get bigger gets increasingly
 # computationall expensive and annoying
-# However for small to medium sized rasters (relative to your computers' RAM)
-# 'ggplot2' can produce nice geostatial visualisations in a timely fashion
 
-# 
+# However for small to medium sized rasters (relative to your computers' RAM)
+# 'ggplot2' can produce good geostatial visualisations in a timely fashion
+
+# if you are starting to run this code file from here you will need to load the
+# ggplot2 package into memory:
+
 library('ggplot2')
+
+# and everyone will need to load the 'raster' package into memory
+
 library('raster')
-# you may need to install it
-# and install the rgdal package
-# this bit needs a different IDE
+
+# (hopefully you were all able to install the R package 'raster'
+# you may have needed to install the R package 'rgdal' first
+
+# first we begin by reading the raster (in this case a GeoTIFF) into R 
+# to do this run the line of code below and select file 'landsat_crop.tif' from
+# the dialoguge box that opens
+# this file is located at '~Intro_2_R/Data/landsat_crop.tif' where the ~
+# represents the file path to where every you extracted the Intro_to_R directory
+# to when you first downloaded it from GitHub
+
 Desert.rst <- raster(x = file.choose())
-# and select '~Intro_2_R/Data/landsat_crop.tif' from the dialoguge box
-# or just use
+
+# alternatively use
+
 setwd('~/Intro_to_R/Data/Graphics_with_ggplot2/')
 Desert.rst <- raster(x = 'landsat_crop.tif')
 
 # for the polygon drawing below to work we need to get R to open an external
-# graphics device normally we'd use dev.new() for a platform independent way
+# graphics device. normally we'd use dev.new() for a platform independent way
 # to do this however RStudio and dev.new() don't play nicely together so
 
 # on MS Windows systems try:
@@ -420,6 +589,8 @@ Desert.df <- data.frame(coordinates(Desert.rst),
 head(Desert.df)
 
 colnames(Desert.df) <- c('Easting', 'Northing', 'Value')
+
+# then we're ready to plot the data with ggplot2
 
 U.p <- ggplot(aes(x = Easting, y = Northing, fill = Value),
               data = Desert.df) +
@@ -454,7 +625,10 @@ U.p
 
 # I don't have any coordinates to annotate this aerial image with so I'm going
 # to generate some below (don't worry too much about this code unless you want
-# to the point of this example is to show how to mark points on a raster). 
+# to, the point of this example is to show how to mark points on a raster for
+# most applications I can think of you'll have the coordinates of the points you
+# wish to mark out (they might be locations sampled for some variable of
+# interest or proposed target locations for some sampling scheme etc. )
 
 PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]),
             length.out = 500)
