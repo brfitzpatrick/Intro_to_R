@@ -1,4 +1,4 @@
-#     This the second R Code File for the Introduction to R Course available at
+#     This the third R Code File for the Introduction to R Course available at
 #     https://github.com/brfitzpatrick/Intro_to_R
 #     Copyright (C) 2015  Ben R. Fitzpatrick.
 #
@@ -20,13 +20,13 @@
 
 ################################################################################
 #                                                                              #
-#                   Code File to Accompany Course Module 2                     #
+#                   Code File to Accompany Course Module 3                     #
 #                                                                              #
 #                          Linear Regression in R                              #
 #                                                                              #
 ################################################################################
 
-# Hello and welcome to the code file to accompany Module II of this course.
+# Hello and welcome to the code file to accompany Module III of this course.
 # You will notice this code file is a lot less heavily annotated than that from
 # the first module.
 # If you get confuse try looking at the page for the function on the line that
@@ -664,7 +664,7 @@ for(i in 1:length(theta.v)){
 
 ################################################################################
 #                                                                              #
-#                End of Code File to Accompany Course Module 2                 #
+#                End of Code File to Accompany Course Module 3                 #
 #                                                                              #
 #                          Linear Regression in R                              #
 #                                                                              #

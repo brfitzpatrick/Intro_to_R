@@ -1,4 +1,4 @@
-#     This the third R Code File for the Introduction to R Course available at
+#     This the second R Code File for the Introduction to R Course available at
 #     https://github.com/brfitzpatrick/Intro_to_R
 #     Copyright (C) 2015  Ben R. Fitzpatrick.
 #
@@ -20,13 +20,13 @@
 
 ################################################################################
 #                                                                              #
-#                   Code File to Accompany Course Module 3                     #
+#                   Code File to Accompany Course Module 2                     #
 #                                                                              #
 #                           Graphics with 'ggplot2'                            #
 #                                                                              #
 ################################################################################
 
-# Hello and welcome to the code file to accompany Module III of this course.
+# Hello and welcome to the code file to accompany Module II of this course.
 # You will notice that this code file is a mess (sorry about that) I'll talk
 # you all through it and will upload a neater, more clearly annotated  version
 # to the repository with edits inspired by how the module goes when I
@@ -543,7 +543,7 @@ ggsave(plot = U.p, filename = 'desert.pdf' , width = 9,
 
 ################################################################################
 #                                                                              #
-#               End of Code File to Accompany Course Module 3                  #
+#               End of Code File to Accompany Course Module 2                  #
 #                                                                              #
 #                         Graphics with 'ggplot2'                              #
 #                                                                              #
