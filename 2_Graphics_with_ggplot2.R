@@ -383,10 +383,10 @@ library('raster')
 # and install the rgdal package
 # this bit needs a different IDE
 Desert.rst <- raster(x = file.choose())
-# and select '~Intro_2_R/Data/landsat_image.png' from the dialoguge box
+# and select '~Intro_2_R/Data/landsat_crop.tif' from the dialoguge box
 # or just use
 setwd('~/Intro_to_R/Data/Graphics_with_ggplot2/')
-Desert.rst <- raster(x = 'landsat_image.png')
+Desert.rst <- raster(x = 'landsat_crop.tif')
 
 # for the polygon drawing below to work we need to get R to open an external
 # graphics device normally we'd use dev.new() for a platform independent way
@@ -419,39 +419,37 @@ Desert.df <- data.frame(coordinates(Desert.rst),
 
 head(Desert.df)
 
-colnames(Desert.df) <- c('Pixels_East', 'Pixels_North', 'Value')
+colnames(Desert.df) <- c('Easting', 'Northing', 'Value')
 
-U.p <- ggplot(aes(x = Pixels_East, y = Pixels_North, fill = Value),
+U.p <- ggplot(aes(x = Easting, y = Northing, fill = Value),
               data = Desert.df) +
                   coord_equal()
 
-U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
+U.p + geom_raster() + scale_fill_gradientn(colours = grey(level = 1:1e4/1e4),
+                                           guide = FALSE)
 
 Polygon.df <- data.frame(Polygon)
 
-colnames(Polygon.df) <- c('Pixels_East', 'Pixels_North')
+colnames(Polygon.df) <- c('Easting', 'Northing')
 
-Polygon.df$Value = rep(1,nrow(Polygon.df))
+Polygon.df$Value = rep(mean(Desert.df$Value),nrow(Polygon.df))
 
 U.p <- U.p + geom_raster() +
-             scale_fill_gradientn(colours = grey(level = 1:1e4/1e4))
+             scale_fill_gradientn(colours = grey(level = 1:1e4/1e4),
+                                  guide = FALSE)
 
 U.p
 
-U.p + geom_path(data = Polygon.df, col = 'green')
+U.p + geom_path(data = Polygon.df, col = 'blue')
 
-U.p <- U.p + geom_path(data = Polygon.df, col = 'green')
+U.p <- U.p + geom_path(data = Polygon.df, col = 'blue')
 
 U.p + geom_polygon(data = Polygon.df, fill = 'green', alpha = 0.5)
 
 U.p + annotate(geom = 'text', x = min(Polygon.df[,1]),
-               y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
-               colour = 'green', hjust = 0)
+               y = min(Polygon.df[,2])-250, label = 'An area in the desert...',
+               colour = 'blue', hjust = 0)
 
-U.p <- U.p + annotate(geom = 'text', x = max(Polygon.df[,1])+25,
-                      y = median(Polygon.df[,2]),
-                      label = 'An area in the desert...',
-                      colour = 'green', hjust = 0, size = 8)
 U.p
 
 # I don't have any coordinates to annotate this aerial image with so I'm going
@@ -466,9 +464,9 @@ PG.y <- seq(from = min(Polygon.df[,2]), to = max(Polygon.df[,2]),
 
 PG.full <- expand.grid(PG.x, PG.y)
 
-PG <- PG.full[sample(x = 1:nrow(PG.full), size = 25), ]
+PG <- PG.full[sample(x = 1:nrow(PG.full), size = 50), ]
 
-PG$Value <- rep(1,nrow(PG))
+PG$Value <- rep(mean(Desert.df$Value),nrow(PG))
 
 PG$Member <- point.in.polygon(point.x = PG[,1], point.y = PG[,2],
                               pol.x = Polygon.df[,1], pol.y = Polygon.df[,2])
@@ -486,39 +484,36 @@ summary(PG$Member.Factor)
 
 colnames(PG)
 
-colnames(PG) <- c('Pixels_East', 'Pixels_North', 'Value', 'Member',
+colnames(PG) <- c('Easting', 'Northing', 'Value', 'Member',
                   'Member.Factor')
 
 # Adding the points onto the raster
 
-
 U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
-      scale_colour_manual(values = c('green', 'red'))
+      scale_colour_manual(values = c('green', 'red')) +
+      labs(colour = 'In Polygon')
+
+# zooming in to the polygon
+
+Poly.ext <- as.matrix(extent(Polygon))
+
+Poly.ext[1,1]
 
 U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
       scale_colour_manual(values = c('green', 'red')) +
-      xlim(0, 1600)
-
-
-U.p + geom_point(colour = 'black', size = 2, data = PG) +
-      geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
-      scale_colour_manual(values = c('green', 'red')) +
-      xlim(0, 1000) +
-      ylim(300, 1050) +
-      annotate(geom = 'text', x = min(Polygon.df[,1]),
-               y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
-               colour = 'black', hjust = 0)
+      labs(colour = 'In Polygon') +          
+      xlim(Poly.ext[1,1] -250, Poly.ext[1,2] + 250) +
+      ylim(Poly.ext[2,1] -250, Poly.ext[2,2] + 250)
 
 U.p <- U.p + geom_point(colour = 'black', size = 2, data = PG) +
       geom_point(aes(colour = Member.Factor), size = 1, data = PG) +
       scale_colour_manual(values = c('green', 'red')) +
-      xlim(0, 750) +
-      ylim(450, 1050) +
+      labs(colour = 'In Polygon') +
       annotate(geom = 'text', x = min(Polygon.df[,1]),
-               y = min(Polygon.df[,2])-25, label = 'An area in the desert...',
-               colour = 'black', hjust = 0)
+               y = min(Polygon.df[,2])-250, label = 'Some hills in the desert.',
+               colour = 'blue', hjust = 0)
 
 U.p
 
@@ -528,7 +523,7 @@ U.p + geom_path(data = PG[PG$Member.Factor == 'In',], colour = 'green')
 
 getwd()
 setwd('/home/ben/Documents/')
-ggsave(plot = U.p, filename = 'desert.pdf' , width = 16,
+ggsave(plot = U.p, filename = 'desert.pdf' , width = 9,
        height = 9, units = 'in')
 
 ################################################################################
@@ -542,8 +537,6 @@ ggsave(plot = U.p, filename = 'desert.pdf' , width = 16,
 #             <http://mran.revolutionanalytics.com/documents/data/>            #
 #                                                                              #
 ################################################################################
-
-
 
 
 
