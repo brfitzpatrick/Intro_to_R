@@ -356,7 +356,7 @@ ggsave(plot = clcw.sp2, filename = 'clcw.pdf' , width = 10, height = 10,
 ################################################################################
 ###                                                                          ###
 ###                                                                          ###
-###                     Distributions of Single Variable                     ###
+###                    Distributions of Single Variables                     ###
 ###                     Histograms and Denisty Estimates                     ###
 ###                                                                          ###
 ################################################################################
@@ -388,7 +388,7 @@ cw.p +
 ################################################################################
 ################################################################################
 
-# the DAAG package includes a some data on possum skull morphology
+# the DAAG package includes some data on possum skull morphology
 library(DAAG)
 # you may need to install the DAAG package
 install.packages('DAAG')
@@ -473,7 +473,6 @@ p3 <- ggplot(aes(x = age, y = totlngth), data = possum)
 p3 + geom_point(alpha = 0.25, size = 4) + facet_wrap( ~ sex) + theme_bw() + geom_smooth() + theme(text = element_text(size = 18)) + labs(x = 'Age (yrs)', y = 'Total Length (cm)', title = 'Possums')
 
 # What was the gender balance in size classes like at different sites?
-
 p4 <- ggplot(aes(x = totlngth), data = possum)
 p4 + geom_histogram()
 p4 + geom_histogram(aes(fill = sex), colour = 'black', breaks = with(possum, seq(from = min(totlngth), to = max(totlngth), length.out = 10)))
@@ -481,8 +480,7 @@ p4 + geom_histogram(aes(fill = sex), colour = 'black', breaks = with(possum, seq
 p4 + geom_histogram(aes(fill = sex), colour = 'black', breaks = with(possum, seq(from = min(totlngth), to = max(totlngth), length.out = 10))) + facet_wrap( ~ Pop)
 
 
-# Don't look at these until you have had a go at the exercise yourself!
-
+# A couple of other examples
 possum.p <- ggplot(aes(x = belly, y = chest, shape = sex), data = possum)
 possum.p + geom_point(alpha = 0.25)
 possum.p + geom_jitter() + facet_wrap(~ sex)
@@ -518,15 +516,15 @@ possum.p +
 # majority of the work but I will visualise the results with 'ggplot2'
 
 # 'ggplot2' is capable of visualising raster imagery once you convert the
-# imagery into 'long' format which in the case of a raster equates to a
+# imagery into 'long' format, which in the case of a raster, equates to a
 # dataframe with columns for the coordinates and value of each pixel and pixels
-# are listed as subsequent rows
+# listed as subsequent rows
 
 # if you're going to be doing lots of geospatial modelling and visualisation
-# it may well be easier to work with the base graphics functions provided by
-# with the 'raster' package which will avoid the necessity to transform all the
+# it may well be easier to work with the base graphics functions provided with
+# the 'raster' package which will avoid the necessity to transform all the
 # rasters to long format which as rasters get bigger gets increasingly
-# computationall expensive and annoying
+# computationall expensive and time consuming 
 
 # However for small to medium sized rasters (relative to your computers' RAM)
 # 'ggplot2' can produce good geostatial visualisations in a timely fashion
@@ -541,13 +539,16 @@ library('ggplot2')
 library('raster')
 
 # (hopefully you were all able to install the R package 'raster'
-# you may have needed to install the R package 'rgdal' first
+# you may have needed to install the R package 'rgdal' first)
 
-# first we begin by reading the raster (in this case a GeoTIFF) into R 
-# to do this run the line of code below and select file 'landsat_crop.tif' from
-# the dialoguge box that opens
+# first we begin by reading the raster (in this case a GeoTIFF) into R
+# (a GeoTIFF is a raster image that has spatial positioning information
+#  associated with the image included in the file)
+
+# To load the GeoTIFF into R please this run the line of code below and select
+# the file 'landsat_crop.tif' from the dialoguge box that opens
 # this file is located at '~Intro_2_R/Data/landsat_crop.tif' where the ~
-# represents the file path to where every you extracted the Intro_to_R directory
+# represents the file path to where you extracted the 'Intro_to_R' directory
 # to when you first downloaded it from GitHub
 
 Desert.rst <- raster(x = file.choose())
@@ -562,26 +563,35 @@ Desert.rst <- raster(x = 'landsat_crop.tif')
 # to do this however RStudio and dev.new() don't play nicely together so
 
 # on MS Windows systems try:
+
 windows()
 
 # on MacOS systems try:
+
 quartz()
 
 # or
+
 x11()
 
 # on GNU+Linux systems running X11 try
+
 x11()
+
+# once you have an external ploting device open (i.e. another ploting window
+# open external to the RStudio window) please run the line below to plot the
+# raster in this window
 
 plot(Desert.rst, col = grey(level = 1:1e4/1e4))
 
 # now lets use the mouse to mark out a polygon on the plot
-Polygon <- drawPoly(sp = FALSE)
 # once you've marked out the polygon either right click or right click and
 # select 'close'
 
-# Next we need take the data from raster object Desert.rst and transcribe it
-# into a long data format dataframe
+Polygon <- drawPoly(sp = FALSE)
+
+# Next we need take the data from raster object 'Desert.rst' and transcribe it
+# into a long data format dataframe as follows
 
 Desert.df <- data.frame(coordinates(Desert.rst),
                         extract(x = Desert.rst, y = coordinates(Desert.rst)))
@@ -624,11 +634,12 @@ U.p + annotate(geom = 'text', x = min(Polygon.df[,1]),
 U.p
 
 # I don't have any coordinates to annotate this aerial image with so I'm going
-# to generate some below (don't worry too much about this code unless you want
-# to, the point of this example is to show how to mark points on a raster for
-# most applications I can think of you'll have the coordinates of the points you
-# wish to mark out (they might be locations sampled for some variable of
-# interest or proposed target locations for some sampling scheme etc. )
+# to generate some below.
+# Don't worry too much about how I do this unless you want to, the point of this
+# example is to show how to mark points on a raster and for most applications I
+# can think of you'll have the coordinates of the points you wish to mark out
+# (they might be locations sampled for some variable of interest or proposed
+# target locations for some sampling scheme etc. etc.)
 
 PG.x <- seq(from = min(Polygon.df[,1]), to = max(Polygon.df[,1]),
             length.out = 500)
@@ -660,6 +671,8 @@ colnames(PG)
 
 colnames(PG) <- c('Easting', 'Northing', 'Value', 'Member',
                   'Member.Factor')
+
+# Start paying attention again here
 
 # Adding the points onto the raster
 
@@ -702,12 +715,15 @@ ggsave(plot = U.p, filename = 'desert.pdf' , width = 9,
 
 ################################################################################
 #                                                                              #
-# We now have an hour for you to experiment with visualising some data of your #
-#     own wiht 'ggplot2'. Don't forget <http://docs.ggplot2.org/current/>      #
+#     We now have an hour for you to experiment with visualising some data     #
+#                          of your own with 'ggplot2'.                         #
+#                                                                              #
+#      Remeber the examples and documentation available for 'ggplot2' at       #
+#                      <http://docs.ggplot2.org/current/>                      #
 #            and feel free to raise you hand if you need some help.            #
 #                                                                              #
-# If you didn't bring any data there's plenty online so why not pick some that #
-#                    interests you from the list hosted at                     #
+#               If you didn't bring any data there's plenty online             #
+#        so why not pick some that interests you from the list hosted at       #
 #             <http://mran.revolutionanalytics.com/documents/data/>            #
 #                                                                              #
 ################################################################################
