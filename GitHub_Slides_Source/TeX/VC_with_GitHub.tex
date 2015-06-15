@@ -64,3 +64,169 @@
 \end{frame}
 
 \end{document}
+
+\begin{frame}
+\frametitle{Version Control Software}
+Have you ever put numbers or dates at the end of a file name to keep different versions of it?
+If yes then you have already used version control!
+
+Have you ever used track changes and comments to take turns editing a  MS Word document with one or more others?
+If yes then you have collaboratively edited a file!
+
+Version Control Software formalizes these concepts and can do a lot of the organisational work for you
+ 
+\end{frame}
+
+\begin{frame}
+\frametitle{Version Control when Working Alone}
+Even if you are not collaborating with anyone on a particular file version control can still be very useful
+You essentially have a time stamped undo button which will allow you to go review or revert to previous versions of the file
+you can even make multiple child versions fo the same file say for different audiences or to trial different orders and styles in which to write a report or program
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Version Control when Collaborating}
+Greatly simplifies your life
+Control over which changes different contributers make get added to the definitive version of a file
+support for file to split into two child copies which can then be edited towards very different end points but still having the option to systematically recombine them at any stage
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Why Git?}
+
+Git is free and open source
+
+Git is available for most operating systems
+
+\begin{block}{Major Online Code Hosting Services Support Git:}
+\begin{itemize}
+\item GitHub \& BitBucket are the popular code hosting choices these days
+\item GitHub \& BitBucket both allow code management with Git
+\item GitHub \& BitBucket both have free code hosting options
+\end{block}
+
+Git is Distributed and Fast
+
+\tiny $^1$ Google Code will close in 2016 as they have deemed it is no longer necessary given success of BitBucket and GitHub
+
+\end{frame}
+
+\begin{frame} 
+\frametitle{Git is Distributed Version Control}
+Every contributor has a copy of the entire database ( all revisions of all files)
+two contributors can both work on the files in their copy of the database independently then their combined modifications can be merged systematically
+
+
+\end{frame} 
+
+
+\begin{frame} 
+\frametitle{Git}
+\framesubtitle{The Three States of Files in a Git Tracked Directory}
+Files in a directory which you are version controlling with Git can exist in one of three states:
+\begin{itemize}
+\item \textbf{committed} data stored in the database for the associted repository
+\item \textbf{modified} local copy of a file (in your working directory) is different to the most recent version of that file stored in the database for the associted repository i.e. you have changed something but not comitted the changes (yet)
+\item \textbf{staged} the local copy of a file which you have modified is marked to be added to the database in the next commit snapshot you send to the database
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame} 
+\frametitle{Git}
+\framesubtitle{Basic Git Workflow}
+
+\begin{itemize}
+\item you modify files in your local copy of the repository
+\item you stage these modified files ready to be committed to the database for the repository
+\item you perform a commit which takes the files as they were when staged and stores a snapshot of them in the database for the repository
+\end{itemize}
+
+\begin{frame} 
+\frametitle{Git}
+\framesubtitle{Basic Git Workflow}
+
+\end{frame}
+
+\begin{frame} 
+\frametitle{Git}
+\framesubtitle{Undoing things}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Branching}
+
+'Branching means you diverge from the main line of development and continue to do work without messing with that main line.'
+
+Every project starts with the default `master' branch
+you can then make a new branch e.g. a `testing' branch which will initially be the same as the `master' branch at the point in time at which you create it
+you switch to another branch by `checking out' that branch
+you can then commit changes to this branch without alterning the `master' branch i.e. you could develop some new feature without risking breaking the functionality of the master branch while you do so
+once your feel your work on the a branch is complete you can `merge' your `testing' branch with the `master' branch
+
+branching allows for collaboration, various contributors can all make their own branches of the repository then submit their changes to the repository owner for merging into the master branch - git provided powerful tools for managing these merges and resolving merge conflicts
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Forking}
+Fork a repository
+Use the Sync button in Windows/MacOS client to get new changes from server (and submit any changes you have made)
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Create a Repository, Add Some Files}
+\begin{itemize}
+\item Log into your Github account
+\item Click the Repositories Tab
+\item Click the 'New' button (it's green)
+\item name your repository
+\item make it public (we can do a private one later)
+\item intialize repository with a README
+\item add a license GPL or MIT are easy FOSS licenses
+\item clone the repository to your hard drive
+\item add a file to your local clone of the repository
+\item commit it to the repository
+\item push your changes to the remote repository
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fork a Friends Repository, Add Some Files}
+\begin{itemize}
+\item search for a friend's github repository
+\item on their repository page click fork
+\item clone your fork of their repository to your hard drive
+\item edit one of their files
+\item push your chages to their repo
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Accepting and rejecting Pull Requests}
+\framesubtitle{Merging your friends' branches}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{References}
+\bibliographystyle{apalike}
+\bibliography{~Intro_to_R/GitHub_Slides_Source/Bib/VC_with_GitHub}
+
+
+\end{frame}
+
+
+
+
+\end{document}
