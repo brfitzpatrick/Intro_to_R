@@ -10,6 +10,6 @@ If you're in a hurry and want to start the current version of the course right n
 
 Once you have the Repository downloaded as a Zip file please extract it somewhere on your hard drive, the course begins with Module 1: '1_Basics.R'.
 
-For best results please install the current realse of R <http://cran.r-project.org/> and the current version of RStudio IDE (Desktop Version) <http://www.rstudio.com/products/RStudio/#Desk> then open the file '1_Basics.R' with RStudio.
+For best results please install the current realse of R <http://cran.r-project.org/> and the current version of the RStudio IDE (Desktop Version) <http://www.rstudio.com/products/RStudio/#Desk> then open the file '1_Basics.R' with RStudio.
 
 
