@@ -18,5 +18,6 @@ All the best with your journey into the free and open source statistical softwar
 These course materials are also free and open source, please see the LICENSE file for details.
 
 Ben R. Fitzpatrick
+
 0000-0003-1916-0939
 
