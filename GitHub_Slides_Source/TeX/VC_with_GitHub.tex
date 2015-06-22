@@ -269,11 +269,11 @@ Open a `PowerShell'
 \begin{column}{3.3cm}
 Mac OS X \& later\\
 Open a `Terminal'
-%\begin{center}
-%\begin{figure}
-%\includegraphics[width = 0.9\textwidth]{} %% insert MacOS Screenshot here
-%\end{figure}
-%\end{center}
+\begin{center}
+\begin{figure}
+\includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_on_MacOS_Terminal/MacOS_Launch_Terminal_Annotated.png} %% insert MacOS Screenshot here
+\end{figure}
+\end{center}
 \end{column} 
 
 \begin{column}{3.3cm}
@@ -291,6 +291,45 @@ Open a `Terminal'
 \end{column} 
 
 \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Accessing a command line interface from MS Windows}
+\framesubtitle{Open a `PowerShell'Powershell}
+\begin{center}
+\begin{figure}
+\includegraphics[height = 0.9\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_on_MS_Windows_Powershell/Powershell.png}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Accessing a command line interface from MacOS}
+\framesubtitle{Open a `Terminal'}
+\begin{center}
+\begin{figure}
+\includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_on_MacOS_Terminal/MacOS_Launch_Terminal_Annotated.png} 
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Accessing a command line interface from GNU+Linux}
+\framesubtitle{Open a `Terminal'}
+\begin{center}
+\begin{figure}
+\includegraphics[height = 0.9\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_on_GNU_Linux_Terminal/Launch_Terminal.png}
+\end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Copy HTTPS URL to use when cloning repository}
+\begin{center}
+\begin{figure}
+\includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Clone_Repo_1.png}
+\end{figure}
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -343,7 +382,8 @@ Use the HTTPS URL you copied earlier!\\
 Make sure the terminal/powershell has the working directory where you want to clone the repository
 \begin{block}{All Users}
 \begin{lstlisting}
-> git clone https://github.com/.../my_new_repo.git
+> git clone https://github.com/.../my_new_repo
+  .git
 > cd ./my_new_repo/
 > ls
 > git status
