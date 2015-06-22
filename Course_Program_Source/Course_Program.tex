@@ -27,113 +27,123 @@
 
 \begin{document}
 
-\title{Introduction to R}
+\title{\huge Introduction to R\\
+\large Course Program}
 \author{Ben R. Fitzpatrick\\ 
 \small PhD Candidate, Mathematical Sciences School,\\
 \small Queensland University of Technology, Brisbane, QLD.}
 \date{\today}
 \maketitle
 
-\section*{Prior to Course}
-Please do you best to install the software listed below on the laptop you will bring to the course.
-Please also ensure you have `Eduroam' \url{http://www.eduroam.edu.au/} configured on your laptop so that you can access the internet during the course.  
-Internet access on the laptop you are using will be vital to completing the module on version control with GitHub.
-\newline
-\newline
-\textbf{Prior to the course please}: \begin{itemize}
-\item download and install \textbf{R}
-\item download and install \textbf{RStudio}
-\item download and install the R packages `ggplot2' and `rgl'
-\item download and install \textbf{Git}
-\item create a GitHub account 
-\item download and install the GNU Image Manipulation Program \textbf{GIMP}
-\item download and install the GIMP Animation Package \textbf{GAP}
-\end{itemize}
-
-\subsection*{Downloading and Installing R}
-R is available for free download for Windows, MacOS, and Linux from the Comprehensive R Archive Network here: \url{http://cran.r-project.org/}.
-\newline
-\newline
-Please also install the following R packages:  \begin{itemize}
- \item `ggplot2'
- \item `rgl' \end{itemize}
-Install R packages with the `Tools' $\rightarrow$ `Install Packages' in RStudio or by executing the following code at the R command line (your computer will need to be connected to the internet to install R pacakges)o:
-\begin{verbatim}
-install.packages('ggplot2')
-install.packages('rgl')
-\end{verbatim}
-You will need to selected a mirror to download the packages from Canberra or Melbourne are good choices if you are in Australia.
-
-\subsection*{Downloading and Installing RStudio}
-RStudio is available to download from here: \url{http://www.rstudio.com/}.
-Please download the free, open source, desktop edition.
-There is a good video introducing RStudio here \url{http://www.rstudio.com/products/rstudio/}.
-
-\subsection*{Downloading and Installing Git}
-\textbf{MS Windows} \& \textbf{Mac OS X} users please visit \url{http://git-scm.com/downloads} and follow the instructions there.\newline
-\newline
-\textbf{GNU+Linux} users:\\ 
-Debian/Ubuntu: \begin{verbatim} sudo apt-get install git-core \end{verbatim}
-Fedora/RedHat: \begin{verbatim} sudo yum install git-core \end{verbatim}
-
-\subsection*{Creating a GitHub Account}
-Navigate to \url{https://github.com/} and click the green `Sign Up' button in the top right.
-\newline
-\newline
-\textbf{Note}: with a .edu email address you can get 5 private repositories (for now think folders to put things in) for free.
-Please visit \url{https://education.github.com/discount_requests/new} to request your 5 free private repositories.
 \clearpage
-\section*{Program}
+\section*{Tuesday, 7th July, 2015}
 \begin{table}[h!]
-\begin{tabular}{ p{2cm}p{7cm}p{3cm} }
+\begin{tabular}{ |p{2cm}|p{4cm}|p{7cm}| }
+%\hline
+%\multicolumn{3}{ |c| }{\textbf{Day 1}} \\
 \hline
-\multicolumn{3}{ |c| }{\textbf{Day 1}} \\
+                               &                              & \\
+\textbf{Session}               & \textbf{Topic}               & \textbf{Materials} \\ 
+                               &                              & \\ \hline \hline
+ & & \\
+Morning I                      & Why R?                       & \begin{verbatim} Introductory_Slides \end{verbatim} \\
+                               & First Steps with R           & \begin{verbatim} 1_Basics.R \end{verbatim} \\ \hline
+\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ 
+\multicolumn{3}{c}{} \\\hline
+ & & \\
+Morning II                     & First Steps with R           & \begin{verbatim} 1_Basics.R \end{verbatim} \\ \hline
+\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{Lunch Break}  \\ 
+\multicolumn{3}{c}{} \\\hline
+
+
+                               &                              & \\
+                               &                              & \\
+Afternoon I                    & Graphics with `ggplot2'      & \begin{verbatim} 2_Graphics_with_ggplot2.R \end{verbatim} \\
+2.5hrs                         &                              &  \\ \hline
+\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ 
+\multicolumn{3}{c}{} \\ \hline
+ & & \\
+Afternoon II                   & Exploring your data with `ggplot2' & Please bring some data (we can also find you some online if you'd prefer)\\
+2.5hrs                         &                              &  \\
+                               &                              & \\ \hline
 \hline
-Session                        & Topic                        & Materials \\ \hline \hline
-Morning                        & Why R?                       & \begin{verbatim} Introductory_Slides \end{verbatim} \\
-2.5hrs                         & First Steps with R           & \begin{verbatim} 1_Basics.R \end{verbatim} \\ \hline
-\multicolumn{3}{c}{Lunch Break}  \\ \hline
-Afternoon I                    & Graphics with `ggplot2'      & \begin{verbatim} 3_Intro_to_ggplot2.R \end{verbatim} \\
-2.5hrs                         &                              &  \\ \hline
-\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ \hline
-Afternoon II                   & Linear Modelling             & \begin{verbatim} 2_Linear_Modelling.R \end{verbatim} \\ \hline % Practise run took 1hrs 50min but I didn't explain the 'rgl' stuff in so that could easily fill the remaining time 
-2.5hrs                         &                              &  \\ \hline
-\multicolumn{3}{c}{End of Day 1}  \\ \hline
-Homework                       & \multicolumn{2}{l}{Read:}  \\
-                               & \multicolumn{2}{l}{\href{http://stackoverflow.com/questions/1408450/why-should-i-use-version-control}{`Why should I use version control?'} \&} \\
-                               & \multicolumn{2}{l}{\href{http://stackoverflow.com/questions/2712421/r-and-version-control-for-the-solo-data-analyst}{`R and version control for the solo data analyst'}} \\ \hline \hline
+\multicolumn{3}{c}{} \\ 
+\multicolumn{3}{l}{Homework}  \\
+\multicolumn{3}{l}{Please read the following two short posts:}  \\
+\multicolumn{3}{l}{\href{http://stackoverflow.com/questions/1408450/why-should-i-use-version-control}{http://stackoverflow.com/questions/1408450/why-should-i-use-version-control} \&} \\
+\multicolumn{3}{l}{\href{http://stackoverflow.com/questions/2712421/r-and-version-control-for-the-solo-data-analyst}{http://stackoverflow.com/questions/2712421/r-and-version-control-for-the-solo-data-analyst}} \\
 \end{tabular}
 \end{table}
 
+\clearpage
+
+\section*{Wednesday, 8th July, 2015}
 \begin{table}[h!]
-\begin{tabular}{ p{2cm}p{7cm}p{3cm} }
+\begin{tabular}{ |p{2cm}|p{4cm}|p{7cm}| }
+%\hline
+%\multicolumn{3}{ |c| }{\textbf{Day 2}} \\
 \hline
-\multicolumn{3}{ |c| }{\textbf{Day 2}} \\
-\hline
-Session                       & Topic                       & Materials \\ \hline \hline
-\multirow{2}{*}{Morning I}    & Programming in R            & Code File 3 \\
-                              &                             &  \\ \hline
-%\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ \hline
-\multirow{2}{*}{Morning II}   & Programming in R            & Code File 3 \\
-                              & Exercise 4 (Programming)    &  \\ \hline
-\multicolumn{3}{c}{Lunch Break}  \\ \hline
-\multirow{3}{*}{Afternoon I}  & Collaboration \& Version    & Link to Slides \\
+                               &                              & \\
+\textbf{Session}               & \textbf{Topic}               & \textbf{Materials} \\ 
+                               &                              & \\ \hline \hline
+ & & \\
+Morning I                   & Linear Modelling             & \begin{verbatim} 3_Linear_Modelling.R \end{verbatim} \\ % Practise run took 1hrs 50min but I didn't explain the 'rgl' stuff in so that could easily fill the remaining time 
+2.5hrs                         &                              &  \\ \hline
+\multicolumn{3}{c}{} \\ 
+\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ 
+\multicolumn{3}{c}{} \\ \hline
+ & & \\
+\multirow{2}{*}{Morning II}    & Programming in R            & \begin{verbatim} 4_Programming.R \end{verbatim} \\
+                               &                             &  \\ \hline
+\multicolumn{3}{c}{} \\ 
+\multicolumn{3}{c}{Lunch Break}  \\ 
+\multicolumn{3}{c}{} \\ \hline
+\multirow{2}{*}{Afternoon I}  & Continue Programming in R            &  \\
+                              &     &  \\ \hline
+\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ 
+\multicolumn{3}{c}{} \\ \hline
+ & & \\
+\multirow{3}{*}{Afternoon II}  & Collaboration \& Version    & Link to Slides \\
                               & Control with GitHub         &  \\
-                              & Excersie 5 (Collaborating with GitHub) &  \\  \hline                   
-\multicolumn{3}{c}{End of Day 2}  \\ \hline
+                              & Commence Collaborative Exercise &  \\ \hline \hline
+\multicolumn{3}{l}{} \\
+\multicolumn{3}{l}{Optional Homework} \\
+\multicolumn{3}{l}{If you would like to make a start of the collaboritive exercise please feel free to do so}
 %\multirow{2}{*}{Homework}     & Continue with Collaborative & XX \\
 %                              & Exercise                    & XX \\ \hline \hline
 \end{tabular}
 \end{table}
 
+\clearpage
+\section*{Thursday, 9th July, 2015}
 \begin{table}[h!]
-\begin{tabular}{ p{2cm}p{7cm}p{3cm} }
+\begin{tabular}{ |p{2cm}|p{4cm}|p{7cm}| }
+%\hline
+%\multicolumn{3}{ |c| }{\textbf{Day 2}} \\
 \hline
-\multicolumn{3}{ |c| }{\textbf{Day 3}} \\
-\multirow{2}{*}{Morning }      & Collaborative Exercise      & Slides and Data \\
-                              & Integrating All Skills      & \\
-                              & Learned so far              & \\ \hline \hline 
-\multicolumn{3}{c}{End of Course}  \\ \hline
+                               &                              & \\
+\textbf{Session}               & \textbf{Topic}               & \textbf{Materials} \\ 
+                               &                              & \\ \hline \hline
+ & & \\
+
+
+
+ & & \\
+\multirow{2}{*}{Morning I }      & Collaborative Exercise Integrating All Skills Learned so far & Slides and Data \\
+                              &               & \\ \hline 
+\multicolumn{3}{c}{} \\ 
+\multicolumn{3}{c}{Tea/Coffee/Stretch}  \\ 
+\multicolumn{3}{c}{} \\ \hline
+ & & \\
+\multirow{2}{*}{Morning II}      & Presentations of Results of Collaborative Exercise      & \\
+ & & \\ \hline
+\multicolumn{3}{c}{} \\
+\multicolumn{3}{c}{End of Course}  \\ 
+\multicolumn{3}{c}{} \\
 \end{tabular}
 \end{table}
 
@@ -154,7 +164,7 @@ Session                       & Topic                       & Materials \\ \hlin
 %                              & Exercise 5                   & XX \\ \hline \hline
 %\end{tabular}
 %\end{table}
-
+\section*{Digital Version of this Document}
 A digital version of this program along with digital versions of all other materials from this course are avavailable for download from \url{https://github.com/brfitzpatrick/Presents_Intro_to_R}.
 
 \end{document}
