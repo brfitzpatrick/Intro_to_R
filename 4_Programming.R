@@ -1,15 +1,30 @@
-# Code File for Quneensland University of Technology: Bayesian Research and Applications Group's Introduction to R Course
-# Course prepared and presented by Ben R. Fitzpatrick (ben.r.fitzpatrick@gmail.com) 14th of March 2012
+#     This the fourth R Code File for the Introduction to R Course available at
+#     https://github.com/brfitzpatrick/Intro_to_R
+#     Copyright (C) 2015  Ben R. Fitzpatrick.
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    The course author may be contacted by email at 
+#    <ben.r.fitzpatrick@gmail.com>
 
-# R is all about the free sharing of code with the proper acknowledgement of authorship so feel free share this file (just don't delete my name from it ;) and only add yours if you've improved it)
-
-##############################
-#                            #
-#   This is code file 4      #
-#   Intro to R Programming   #
-#                            #
-##############################
-
+################################################################################
+#                                                                              #
+#                   Code File to Accompany Course Module 4                     #
+#                                                                              #
+#                      Introduction to Programming in R                        #
+#                                                                              #
+################################################################################
 
 # Repetitions of a particular sequence of operations on successive selections of data possibly with a changes in the operations may be efficiently accomplished by utilising
 
@@ -618,10 +633,6 @@ system.time(sl2.sp3 <- ptv.sp3(v=seq(1e5,1e5+100,1)))[3]/1000 #    sec per eleme
 ############
 ################
 
-
-
-
-
 # To Speed Up R Code:
 
 # Replace loops with matrix operations
@@ -631,24 +642,15 @@ system.time(sl2.sp3 <- ptv.sp3(v=seq(1e5,1e5+100,1)))[3]/1000 #    sec per eleme
 # Define you data.storage object once outside the loop and fill it from within the loop (rather than adding new columns or rows with each iteration of the loop- R has to re-define the whole thing each time if you do this )
 
 # try using lapply() instead of for()
-#'lapply() can be faster than a carefully crafted for() loop (since C-level code is more efficient in memory allocation)' - Brian D. Ripley, Professor of Applied Statistics, Oxford
+# 'lapply() can be faster than a carefully crafted for() loop (since C-level code is more efficient in memory allocation)' - Brian D. Ripley, Professor of Applied Statistics, Oxford
 
-# call 'C' or 'fortran' for the slow bits (I can't help with this sorry)
+# where job allows for parallel computing split it across multiple processor cores using package the `foreach' or 'parallel' pacakges
 
-# where job allows for parallel computing split it across multiple processor cores using package 'multicore' e.g. mclapply()  or the REvolution package
-
-
-
-
-
-
-
-
-
-
-#or if you would rather try to emulate solar system producing something along the lines of the animation I made: Solar_System.avi
-#(you don't have to make it into an external animation an animation within R is also fine for our purposes here)
-
+###############################
+#                             #
+#     Extension Exercises:    #
+#                             #
+###############################
 
 # If you'd like more exercises to learn R programming by doing:
 
@@ -662,4 +664,13 @@ system.time(sl2.sp3 <- ptv.sp3(v=seq(1e5,1e5+100,1)))[3]/1000 #    sec per eleme
 
 # Remember you've got Wikipedia and Wolfram MathWorld if you need to look up any maths concepts to do a problem
 
-# 
+
+################################################################################
+#                                                                              #
+#                    End of Code File 4 that Accompanies                       #
+#                                                                              #
+#                              Course Module 4                                 #
+#                                                                              #
+#                     Introduction to Programming in R                         #
+#                                                                              #
+################################################################################
