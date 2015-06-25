@@ -96,6 +96,93 @@
 \end{frame}
 
 
+\begin{frame}
+\frametitle{Version Control Software}
+Have you ever put numbers or dates at the end of a file name to keep different versions of it? 
+\begin{itemize} 
+\item If yes then you have already used version control!
+\newline
+\newline
+\end{itemize}
+
+Have you ever used track changes and comments to take turns editing a  MS Word document with one or more others?
+\begin{itemize}
+\item If yes then you have collaboratively edited a file!
+\newline
+\newline
+\end{itemize}
+
+Version Control Software: 
+\begin{itemize} 
+\item formalizes these concepts
+\item can do a lot of the organisational work for you
+\item makes reverting to previous versions without losing work easy 
+\end{itemize}
+ 
+\end{frame}
+
+\begin{frame}
+\frametitle{Version Control when Working Alone}
+\begin{block}{Version Control for Solo Authoring File}
+\begin{itemize}
+\item You essentially have a time stamped undo button which will allow you to go review or revert to previous versions of the file
+\item you can even make multiple child versions fo the same file say for different audiences or to trial different orders and styles in which to write a report or program
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Version Control when Collaborating}
+Greatly simplifies your life
+Control over which changes different contributers make get added to the definitive version of a file
+support for file to split into two child copies which can then be edited towards very different end points but still having the option to systematically recombine them at any stage
+
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Why Git?}
+
+Git is free and open source
+\newline
+\newline
+Git is available for most operating systems
+\newline
+\newline
+Git is Distributed and Fast
+\newline
+\newline
+Two major code hosting services (GitHub \& BitBucket) support version control with Git and both services have free account options
+
+% \tiny $^1$ Google Code will close in 2016 as they have deemed it is no longer necessary given success of BitBucket and GitHub
+
+\end{frame}
+
+
+
+\begin{frame} 
+\frametitle{Git is Distributed Version Control}
+Every contributor has a copy of the entire database ( all revisions of all files)
+two contributors can both work on the files in their copy of the database independently then their combined modifications can be merged systematically
+\end{frame} 
+
+\begin{frame}
+\frametitle{Why Git on the Command Line?}
+Makes discrete components of the workflow obvious this in turn will enable you to migrate easily to one of the many GUIs
+\newline
+\newline
+The workflows we will practise today will work exactly the same way on MS Windows, MacOS and GNU+Linux
+\newline
+\newline
+We have now been using a command line interface for 1.5 days to interact with the R program it's time to take it to the next level
+\end{frame}
+
 \begin{frame} 
 \frametitle{Plan for this Module - Part 1}
 \begin{block}{Solo Version Control}
@@ -127,88 +214,6 @@
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Version Control Software}
-Have you ever put numbers or dates at the end of a file name to keep different versions of it? 
-\begin{itemize} 
-\item If yes then you have already used version control!
-\newline
-\newline
-\end{itemize}
-
-Have you ever used track changes and comments to take turns editing a  MS Word document with one or more others?
-\begin{itemize}
-\item If yes then you have collaboratively edited a file!
-\newline
-\newline
-\end{itemize}
-
-Version Control Software: 
-\begin{itemize} 
-\item formalizes these concepts
-\item can do a lot of the organisational work for you
-\item makes reverting to previous versions without losing work easy 
-\end{itemize}
- 
-\end{frame}
-
-\begin{frame}
-\frametitle{Version Control when Working Alone}
-Even if you are not collaborating with anyone on a particular file version control can still be very useful
-You essentially have a time stamped undo button which will allow you to go review or revert to previous versions of the file
-you can even make multiple child versions fo the same file say for different audiences or to trial different orders and styles in which to write a report or program
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Version Control when Collaborating}
-Greatly simplifies your life
-Control over which changes different contributers make get added to the definitive version of a file
-support for file to split into two child copies which can then be edited towards very different end points but still having the option to systematically recombine them at any stage
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Why Git?}
-
-Git is free and open source
-\newline
-\newline
-Git is available for most operating systems
-\newline
-\newline
-\begin{block}{Major Online Code Hosting Services Support Git:}
-\begin{itemize}
-\item GitHub \& BitBucket are the popular code hosting choices these days
-\item GitHub \& BitBucket both allow code management with Git
-\item GitHub \& BitBucket both have free code hosting options
-\end{itemize}
-\end{block}
-
-Git is Distributed and Fast
-
-\tiny $^1$ Google Code will close in 2016 as they have deemed it is no longer necessary given success of BitBucket and GitHub
-
-\end{frame}
-
-
-
-\begin{frame} 
-\frametitle{Git is Distributed Version Control}
-Every contributor has a copy of the entire database ( all revisions of all files)
-two contributors can both work on the files in their copy of the database independently then their combined modifications can be merged systematically
-\end{frame} 
-
-\begin{frame}
-\frametitle{Why Git on the Command Line?}
-Makes discrete components of the workflow obvious this in turn will enable you to migrate easily to one of the many GUIs
-\newline
-\newline
-The workflows we will practise today will work exactly the same way on MS Windows, MacOS and GNU+Linux
-\newline
-\newline
-By this stage we have been using a command line interface for 1.5 days to interact with the R program it's time to take it to the next level
-\end{frame}
 
 \begin{frame}
 \frametitle{Creating a Repository on the GitHub Servers}
@@ -241,15 +246,25 @@ By this stage we have been using a command line interface for 1.5 days to intera
 \end{frame}
 
 \begin{frame}
-\frametitle{Next - to clone your repository to the hard drive of your laptop}
-Create a folder to store your Git Repositories on your Hard Drive
+\frametitle{Cloning your new Repository to your Hard Drive}
+
+First, create a folder on your Hard Drive in which to store your Git Repositories.  
+\newline
+\newline
+We are now going to use the Git command line application to `clone' your new repository from the GitHub server to your hard drive.
+\newline
+\newline
+Git is distributed version control so a Git `clone' is a complete copy of the entirity of the repository i.e.\begin{itemize}
+\item all the files
+\item the entire history of snapshots of files states created each time you committed to the respository
+\newline \end{itemize}
+Being a distributed version control system Git doesn't require you to be connected to the GitHub servers to work on your files and commit them to your branch of the repository.
 
 \end{frame}
 
-
 \begin{frame}
-\frametitle{Accessing a command line interface in your OS of choice}
-
+\frametitle{Git on the Command Line}
+Accessing a command line interface in your OS of choice
 \begin{columns}
 
 \begin{column}{3.3cm}
@@ -323,24 +338,6 @@ Open a `Terminal'
 \end{center}
 \end{frame}
 
-\begin{frame}
-\frametitle{Copy HTTPS URL to use when cloning repository}
-\begin{center}
-\begin{figure}
-\includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Clone_Repo_1.png}
-\end{figure}
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Copy HTTPS URL to use when cloning repository}
-\begin{center}
-\begin{figure}
-\includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Clone_Repo_1.png}
-\end{figure}
-\end{center}
-\end{frame}
-
 \begin{frame}[fragile]
 \frametitle{Configuring Git for the first time}
 \begin{block}{All Users}
@@ -351,14 +348,15 @@ Open a `Terminal'
 \end{block}
 \end{frame}
 
-
 \begin{frame}[fragile]
 \frametitle{Cloning Your Repository from the GitHub Servers}
+
+Set the working directory to the location on your hard drive to which you would like the repository cloned:
 
 \begin{block}{Powershell Users}
 \begin{lstlisting}
 > C:
-> cd C:\Users\username\Document\GitHub_Repos\
+> cd C:\Users\username\Documents\GitHub_Repos\
 > dir 
 \end{lstlisting}
 \end{block}
@@ -371,15 +369,24 @@ Open a `Terminal'
 \end{block}
 \end{frame}
 
+\begin{frame}
+\frametitle{Copy HTTPS URL to use when cloning repository}
+\begin{center}
+\begin{figure}
+\includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Clone_Repo_1.png}
+\end{figure}
+\end{center}
+\end{frame}
+
 \begin{frame}[fragile]
-\frametitle{Clone Git Repository from the GitHub Servers to Your Hard drive}
-Use the HTTPS URL you copied earlier!\\
+\frametitle{Clone your Repository: GitHub Servers $\rightarrow$ your Hard Drive}
+Use the HTTPS URL you copied earlier:\\
 \begin{center}
 \begin{figure}
 \includegraphics[width = 0.5\textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/HTTPS_Clone.png}
 \end{figure}
 \end{center}
-Make sure the terminal/powershell has the working directory where you want to clone the repository
+
 \begin{block}{All Users}
 \begin{lstlisting}
 > git clone https://github.com/.../my_new_repo
@@ -391,8 +398,6 @@ Make sure the terminal/powershell has the working directory where you want to cl
 \end{block}
 \end{frame}
 
-\end{document}
-
 \begin{frame} 
 \frametitle{Git}
 \framesubtitle{The Three States of Files in a Git Tracked Directory}
@@ -401,26 +406,151 @@ Files in a directory which you are version controlling with Git can exist in one
 \item \textbf{committed} data stored in the database for the associted repository
 \item \textbf{modified} local copy of a file (in your working directory) is different to the most recent version of that file stored in the database for the associted repository i.e. you have changed something but not comitted the changes (yet)
 \item \textbf{staged} the local copy of a file which you have modified is marked to be added to the database in the next commit snapshot you send to the database
-
 \end{itemize}
-
 \end{frame}
 
 \begin{frame} 
 \frametitle{Git}
 \framesubtitle{Basic Git Workflow}
-
 \begin{itemize}
-\item you modify files in your local copy of the repository
+\item you add files or modify existing files in your local copy of the repository
 \item you stage these modified files ready to be committed to the database for the repository
 \item you perform a commit which takes the files as they were when staged and stores a snapshot of them in the database for the repository
 \end{itemize}
+\end{frame}
 
-\begin{frame} 
+\begin{frame}[fragile]
 \frametitle{Git}
-\framesubtitle{Basic Git Workflow}
+\framesubtitle{Adding New Files}
+\begin{enumerate}
+\item Open your favourite program for authoring R code (e.g. RStudio)
+\item Create an new R script 
+\item Save your R Script in the `clone' of your repository
+\end{enumerate}
 
 \end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Git}
+\framesubtitle{Adding New Files}
+
+\begin{block}{}
+\begin{lstlisting}
+> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what 
+will be committed)
+\end{lstlisting}
+\end{block}
+
+We have to tell Git that we want it to track the changes we make to this new file
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Git}
+\framesubtitle{Adding New Files}
+
+We have to tell Git that we want it to track the changes we make to this new file
+\begin{block}{}
+\begin{lstlisting}
+> git add filename.R
+> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   filename.R
+\end{lstlisting}
+\end{block}
+We can still change our mind about adding the file to the repository at this stage quite easily.
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Git}
+\framesubtitle{Adding New Files}
+Once you're ready to `commit' this change to the permanent record of changes in this repository we make a `commit'
+\begin{block}{}
+\begin{lstlisting}
+> git commit
+[master 311acfb] Initial Commit of some R code.
+ 1 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 filename.R
+\end{lstlisting}
+\end{block}
+You will be prompted to write a short description of the changes you are committing - these become invaluable as your project grows and if you are collaborating:\\
+Once you've written a commit message, save it and close the text editor if you used one.\\
+You should see confirmation of the commit immediately below the git commit line.
+\end{frame}
+\begin{block}{}
+\begin{lstlisting}
+> git commit
+[master 311acfb] Initial Commit of some R code.
+ 1 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 filename.R
+\end{lstlisting}
+\end{block}
+
+\begin{frame}[fragile]
+\frametitle{Git}
+Now that you've commited some changes to your local clone of the repository this local version will be ahead of the version on the GitHub Server
+\begin{block}{}
+\begin{lstlisting}
+git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+\end{lstlisting}
+\end{block}
+Seeing as we are all currently connected to the internet, it's a good time to `push' these changes to GitHub server (`origin/master' in this our default setup) to bring the remote copy of this repository up to date.
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{block}{}
+\begin{lstlisting}
+git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+\end{lstlisting}
+\end{block}
+If you return to the page for your repository on the GitHub website and refresh the page you should see you
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{block}{the whole process}
+\begin{lstlisting}
+> git clone git@github.com:brfitzpatrick/my_new_repo.git
+Cloning into 'my_new_repo'...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100\% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100\% (4/4), 12.12 KiB | 0 bytes/s, done.
+Checking connectivity... done.
+> cd my_new_repo/
+> touch filename.R
+> emacs filename.R 
+> git add filename.R
+> git commit
+[master 99d61f1] My first commit of some R code.
+ 1 file changed, 2 insertions(+)
+ create mode 100644 filename.R
+> git push
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100\% (2/2), done.
+Writing objects: 100\% (3/3), 353 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:brfitzpatrick/my_new_repo.git
+   4930bee..99d61f1  master -> master
+\end{lstlisting}
+\end{block}
+\end{frame}
+
 
 \begin{frame} 
 \frametitle{Git}
@@ -450,8 +580,6 @@ branching allows for collaboration, various contributors can all make their own 
 Fork a repository
 Use the Sync button in Windows/MacOS client to get new changes from server (and submit any changes you have made)
 \end{frame}
-
-
 
 \begin{frame}
 \frametitle{Create a Repository, Add Some Files}
@@ -485,6 +613,32 @@ Use the Sync button in Windows/MacOS client to get new changes from server (and 
 \frametitle{Accepting and rejecting Pull Requests}
 \framesubtitle{Merging your friends' branches}
 \end{frame}
+
+\begin{frame}
+\frametitle{Recommended Further Reading}
+\framesubtitle{\url{http://git-scm.com/book/en/v2}}
+\begin{center}
+\begin{figure}
+\includegraphics[height = 0.8\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_Resources/ProGitCover.pdf}
+\end{figure}
+\cite{Chacon2014}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Recommended Further Reading:}
+\framesubtitle{\url{https://help.github.com/}}
+%
+\begin{center}
+\begin{figure}
+\includegraphics[width = 0.95\textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_Resources/GitHub_Help_Page.pdf}
+\end{figure}
+
+\end{center}
+
+\end{frame}
+
 
 \begin{frame}
 \frametitle{References}
