@@ -478,67 +478,33 @@ Once you're ready to `commit' this change to the permanent record of changes in 
 \begin{lstlisting}
 > git commit
 [master 311acfb] Initial Commit of some R code.
- 1 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 filename.R
+1 files changed, 0 insertions(+), 0 deletions
+(-) create mode 100644 filename.R
 \end{lstlisting}
 \end{block}
-You will be prompted to write a short description of the changes you are committing - these become invaluable as your project grows and if you are collaborating:\\
-Once you've written a commit message, save it and close the text editor if you used one.\\
+You will be prompted to write a short description of the changes you are committing - these become invaluable as your project grows and if you are collaborating.
+Once you've written a commit message, save it (and close the text editor if you used one).\\
 You should see confirmation of the commit immediately below the git commit line.
 \end{frame}
-\begin{block}{}
-\begin{lstlisting}
-> git commit
-[master 311acfb] Initial Commit of some R code.
- 1 files changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 filename.R
-\end{lstlisting}
-\end{block}
 
 \begin{frame}[fragile]
 \frametitle{Git}
 Now that you've commited some changes to your local clone of the repository this local version will be ahead of the version on the GitHub Server
 \begin{block}{}
 \begin{lstlisting}
-git status
+> git status
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
+Your branch is ahead of 'origin/master' by 1
+commit.
+ (use "git push" to publish your local commits)
 \end{lstlisting}
 \end{block}
-Seeing as we are all currently connected to the internet, it's a good time to `push' these changes to GitHub server (`origin/master' in this our default setup) to bring the remote copy of this repository up to date.
+Seeing as we are all currently connected to the internet, it's a good time to `push' these changes to GitHub server (`origin/master' in the default setup) to bring the remote copy of this repository up to date.
 \end{frame}
 
 \begin{frame}[fragile]
-\begin{block}{}
+\begin{block}{pushing to the remote servers}
 \begin{lstlisting}
-git status
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-\end{lstlisting}
-\end{block}
-If you return to the page for your repository on the GitHub website and refresh the page you should see you
-\end{frame}
-
-\begin{frame}[fragile]
-\begin{block}{the whole process}
-\begin{lstlisting}
-> git clone git@github.com:brfitzpatrick/my_new_repo.git
-Cloning into 'my_new_repo'...
-remote: Counting objects: 4, done.
-remote: Compressing objects: 100\% (3/3), done.
-remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100\% (4/4), 12.12 KiB | 0 bytes/s, done.
-Checking connectivity... done.
-> cd my_new_repo/
-> touch filename.R
-> emacs filename.R 
-> git add filename.R
-> git commit
-[master 99d61f1] My first commit of some R code.
- 1 file changed, 2 insertions(+)
- create mode 100644 filename.R
 > git push
 Counting objects: 3, done.
 Delta compression using up to 8 threads.
@@ -549,30 +515,160 @@ To git@github.com:brfitzpatrick/my_new_repo.git
    4930bee..99d61f1  master -> master
 \end{lstlisting}
 \end{block}
+If you return to the page for your repository on the GitHub website and refresh the page you should see your most recent commit listed on the repository page.
 \end{frame}
 
+\begin{frame}[fragile]
+\begin{block}{the whole process}
+Furthermore, now that we have `commited' and `pushed' our most recent changes our local copy of the repository and the remote copy of the repository on the GitHub servers will be identical
+\begin{lstlisting}
+> git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+
+%\begin{frame}[fragile]
+%\begin{block}{the whole process}
+%\begin{lstlisting}
+%> git clone git@github.com:brfitzpatrick/my_new_repo.git
+%Cloning into 'my_new_repo'...
+%remote: Counting objects: 4, done.
+%remote: Compressing objects: 100\% (3/3), done.
+%remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+%Receiving objects: 100\% (4/4), 12.12 KiB | 0 bytes/s, done.
+%Checking connectivity... done.
+%> cd my_new_repo/
+%> touch filename.R
+%> emacs filename.R 
+%> git add filename.R
+%> git commit
+%[master 99d61f1] My first commit of some R code.
+% 1 file changed, 2 insertions(+)
+% create mode 100644 filename.R
+%> git push
+%Counting objects: 3, done.
+%Delta compression using up to 8 threads.
+%Compressing objects: 100\% (2/2), done.
+%Writing objects: 100\% (3/3), 353 bytes | 0 bytes/s, done.
+%Total 3 (delta 0), reused 0 (delta 0)
+%To git@github.com:brfitzpatrick/my_new_repo.git
+%   4930bee..99d61f1  master -> master
+%\end{lstlisting}
+%\end{block}
+%\end{frame}
 
 \begin{frame} 
 \frametitle{Git}
 \framesubtitle{Undoing things}
+To revert to a previous version of a file that you have `snapshot' of from a previous `commit'\\
+Click on the file name on the GitHub website and click the `History' button:
+\newline
+\newline
+Provided we have commited all changes to the file then it is safe to use the checkout command which will overwrite the file in the current local working directory with the file from the previous `commit'.
+\newline
+\newline
+You can think of commits a bit like save points, if we have two we can move between them but if we load and old save without first making a current save we will loose the unsaveed changes
+\end{frame}
+
+\begin{frame} 
+\frametitle{Git}
+\framesubtitle{Undoing things}
+choose a commit you'd like to go back to...copy the SHA
+\newline
+\newline
+git checkout 99d61f19d85ae7aec691feb81ca8aef59f6a0719
+\newline
+\newline
+and open `filename.R' and our changes are gone
+\newline
+\newline
+checkout the most recent commit to get them back
+\newline
+\newline
+if you want to go back to a previous version of a file and try something new without overwriting your most recent versions you can `checkout' and old `commit' to a new `branch' of the repository
 
 \end{frame}
 
 
-\begin{frame}
-\frametitle{Branching}
 
-'Branching means you diverge from the main line of development and continue to do work without messing with that main line.'
+\begin{frame}[fragile]
+\frametitle{Git}
+\framesubtitle{Undoing things}
+One way to safely experiment with past versions of a file is to create a new `branch' in the repository in which to do so
+\newline
+\newline
+branches are separate lines of development of the same files
+\newline
+\newline
+let's make a new `testing3' branch checking out a previous version of the file filename.R\\
+\begin{lstlisting}
+> git checkout 99d61f19d85ae7aec691feb81ca8aef59f6a0719 -b testing3
 
-Every project starts with the default `master' branch
-you can then make a new branch e.g. a `testing' branch which will initially be the same as the `master' branch at the point in time at which you create it
-you switch to another branch by `checking out' that branch
-you can then commit changes to this branch without alterning the `master' branch i.e. you could develop some new feature without risking breaking the functionality of the master branch while you do so
-once your feel your work on the a branch is complete you can `merge' your `testing' branch with the `master' branch
+> git push --set-upstream origin testing3
+\end{lstlisting}
+we can then move between branches with the checkout command
+\begin{lstlisting}
+> git checkout master
 
-branching allows for collaboration, various contributors can all make their own branches of the repository then submit their changes to the repository owner for merging into the master branch - git provided powerful tools for managing these merges and resolving merge conflicts
-
+> git checkout testing3
+\end{lstlisting}
 \end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Merging Branches}
+To merge the `master' and `testing3' branches
+\begin{block}{}
+\begin{lstlisting}
+> git checkout master
+> git merge testing3
+\end{lstlisting}
+\end{block}
+
+if you get a merge conflict use a mergetool to resolve the conflict\\
+(you should have one installed by default from when you installed Git)
+
+\begin{block}{}
+\begin{lstlisting}
+> git mergetool
+\end{lstlisting}
+\end{block}
+\end{frame}
+
+%\begin{frame}[fragile]
+%  \frametitle{Merging Branches}
+%
+%\begin{block}{once you have resolved the conflict}
+% \begin{lstlisting}
+%  > git add filename.R
+%  > git commit
+% \end{lstlisting}
+% \end{block}
+
+%\begin{block}{finally you can delete your testing branch if you're done with it}
+% \begin{lstlisting}
+%  > git branch -d testing3
+% \end{lstlisting}
+% \end{block}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Branching}
+%
+%%%'Branching means you diverge from the main line of development and continue to do work without messing with that main line.'
+
+%Every project starts with the default `master' branch
+%%%%you can then make a new branch e.g. a `testing' branch which will initially be the same as the `master' branch at the point in time at which you create it
+%you switch to another branch by `checking out' that branch
+%you can then commit changes to this branch without alterning the `master' branch i.e. you could develop some new feature without risking breaking the functionality of the master branch while you do so
+%once your feel your work on the a branch is complete you can `merge' your `testing' branch with the `master' branch
+
+%branching allows for collaboration, various contributors can all make their own branches of the repository then submit their changes to the repository owner for merging into the master branch - git provided powerful tools for managing these merges and resolving merge conflicts
+
+%\end{frame}
 
 
 \begin{frame}
