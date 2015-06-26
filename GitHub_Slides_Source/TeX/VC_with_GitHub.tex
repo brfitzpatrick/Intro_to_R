@@ -349,6 +349,49 @@ Open a `Terminal'
 \end{frame}
 
 \begin{frame}[fragile]
+\frametitle{Configuring Git for the first time}
+\framesubtitle{Choosing a Global Editor}
+The global editor is used to write your commit messages.
+\newline
+\newline
+Default is Vim but Vim is a little heavy on keyboard short cuts for some...
+\newline
+\newline
+Many of the below can also function as an IDE for authoring R code if you prefer one of them to RStudio.
+\newline
+\newline
+Other Options: \begin{itemize}
+\item Notepad (available on all Windows PCs)
+\item Atom: \url{https://atom.io/docs/v1.0.0/getting-started-installing-atom}
+\item Sublime: \url{http://www.sublimetext.com/2}
+\item TextMate: \url{http://macromates.com/download}
+\item Emacs: \begin{verbatim} sudo apt-get install emacs \end{verbatim} 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Configuring Git for the first time}
+
+\begin{block}{Set a Text Editor of your choice (you'll need it installed}
+Use one of the below
+\begin{lstlisting}
+# Notepad:
+> git config --global core.editor notepad.exe
+# Atom:
+> git config --global core.editor "atom --wait"
+# Sublime:
+> git config --global core.editor "subl -n -w"
+# TextMate:
+> git config --global core.editor "mate -w"
+# Emacs:
+> git config --global core.editor "emacs"
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
 \frametitle{Cloning Your Repository from the GitHub Servers}
 
 Set the working directory to the location on your hard drive to which you would like the repository cloned:
