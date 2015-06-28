@@ -362,6 +362,7 @@ Many of the below can also function as an IDE for authoring R code if you prefer
 \newline
 Other Options: \begin{itemize}
 \item Notepad (available on all Windows PCs)
+\item TextEdit (available on most Macs)
 \item Atom: \url{https://atom.io/docs/v1.0.0/getting-started-installing-atom}
 \item Sublime: \url{http://www.sublimetext.com/2}
 \item TextMate: \url{http://macromates.com/download}
@@ -378,6 +379,8 @@ Use one of the below
 \begin{lstlisting}
 # Notepad:
 > git config --global core.editor notepad.exe
+# TextEdit:
+> git config --global core.editor 'open -t -n -W'
 # Atom:
 > git config --global core.editor "atom --wait"
 # Sublime:
