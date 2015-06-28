@@ -40,10 +40,10 @@
 \section*{Prior to Course}
 Please do you best to install the software listed below on the laptop you will bring to the course.
 Please also ensure you have `Eduroam' \url{http://www.eduroam.edu.au/} configured on your laptop so that you can access the internet during the course.  
-Internet access on the laptop you are using will be vital to completing the module on version control with Gti and GitHub.
+Internet access on the laptop you are using will be vital to completing the module on version control with Git and GitHub.
 If possible please bring along some data that interests you, for use in exercises.
 Please note: I would like you to be able to show the results of your exercises on these data to other students during the course so if you have data that you are not allowed to let other people see please don't bring these data.
-If you don't have any data you'd like work on there is plenty of free data available online that will suit our purposes - the demonstrator will show you where you can download some such data during the course.
+If you don't have any data you'd like work on there is plenty of free data available online that will suit our purposes - I can show you where you can download some such data during the course.
 \newline
 \newline
 \textbf{Prior to the course please}: \begin{itemize}
@@ -51,7 +51,7 @@ If you don't have any data you'd like work on there is plenty of free data avail
 \item download and install \textbf{RStudio}
 \item download and install the \textbf{R packages: `ggplot2', `rgl', `DAAG', `rgdal'} and \textbf{`raster'}
 \item download and install \textbf{Git}
-\item if you'd rather not use \textbf{Notepad} or the MacOS equivalent you might like to download and install one of \textbf{Atom, Sublime, TextMate or Emacs}
+\item if you'd rather not use \textbf{Notepad} or the TextEdit you might like to download and install one of \textbf{Atom, Sublime, TextMate} or \textbf{Emacs}
 \item create a GitHub account. \end{itemize}
 
 \textbf{Note:} Please ensure that all the listed software are installed to the hard drive of the laptop you will bring to the course (rather than to your personal folder on your university's network shared drives as this will likely not be accessible when you are away from your university).
@@ -74,17 +74,17 @@ Prior to the course please install the R packages: \begin{itemize}
 \end{itemize}
 
 To install R packages with the RStudio R package manager please: \begin{enumerate}
-\item ensure your computer is connected to the internet and logged in such that you can access the broader internet not just your university's intranet e.g. make sure you can visit \url{www.abc.net.au}
+\item ensure your computer is connected to the internet and logged in such that you can access the broader internet (not just your university's intranet e.g. make sure you can visit \url{www.abc.net.au})
 \item open RStudio
 \item from the `Tools' menu up the top selected `Install Packages'
 \item Type the names of the packages you want to install into the dialogue box separated by commas
 \item Click `Install'
 \end{enumerate}
-You will need to selected a mirror from which to download the packages; Canberra or Melbourne are good choices if you are in Australia.
+You will need to select a mirror from which to download the packages; Canberra or Melbourne are good choices if you are in Australia.
 Please check that you have successfully installed each of these packages by loading them with the library command e.g. to load the `ggplot2' package use:
 \begin{verbatim}
 library('ggplot2')
-\end{verbatim}.
+\end{verbatim}
 
 \subsection*{Downloading and Installing Git}
 \textbf{MS Windows} \& \textbf{Mac OS X} users please visit \url{http://git-scm.com/downloads} and follow the instructions there.
@@ -99,13 +99,13 @@ Fedora/RedHat: \begin{verbatim} sudo yum install git-core \end{verbatim}
 
 Please also download and install the current version of \textbf{Meld} for your operating system: \url{http://meldmerge.org/}
 
-\subsection*{Downloading and a Text Editor of Your Choice}
-By default \textbf{Git} will open \textbf{Vim} text editor when the time comes for your to write a commit meassage.
-Vim is a little difficult to get into at first running in the terminal as it does with separate insert and command modes.
+\subsection*{Downloading a Text Editor of Your Choice}
+By default \textbf{Git} will open the \textbf{Vim} text editor when the time comes for you to write a commit message.
+Vim is a little difficult to get into at first, running in the terminal as it does with separate insert and command modes.
 If you would prefer you can set either Notepad (Windows) or TextEdit (MacOS) as the default text editor Git will open when you need to write commit messages.  
-You may also configure Git to use one of several popular editors such as \textbf{Atom, Sublime, TextMate or Emacs}.
+You may also configure Git to use one of several popular editors such as \textbf{Atom, Sublime, TextMate} or Emacs.
 If you already know how to use one of these editors this will likely be easiest.  
-Atom and Sublime can both be used as IDEs for R, if you already know one this may be a good option too.
+Atom, Sublime and Emacs (Speaks Statistics) can all be used as IDEs for R, if you already know one this may be a good option too.
 \newline
 \newline
 To install Atom, Sublime or TextMate see these links: \begin{itemize}
@@ -114,12 +114,18 @@ To install Atom, Sublime or TextMate see these links: \begin{itemize}
 \item TextMate: \url{http://macromates.com/download}
 \end{itemize}
 
-\textbf{GNU+Linux users:} Emacs or Vim will suffice as a text editor to write Git commit messages here provided you know how to use one of them.
-\begin{itemize}
-\item \begin{verbatim} sudo apt-get install vim \end{verbatim} 
+\textbf{GNU+Linux users:} Emacs, Nano or Vim will suffice as a text editor to write Git commit messages here provided you know how to use one of them.
+Debian/Ubuntu: \begin{itemize}
 \item \begin{verbatim} sudo apt-get install emacs \end{verbatim} 
+\item \begin{verbatim} sudo apt-get install nano \end{verbatim} 
+\item \begin{verbatim} sudo apt-get install vim \end{verbatim} 
 \end{itemize}
-Emacs Speaks Statistics is also a great IDE for R.
+
+Debian/Ubuntu: \begin{itemize}
+\item \begin{verbatim} sudo yum install emacs \end{verbatim} 
+\item \begin{verbatim} sudo yum install nano \end{verbatim} 
+\item \begin{verbatim} sudo yum install vim \end{verbatim} 
+\end{itemize}
 
 \subsection*{Creating a GitHub Account}
 Navigate to \url{https://github.com/} and click the green `Sign Up' button in the top right.\\
@@ -137,14 +143,16 @@ If you'd like to find out a bit more about R and its increasing popularity I hea
 \end{itemize}
 
 \subsection*{Concerning the RStudio IDE for R}
-If you'd like a little preview of the Integrated Development Environment we will be using to author R code and interact with the R program I refer you to the following sources on RStudio and its intuitive yet feature rich approach to authroing R Code and running an R program: \begin{itemize}
+If you'd like a little preview of the Integrated Development Environment we will be using to author R code and interact with the R program I refer you to the following sources on RStudio and its intuitive yet feature rich approach to authoring R code and running an R program: \begin{itemize}
 \item \url{https://vimeo.com/97166163}
 \item \url{http://www.rstudio.com/products/rstudio/features/}
 \newline
+\newline
 \end{itemize}
-
-Thank you for taking the time to prepare for the course, I look forward to meeting you all in Adelaide and empowering you all to utilize the wonderfull free and open source tool that is R.
-
-
+Thank you for taking the time to prepare for the course, I look forward to meeting you all in Adelaide and empowering you all to utilize the wonderful, free and open source tool that is R.
+\newline
+\newline
+\newline
+    - \textit{Ben R. Fitzpatrick, \date{\today}}
 
 \end{document}
