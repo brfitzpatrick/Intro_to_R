@@ -607,8 +607,8 @@ nothing to commit, working directory clean
 %\end{frame}
 
 \begin{frame} 
-\frametitle{Git}
-\framesubtitle{Undoing things}
+\frametitle{Undoing Things Safely}
+\framesubtitle{Checking out Previous Commits to a New Branch}
 To revert to a previous version of a file that you have `snapshot' of from a previous `commit'\\
 Click on the file name on the GitHub website and click the `History' button:
 \newline
@@ -625,7 +625,67 @@ You can think of commits a bit like save points, if we have two we can move betw
 choose a commit you'd like to go back to...copy the SHA
 \newline
 \newline
-git checkout 99d61f19d85ae7aec691feb81ca8aef59f6a0719
+# List existing branches of current directory
+git branch
+
+# checkout a previous commit (SHA = 58...a44) 
+\begin{verbatim}
+> git checkout -b testing 589172506c13572be6cc052706ab4129de2c7a44
+  Switched to a new branch 'testing'
+
+> git branch
+    master
+  * testing
+
+\end{verbatim}
+
+Now if you open your .R file you'll see that you have a previous version of the file without the new changes
+
+git branch
+
+# make some changes on testing branch
+# push those changes upsteam to server
+
+git push --set-upstream origin testing
+
+# check website - your repo should now have two branches
+
+# Now to merge your changes from 'testing' back into 'master'
+
+# to merge into a branch we must be on that branch:
+git checkout master
+
+# merge testing1 into current branch (master)
+git merge testing1
+
+Auto-merging Car_Bar_Charts.R
+CONFLICT (content): Merge conflict in Car_Bar_Charts.R
+Automatic merge failed; fix conflicts and then commit the result.
+
+git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+meld opendiff kdiff3 tkdiff xxdiff tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc3 codecompare emerge vimdiff
+Merging:
+Car_Bar_Charts.R
+
+Normal merge conflict for 'Car_Bar_Charts.R':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (meld): 
+
+## 
+
+Now open you're R file to see the results of your merge
+
+
+
+
+
+
+
 \newline
 \newline
 and open `filename.R' and our changes are gone
