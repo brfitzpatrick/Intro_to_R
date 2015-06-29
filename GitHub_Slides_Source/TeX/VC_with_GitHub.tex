@@ -140,11 +140,6 @@ support for file to split into two child copies which can then be edited towards
 
 \end{frame}
 
-
-
-
-
-
 \begin{frame}
 \frametitle{Why Git?}
 
@@ -158,12 +153,8 @@ Git is Distributed and Fast
 \newline
 \newline
 Two major code hosting services (GitHub \& BitBucket) support version control with Git and both services have free account options
-
 % \tiny $^1$ Google Code will close in 2016 as they have deemed it is no longer necessary given success of BitBucket and GitHub
-
 \end{frame}
-
-
 
 \begin{frame} 
 \frametitle{Git is Distributed Version Control}
@@ -212,7 +203,6 @@ We have now been using a command line interface for 1.5 days to interact with th
 \end{block}
 
 \end{frame}
-
 
 \begin{frame}
 \frametitle{Creating a Repository on the GitHub Servers}
@@ -619,49 +609,56 @@ Provided we have commited all changes to the file then it is safe to use the che
 You can think of commits a bit like save points, if we have two we can move between them but if we load and old save without first making a current save we will loose the unsaveed changes
 \end{frame}
 
-\begin{frame} 
+\begin{frame}[fragile]
 \frametitle{Git}
-\framesubtitle{Undoing things}
+\framesubtitle{Undoing Things Safely}
 choose a commit you'd like to go back to...copy the SHA
 \newline
 \newline
+\begin{lstlisting}
 # List existing branches of current directory
 git branch
 
 # checkout a previous commit (SHA = 58...a44) 
-\begin{verbatim}
+
 > git checkout -b testing 589172506c13572be6cc052706ab4129de2c7a44
   Switched to a new branch 'testing'
 
 > git branch
     master
   * testing
-
-\end{verbatim}
+\end{lstlisting}
 
 Now if you open your .R file you'll see that you have a previous version of the file without the new changes
 
-git branch
+\end{frame}
 
-# make some changes on testing branch
-# push those changes upsteam to server
+\begin{frame}[fragile]
+\frametitle{Git}
+\framesubtitle{Undoing Things Safely}
 
-git push --set-upstream origin testing
+\begin{lstlisting}
+> git branch
+  # make some changes on testing branch
+  # push those changes upsteam to server
+> git push --set-upstream origin testing
+  # check website - your repo should now have two branches
+  # Now to merge your changes from 'testing' back into 'master'
+  # to merge into a branch we must be on that branch:
+> git checkout master
+  # merge testing1 into current branch (master)
+> git merge testing1
+  Auto-merging Car_Bar_Charts.R
+  CONFLICT (content): Merge conflict in Car_Bar_Charts.R
+  Automatic merge failed; fix conflicts and then commit the result.
+\end{lstlisting}
 
-# check website - your repo should now have two branches
+\end{frame}
 
-# Now to merge your changes from 'testing' back into 'master'
 
-# to merge into a branch we must be on that branch:
-git checkout master
-
-# merge testing1 into current branch (master)
-git merge testing1
-
-Auto-merging Car_Bar_Charts.R
-CONFLICT (content): Merge conflict in Car_Bar_Charts.R
-Automatic merge failed; fix conflicts and then commit the result.
-
+\begin{frame}[fragile]
+\frametitle{Resolving a Merge Conflict with a Merge Tool}
+\begin{lstlisting}
 git mergetool
 
 This message is displayed because 'merge.tool' is not configured.
@@ -675,17 +672,19 @@ Normal merge conflict for 'Car_Bar_Charts.R':
   {local}: modified file
   {remote}: modified file
 Hit return to start merge resolution tool (meld): 
+\end{lstlisting}
+\end{frame}
 
-## 
+\begin{frame}[fragile]
+\frametitle{Resolving a Merge Conflict with a Merge Tool}
+
+Insert Screen shot of \textbf{Meld} in action
+
+\end{frame}
+
+\begin{frame}
 
 Now open you're R file to see the results of your merge
-
-
-
-
-
-
-
 \newline
 \newline
 and open `filename.R' and our changes are gone
