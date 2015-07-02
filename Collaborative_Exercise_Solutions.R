@@ -1,4 +1,30 @@
-# When using this data, please cite the original publication:
+#     This the R Code File Containing the Solutions to the Collaborative
+#     Exercise that concludes the Introduction to R Course available at:
+#     https://github.com/brfitzpatrick/Intro_to_R
+#     Copyright (C) 2015  Ben R. Fitzpatrick.
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    The course author may be contacted by email at 
+#    <ben.r.fitzpatrick@gmail.com>
+
+
+# This exercise uses some publically available data from the Dryad Repository
+# Please download a copy of 'Data appendix.xlsx' from
+# <http://dx.doi.org/10.5061/dryad.r36n0>
+
+# When using these data, please cite the original publication:
 
 # Gibb H, Sanders NJ, Dunn RR, Watson S, Photakis M, Abril S, Andersen AN, Angulo E, Armbrecht I, Arnan X, Baccaro FB, Bishop TR, Boulay R, Castracani C, Del Toro I, Delsinne T, Diaz M, Donoso DA, Enríquez ML, Fayle TM, Feener DH, Fitzpatrick MC, Gómez C, Grasso DA, Groc S, Heterick B, Hoffmann BD, Lach L, Lattke J, Leponce M, Lessard J, Longino J, Lucky A, Majer J, Menke SB, Mezger D, Mori A, Munyai TC, Paknia O, Pearce-Duvet J, Pfeiffer M, Philpott SM, de Souza JLP, Tista M, Vasconcelos HL, Vonshak M, Parr CL (2015) Climate mediates the effects of disturbance on ant assemblage structure. Proceedings of the Royal Society B 282(1808): 20150418. http://dx.doi.org/10.1098/rspb.2015.0418
 
@@ -154,3 +180,21 @@ summary(Full.lm)
 
 
 
+###
+
+C.RCRS.OD <- C.RCRS[-c(189,117),]
+
+Full.lm <- lm(Data$Species.richness[-c(189,117)] ~ . , data = C.RCRS.OD)
+
+Empty.lm <- lm(Data$Species.richness[-c(189,117)] ~ +1 , data = C.RCRS.OD)
+
+nrow(Data)
+
+S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
+
+summary(S.lm)
+
+par(mfcol = c(2,2))
+plot(S.lm)
+
+###
