@@ -32,8 +32,7 @@
 
 # Gibb H, Sanders NJ, Dunn RR, Watson S, Photakis M, Abril S, Andersen AN, Angulo E, Armbrecht I, Arnan X, Baccaro FB, Bishop TR, Boulay R, Castracani C, Del Toro I, Delsinne T, Diaz M, Donoso DA, Enríquez ML, Fayle TM, Feener DH, Fitzpatrick MC, Gómez C, Grasso DA, Groc S, Heterick B, Hoffmann BD, Lach L, Lattke J, Leponce M, Lessard J, Longino J, Lucky A, Majer J, Menke SB, Mezger D, Mori A, Munyai TC, Paknia O, Pearce-Duvet J, Pfeiffer M, Philpott SM, de Souza JLP, Tista M, Vasconcelos HL, Vonshak M, Parr CL (2015) Data from: Climate mediates the effects of disturbance on ant assemblage structure. Dryad Digital Repository. http://dx.doi.org/10.5061/dryad.r36n0
 
-
-Data <- read.csv(file = '/home/ben/Downloads/Ants.csv')
+Data <- read.csv(file = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Data/Ants.csv')
 
 head(Data)
 
@@ -198,3 +197,62 @@ par(mfcol = c(2,2))
 plot(S.lm)
 
 ###
+
+
+## Ok next up some interaction terms
+
+# Let's just do first order interactions for now
+
+Full.lm <- lm(Data$Species.richness[-c(189,117)] ~ . , data = C.RCRS.OD)
+
+Empty.lm <- lm(Data$Species.richness[-c(189,117)] ~ +1 , data = C.RCRS.OD)
+
+
+
+
+# Extensions:
+# Generalized Linear Model to use a better choice of error distribution
+# Generalized Linear Mixed Effects model to incorporate random effects for Cluster
+
+colnames(C.RCRS)
+
+Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
+
+CC.RCRS.Lin <- C.RCRS[,c('MAT', 'TAP', 'TR', 'PD', 'TL')] #, 'Disturbance', 'Hemisphere', 'Continent')]
+
+dim(CC.RCRS.Lin)
+
+choose(n = ncol(CC.RCRS.Lin), k = 2)
+
+Int.Ind <- combn(x = 1:ncol(CC.RCRS.Lin), m = 2)
+
+Int.Ind
+
+Int <- data.frame(matrix(data = NA, nrow = nrow(C.RCRS), ncol = choose(n = ncol(CC.RCRS.Lin), k = 2)))
+
+for(i in 1:ncol(Int.Ind)){    
+
+    Var1 = colnames(CC.RCRS.Lin)[Int.Ind[1,i]]
+    Var2 = colnames(CC.RCRS.Lin)[Int.Ind[2,i]]
+
+    Int[,i] <- CC.RCRS.Lin[, Var1] * CC.RCRS.Lin[, Var2]
+
+    colnames(Int)[i] <- paste(Var1, Var2, sep = ':')
+
+}
+    
+head(Int)
+
+# Will have to do Cont:Discrete Interaction by hand, damit,
+
+
+Full.lm <- lm(Data$Species.richness ~ . , data = C.RCRS)
+
+
+, 'Disturbance', 'Hemisphere', 'Continent')]
+
+Test <- lm(Data$Species.richness ~ Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
+
+Test <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
+
+summary(Test)
