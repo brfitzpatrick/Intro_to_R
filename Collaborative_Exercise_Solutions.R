@@ -256,3 +256,49 @@ Test <- lm(Data$Species.richness ~ Disturbance*MAT + Disturbance*TAP + Disturban
 Test <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
 
 summary(Test)
+
+
+Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
+
+Full.lm <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
+
+S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
+
+par(mfcol = c(2,2))
+plot(S.lm)
+
+##
+
+summary(S.lm)
+
+# so some combinations of continent and continuous covariates lack data so we'll drop those interaction terms
+
+Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
+
+Full.lm <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL, data = C.RCRS)
+
+S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
+
+par(mfcol = c(2,2))
+plot(S.lm)
+
+
+summary(S.lm)
+
+####
+
+Empty.lm <- lm(Data$Species.richness[-c(117,1075)] ~ +1 , data = C.RCRS[-c(117,1075),])
+
+Full.lm <- lm(Data$Species.richness[-c(117,1075)] ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL, data = C.RCRS[-c(117,1075),])
+
+S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
+
+par(mfcol = c(2,2))
+plot(S.lm)
+
+
+summary(S.lm)
+
+?step # also works for objects of class glm( )
+?glm
+?family
