@@ -50,11 +50,86 @@ Capstone Collaborative Exercise
 \frametitle{}
 \begin{itemize}
 \item Please form small groups
-\item Together I'd like you to collaboratively conduct and exploratory analysis of some data
+\item Together I'd like you to collaboratively conduct an exploratory analysis of some data
 \item Please write neat, well annotated code and share this code with your group memebers via a GitHub repository
 \item at the end of the course each group will present their methods and code along with their results and interpretation 
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Goals}
+Generic Analysis Workflow:
+\begin{enumerate}
+\item Summarise \& Visualise the Data
+\item Formulate Analysis Questions
+\item Choose Model
+\item Fit Model
+\item Produce and Interpret Model Diagnostics
+\item Produce \& Interpret Model Summary Statistics
+\item Predict from Model and Quantify Uncertainty Associated with these Predictions
+\item Reflect and Revise Analysis Questions
+\item Potentially, Repeat...
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Data}
+
+This exercise uses some publically available data from the Dryad Repository. Please download a copy of `Data appendix.xlsx' from:
+\newline
+\newline
+\url{http://dx.doi.org/10.5061/dryad.r36n0}
+\newline
+\newline
+These data were published as part of:
+\newline
+\newline
+\small Gibb H, Sanders NJ, Dunn RR, Watson S, Photakis M, Abril S, Andersen AN, Angulo E, Armbrecht I, Arnan X, Baccaro FB, Bishop TR, Boulay R, Castracani C, Del Toro I, Delsinne T, Diaz M, Donoso DA, Enríquez ML, Fayle TM, Feener DH, Fitzpatrick MC, Gómez C, Grasso DA, Groc S, Heterick B, Hoffmann BD, Lach L, Lattke J, Leponce M, Lessard J, Longino J, Lucky A, Majer J, Menke SB, Mezger D, Mori A, Munyai TC, Paknia O, Pearce-Duvet J, Pfeiffer M, Philpott SM, de Souza JLP, Tista M, Vasconcelos HL, Vonshak M, Parr CL (2015) \textit{Climate mediates the effects of disturbance on ant assemblage structure}. \textbf{Proceedings of the Royal Society B} 282(1808).
+\end{frame}
+
+\begin{frame}
+\frametitle{Some Ideas...}
+
+Article title:\\
+\textit{Climate mediates the effects of disturbance on ant assemblage structure}.\\
+suggests interaction terms may be important here \begin{itemize}
+ \item as variables are on different scales it will be advisable to recenter and rescale them all to a common mean and magnitude (0, 1) is the traditional choice
+\newline
+\end{itemize}
+Species Richness is not continuous (it's non-negative integers) so: \begin{itemize}
+\item a Generalized Linear Model woul be a good idea
+\item however there is quite a range in the response so Multiple Linear Regression will be ok here for our purposes if you'd like to keep it simple
+\newline
+\end{itemize} 
+Probability of Interspecific Encouter (PIE) bounded between 0 and 1 (it's a probability!) \begin{itemize}
+\item so a Generalised Linear Model or transformation of the response highly advisable...\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Questions}
+\begin{enumerate}
+\item Is climate a useful predictor of the variation in ant species richness?
+\item Is habbitat disturbance a useful predictor of the variation in ant species richness?
+\item Does habitat distrubance influence the nature of the correlation between climate and ant species richness?
+\item Are there non-linear effects?
+\item Does habitat distrubance influence the nature of the correlation between climate and ant species richness after all other covariate effects have been accounted for?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extension Questions}
+\begin{enumerate}
+\item What would be an appropriate error distribution for Species Richness?
+\item Please use this error distribution with Generalized Linear Models to conduct variable selection
+\item What would be an appropriate error distribution for Probability of Interspecific Encounter (PIE)?
+\item Please use this error distribution with Generalized Linear Models to conduct variable selection
+\end{enumerate}
+\end{frame}
+
+
 
 \begin{frame} 
 \frametitle{Image Credits}
