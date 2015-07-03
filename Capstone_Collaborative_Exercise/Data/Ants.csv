@@ -1,0 +1,1129 @@
+Locality_ID,Cluster,Latitude,Longitude,Mean annual temperature,Total annual precipitation,Temperature range,Disturbance,Hemisphere,Continent,Pitfall days,Transect length,Species richness,PIE
+Andersen&Hoffmann_2003_01,20,-22.54,148.32,21.9,615,25.4,Undisturbed,South,Oceania,450,40,75,0.8266163401
+Andersen&Hoffmann_2003_02,20,-22.54,148.32,21.9,615,25.4,Disturbed,South,Oceania,300,40,55,0.3558785338
+Andersen&Hoffmann_2003_03,20,-22.54,148.32,21.9,615,25.4,Disturbed,South,Oceania,300,40,50,0.7103116167
+Andersen&Hoffmann_2003_04,20,-22.54,148.32,21.9,615,25.4,Disturbed,South,Oceania,300,40,38,0.6393776698
+Andersen&Hoffmann_2003_05,20,-22.54,148.32,21.9,615,25.4,Disturbed,South,Oceania,300,40,46,0.5262844732
+Andersen&Hoffmann_2003_06,20,-22.54,148.32,21.9,615,25.4,Undisturbed,South,Oceania,450,40,87,0.2350024646
+Andersen&Hoffmann_2003_07,20,-22.54,148.32,21.9,615,25.4,Undisturbed,South,Oceania,450,40,112,0.6203261013
+Andersen&Hoffmann_2003_08,20,-22.54,148.32,21.9,615,25.4,Disturbed,South,Oceania,450,40,55,0.8958511399
+Andersen&Hoffmann_2003_09,20,-22.54,148.32,21.9,615,25.4,Disturbed,South,Oceania,450,40,40,0.6334227674
+Andersen&Hoffmann_2011_01,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,32,0.8224248687
+Andersen&Hoffmann_2011_02,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,39,0.8688130782
+Andersen&Hoffmann_2011_03,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,35,0.8375051069
+Andersen&Hoffmann_2011_04,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,46,0.8953529851
+Andersen&Hoffmann_2011_05,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,35,0.8406866146
+Andersen&Hoffmann_2011_06,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,33,0.9354512383
+Andersen&Hoffmann_2011_07,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,41,0.8717220033
+Andersen&Hoffmann_2011_08,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,43,0.847847537
+Andersen&Hoffmann_2011_09,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,43,0.8782549453
+Andersen&Hoffmann_2011_10,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,30,0.8380036697
+Andersen&Hoffmann_2011_11,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,38,0.8349945917
+Andersen&Hoffmann_2011_12,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,42,0.8942173898
+Andersen&Hoffmann_2011_13,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,33,0.895871518
+Andersen&Hoffmann_2011_14,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,46,0.8570304371
+Andersen&Hoffmann_2011_15,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,27,0.8316431074
+Andersen&Hoffmann_2011_16,32,-12.7,130.983,27.4,1500,17.8,Disturbed,South,Oceania,120,40,36,0.8560241457
+Andersen_1986_01,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,12,0.7158469946
+Andersen_1986_02,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,13,0.757797487
+Andersen_1986_03,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,7,0.5434667606
+Andersen_1986_04,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,19,0.8075019223
+Andersen_1986_05,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,17,0.798066663
+Andersen_1986_06,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,13,0.8263361319
+Andersen_1986_07,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,12,0.7285223366
+Andersen_1986_08,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,18,0.7510727368
+Andersen_1986_09,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,16,0.731280637
+Andersen_1986_10,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,10,0.7960992909
+Andersen_1986_11,1,-39.02,146.38,12.2,1201,15.8,Undisturbed,South,Oceania,300,30,5,0.6780303028
+Andersen_1993_01,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,26,0.8721991697
+Andersen_1993_02,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,34,0.9027689092
+Andersen_1993_03,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,21,0.8856275303
+Andersen_1993_04,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,17,0.8479553236
+Andersen_1993_05,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,39,0.9301702129
+Andersen_1993_06,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,30,0.8926073202
+Andersen_1993_07,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,26,0.9058091291
+Andersen_1993_08,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,24,0.8504881446
+Andersen_1993_09,26,-18.72,138.6,25.8,545,25.8,Undisturbed,South,Oceania,60,50,16,0.8567836942
+Andersen_1997_01,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,17,0.8671906584
+Andersen_1997_02,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,24,0.9144592348
+Andersen_1997_03,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,26,0.9023176013
+Andersen_1997_04,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,24,0.8777533617
+Andersen_1997_05,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,30,0.9305730595
+Andersen_1997_06,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,22,0.9197181948
+Andersen_1997_07,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,10,0.8063204825
+Andersen_1997_08,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,2,0.5555555556
+Andersen_1997_09,46,31.87,-109.25,11.3,560,33.2,Undisturbed,North,North America,60,40,5,0.7272727272
+Andersen_etal_2003_01,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,39,0.9060465475
+Andersen_etal_2003_02,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,24,0.9088967972
+Andersen_etal_2003_03,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,28,0.907778496
+Andersen_etal_2003_04,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,16,0.8561759731
+Andersen_etal_2003_05,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,14,0.6595744681
+Andersen_etal_2003_06,17,-24.34,150.61,20.7,695,25.8,Undisturbed,South,Oceania,75,40,36,0.9155167859
+Andersen_etal_2003_07,17,-24.34,150.61,20.7,695,25.8,Undisturbed,South,Oceania,75,40,39,0.9373090484
+Andersen_etal_2003_08,17,-24.34,150.61,20.7,695,25.8,Undisturbed,South,Oceania,75,40,48,0.9586979234
+Andersen_etal_2003_09,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,30,0.922244095
+Andersen_etal_2003_10,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,7,0.768831169
+Andersen_etal_2003_11,17,-24.34,150.61,20.7,695,25.8,Transformed,South,Oceania,75,40,49,0.9338575913
+Andersen_etal_2006_01,32,-12.59,131.09,27.2,1484,18,Disturbed,South,Oceania,90,40,52,0.9410418387
+Andersen_etal_2006_02,32,-12.59,131.09,27.2,1484,18,Disturbed,South,Oceania,90,40,54,0.9492086865
+Andersen_etal_2006_03,32,-12.59,131.09,27.2,1484,18,Undisturbed,South,Oceania,90,40,31,0.9256322008
+Andersen_etal_2006_04,32,-12.59,131.09,27.2,1484,18,Undisturbed,South,Oceania,90,40,34,0.9342900802
+Andersen_etal_2007_01,32,-12.7,130.98,27.4,1500,17.8,Undisturbed,South,Oceania,300,20,24,0.7081070395
+Andersen_etal_2010_01,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,36,0.7740924792
+Andersen_etal_2010_02,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,55,0.8723089345
+Andersen_etal_2010_03,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,38,0.8329166608
+Andersen_etal_2010_04,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,45,0.8613783537
+Andersen_etal_2010_05,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,52,0.8273101497
+Andersen_etal_2010_06,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,59,0.8610508627
+Andersen_etal_2010_07,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,36,0.7812257646
+Andersen_etal_2010_08,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,46,0.7253208819
+Andersen_etal_2010_09,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,40,0.8943085612
+Andersen_etal_2010_10,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,42,0.8688383232
+Andersen_etal_2010_11,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,43,0.8860523781
+Andersen_etal_2010_12,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,46,0.9375361148
+Andersen_etal_2010_13,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,45,0.8859938301
+Andersen_etal_2010_14,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,39,0.869178485
+Andersen_etal_2010_15,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,51,0.8417008005
+Andersen_etal_2010_16,30,-14.8,125.68,27.3,1398,16.4,Undisturbed,South,Oceania,160,50,55,0.8439345375
+Andersen_etal_2012_01,32,-11.38,130.51,27,1866,14.5,Undisturbed,South,Oceania,20,45,23,0.9202608882
+Andersen_etal_2012_02,32,-11.38,130.51,27,1866,14.5,Undisturbed,South,Oceania,20,45,19,0.9224137929
+Andersen_etal_2012_03,32,-11.38,130.51,27,1866,14.5,Undisturbed,South,Oceania,20,45,22,0.9320388347
+Andersen_etal_2012_04,32,-11.38,130.51,27,1866,14.5,Undisturbed,South,Oceania,20,45,19,0.8985560899
+Andersen_etal_2012_05,32,-11.38,130.51,27,1866,14.5,Undisturbed,South,Oceania,20,45,19,0.9289191817
+Andersen_etal_2012_06,32,-11.38,130.51,27,1866,14.5,Undisturbed,South,Oceania,20,45,16,0.895212285
+Andersen_etal_2012_07,32,-11.44,130.44,27.1,1902,14.5,Undisturbed,South,Oceania,20,45,21,0.9373401539
+Andersen_etal_2012_08,32,-11.44,130.44,27.1,1902,14.5,Undisturbed,South,Oceania,20,45,25,0.9539069362
+Andersen_etal_2012_09,32,-11.44,130.44,27.1,1902,14.5,Undisturbed,South,Oceania,20,45,19,0.8918918919
+Andersen_etal_2012_10,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,24,0.936517181
+Andersen_etal_2012_11,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,19,0.9062374244
+Andersen_etal_2012_12,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,13,0.9328063237
+Andersen_etal_2012_13,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,19,0.881661442
+Andersen_etal_2012_14,32,-11.38,130.67,27.2,1771,14.4,Undisturbed,South,Oceania,20,45,18,0.8962025316
+Andersen_etal_2012_15,32,-11.38,130.67,27.2,1771,14.4,Undisturbed,South,Oceania,20,45,25,0.9032474802
+Andersen_etal_2012_16,32,-11.38,130.67,27.2,1771,14.4,Undisturbed,South,Oceania,20,45,21,0.9104721835
+Andersen_etal_2012_17,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,28,0.9278786814
+Andersen_etal_2012_18,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,24,0.9206349203
+Andersen_etal_2012_19,32,-11.66,130.66,26.9,1792,14.7,Undisturbed,South,Oceania,20,45,21,0.9302219168
+Angulo_etal_noyear_01,51,37.94,-5.69,16,648,31.9,Undisturbed,North,Europe,56,50,21,0.8361988859
+Arnan_etal_2009_01,38,1.05,42.6,27.9,539,16.7,Disturbed,North,Europe,525,80,9,0.0124056744
+Arnan_etal_2009_02,38,1.05,42.6,27.9,539,16.7,Disturbed,North,Europe,525,80,6,0.0029761942
+Arnan_etal_2009_03,38,1.05,42.6,27.9,539,16.7,Undisturbed,North,Europe,525,80,10,0.4760094718
+Barrow_etal_2006_01,27,-17.32,128.32,25.9,679,26.4,Undisturbed,South,Oceania,1440,40,85,0.4052786203
+Barrow_etal_2006_02,27,-17.32,128.32,25.9,679,26.4,Undisturbed,South,Oceania,1800,40,105,0.5447484093
+Barrow_etal_2006_03,27,-17.32,128.32,25.9,679,26.4,Undisturbed,South,Oceania,720,40,89,0.9476573935
+Basu_1997_12,42,12.54,75.67,22,3303,14.5,Undisturbed,North,Asia,7500,6,31,0.790692306
+Bedetti_2010_01,62,45.61,7.2,1.1,1621,23.2,Undisturbed,North,Europe,750,200,10,0.310973623
+Bedetti_2010_02,62,45.61,7.2,1.1,1621,23.2,Disturbed,North,Europe,750,200,11,0.4785132092
+Bedetti_2010_03,62,45.61,7.2,1.1,1621,23.2,Undisturbed,North,Europe,750,200,12,0.0782052811
+Bess_etal_2002_01,48,33.52,-106.5,12.2,346,36.5,Disturbed,North,North America,18360,170,9,0.5890348708
+Bestelmeyer&Schooley_1999_01,45,27.97,-110.82,24.4,198,24.5,Undisturbed,North,North America,240,190,35,0.6203968059
+Bharti&Sharma_2009_01,49,34.38,76.78,6,202,40.1,Undisturbed,North,Asia,100,250,12,0.9080125013
+Bharti&Sharma_2009_02,49,34.38,76.78,6,202,40.1,Undisturbed,North,Asia,100,250,11,0.7470763979
+Bisevac&Majer_1999_01,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,25,0.8825668389
+Bisevac&Majer_1999_03,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,20,0.8702017713
+Bisevac&Majer_1999_05,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,22,0.8937602868
+Bisevac&Majer_1999_07,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,27,0.8887730272
+Bisevac&Majer_1999_09,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,17,0.7533438711
+Bisevac&Majer_1999_11,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,17,0.3270361233
+Bisevac&Majer_1999_13,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,95,13,0.7838368323
+Bisevac&Majer_1999_15,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,95,17,0.7683316934
+Bisevac&Majer_1999_17,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,95,19,0.7346593037
+Bisevac&Majer_1999_19,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,95,18,0.5365145223
+Bishop_etal_2014_1,12,-29.6,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,5,0.2310606066
+Bishop_etal_2014_10,12,-29.6,29.31,9.1,861,23.6,Undisturbed,South,Africa,50,50,10,0.7517383064
+Bishop_etal_2014_11,12,-29.61,29.31,9.1,861,23.6,Undisturbed,South,Africa,50,50,14,0.8325944128
+Bishop_etal_2014_12,12,-29.61,29.32,9.1,861,23.6,Undisturbed,South,Africa,50,50,9,0.7829858219
+Bishop_etal_2014_13,12,-29.6,29.32,9.1,861,23.6,Undisturbed,South,Africa,50,50,12,0.7933449237
+Bishop_etal_2014_14,12,-29.6,29.33,9.1,861,23.6,Undisturbed,South,Africa,50,50,16,0.7218352679
+Bishop_etal_2014_15,12,-29.6,29.33,9.1,861,23.6,Undisturbed,South,Africa,50,50,17,0.8206928342
+Bishop_etal_2014_16,12,-29.6,29.33,9.1,861,23.6,Undisturbed,South,Africa,50,50,17,0.8474576273
+Bishop_etal_2014_17,12,-29.62,29.39,11.9,1049,25.5,Undisturbed,South,Africa,50,50,16,0.8022408962
+Bishop_etal_2014_18,12,-29.62,29.39,11.9,1049,25.5,Undisturbed,South,Africa,50,50,20,0.8212965737
+Bishop_etal_2014_19,12,-29.62,29.39,11.9,1049,25.5,Undisturbed,South,Africa,50,50,22,0.8878730162
+Bishop_etal_2014_2,12,-29.6,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,2,0.0952380954
+Bishop_etal_2014_20,12,-29.62,29.4,11.9,1049,25.5,Undisturbed,South,Africa,50,50,5,0.5800865798
+Bishop_etal_2014_21,12,-29.65,29.45,13.3,1044,26,Undisturbed,South,Africa,50,50,12,0.8900634252
+Bishop_etal_2014_22,12,-29.65,29.45,13.3,1044,26,Undisturbed,South,Africa,50,50,19,0.751566416
+Bishop_etal_2014_23,12,-29.65,29.45,13.3,1044,26,Undisturbed,South,Africa,50,50,12,0.9041835362
+Bishop_etal_2014_24,12,-29.65,29.45,13.3,1044,26,Undisturbed,South,Africa,50,50,14,0.8541703404
+Bishop_etal_2014_25,12,-30.06,29.98,15.7,875,22.3,Undisturbed,South,Africa,50,50,21,0.8406903766
+Bishop_etal_2014_26,12,-30.06,29.98,15.7,875,22.3,Undisturbed,South,Africa,50,50,17,0.7385936969
+Bishop_etal_2014_27,12,-30.06,29.98,15.7,875,22.3,Undisturbed,South,Africa,50,50,29,0.4493755138
+Bishop_etal_2014_28,12,-30.05,29.98,15.7,875,22.3,Undisturbed,South,Africa,50,50,20,0.5746323918
+Bishop_etal_2014_29,12,-30.18,30.15,16.4,859,21.4,Undisturbed,South,Africa,50,50,13,0.7782754754
+Bishop_etal_2014_3,12,-29.6,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,7,0.3720246841
+Bishop_etal_2014_30,12,-30.18,30.15,16.4,859,21.4,Undisturbed,South,Africa,50,50,12,0.8040241447
+Bishop_etal_2014_31,12,-30.18,30.15,16.4,859,21.4,Undisturbed,South,Africa,50,50,16,0.814962878
+Bishop_etal_2014_32,12,-30.19,30.14,16.4,859,21.4,Undisturbed,South,Africa,50,50,24,0.9033640849
+Bishop_etal_2014_4,12,-29.61,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,5,0.5687123005
+Bishop_etal_2014_5,12,-29.59,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,8,0.1059447651
+Bishop_etal_2014_6,12,-29.59,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,15,0.8355367532
+Bishop_etal_2014_7,12,-29.59,29.29,6.7,823,21.7,Undisturbed,South,Africa,50,50,5,0.6539624924
+Bishop_etal_2014_8,12,-29.59,29.3,9.1,861,23.6,Undisturbed,South,Africa,50,50,5,0.4860335192
+Bishop_etal_2014_9,12,-29.6,29.31,9.1,861,23.6,Undisturbed,South,Africa,50,50,14,0.8487394955
+Boulton_etal_2005_01,53,38.85,-123.5,11.5,1208,21.1,Undisturbed,North,North America,1638,20,16,0.7614913249
+Boulton_etal_2005_02,53,38.85,-123.5,11.5,1208,21.1,Undisturbed,North,North America,1722,20,17,0.7284893552
+Castracani_etal_2007_01,63,44.82,10.22,12.6,835,30.9,Transformed,North,Europe,180,90,9,0.7972420842
+Castracani_etal_2007_02,63,44.79,10.23,12.5,842,30.5,Transformed,North,Europe,180,90,6,0.4053824064
+Castracani_etal_2007_03,63,44.77,10.2,12.6,836,30.5,Transformed,North,Europe,180,90,8,0.8170276329
+Castracani_etal_2007_04,63,44.8,10.22,12.6,835,30.9,Transformed,North,Europe,180,90,8,0.5340158808
+Castracani_etal_2007_05,63,44.77,10.19,12.6,836,30.5,Transformed,North,Europe,180,90,6,0.6865401984
+Castracani_etal_2007_06,63,44.81,10.22,12.6,835,30.9,Transformed,North,Europe,180,90,5,0.474452555
+Castracani_etal_2007_07,63,45.79,10.21,9,872,28.8,Transformed,North,Europe,180,90,5,0.7137529141
+Castracani_etal_2007_08,63,45.79,10.2,6.3,864,26.2,Transformed,North,Europe,180,90,7,0.6684647306
+Castracani_etal_2007_09,63,44.77,10.23,12.5,842,30.5,Transformed,North,Europe,180,90,8,0.8266666662
+Castracani_etal_2007_10,63,44.77,10.19,12.6,836,30.5,Transformed,North,Europe,180,90,5,0.6362281539
+Castracani_etal_2010_01,58,41.73,12.41,15.5,769,24.3,Transformed,North,Europe,120,90,8,0.6682484837
+Castracani_etal_2010_02,58,41.74,12.4,15.5,769,24.3,Disturbed,North,Europe,120,90,8,0.6146383963
+Castracani_etal_2010_03,58,41.77,12.44,15.5,780,25.2,Transformed,North,Europe,120,90,13,0.6739746447
+Castracani_etal_2010_04,58,41.73,12.41,15.5,769,24.3,Transformed,North,Europe,120,90,13,0.3934650861
+Castracani_etal_2010_05,58,41.76,12.4,15.5,762,24.8,Undisturbed,North,Europe,120,90,7,0.7245323035
+Castracani_etal_2010_06,58,41.74,12.42,15.4,773,24.7,Undisturbed,North,Europe,120,90,14,0.7548930334
+Castracani_etal_2010_07,58,41.77,12.39,15.5,762,24.8,Undisturbed,North,Europe,120,90,10,0.8388954108
+Deblauwe&Dekoninck_2007_01,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,63,0.6191718136
+Deblauwe&Dekoninck_2007_02,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,62,0.3019767294
+Deblauwe&Dekoninck_2007_03,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,63,0.5634088523
+Deblauwe&Dekoninck_2007_04,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,63,0.8322508722
+Deblauwe&Dekoninck_2007_05,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,55,0.6267835719
+Deblauwe&Dekoninck_2007_06,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,64,0.647837079
+Deblauwe&Dekoninck_2007_07,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,60,0.3896302013
+Deblauwe&Dekoninck_2007_08,40,3.42,13.15,23.2,1638,11.8,Disturbed,North,Africa,480,70,145,0.966099949
+Delsinne_etal_2010_03,24,-21.99,-60.64,25.2,746,23,Undisturbed,South,South America,60,200,61,0.8901621075
+Delsinne_etal_2010_05,24,-20.92,-61.39,24.2,576,23,Undisturbed,South,South America,20,200,36,0.8488434814
+Delsinne_etal_2010_10,24,-20.6,-62.05,24,460,21.9,Undisturbed,South,South America,60,200,48,0.8638565066
+DelToro_etal_2009_01,43,17.99,-92.97,26.9,1962,17.4,Transformed,North,North America,20,225,26,0.8652068757
+DelToro_etal_2009_04,43,17.62,-92.49,26.3,3059,16.7,Undisturbed,North,North America,20,225,32,0.9025306292
+DelToro_etal_2009_05,43,17.44,-92.75,25.1,3291,17.1,Undisturbed,North,North America,20,225,15,0.7099301804
+Donoso&Ramón_2009_01,37,0.32,-78.95,21.8,2338,10.3,Disturbed,North,South America,40,200,75,0.9301731588
+Donoso_2009_1,37,-0.3175,-78.9523,19.9,2323,10.3,Disturbed,South,South America,40,200,75,0.9300143369
+Donoso_2014_1,34,-3.99778,-79.44704,19.5,900,13.4,Undisturbed,South,South America,22.5,45,14,0.7581905586
+Donoso_2014_2,34,-3.99622,-79.44136,19.5,900,13.4,Undisturbed,South,South America,22.5,45,13,0.7933927155
+Donoso_2014_3,34,-3.99461,-79.42954,19.5,900,13.4,Undisturbed,South,South America,22.5,45,13,0.789858599
+Donoso_2014_4,34,-3.98994,-79.42523,19.5,900,13.4,Undisturbed,South,South America,22.5,45,15,0.6335885036
+Donoso_2014_5,34,-3.98465,-79.42589,19.5,900,13.4,Undisturbed,South,South America,22.5,45,18,0.646460467
+Donoso_2014_6,34,-3.96933,-79.42322,19.5,900,13.4,Undisturbed,South,South America,22.5,45,11,0.7702972287
+Dunlop_etal_1985_01,22,-21.69,116.28,27,341,28.2,Disturbed,South,Oceania,40,100,16,0.8082352049
+Dunlop_etal_1985_02,22,-21.69,116.28,27,341,28.2,Disturbed,South,Oceania,40,100,14,0.6472310645
+Dunlop_etal_1985_03,22,-21.69,116.28,27,341,28.2,Disturbed,South,Oceania,40,100,11,0.5430817837
+Dunlop_etal_1985_04,22,-21.69,116.28,27,341,28.2,Disturbed,South,Oceania,40,100,7,0.4865167794
+Dunlop_etal_1985_05,18,-23.36,119.68,24.1,289,30.7,Disturbed,South,Oceania,40,100,16,0.6674512987
+Enríquez_1998_06,41,4.53,-75.52,9.3,1784,9.7,Disturbed,North,South America,22.5,80,22,0.9125188535
+Gibb&Cunningham_noyear_01,4,-34.3805,148.7028,13.7,693,29.4,Disturbed,South,Oceania,280,5,17,0.4312466558
+Gibb&Cunningham_noyear_02,4,-34.6522,148.5913,13.5,739,29.5,Disturbed,South,Oceania,280,5,28,0.4108990238
+Gibb&Cunningham_noyear_03,4,-34.7329,148.6724,13.7,730,29.4,Disturbed,South,Oceania,280,5,20,0.78411006
+Gibb&Cunningham_noyear_04,4,-35.2665,149.1905,12.8,648,28.1,Disturbed,South,Oceania,280,5,27,0.8714160511
+Gibb&Cunningham_noyear_05,4,-34.4197,148.8242,13.6,687,29.2,Disturbed,South,Oceania,280,5,30,0.7951721552
+Gibb&Cunningham_noyear_06,4,-35.2835,149.3763,11.9,733,27.3,Disturbed,South,Oceania,280,5,21,0.6724857049
+Gibb&Cunningham_noyear_07,4,-34.6269,148.5444,13.8,718,29.6,Disturbed,South,Oceania,280,5,28,0.4671534405
+Gibb&Cunningham_noyear_08,4,-35.258,149.0421,12.8,683,28.5,Disturbed,South,Oceania,280,5,24,0.5988376327
+Gibb&Cunningham_noyear_09,4,-34.4197,148.8242,13.6,687,29.2,Disturbed,South,Oceania,280,5,30,0.6195536018
+Gibb&Cunningham_noyear_10,4,-35.1587,149.0257,13,734,28.5,Disturbed,South,Oceania,280,5,25,0.7061207554
+Gibb&Cunningham_noyear_11,4,-35.0697,148.9143,13.6,759,29,Disturbed,South,Oceania,280,5,17,0.3231425794
+Gibb&Cunningham_noyear_12,4,-34.7337,148.6678,13.7,730,29.4,Disturbed,South,Oceania,280,5,18,0.3311507835
+Gibb&Cunningham_noyear_13,4,-34.5233,148.6583,13.3,737,29.3,Disturbed,South,Oceania,280,5,15,0.6735750118
+Gibb&Cunningham_noyear_14,4,-34.3459,148.8602,13.5,701,29.1,Disturbed,South,Oceania,280,5,20,0.647568513
+Gibb&Cunningham_noyear_15,4,-34.3443,148.6312,13.4,734,29.2,Disturbed,South,Oceania,280,5,25,0.5754304934
+Gibb&Cunningham_noyear_16,4,-35.1725,149.0575,12.8,709,28.4,Disturbed,South,Oceania,280,5,24,0.781644246
+Gibb&Cunningham_noyear_17,4,-34.9694,149.1708,12.8,725,28.1,Disturbed,South,Oceania,280,5,22,0.8594566357
+Gibb&Cunningham_noyear_18,4,-34.1868,148.5203,14.2,720,29.4,Disturbed,South,Oceania,280,5,30,0.8270926772
+Gibb&Cunningham_noyear_19,4,-34.4688,148.5962,13.6,716,29.5,Disturbed,South,Oceania,280,5,27,0.5779922354
+Gibb&Cunningham_noyear_20,4,-34.3681,148.702,13.6,713,29.2,Disturbed,South,Oceania,280,5,27,0.5440345529
+Gibb&Cunningham_noyear_21,4,-35.3486,149.3977,11.7,744,27.2,Disturbed,South,Oceania,280,5,14,0.7315165687
+Gibb&Cunningham_noyear_22,4,-35.0123,149.1186,12.7,739,28.3,Disturbed,South,Oceania,280,5,24,0.8086643305
+Gibb&Cunningham_noyear_23,4,-34.5081,148.7633,13.2,736,29.1,Disturbed,South,Oceania,280,5,29,0.6402509388
+Gibb&Cunningham_noyear_24,4,-34.4469,148.7153,13.7,678,29.4,Disturbed,South,Oceania,280,5,18,0.701184959
+Gibb&Cunningham_noyear_25,4,-34.6637,148.5932,13.5,739,29.5,Disturbed,South,Oceania,280,5,21,0.6521320779
+Gibb&Cunningham_noyear_26,4,-35.3531,149.4229,11.9,728,27.2,Disturbed,South,Oceania,280,5,15,0.4202555581
+Gibb&Cunningham_noyear_27,4,-35.0565,148.942,13.7,725,28.9,Disturbed,South,Oceania,280,5,10,0.3972206966
+Gibb&Cunningham_noyear_28,4,-34.5274,148.6516,13.3,737,29.3,Disturbed,South,Oceania,280,5,24,0.6979203432
+Gibb&Cunningham_noyear_29,4,-35.2849,149.3773,11.9,733,27.3,Disturbed,South,Oceania,280,5,19,0.6881454702
+Gibb&Cunningham_noyear_30,4,-34.1911,148.5513,14.1,720,29.4,Disturbed,South,Oceania,280,5,20,0.672157747
+Gibb&Hjältén_2007_01,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,7,0.6546546551
+Gibb&Hjältén_2007_02,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,11,0.7728302546
+Gibb&Hjältén_2007_03,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,12,0.856217883
+Gibb&Hjältén_2007_04,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,15,0.8212728856
+Gibb&Hjältén_2007_05,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,12,0.8423142975
+Gibb&Hjältén_2007_06,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,12,0.8188679241
+Gibb&Hjältén_2007_07,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,12,0.8569031275
+Gibb&Hjältén_2007_08,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,8,0.8229570149
+Gibb&Hjältén_2007_09,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,11,0.7546439625
+Gibb&Hjältén_2007_10,68,64.58,18.67,0.9,568,37.2,Transformed,North,Europe,1920,80,9,0.8230263158
+Gibb&Hochuli_2002_01,4,-34.01,151.23,17.6,1205,18.7,Undisturbed,South,Oceania,168,40,14,0.4657071783
+Gibb&Hochuli_2002_02,4,-34.01,151.22,17.6,1205,18.7,Undisturbed,South,Oceania,168,40,12,0.708898944
+Gibb&Hochuli_2002_03,4,-33.85,151.25,17.5,1277,18.8,Transformed,South,Oceania,168,40,16,0.5619558735
+Gibb&Hochuli_2002_04,4,-33.51,151.3,17.4,1291,20.6,Undisturbed,South,Oceania,168,40,11,0.8217054265
+Gibb&Hochuli_2002_05,4,-33.51,151.3,17.4,1291,20.6,Undisturbed,South,Oceania,168,40,14,0.8033826639
+Gibb&Hochuli_2002_06,4,-33.7,151.31,17.6,1276,19.6,Transformed,South,Oceania,168,40,9,0.2286808974
+Gibb&Hochuli_2002_07,4,-33.81,151.27,17.6,1292,19.2,Transformed,South,Oceania,168,40,10,0.8449197859
+Gibb&Hochuli_2002_08,4,-33.62,151.25,17,1295,20.3,Undisturbed,South,Oceania,168,40,22,0.7568181823
+Gibb&Hochuli_2002_09,4,-33.59,151.28,17,1295,20.3,Undisturbed,South,Oceania,168,40,14,0.8704902869
+Gibb&Hochuli_2002_10,4,-33.97,151.26,17.6,1161,18.6,Transformed,South,Oceania,168,40,9,0.3968569065
+Gibb&Hochuli_2002_11,4,-33.96,151.25,17.6,1161,18.6,Transformed,South,Oceania,168,40,14,0.7771141904
+Gibb&Hochuli_2002_12,4,-33.83,151.27,17.6,1292,19.2,Transformed,South,Oceania,168,40,13,0.7236976503
+Gibb&Hochuli_2002_13,4,-33.85,151.27,17.5,1277,18.8,Transformed,South,Oceania,168,40,20,0.6534798539
+Gibb&Hochuli_2002_14,4,-33.82,151.3,17.4,1265,18.9,Transformed,South,Oceania,168,40,8,0.84
+Gibb&Hochuli_2002_15,4,-33.81,151.29,17.6,1292,19.2,Transformed,South,Oceania,168,40,14,0.7538659792
+Gibb&Hochuli_2002_16,4,-33.81,151.25,17.6,1292,19.2,Transformed,South,Oceania,168,40,16,0.7263243462
+Gibb&Hochuli_2002_17,4,-34.17,151.06,16.9,1437,19.6,Undisturbed,South,Oceania,168,40,11,0.9042016807
+Gibb&Hochuli_2002_18,4,-34.1,151.09,17.1,1344,19.4,Undisturbed,South,Oceania,168,40,19,0.8108536974
+Gibb&Hochuli_2002_19,4,-34,151.1,17.5,1211,19.9,Undisturbed,South,Oceania,168,40,12,0.7496371553
+Gibb&Hochuli_2002_20,4,-34.08,151.11,17.3,1261,19.7,Undisturbed,South,Oceania,168,40,12,0.7496371553
+Gibb&Hochuli_2002_21,4,-33.8,151.27,17.6,1292,19.2,Transformed,South,Oceania,168,40,17,0.8422049228
+Gibb&Hochuli_2003_01,4,-33.49,151.11,16.8,1175,22.6,Undisturbed,South,Oceania,56,40,39,0.9486519446
+Gibb&Hochuli_2003_02,4,-33.48,151.13,17.3,1163,22.3,Undisturbed,South,Oceania,56,40,32,0.9053009884
+Gibb&Hochuli_2003_03,4,-33.48,151.14,17.3,1163,22.3,Undisturbed,South,Oceania,56,40,32,0.929274395
+Gibb&Hochuli_2003_04,4,-33.49,151.14,17.3,1163,22.3,Undisturbed,South,Oceania,56,40,37,0.9365587095
+Gibb&Hochuli_2003_05,4,-33.53,151.04,16.5,1140,23.1,Undisturbed,South,Oceania,56,40,37,0.9545872408
+Gibb&Hochuli_2003_06,4,-33.53,151.05,16.6,1172,22.6,Undisturbed,South,Oceania,56,40,35,0.9248120303
+Gibb&Hochuli_2003_07,4,-33.53,151.05,16.6,1172,22.6,Undisturbed,South,Oceania,56,40,37,0.9466971252
+Gibb&Hochuli_2003_08,4,-33.52,151.04,16.5,1140,23.1,Undisturbed,South,Oceania,56,40,33,0.9322120289
+Gibb&Hochuli_2003_09,4,-33.57,151.18,16.8,1253,21.3,Undisturbed,South,Oceania,56,40,28,0.9250749249
+Gibb&Hochuli_2003_10,4,-33.54,151.1,16.9,1168,22.3,Undisturbed,South,Oceania,56,40,24,0.9153055054
+Gibb&Hochuli_2003_11,4,-33.51,150.97,16.9,1050,23.6,Undisturbed,South,Oceania,56,40,35,0.9178410791
+Gibb&Hochuli_2003_12,4,-33.54,151.19,17.3,1205,21.7,Undisturbed,South,Oceania,56,40,42,0.947824106
+Gibb&Hochuli_2003_13,4,-33.55,151.19,16.8,1253,21.3,Undisturbed,South,Oceania,56,40,21,0.8981562776
+Gibb&Hochuli_2003_14,4,-33.55,151.19,16.8,1253,21.3,Undisturbed,South,Oceania,56,40,35,0.9133674895
+Gibb&Hochuli_2003_15,4,-33.56,151.19,16.8,1253,21.3,Undisturbed,South,Oceania,56,40,45,0.9598842019
+Gibb&Hochuli_2003_16,4,-33.56,151.19,16.8,1253,21.3,Undisturbed,South,Oceania,56,40,25,0.9077340565
+Gibb_2011_01,68,64.15,20.09,1.2,598,35.5,Disturbed,North,Europe,790,5,3,0.514604035
+Gibb_2011_02,68,64.35,20.34,1,598,35.8,Disturbed,North,Europe,790,5,6,0.0052207098
+Gibb_2011_03,68,64.36,20.35,1,598,35.8,Disturbed,North,Europe,790,5,5,0.0130953609
+Gibb_2011_04,68,63.68,19.95,2.7,577,34.5,Disturbed,North,Europe,790,5,6,0.0124343775
+Gibb_2011_05,68,64.17,20.05,1,602,35.6,Disturbed,North,Europe,790,5,5,0.7340301975
+Gibb_2011_06,68,64.28,20.04,0.8,606,36,Disturbed,North,Europe,790,5,6,0.0278740893
+Gibb_2011_07,68,64.14,19.82,1.4,590,35.7,Disturbed,North,Europe,790,5,8,0.7001252593
+Gibb_2011_08,68,64.26,20.04,0.8,606,36,Disturbed,North,Europe,790,5,7,0.0046927271
+Gibb_2011_09,68,64.35,20.68,1.4,598,35.4,Disturbed,North,Europe,790,5,6,0.0954200247
+Gibb_2011_10,68,64.28,20.05,0.8,605,35.8,Disturbed,North,Europe,790,5,5,0.0694934308
+Gibb_2011_11,68,64.14,19.81,1.4,590,35.7,Disturbed,North,Europe,790,5,4,0.0031215676
+Gibb_2011_12,68,63.81,19.8,2,594,34.9,Disturbed,North,Europe,790,5,4,0.0242101373
+Gibb_2011_13,68,64.26,20.03,0.8,606,36,Disturbed,North,Europe,790,5,10,0.29159791
+Gibb_2011_14,68,64.26,20.06,0.8,605,35.8,Disturbed,North,Europe,790,5,5,0.1353315894
+Gibb_2011_15,68,64.18,19.8,1.2,594,35.9,Disturbed,North,Europe,790,5,5,0.4525151012
+Gibb_2011_16,68,64.27,20.1,0.9,604,35.8,Disturbed,North,Europe,790,5,6,0.028957583
+Gibb_2011_17,68,63.66,19.8,2.7,581,34.6,Disturbed,North,Europe,790,5,10,0.6345136566
+Gibb_2011_18,68,64.26,20.34,1.1,602,35.6,Disturbed,North,Europe,790,5,7,0.3098705629
+Gibb_2011_19,68,64.17,19.77,1.4,587,35.8,Disturbed,North,Europe,790,5,4,0.204322938
+Gibb_2011_20,68,64.17,19.83,1.2,594,35.9,Disturbed,North,Europe,790,5,3,0.0065909082
+Gibb_2011_21,68,63.83,19.82,2,594,34.9,Disturbed,North,Europe,790,5,3,0.0617619985
+Gibb_2011_22,68,64.34,20.35,1,598,35.8,Disturbed,North,Europe,790,5,2,0.002644721
+Gibb_2011_23,68,64.29,20.07,0.8,605,35.8,Disturbed,North,Europe,790,5,2,0.0014716699
+Gibb_2011_24,68,64.15,20.08,1.1,605,35.5,Disturbed,North,Europe,790,5,3,0.0247322655
+Gibb_2011_25,68,64.15,20.08,1.1,605,35.5,Disturbed,North,Europe,790,5,1,0
+Gibb_2011_26,68,64.16,20.05,1.1,605,35.5,Disturbed,North,Europe,790,5,2,0.0002573671
+Gibb_2011_27,68,64.26,20.12,0.9,604,35.8,Disturbed,North,Europe,790,5,4,0.0009487671
+Gibb_2011_28,68,64.26,20.12,0.9,604,35.8,Disturbed,North,Europe,790,5,2,0.000709975
+Gibb_2011_29,68,64.28,19.8,0.9,598,36,Disturbed,North,Europe,790,5,2,0.0007646722
+Gibb_2011_30,68,64.28,19.8,0.9,598,36,Disturbed,North,Europe,790,5,3,0.666315789
+Gibb_2011_31,68,64.35,20.65,1.4,593,35.4,Disturbed,North,Europe,790,5,3,0.0100919598
+Gibb_2011_32,68,64.35,20.65,1.4,593,35.4,Disturbed,North,Europe,790,5,3,0.3211515184
+Gibb_2011_33,68,64.37,20.33,0.9,602,35.8,Disturbed,North,Europe,790,5,2,0.0254741796
+Gibb_2011_34,68,64.29,19.87,0.7,603,36.1,Disturbed,North,Europe,790,5,2,0.2029840389
+Gibb_2011_35,68,64.29,19.87,0.7,603,36.1,Disturbed,North,Europe,790,5,3,0.6534190532
+Gibb_2011_36,68,63.67,19.8,2.5,583,34.6,Disturbed,North,Europe,790,5,3,0.2225881866
+Gibb_2011_37,68,64.26,20.05,0.8,605,35.8,Disturbed,North,Europe,790,5,3,0.2156862748
+Gibb_2011_38,68,64.16,20.05,1.1,605,35.5,Disturbed,North,Europe,790,5,2,0.1333333329
+Gibb_2011_39,68,64.33,20.29,0.8,607,35.8,Disturbed,North,Europe,790,5,5,0.6578014182
+Gibb_2011_40,68,64.17,19.85,1.5,587,35.8,Disturbed,North,Europe,790,5,3,0.7333333332
+Gómez_etal_2003_01,59,42.3,3.08,15.7,585,23.4,Disturbed,North,Europe,210,20,6,0.3779032774
+Gómez_etal_2003_02,59,42.3,3.08,15.7,585,23.4,Disturbed,North,Europe,210,20,9,0.4990930528
+Gómez_etal_2003_03,59,42.3,3.08,15.7,585,23.4,Disturbed,North,Europe,210,20,6,0.4500000003
+Gómez_etal_2003_04,59,42.3,3.08,15.7,585,23.4,Transformed,North,Europe,210,20,7,0.4851530601
+Gómez_etal_2003_05,59,42.3,3.08,15.7,585,23.4,Transformed,North,Europe,210,20,7,0.7621821005
+Gómez_etal_2003_06,59,42.3,3.08,15.7,585,23.4,Transformed,North,Europe,210,20,10,0.7955176206
+Gómez_etal_2003_07,59,42.3,3.08,15.7,585,23.4,Transformed,North,Europe,210,20,15,0.7029059608
+Gómez_etal_2003_08,59,42.3,3.08,15.7,585,23.4,Transformed,North,Europe,210,20,12,0.6897531075
+Gómez_etal_2003_10,59,42.3,3.08,15.7,585,23.4,Undisturbed,North,Europe,210,20,14,0.6611353406
+Gómez_etal_2003_11,59,42.3,3.08,15.7,585,23.4,Undisturbed,North,Europe,210,20,10,0.6472483218
+Gómez_etal_2003_12,59,42.3,3.08,15.7,585,23.4,Undisturbed,North,Europe,210,20,6,0.5130654911
+Gómez_etal_2003_13,59,42.3,3.08,15.7,585,23.4,Undisturbed,North,Europe,210,20,19,0.6638258456
+Gómez_etal_2003_14,59,42.3,3.08,15.7,585,23.4,Undisturbed,North,Europe,210,20,15,0.8278695415
+Gómez_etal_2003_15,59,42.3,3.08,15.7,585,23.4,Undisturbed,North,Europe,210,20,10,0.8384898538
+Gómez_etal_2003a_01,59,41.97,2.87,14.9,752,22.9,Undisturbed,North,Europe,480,20,19,0.8035473495
+Gómez_etal_2003a_02,59,41.97,2.87,14.9,752,22.9,Undisturbed,North,Europe,480,20,14,0.6370346937
+Gómez_etal_2003a_03,59,41.97,2.87,14.9,752,22.9,Undisturbed,North,Europe,480,20,14,0.3781853067
+Gómez_noyear_01,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.7121951217
+Gómez_noyear_02,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,10,0.3476952188
+Gómez_noyear_03,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.4084415583
+Gómez_noyear_04,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,9,0.5406060606
+Gómez_noyear_05,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,7,0.4062709968
+Gómez_noyear_06,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,11,0.4910743267
+Gómez_noyear_07,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.4315476196
+Gómez_noyear_08,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,12,0.7553672319
+Gómez_noyear_09,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.5776997364
+Gómez_noyear_10,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.3203957377
+Gómez_noyear_11,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,7,0.5454545452
+Gómez_noyear_12,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,7,0.3917721519
+Gómez_noyear_13,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,6,0.3335526316
+Gómez_noyear_14,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.7904761907
+Gómez_noyear_15,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,6,0.2305860809
+Gómez_noyear_16,55,41.23,-4.71,12.2,389,29.2,Undisturbed,North,Europe,27,10,8,0.4689132709
+Gómez_noyeara_01,59,41.97,2.87,14.9,752,22.9,Undisturbed,North,Europe,45,20,10,0.2753697966
+Gómez_noyeara_02,59,41.97,2.87,14.9,752,22.9,Undisturbed,North,Europe,45,20,12,0.211442786
+Gómez_noyeara_03,59,41.97,2.87,14.9,752,22.9,Undisturbed,North,Europe,45,20,10,0.8084033609
+Grossman&Gibb_unpublished_01,6,-33.1788,141.1771,17.7,243,28.6,Undisturbed,South,Oceania,63,12,24,0.9085403729
+Grossman&Gibb_unpublished_02,6,-33.1789,141.1763,17.7,243,28.6,Undisturbed,South,Oceania,63,12,22,0.9130434783
+Grossman&Gibb_unpublished_03,6,-33.1786,141.1753,17.7,243,28.6,Undisturbed,South,Oceania,63,12,22,0.8731327579
+Grossman&Gibb_unpublished_04,6,-33.1765,141.1657,17.6,240,28.6,Undisturbed,South,Oceania,63,12,22,0.5634514105
+Grossman&Gibb_unpublished_05,6,-33.1759,141.165,17.6,240,28.6,Undisturbed,South,Oceania,63,12,20,0.9315315314
+Grossman&Gibb_unpublished_06,6,-33.1761,141.1644,17.6,240,28.6,Undisturbed,South,Oceania,63,12,31,0.7573306373
+Grossman&Gibb_unpublished_07,6,-33.1856,141.1688,17.7,243,28.6,Undisturbed,South,Oceania,63,12,23,0.9055855855
+Grossman&Gibb_unpublished_08,6,-33.1855,141.168,17.7,243,28.6,Undisturbed,South,Oceania,63,12,20,0.8737341772
+Grossman&Gibb_unpublished_09,6,-33.1854,141.1672,17.7,243,28.6,Undisturbed,South,Oceania,63,12,29,0.9189857766
+Grossman&Gibb_unpublished_10,6,-33.1933,141.1748,17.7,243,28.6,Undisturbed,South,Oceania,63,12,21,0.5768078735
+Grossman&Gibb_unpublished_11,6,-33.1926,141.1745,17.7,243,28.6,Undisturbed,South,Oceania,63,12,26,0.8042570613
+Grossman&Gibb_unpublished_12,6,-33.192,141.1741,17.7,243,28.6,Undisturbed,South,Oceania,63,12,26,0.9217336423
+Grossman&Gibb_unpublished_13,6,-33.2011,141.1859,17.7,243,28.6,Undisturbed,South,Oceania,63,12,21,0.8303870047
+Grossman&Gibb_unpublished_14,6,-33.2004,141.1853,17.7,243,28.6,Undisturbed,South,Oceania,63,12,25,0.5540804498
+Grossman&Gibb_unpublished_15,6,-33.2005,141.1847,17.7,243,28.6,Undisturbed,South,Oceania,63,12,26,0.8871689022
+Grossman&Gibb_unpublished_16,6,-33.131,141.1526,17.6,241,28.7,Undisturbed,South,Oceania,63,12,25,0.7469176434
+Grossman&Gibb_unpublished_17,6,-33.131,141.1533,17.6,241,28.7,Undisturbed,South,Oceania,63,12,26,0.9370853349
+Grossman&Gibb_unpublished_18,6,-33.1309,141.154,17.6,241,28.7,Undisturbed,South,Oceania,63,12,26,0.8394160581
+Grossman&Gibb_unpublished_19,6,-33.1266,141.161,17.6,241,28.7,Undisturbed,South,Oceania,63,12,22,0.6598142224
+Grossman&Gibb_unpublished_20,6,-33.1264,141.1618,17.6,241,28.7,Undisturbed,South,Oceania,63,12,26,0.8636969351
+Grossman&Gibb_unpublished_21,6,-33.1264,141.1625,17.6,241,28.7,Undisturbed,South,Oceania,63,12,30,0.9463171035
+Grossman&Gibb_unpublished_22,6,-33.1232,141.1614,17.7,237,28.7,Undisturbed,South,Oceania,63,12,29,0.7467472859
+Grossman&Gibb_unpublished_23,6,-33.1232,141.1607,17.7,237,28.7,Undisturbed,South,Oceania,63,12,32,0.8853649567
+Grossman&Gibb_unpublished_24,6,-33.1233,141.1598,17.7,237,28.7,Undisturbed,South,Oceania,63,12,21,0.6221993833
+Grossman&Gibb_unpublished_25,6,-33.114,141.1664,17.7,237,28.7,Undisturbed,South,Oceania,63,12,24,0.911976912
+Grossman&Gibb_unpublished_26,6,-33.114,141.1657,17.7,237,28.7,Undisturbed,South,Oceania,63,12,20,0.8617826621
+Grossman&Gibb_unpublished_27,6,-33.1139,141.1649,17.7,237,28.7,Undisturbed,South,Oceania,63,12,24,0.7696162595
+Grossman&Gibb_unpublished_28,6,-33.1499,141.1308,17.6,241,28.7,Undisturbed,South,Oceania,63,12,17,0.8571428572
+Grossman&Gibb_unpublished_29,6,-33.1499,141.1316,17.6,241,28.7,Undisturbed,South,Oceania,63,12,27,0.8660378808
+Grossman&Gibb_unpublished_30,6,-33.15,141.1325,17.6,241,28.7,Undisturbed,South,Oceania,63,12,26,0.9447004604
+Hanrahan et al. 2014_1,10,-30.95833,23.54166,15.9,271,32.5,Undisturbed,South,Africa,64,80,21,0.7840265558
+Hanrahan et al. 2014_2,10,-31.18805,23.57916,15.4,277,32.3,Undisturbed,South,Africa,64,80,18,0.5346065855
+Hanrahan et al. 2014_3,10,-30.1333,24.7,16,360,34.5,Undisturbed,South,Africa,60,10,19,0.8146615002
+Heterick_etal_2000_11,7,-31.97,115.9,18.6,801,22.2,Transformed,South,Oceania,70,9.8,8,0.5163591026
+Hoffmann&Andersen_2006_01,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,39,0.6333009449
+Hoffmann&Andersen_2006_02,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,36,0.7610664153
+Hoffmann&Andersen_2006_03,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,40,0.8738520783
+Hoffmann&Andersen_2006_04,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,40,0.8231193928
+Hoffmann&Andersen_2006_05,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,31,0.867245658
+Hoffmann&Andersen_2006_06,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,29,0.5406592404
+Hoffmann&Andersen_2006_07,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,42,0.9017601274
+Hoffmann&Andersen_2006_08,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,39,0.7576774629
+Hoffmann&Andersen_2006_09,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,41,0.8747013164
+Hoffmann&Andersen_2006_10,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,51,0.8943676182
+Hoffmann&Andersen_2006_11,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,35,0.8981343288
+Hoffmann&Andersen_2006_12,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,29,0.5593177702
+Hoffmann&Andersen_2006_13,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,47,0.9143124683
+Hoffmann&Andersen_2006_14,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,47,0.9153488051
+Hoffmann&Andersen_2006_15,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,43,0.9098332739
+Hoffmann&Andersen_2006_16,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,46,0.8681401775
+Hoffmann&Andersen_2006_17,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,17,0.8338185888
+Hoffmann&Andersen_2006_18,17,-24.2,150.48,20.9,692,25.4,Undisturbed,South,Oceania,75,40,39,0.8402972448
+Hoffmann&Andersen_2006_19,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,23,0.7940336021
+Hoffmann&Andersen_2006_20,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.5147914165
+Hoffmann&Andersen_2006_21,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.640806272
+Hoffmann&Andersen_2006_22,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.6963550028
+Hoffmann&Andersen_2006_23,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,29,0.7177260812
+Hoffmann&Andersen_2006_24,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.6591660201
+Hoffmann&Andersen_2006_25,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,39,0.7056319877
+Hoffmann&Andersen_2006_26,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,37,0.6433781457
+Hoffmann&Andersen_2006_27,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,33,0.7057467966
+Hoffmann&Andersen_2006_28,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,32,0.8977314851
+Hoffmann&Andersen_2006_29,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,25,0.883102806
+Hoffmann&Andersen_2006_30,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,28,0.8158810105
+Hoffmann&Andersen_2006_31,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,27,0.5635709939
+Hoffmann&Andersen_2006_32,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,40,0.8135463059
+Hoffmann&Andersen_2006_33,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,40,0.1283869237
+Hoffmann&Andersen_2006_34,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.1095026025
+Hoffmann&Andersen_2006_35,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,16,0.7845838451
+Hoffmann&Andersen_2006_36,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,25,0.8924675877
+Hoffmann&Andersen_2006_37,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,30,0.73352949
+Hoffmann&Andersen_2006_38,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,28,0.3341393476
+Hoffmann&Andersen_2006_39,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.7939068097
+Hoffmann&Andersen_2006_40,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,29,0.6014010726
+Hoffmann&Andersen_2006_41,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,14,0.4766251332
+Hoffmann&Andersen_2006_42,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,30,0.4069588636
+Hoffmann&Andersen_2006_43,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,31,0.8727110194
+Hoffmann&Andersen_2006_44,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,11,0.5061403513
+Hoffmann&Andersen_2006_45,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,23,0.7487476783
+Hoffmann&Andersen_2006_46,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,7,0.6890223943
+Hoffmann&Andersen_2006_47,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,17,0.7820726117
+Hoffmann&Andersen_2006_48,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,21,0.5127047376
+Hoffmann&Andersen_2006_49,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,21,0.6964222525
+Hoffmann&Andersen_2006_50,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,26,0.7983806433
+Hoffmann&Andersen_2006_51,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,30,0.3394719659
+Hoffmann&Andersen_2006_52,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,35,0.2795713786
+Hoffmann&Andersen_2006_53,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,31,0.8128014843
+Hoffmann&Andersen_2006_54,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,23,0.7492124718
+Hoffmann&Andersen_2006_55,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,15,0.7574886046
+Hoffmann&Andersen_2006_56,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,48,0.7481372146
+Hoffmann&Andersen_2006_57,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,44,0.2912636888
+Hoffmann&Andersen_2006_58,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,44,0.6398241858
+Hoffmann&Andersen_2006_59,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,28,0.7055446615
+Hoffmann&Andersen_2006_60,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,35,0.5597298413
+Hoffmann&Andersen_2006_61,17,-24.2,150.48,20.9,692,25.4,Transformed,South,Oceania,75,40,32,0.2282803727
+Hoffmann&James_2011_01,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,26,0.3917748455
+Hoffmann&James_2011_02,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,20,0.7638809708
+Hoffmann&James_2011_03,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,24,0.5024305259
+Hoffmann&James_2011_04,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,20,0.1752052975
+Hoffmann&James_2011_05,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,22,0.0134885311
+Hoffmann&James_2011_06,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,21,0.3492400411
+Hoffmann&James_2011_07,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,18,0.0043185182
+Hoffmann&James_2011_08,13,-29.9,134.43,19.9,163,30.3,Disturbed,South,Oceania,40,1000,16,0.2813745806
+Hoffmann&James_2011_09,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,20,0.4206205687
+Hoffmann&James_2011_10,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,20,0.3201617908
+Hoffmann&James_2011_11,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,17,0.123613347
+Hoffmann&James_2011_12,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,16,0.5176156197
+Hoffmann&James_2011_13,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,23,0.090199671
+Hoffmann&James_2011_14,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,20,0.5023085172
+Hoffmann&James_2011_15,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,23,0.0742177638
+Hoffmann&James_2011_16,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,21,0.8768263676
+Hoffmann&James_2011_17,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,18,0.1777109164
+Hoffmann&James_2011_18,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,16,0.202421979
+Hoffmann&James_2011_19,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,30,0.3542638446
+Hoffmann&James_2011_20,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,20,0.8326060834
+Hoffmann&James_2011_21,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,23,0.7459627329
+Hoffmann&James_2011_22,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,20,0.6150554621
+Hoffmann&James_2011_23,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,21,0.7347574849
+Hoffmann&James_2011_24,13,-30.2,133.1,19.1,186,28.8,Disturbed,South,Oceania,40,1000,15,0.7431094865
+Hoffmann&James_2011_25,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,17,0.0133318464
+Hoffmann&James_2011_26,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,24,0.1418100091
+Hoffmann&James_2011_27,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,27,0.5273139154
+Hoffmann&James_2011_28,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,26,0.0746679212
+Hoffmann&James_2011_29,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,31,0.7658493537
+Hoffmann&James_2011_30,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,16,0.7216014902
+Hoffmann&James_2011_31,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,20,0.4207620898
+Hoffmann&James_2011_32,13,-30.22,133.97,19.1,183,29.7,Disturbed,South,Oceania,40,1000,26,0.5407713774
+Hoffmann&James_2011_33,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,18,0.3279354237
+Hoffmann&James_2011_34,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,21,0.0834717245
+Hoffmann&James_2011_35,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,19,0.0690857043
+Hoffmann&James_2011_36,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,18,0.0154421178
+Hoffmann&James_2011_37,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,18,0.080932696
+Hoffmann&James_2011_38,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,19,0.0611423782
+Hoffmann&James_2011_39,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,25,0.2900259937
+Hoffmann&James_2011_40,13,-29.43,134.8,20.4,157,30.6,Disturbed,South,Oceania,40,1000,21,0.7852197997
+Hoffmann&James_2011_41,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,11,0.7032534055
+Hoffmann&James_2011_42,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,20,0.5041620314
+Hoffmann&James_2011_43,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,17,0.8419389979
+Hoffmann&James_2011_44,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,22,0.7771438453
+Hoffmann&James_2011_45,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,10,0.8077922079
+Hoffmann&James_2011_46,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,23,0.7544955265
+Hoffmann&James_2011_47,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,15,0.7347207013
+Hoffmann&James_2011_48,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,31,0.876599147
+Hoffmann&James_2011_49,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,39,0.0756331167
+Hoffmann&James_2011_50,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,25,0.4190482164
+Hoffmann&James_2011_51,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,36,0.8789891166
+Hoffmann&James_2011_52,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,28,0.8851757309
+Hoffmann&James_2011_53,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,36,0.2955119791
+Hoffmann&James_2011_54,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,34,0.7879754596
+Hoffmann&James_2011_55,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,30,0.6553781728
+Hoffmann&James_2011_56,13,-30.73,134.75,19.1,178,30.3,Disturbed,South,Oceania,40,1000,24,0.782678063
+Hoffmann&Parr_2008_06,32,-12.45,131.05,27.4,1541,16.9,Undisturbed,South,Oceania,40,18,11,0.7739602167
+Hoffmann&Parr_2008_07,32,-12.45,131.05,27.4,1541,16.9,Undisturbed,South,Oceania,40,18,10,0.7296834901
+Hoffmann&Parr_2008_08,32,-12.45,131.05,27.4,1541,16.9,Undisturbed,South,Oceania,40,18,5,0.7269866244
+Hoffmann&Saul_2010_03,31,-12.37,136.73,26.7,1412,14,Undisturbed,South,Oceania,24,30,8,0.6396491228
+Hoffmann&Saul_2010_05,31,-12.37,136.73,26.7,1412,14,Undisturbed,South,Oceania,24,30,20,0.8356982824
+Hoffmann&Saul_2010_11,31,-12.37,136.73,26.7,1412,14,Undisturbed,South,Oceania,24,30,14,0.8904109594
+Hoffmann&Saul_2010_13,31,-12.37,136.73,26.7,1412,14,Undisturbed,South,Oceania,24,30,11,0.7408169261
+Hoffmann&Saul_2010_15,31,-12.37,136.73,26.7,1412,14,Undisturbed,South,Oceania,24,30,10,0.7340425532
+Hoffmann_2000_01,28,-16.98,130.56,26.7,643,27.1,Disturbed,South,Oceania,180,90,18,0.8757317902
+Hoffmann_2000_02,28,-16.98,130.56,26.7,643,27.1,Disturbed,South,Oceania,180,90,19,0.8681023154
+Hoffmann_2000_03,28,-16.98,130.56,26.7,643,27.1,Disturbed,South,Oceania,180,90,14,0.8460173292
+Hoffmann_2000_04,28,-16.98,130.56,26.7,643,27.1,Disturbed,South,Oceania,180,90,16,0.7350762524
+Hoffmann_2000_05,28,-16.98,130.56,26.7,643,27.1,Disturbed,South,Oceania,180,90,20,0.7695852538
+Hoffmann_2000_06,28,-16.98,130.56,26.7,643,27.1,Disturbed,South,Oceania,180,90,26,0.8741170934
+Hoffmann_2000_07,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,420,90,35,0.9350753612
+Hoffmann_2000_08,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,420,90,39,0.8910148604
+Hoffmann_2000_09,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,420,90,33,0.9325873326
+Hoffmann_2000_10,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,420,90,33,0.9267749333
+Hoffmann_2000_11,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,420,90,42,0.9207621761
+Hoffmann_2003_01,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,11,0.3618488251
+Hoffmann_2003_02,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,3,0.0785585584
+Hoffmann_2003_03,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,9,0.6074561401
+Hoffmann_2003_04,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,11,0.5732255169
+Hoffmann_2003_05,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,35,0.9395588395
+Hoffmann_2003_06,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.9055668528
+Hoffmann_2003_07,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,33,0.885718047
+Hoffmann_2003_08,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,27,0.8582077715
+Hoffmann_2003_09,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,13,0.4760505437
+Hoffmann_2003_10,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,16,0.4562150052
+Hoffmann_2003_11,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,28,0.9038954516
+Hoffmann_2003_12,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,32,0.9237501476
+Hoffmann_2003_13,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,32,0.8831600836
+Hoffmann_2003_14,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.8720516484
+Hoffmann_2003_15,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.8776776059
+Hoffmann_2003_16,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,33,0.9146314991
+Hoffmann_2003_17,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,39,0.9347365094
+Hoffmann_2003_18,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,38,0.9359453908
+Hoffmann_2003_19,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.890824622
+Hoffmann_2003_20,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.9080023367
+Hoffmann_2003_21,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,28,0.9092681877
+Hoffmann_2003_22,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,34,0.900461102
+Hoffmann_2003_23,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,23,0.5822072076
+Hoffmann_2003_24,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,18,0.6500474195
+Hoffmann_2003_25,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.8894594977
+Hoffmann_2003_26,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,36,0.880144365
+Hoffmann_2003_27,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,30,0.8989331022
+Hoffmann_2003_28,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,26,0.9120071685
+Hoffmann_2003_29,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,19,0.6931310117
+Hoffmann_2003_30,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,23,0.6944040693
+Hoffmann_2003_31,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,13,0.5355316527
+Hoffmann_2003_32,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,9,0.4239304504
+Hoffmann_2003_33,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,23,0.7800586515
+Hoffmann_2003_34,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,15,0.6488280719
+Hoffmann_2003_35,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,23,0.790763674
+Hoffmann_2003_36,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,28,0.8747313312
+Hoffmann_2003_37,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,12,0.4090597121
+Hoffmann_2003_38,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,17,0.5241758237
+Hoffmann_2003_39,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,16,0.8947144075
+Hoffmann_2003_40,28,-16.11,130.95,27.4,741,26,Disturbed,South,Oceania,96,30,23,0.7638344226
+Hoffmann_2010_04,32,-13.67,130.6,27.5,1279,21.5,Undisturbed,South,Oceania,48,30,7,0.5088346279
+Hoffmann_2010_05,32,-13.67,130.6,27.5,1279,21.5,Undisturbed,South,Oceania,48,30,9,0.5516275972
+Hoffmann_2010_06,32,-13.67,130.6,27.5,1279,21.5,Undisturbed,South,Oceania,48,30,8,0.5203572053
+Hoffmann_etal_2000_01,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,37,0.8879756606
+Hoffmann_etal_2000_02,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,24,0.8581355345
+Hoffmann_etal_2000_03,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,24,0.9036050152
+Hoffmann_etal_2000_04,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,29,0.9248844378
+Hoffmann_etal_2000_05,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,21,0.8866832097
+Hoffmann_etal_2000_06,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,21,0.8568449592
+Hoffmann_etal_2000_07,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,46,0.9445449061
+Hoffmann_etal_2000_08,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,45,0.9225692445
+Hoffmann_etal_2000_09,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,46,0.9491559892
+Hoffmann_etal_2000_10,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,31,0.8700598128
+Hoffmann_etal_2000_11,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,31,0.9206174779
+Hoffmann_etal_2000_12,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,24,0.915502008
+Hoffmann_etal_2000_13,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,30,0.8385602105
+Hoffmann_etal_2000_14,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,29,0.9363830611
+Hoffmann_etal_2000_15,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,29,0.8506584628
+Hoffmann_etal_2000_16,23,-20.72,139.48,24.3,424,28.9,Undisturbed,South,Oceania,30,40,37,0.9280248686
+Hoffmann_etal_2000_17,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,25,0.8815224065
+Hoffmann_etal_2000_18,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,24,0.9161448739
+Hoffmann_etal_2000_19,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,24,0.9072818608
+Hoffmann_etal_2000_20,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,22,0.9081417626
+Hoffmann_etal_2000_21,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,13,0.8592840773
+Hoffmann_etal_2000_22,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,11,0.8272914824
+Hoffmann_etal_2000_23,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,13,0.88
+Hoffmann_etal_2000_24,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,12,0.7647307733
+Hoffmann_etal_2000_25,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,15,0.7977296185
+Hoffmann_etal_2000_26,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,18,0.8246163293
+Hoffmann_etal_2000_27,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,16,0.7554628854
+Hoffmann_etal_2000_28,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,29,0.8699837807
+Hoffmann_etal_2000_29,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,27,0.8601349707
+Hoffmann_etal_2000_30,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,19,0.8817299398
+Hoffmann_etal_2000_31,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,16,0.8524844716
+Hoffmann_etal_2000_32,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,51,0.9576936748
+Hoffmann_etal_2000_33,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,11,0.7838377784
+Hoffmann_etal_2000_34,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,29,0.8884385903
+Hoffmann_etal_2000_35,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,27,0.9123563216
+Hoffmann_etal_2000_36,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,36,0.9123321863
+Hoffmann_etal_2000_37,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,21,0.8182497541
+Hoffmann_etal_2000_38,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,14,0.8216212789
+Hoffmann_etal_2000_39,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,12,0.8013931366
+Hoffmann_etal_2000_40,23,-20.72,139.48,24.3,424,28.9,Transformed,South,Oceania,30,40,16,0.8398467435
+Holway_1996_02,53,38.5,-122.01,16,617,32.3,Undisturbed,North,North America,5600,76,24,0.8621273235
+Jennings_etal_1986_01,64,45.98,-69.2,3.4,1024,42.5,Transformed,North,North America,294,1,10,0.7951013763
+Jennings_etal_1986_02,64,45.98,-69.2,3.4,1024,42.5,Transformed,North,North America,294,1,4,0.2647289865
+Jennings_etal_1986_03,64,45.98,-69.2,3.4,1024,42.5,Undisturbed,North,North America,588,1,7,0.5700516513
+KABAY_2007_01,7,-32.28,116.13,16.3,1118,24.9,Disturbed,South,Oceania,70,80,24,0.6896440346
+KABAY_2007_02,7,-32.28,116.13,16.3,1118,24.9,Disturbed,South,Oceania,70,80,20,0.8012783545
+KABAY_2007_03,7,-32.28,116.14,16.3,1118,24.9,Disturbed,South,Oceania,70,80,29,0.8400385519
+KABAY_2007_04,7,-32.28,116.14,16.3,1118,24.9,Disturbed,South,Oceania,70,80,25,0.8905034048
+KABAY_2007_05,7,-32.31,116.19,16.2,1095,25.3,Disturbed,South,Oceania,70,80,14,0.8107744109
+KABAY_2007_06,7,-32.31,116.19,16.2,1095,25.3,Disturbed,South,Oceania,70,80,13,0.812244898
+KABAY_2007_07,7,-32.32,116.2,16.2,1095,25.3,Disturbed,South,Oceania,70,80,17,0.6620446538
+KABAY_2007_08,7,-32.32,116.2,16.2,1095,25.3,Disturbed,South,Oceania,70,80,7,0.7163934428
+KABAY_2007_09,7,-32.34,116.23,15.9,1056,25.6,Disturbed,South,Oceania,70,80,22,0.8577830189
+KABAY_2007_10,7,-32.34,116.23,15.9,1056,25.6,Disturbed,South,Oceania,70,80,19,0.7528764007
+KABAY_2007_11,7,-32.35,116.24,15.9,1056,25.6,Disturbed,South,Oceania,70,80,8,0.2841214765
+KABAY_2007_12,7,-32.35,116.24,15.9,1056,25.6,Disturbed,South,Oceania,70,80,9,0.728270413
+KABAY_2009_01,7,-32.28,116.13,16.3,1118,24.9,Disturbed,South,Oceania,70,80,27,0.7171048858
+KABAY_2009_02,7,-32.28,116.13,16.3,1118,24.9,Disturbed,South,Oceania,70,80,23,0.8923755321
+KABAY_2009_03,7,-32.28,116.14,16.3,1118,24.9,Disturbed,South,Oceania,70,80,26,0.7981429928
+KABAY_2009_04,7,-32.28,116.14,16.3,1118,24.9,Disturbed,South,Oceania,70,80,23,0.8161838923
+KABAY_2009_05,7,-32.31,116.19,16.2,1095,25.3,Disturbed,South,Oceania,70,80,20,0.7904832823
+KABAY_2009_06,7,-32.31,116.19,16.2,1095,25.3,Disturbed,South,Oceania,70,80,12,0.4485540039
+KABAY_2009_07,7,-32.32,116.2,16.2,1095,25.3,Disturbed,South,Oceania,70,80,17,0.6349876973
+KABAY_2009_08,7,-32.32,116.2,16.2,1095,25.3,Disturbed,South,Oceania,70,80,12,0.5920471282
+KABAY_2009_09,7,-32.34,116.23,15.9,1056,25.6,Disturbed,South,Oceania,70,80,17,0.8516683869
+KABAY_2009_10,7,-32.34,116.23,15.9,1056,25.6,Disturbed,South,Oceania,70,80,21,0.8502824418
+KABAY_2009_11,7,-32.35,116.24,15.9,1056,25.6,Disturbed,South,Oceania,70,80,12,0.6175147108
+KABAY_2009_12,7,-32.35,116.24,15.9,1056,25.6,Disturbed,South,Oceania,70,80,17,0.8448166879
+KABAY_2012_01,7,-32.21,116.12,16.5,1125,24.5,Disturbed,South,Oceania,70,80,20,0.8856727696
+KABAY_2012_02,7,-32.21,116.12,16.5,1125,24.5,Disturbed,South,Oceania,70,80,20,0.8471800069
+KABAY_2012_03,7,-32.22,116.11,16.5,1125,24.5,Disturbed,South,Oceania,70,80,23,0.9101231721
+KABAY_2012_04,7,-32.22,116.11,16.5,1125,24.5,Disturbed,South,Oceania,70,80,20,0.9135662895
+KABAY_2012_05,7,-32.21,116.11,16.5,1125,24.5,Disturbed,South,Oceania,70,80,17,0.6320499828
+KABAY_2012_06,7,-32.21,116.11,16.5,1125,24.5,Disturbed,South,Oceania,70,80,20,0.8213187783
+KABAY_2012_07,7,-32.21,116.12,16.5,1125,24.5,Disturbed,South,Oceania,70,80,16,0.8939244668
+KABAY_2012_08,7,-32.21,116.12,16.5,1125,24.5,Disturbed,South,Oceania,70,80,16,0.6376949515
+KABAY_2012_09,7,-32.23,116.11,16.5,1125,24.5,Disturbed,South,Oceania,70,80,28,0.7628672415
+KABAY_2012_10,7,-32.22,116.11,16.5,1125,24.5,Disturbed,South,Oceania,70,80,30,0.8954963235
+KABAY_2012_11,7,-32.22,116.12,16.5,1125,24.5,Disturbed,South,Oceania,70,80,24,0.9245495497
+KABAY_2012_12,7,-32.22,116.12,16.5,1125,24.5,Disturbed,South,Oceania,70,80,19,0.8658475681
+Kain_etal_2002_01,7,-31.94,115.77,18.6,765,21,Transformed,South,Oceania,70,20,9,0.8233618233
+Kain_etal_2002_02,7,-31.94,115.77,18.6,765,21,Transformed,South,Oceania,70,20,20,0.9093167706
+Kain_etal_2002_03,7,-31.94,115.77,18.6,765,21,Transformed,South,Oceania,70,20,14,0.3097825188
+Kain_etal_2002_05,7,-31.94,115.77,18.6,765,21,Transformed,South,Oceania,70,20,13,0.5226747112
+Lach_noyeara_01,5,-33.59,18.58,16.5,512,20.9,Undisturbed,South,Africa,140,80,16,0.4123358995
+Lach_noyeara_02,5,-33.6,18.58,16.5,512,20.9,Undisturbed,South,Africa,70,80,14,0.6311986866
+Lach_noyearb_01,5,-33.59,18.58,16.5,512,20.9,Undisturbed,South,Africa,140,80,4,0.6571428568
+Lach_noyearb_03,5,-33.59,18.57,16.5,512,20.9,Undisturbed,South,Africa,140,80,5,0.7222222226
+Lach_noyearb_05,5,-33.43,19.09,15,904,24.2,Undisturbed,South,Africa,84,80,1,
+Lach_noyearb_06,5,-33.43,19.09,15,904,24.2,Undisturbed,South,Africa,84,80,2,0.6
+Lach_noyearc_01,5,-33.59,18.58,16.5,512,20.9,Undisturbed,South,Africa,140,80,14,0.7146875923
+Lach_noyearc_02,5,-33.6,18.58,16.5,512,20.9,Undisturbed,South,Africa,70,80,7,0.2934867055
+Lach_noyearc_05,5,-33.43,19.09,15,904,24.2,Undisturbed,South,Africa,84,80,18,0.675349822
+Majer&deKock_1992_03,14,-28.66,32.23,21.7,1136,16.9,Undisturbed,South,Africa,70,100,11,0.4496001284
+Majer&deKock_1992_09,14,-28.66,32.23,21.7,1136,16.9,Transformed,South,Africa,70,100,2,0.555555555
+Majer_1978_01,7,-32.78,116.18,15.4,1044,25.5,Disturbed,South,Oceania,40,151.66,18,0.7441533943
+Majer_1978_02,7,-32.78,116.18,15.4,1044,25.5,Disturbed,South,Oceania,40,151.66,20,0.8257035505
+Majer_1978_03,7,-32.78,116.05,15.6,1130,24.7,Disturbed,South,Oceania,40,151.66,22,0.9024112401
+Majer_1978_04,7,-32.7,116.08,15.5,1205,24.6,Transformed,South,Oceania,40,151.66,15,0.7466251296
+Majer_1978_05,7,-32.75,116.08,15.6,1130,24.7,Transformed,South,Oceania,40,151.66,10,0.0925324966
+Majer_1978_06,7,-32.65,116.02,15.6,1199,24.2,Transformed,South,Oceania,40,151.66,6,0.2643363731
+Majer_1978_07,7,-32.72,116.03,15.5,1191,24.4,Transformed,South,Oceania,40,151.66,4,0.645977011
+Majer_1992_01,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,10,0.689410401
+Majer_1992_03,21,-21.85,-46.57,17.8,1706,18.5,Undisturbed,South,South America,70,90,12,0.6659740263
+Majer_1992_05,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,8,0.7004813036
+Majer_1992_07,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,3,0.3505827509
+Majer_1992_09,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,16,0.8344989827
+Majer_1992_11,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,3,0.1931549956
+Majer_1992_13,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,7,0.6804730727
+Majer_1992_15,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,6,0.4396812927
+Majer_1992_17,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,15,0.7540737482
+Majer_1992_19,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,11,0.7100483605
+Majer_1992_21,21,-21.85,-46.57,17.8,1706,18.5,Undisturbed,South,South America,70,90,9,0.4560433228
+Majer_1992_23,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,11,0.6888059704
+Majer_1992_25,21,-21.85,-46.57,17.8,1706,18.5,Transformed,South,South America,70,90,8,0.7820408163
+Majer_1996_02,36,-1.75,-56.5,26.9,2400,10.9,Transformed,South,South America,70,90,2,1
+Majer_1996_05,36,-1.75,-56.5,26.9,2400,10.9,Transformed,South,South America,70,90,2,0.1591119333
+Majer_1996_24,36,-1.75,-56.5,26.9,2400,10.9,Transformed,South,South America,70,90,20,0.7825165558
+Majer_1996_41,36,-1.75,-56.5,26.9,2400,10.9,Undisturbed,South,South America,70,90,15,0.6366972478
+Majer_etal_1982_01,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,2,0.0588235298
+Majer_etal_1982_03,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,1,0
+Majer_etal_1982_05,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,2,0.5
+Majer_etal_1982_07,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,5,0.7230769234
+Majer_etal_1982_09,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,5,0.5171026154
+Majer_etal_1982_11,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,3,0.4393939396
+Majer_etal_1982_13,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,4,0.4410170599
+Majer_etal_1982_15,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,4,0.4979603731
+Majer_etal_1982_17,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,6,0.6176635616
+Majer_etal_1982_19,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,4,0.5445124026
+Majer_etal_1982_21,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,7,0.2682573923
+Majer_etal_1982_23,11,-29.92,115.27,19.8,532,25.7,Transformed,South,Oceania,140,100,7,0.3992681756
+Majer_etal_1982_25,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,100,25,0.8070004699
+Majer_etal_1982_27,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,100,27,0.8073239953
+Majer_etal_1982_29,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,100,18,0.6932658414
+Majer_etal_1982_31,11,-29.92,115.27,19.8,532,25.7,Undisturbed,South,Oceania,140,100,24,0.7609988934
+Markó_etal_2004_01,65,46.11,26.17,6.8,634,31.6,Undisturbed,North,Europe,105,15,7,0.7971014494
+Markó_etal_2004_02,65,46.11,26.17,6.8,634,31.6,Undisturbed,North,Europe,105,15,4,0.1940298512
+Markó_etal_2004_03,65,46.11,26.17,6.8,634,31.6,Undisturbed,North,Europe,105,15,3,0.2240740736
+Markó_etal_2004_04,65,46.11,26.21,6.8,632,31.7,Undisturbed,North,Europe,105,15,7,0.5956621409
+Markó_etal_2004_05,65,46.11,26.21,6.8,632,31.7,Undisturbed,North,Europe,105,15,6,0.6117085626
+Markó_etal_2004_06,65,46.29,25.31,7.5,617,32.2,Undisturbed,North,Europe,105,15,2,0.4090909092
+Markó_etal_2004_07,65,46.29,25.31,7.5,617,32.2,Undisturbed,North,Europe,105,15,4,0.6137931031
+Markó_etal_2004_08,65,46.29,25.31,7.5,617,32.2,Undisturbed,North,Europe,105,15,7,0.7753623193
+Markó_etal_2004_09,65,46.29,25.31,7.5,617,32.2,Undisturbed,North,Europe,105,15,4,0.8666666664
+Markó_etal_2004_10,65,46.4,25.37,7.1,626,31.9,Undisturbed,North,Europe,150,15,5,0.7912912911
+Markó_etal_2004_11,65,46.4,25.37,7.1,626,31.9,Undisturbed,North,Europe,150,15,5,0.5476573882
+Markó_etal_2004_12,65,46.4,25.37,7.1,626,31.9,Undisturbed,North,Europe,150,15,3,0.0395477387
+May&Heterick_2000_06,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,5,0.4158602492
+May&Heterick_2000_07,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,11,0.7072948324
+May&Heterick_2000_08,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,12,0.6196965208
+May&Heterick_2000_09,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,7,0.3507523942
+May&Heterick_2000_10,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,11,0.6782511831
+May&Heterick_2000_11,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,6,0.5462424895
+May&Heterick_2000_12,7,-31.95,115.87,18.7,803,21.8,Transformed,South,Oceania,70,4.5,10,0.7324583366
+Menke&Dunn_noyear_01,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,7,0.7307917887
+Menke&Dunn_noyear_02,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,8,0.4777992275
+Menke&Dunn_noyear_03,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,11,0.7389188615
+Menke&Dunn_noyear_04,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,9,0.3415112975
+Menke&Dunn_noyear_05,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,11,0.4892911964
+Menke&Dunn_noyear_06,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,12,0.5133387734
+Menke&Dunn_noyear_07,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,12,0.7036837378
+Menke&Dunn_noyear_08,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,10,0.7958298579
+Menke&Dunn_noyear_09,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,11,0.7244870045
+Menke&Dunn_noyear_10,54,38.96,-106.99,-1.2,627,39,Undisturbed,North,North America,24,10,7,0.6073926077
+Menke&Whitcraft_noyear_02,47,32.56,-117.12,16.9,213,18.1,Undisturbed,North,North America,912,3,1,
+Menke&Whitcraft_noyear_03,47,32.56,-117.12,16.9,213,18.1,Undisturbed,North,North America,864,3,1,0
+Menke&Whitcraft_noyear_13,47,32.56,-117.12,16.9,213,18.1,Undisturbed,North,North America,864,3,2,0.666666666
+Menke&Whitcraft_noyear_14,47,32.56,-117.12,16.9,213,18.1,Undisturbed,North,North America,1152,3,4,0.5561224487
+Menke&Whitcraft_noyear_17,47,32.56,-117.11,16.9,213,18.1,Undisturbed,North,North America,1104,3,5,0.0316410272
+Menke_2011_01,60,42.429745,-88.307401,8.4,896,40.7,Undisturbed,North,North America,6.25,100,14,0.4765014339
+Menke_2011_02,60,42.425311,-88.306201,8.4,896,40.7,Undisturbed,North,North America,5.8333333333,100,17,0.6005635448
+Menke_2011_03,60,42.383994,-88.438985,8.4,905,41.1,Undisturbed,North,North America,6.25,100,8,0.8304297325
+Menke_2011_04,60,42.2044395,-88.4842866,8.5,917,40.9,Undisturbed,North,North America,6.25,100,12,0.6964189866
+Menke_2011_05,60,42.2544083,-88.6617284,8.5,901,41.2,Undisturbed,North,North America,6.25,100,12,0.8413373858
+Menke_2011_06,60,42.1916329,-88.3016351,8.5,913,40.5,Undisturbed,North,North America,6.25,100,17,0.86563716
+Menke_2011_07,60,42.1938273,-88.3153487,8.5,913,40.5,Undisturbed,North,North America,5.8333333333,100,19,0.6418466094
+Menke_2011_08,60,42.1922981,-88.3218104,8.5,913,40.5,Undisturbed,North,North America,6.25,100,10,0.5012298758
+Menke_2011_09,60,42.1913803,-88.3270796,8.5,913,40.5,Undisturbed,North,North America,6.25,100,18,0.9067590271
+Menke_2011_10,60,42.2350976,-88.4514613,8.5,913,40.9,Undisturbed,North,North America,5.4166666667,100,11,0.7918269227
+Menke_2011_11,60,42.2373383,-88.4549044,8.5,913,40.9,Disturbed,North,North America,6.0416666667,100,15,0.5922299185
+Menke_2011_12,60,42.234974,-88.4528433,8.5,913,40.9,Disturbed,North,North America,6.25,100,11,0.6306075537
+Menke_2011_13,60,42.415603,-88.326852,8.4,904,40.7,Disturbed,North,North America,6.25,100,15,0.6431973937
+Menke_2011_14,60,42.417007,-88.304814,8.4,896,40.7,Disturbed,North,North America,6.25,100,7,0.1424481033
+Menke_2011_15,60,42.413782,-88.323855,8.4,904,40.7,Disturbed,North,North America,6.0416666667,100,18,0.8572943865
+Menke_2011_16,60,42.421246,-88.340068,8.4,905,40.9,Disturbed,North,North America,6.25,100,4,0.6262694647
+Menke_2011_17,60,42.415751,-88.340731,8.4,905,40.8,Disturbed,North,North America,6.25,100,7,0.3359820086
+Menke_2011_18,60,42.2581852,-88.2357743,8.6,898,40.3,Disturbed,North,North America,6.25,100,14,0.7803982487
+Menke_2011_19,60,42.227776,-88.200059,8.6,899,40.1,Disturbed,North,North America,6.25,100,10,0.7943950665
+Menke_2011_20,60,42.182195,-88.382585,8.5,917,40.9,Disturbed,North,North America,6.25,100,12,0.5693465262
+Menke_2011_21,60,42.408604,-88.306956,8.4,904,40.7,Disturbed,North,North America,6.25,100,17,0.3508655671
+Menke_2011_22,60,42.433674,-88.311734,8.4,896,40.7,Disturbed,North,North America,6.25,100,8,0.7513725491
+Menke_2011_23,60,42.261193,-88.236497,8.6,898,40.3,Disturbed,North,North America,6.25,100,11,0.7926923481
+Menke_2011_24,60,42.384438,-88.436228,8.4,905,41.1,Disturbed,North,North America,6.25,100,9,0.7426515932
+Menke_2011_25,60,42.480602,-88.318659,8.3,896,40.8,Disturbed,North,North America,6.25,100,12,0.6323593925
+Menke_2011_26,60,42.2788953,-88.2605625,8.5,906,40.4,Disturbed,North,North America,6.25,100,11,0.5994560996
+Menke_2011_27,60,42.414139,-88.303919,8.4,904,40.7,Disturbed,North,North America,6.25,100,13,0.5571537911
+Menke_2011_28,60,42.354546,-88.551067,8.3,908,41.3,Disturbed,North,North America,6.25,100,12,0.5730137267
+Menke_2011_29,60,42.434885,-88.293605,8.4,896,40.7,Disturbed,North,North America,6.25,100,8,0.6129462642
+Menke_2011_30,60,42.253168,-88.699884,8.5,901,41.4,Disturbed,North,North America,6.25,100,11,0.632120182
+Menke_2011_31,60,42.193315,-88.328581,8.5,913,40.5,Disturbed,North,North America,6.25,100,9,0.3918406371
+Menke_2011_34,60,42.239557,-88.458197,8.5,913,40.9,Disturbed,North,North America,6.0416666667,100,12,0.6894734248
+Menke_2011_35,60,42.278388,-88.599439,8.5,903,41.2,Disturbed,North,North America,5.625,100,5,0.8190476186
+Menke_2011_36,60,42.234073,-88.460292,8.5,911,41,Disturbed,North,North America,6.25,100,12,0.5261533868
+Menke_2011_37,60,42.235876,-88.460485,8.5,911,41,Disturbed,North,North America,5.8333333333,100,16,0.8241208955
+Menke_2011_38,60,42.288696,-88.448599,8.4,916,40.9,Disturbed,North,North America,6.25,100,9,0.422401137
+Menke_2011_39,60,42.277878,-88.592681,8.5,903,41.2,Disturbed,North,North America,5.625,100,3,0.523809524
+Menke_2011_40,60,42.279847,-88.589787,8.5,903,41.2,Disturbed,North,North America,6.25,100,4,0.6727272728
+Menke_2011_41,60,42.361028,-88.533582,8.4,907,41.2,Disturbed,North,North America,5.4166666667,100,3,0.1468531466
+Menke_2011_42,60,42.238879,-88.500545,8.5,911,41.1,Disturbed,North,North America,6.25,100,5,0.44018583
+Menke_2011_43,60,42.226717,-88.46994,8.5,911,41,Disturbed,North,North America,6.25,100,4,0.5833333339
+Menke_2011_44,60,42.226682,-88.467638,8.5,911,41,Disturbed,North,North America,6.25,100,6,0.8351648351
+Menke_2011_45,60,42.274025,-88.590881,8.5,903,41.2,Disturbed,North,North America,6.25,100,1,#DIV/0!
+Menke_2011_46,60,42.448228,-88.453967,8.3,907,41.2,Disturbed,North,North America,5.8333333333,100,2,0.666666666
+Menke_2011_47,60,42.485225,-88.332689,8.3,896,40.8,Disturbed,North,North America,6.25,100,4,0.6153846158
+Menke_2011_48,60,42.435384,-88.336573,8.4,905,40.9,Disturbed,North,North America,6.25,100,12,0.7735769553
+Menke_2011_49,60,42.489177,-88.273478,8.3,899,40.6,Disturbed,North,North America,6.25,100,16,0.7447314475
+Menke_2011b_CP01,60,41.95881,-87.657173,9.8,907,37.7,Disturbed,North,North America,3.125,40,5,0.5878787881
+Menke_2011b_DP01,60,41.861432,-87.697733,10,922,38.1,Disturbed,North,North America,3.125,40,9,0.4479435957
+Menke_2011b_FP01,60,41.70383,-87.63839,10,938,38.6,Disturbed,North,North America,3.125,40,10,0.5190878039
+Menke_2011b_GP01,60,41.884153,-87.715009,9.9,917,38.1,Disturbed,North,North America,3.125,40,10,0.7629582802
+Menke_2011b_HP01,60,41.905733,-87.702243,9.9,917,37.9,Disturbed,North,North America,3.125,40,9,0.7686349201
+Menke_2011b_KP01,60,41.952196,-87.656915,9.9,913,37.8,Disturbed,North,North America,3.125,40,2,0.1578024549
+Menke_2011b_MC01,60,41.824962,-87.677479,10,923,38.2,Disturbed,North,North America,3.125,40,7,0.7517926088
+Menke_2011b_PT01,60,41.856318,-87.635022,10,921,37.9,Disturbed,North,North America,3.125,40,4,0.123896572
+Menke_2011b_RB01,60,41.725495,-87.634121,10.1,932,38.4,Disturbed,North,North America,3.125,40,8,0.7289021657
+Menke_2011b_RG01,60,41.719978,-87.667685,10,933,38.6,Disturbed,North,North America,3.125,40,11,0.7372203168
+Menke_2011b_SQ01,60,41.842856,-87.650198,10,921,37.9,Disturbed,North,North America,3.125,40,3,0.5868945865
+Menke_2011b_WP01,60,41.796175,-87.61544,10.1,926,38,Disturbed,North,North America,3.125,40,4,0.7101144213
+Menke_2012_01,60,42.182584,-88.269165,8.6,912,40.5,Undisturbed,North,North America,2.7083333333,100,10,0.8487394959
+Menke_2012_02,60,42.402107,-88.590185,8.2,905,41.4,Undisturbed,North,North America,2.2916666667,100,4,0.9
+Menke_2012_03,60,42.413617,-88.32665,8.4,904,40.7,Undisturbed,North,North America,5.625,100,15,0.8419413914
+Menke_2012_04,60,42.424082,-88.32662,8.4,896,40.7,Disturbed,North,North America,6.0416666667,100,19,0.9183876936
+Menke_2012_05,60,42.46141,-88.518321,8.2,909,41.4,Disturbed,North,North America,5.625,100,18,0.8993006992
+Menke_2012_06,60,42.421098,-88.327467,8.4,896,40.7,Disturbed,North,North America,6.0416666667,100,22,0.9174007049
+Menke_2012_07,60,42.423217,-88.32878,8.4,896,40.7,Disturbed,North,North America,6.25,100,20,0.8764460346
+Menke_2012_08,60,42.43142,-88.303251,8.4,896,40.7,Disturbed,North,North America,5.8333333333,100,18,0.9160463188
+Menke_2012_09,60,42.416082,-88.322061,8.4,904,40.7,Disturbed,North,North America,5.8333333333,100,22,0.8662025753
+Menke_2012_10,60,42.425671,-88.204013,8.4,891,40.2,Disturbed,North,North America,6.0416666667,100,12,0.8272550375
+Menke_2012_11,60,42.256332,-88.236384,8.6,898,40.3,Disturbed,North,North America,6.25,100,22,0.7934115629
+Menke_2012_12,60,42.417531,-88.324987,8.4,896,40.7,Disturbed,North,North America,6.25,100,18,0.8476749054
+Menke_2012_13,60,42.255742,-88.223874,8.6,898,40.3,Disturbed,North,North America,6.25,100,18,0.8583747928
+Menke_2012_14,60,42.242008,-88.454812,8.5,913,40.9,Disturbed,North,North America,5.625,100,13,0.6670816045
+Menke_2012_15,60,42.490203,-88.322729,8.3,896,40.8,Disturbed,North,North America,6.0416666667,100,10,0.7872322317
+Menke_2012_16,60,42.231524,-88.211633,8.5,906,40.3,Disturbed,North,North America,6.25,100,10,0.7775549987
+Menke_2012_17,60,42.430612,-88.294789,8.4,896,40.7,Disturbed,North,North America,5.8333333333,100,10,0.8471153844
+Menke_2012_18,60,42.382083,-88.33407,8.4,905,40.8,Disturbed,North,North America,5.2083333333,100,8,0.7664884139
+Menke_2012_19,60,42.250515,-88.245456,8.6,898,40.3,Disturbed,North,North America,5.8333333333,100,15,0.863465621
+Menke_2012_20,60,42.240129,-88.451047,8.5,913,40.9,Disturbed,North,North America,6.0416666667,100,4,0.4174491397
+Menke_2012_21,60,42.242364,-88.450249,8.5,913,40.9,Disturbed,North,North America,4.7916666667,100,9,0.3439775909
+Menke_etal_2007_04,47,32.89,-117.1,17.1,319,21.6,Undisturbed,North,North America,50,5,4,0.5789473681
+Menke_etal_2007_08,47,32.89,-117.1,17.1,319,21.6,Undisturbed,North,North America,50,5,3,0.6785714286
+Menke_etal_2007_09,47,32.89,-117.1,17.1,319,21.6,Undisturbed,North,North America,50,5,1,0
+Menke_etal_2007_19,47,32.89,-117.1,17.1,319,21.6,Undisturbed,North,North America,50,5,4,0.4705882348
+Menke_etal_2007_24,47,32.89,-117.1,17.1,319,21.6,Undisturbed,North,North America,50,5,2,0.5
+Menke_etal_2010_01,50,35.73,-78.7,15.4,1149,33,Disturbed,North,North America,25,20,7,0.7282333048
+Menke_etal_2010_04,50,35.8,-78.7,15.2,1143,33.2,Disturbed,North,North America,25,20,9,0.8293995855
+Menke_etal_2010_10,50,35.76,-78.7,15.3,1145,33.2,Disturbed,North,North America,25,20,16,0.8810741689
+Menke_etal_2010_12,50,35.83,-78.63,15.3,1137,33.3,Transformed,North,North America,25,20,13,0.7203717337
+Menke_etal_2010_13,50,35.77,-78.67,15.3,1145,33.2,Transformed,North,North America,25,20,6,0.2734653179
+Menke_etal_2010_21,50,35.74,-78.7,15.4,1149,33,Transformed,North,North America,25,20,5,0.7424242429
+Menke_etal_2010_22,50,35.87,-78.7,15.2,1134,33.3,Transformed,North,North America,25,20,5,0.5425287352
+Menke_etal_2010_24,50,35.77,-78.68,15.3,1145,33.2,Transformed,North,North America,25,20,11,0.8813813814
+Menke_etal_2010_25,50,35.81,-78.61,15.4,1136,33.5,Transformed,North,North America,25,20,9,0.6133942165
+Menke_etal_2010_26,50,35.82,-78.73,15.2,1138,33.2,Transformed,North,North America,25,20,3,0.3578947368
+Menke_etal_2010_27,50,35.81,-78.69,15.2,1143,33.2,Transformed,North,North America,25,20,5,0.6703296708
+Menke_etal_2010_29,50,35.76,-78.6,15.5,1142,33.3,Transformed,North,North America,25,20,8,0.6059113301
+Menke_etal_2010_33,50,35.79,-78.71,15.2,1148,33.1,Transformed,North,North America,25,20,7,0.5807327002
+Menke_etal_2010_34,50,35.78,-78.66,15.4,1142,33.2,Transformed,North,North America,25,20,7,0.6042499478
+Menke_etal_2010_40,50,35.86,-78.74,15.2,1131,33.4,Transformed,North,North America,25,20,8,0.756923077
+Menke_etal_2010_42,50,35.84,-78.76,15.1,1130,33.4,Transformed,North,North America,25,20,6,0.5925925928
+Menke_etal_2010_43,50,35.83,-78.54,15.4,1143,33.5,Transformed,North,North America,25,20,3,0.6388888894
+Menke_etal_2010_44,50,35.78,-78.66,15.4,1142,33.2,Transformed,North,North America,25,20,11,0.8492063492
+Menke_etal_2010_45,50,35.84,-78.75,15.2,1131,33.4,Transformed,North,North America,25,20,6,0.670289855
+Menke_etal_2010_46,50,35.86,-78.65,15.2,1141,33.5,Transformed,North,North America,25,20,7,0.795918367
+Menke_etal_2010_50,50,35.85,-78.65,15.2,1141,33.5,Transformed,North,North America,25,20,7,0.8634920637
+Menke_etal_2010_51,50,35.75,-78.69,15.4,1149,33,Transformed,North,North America,25,20,10,0.7222222225
+Menke_etal_2010_52,50,35.84,-78.57,15.3,1141,33.5,Transformed,North,North America,25,20,10,0.8257918556
+Menke_etal_2010_53,50,35.77,-78.65,15.4,1142,33.2,Transformed,North,North America,25,20,6,0.3906359185
+Menke_etal_2010_55,50,35.83,-78.55,15.4,1143,33.4,Transformed,North,North America,25,20,5,0.570075758
+Menke_etal_2010_56,50,35.9,-78.59,15.1,1142,33.6,Transformed,North,North America,25,20,5,0.4718614717
+Menke_etal_2010_57,50,35.89,-78.69,15,1141,33.5,Transformed,North,North America,25,20,6,0.4155844153
+Menke_etal_2010_58,50,35.85,-78.63,15.2,1141,33.5,Transformed,North,North America,25,20,2,0.1176470593
+Menke_etal_2010_60,50,35.88,-78.62,15.1,1142,33.6,Transformed,North,North America,25,20,7,0.0731713648
+Menke_etal_2010_61,50,35.82,-78.67,15.2,1143,33.2,Transformed,North,North America,25,20,9,0.3152079453
+Menke_etal_2010_62,50,35.87,-78.6,15.2,1141,33.5,Transformed,North,North America,25,20,4,0.5019762849
+Menke_etal_2010_63,50,35.75,-78.56,15.5,1149,33.3,Transformed,North,North America,25,20,9,0.2700156981
+Menke_etal_2010_65,50,35.81,-78.67,15.2,1143,33.2,Transformed,North,North America,25,20,9,0.8133262829
+Menke_etal_2010_68,50,35.83,-78.65,15.3,1137,33.3,Transformed,North,North America,25,20,10,0.8796610169
+Menke_etal_2010_71,50,35.85,-78.71,15.2,1131,33.4,Transformed,North,North America,25,20,4,0.6205533599
+Menke_etal_2010_72,50,35.82,-78.74,15.2,1138,33.2,Transformed,North,North America,25,20,6,0.7318840581
+Menke_etal_2010_74,50,35.79,-78.65,15.4,1142,33.2,Transformed,North,North America,25,20,13,0.8307375846
+Menke_etal_2010_75,50,35.89,-78.67,15,1141,33.5,Transformed,North,North America,25,20,4,0.7090909089
+Menke_etal_2010_77,50,35.77,-78.73,15.2,1148,33.1,Transformed,North,North America,25,20,9,0.8666666663
+Menke_etal_2010_79,50,35.87,-78.69,15.2,1134,33.3,Transformed,North,North America,25,20,8,0.5624797144
+Menke_etal_2010_80,50,35.78,-78.67,15.3,1145,33.2,Disturbed,North,North America,25,20,13,0.7651741295
+Menke_etal_2010_81,50,35.72,-78.69,15.4,1149,33,Disturbed,North,North America,25,20,11,0.6746031746
+Menke_etal_2010_82,50,35.72,-78.69,15.4,1149,33,Disturbed,North,North America,25,20,7,0.6267995569
+Menke_etal_2010_83,50,35.72,-78.79,15.3,1149,33.1,Disturbed,North,North America,25,20,15,0.7476489033
+Menke_etal_2010_84,50,35.72,-78.79,15.3,1149,33.1,Disturbed,North,North America,25,20,8,0.7874140669
+Menke_etal_2010_85,50,35.72,-78.79,15.3,1149,33.1,Disturbed,North,North America,25,20,9,0.8181818187
+Menke_etal_2010_86,50,35.72,-78.69,15.4,1149,33,Disturbed,North,North America,25,20,7,0.6621621627
+Menke_etal_2010_87,50,35.72,-78.37,15.4,1169,33.4,Disturbed,North,North America,25,20,12,0.6564566658
+Menke_etal_2010_88,50,35.78,-78.67,15.3,1145,33.2,Disturbed,North,North America,25,20,8,0.7312206575
+Menke_etal_2010_89,50,35.82,-78.79,15.1,1138,33.2,Disturbed,North,North America,25,20,8,0.7572463763
+Mezger_2003_01,25,-20.07,44.66,25.9,915,20.7,Disturbed,South,Africa,630,25,20,0.8561356598
+Mezger_2003_02,25,-20.07,44.68,25.9,933,21,Undisturbed,South,Africa,630,25,31,0.8779334518
+Mezger_2003_03,25,-20.09,44.7,25.8,926,21.1,Disturbed,South,Africa,252,25,21,0.8681129668
+Mezger_2003_04,25,-20.09,44.7,25.8,926,21.1,Disturbed,South,Africa,378,25,20,0.8319077951
+Miranda_etal_2012_02,33,-10.856014,-68.40045,25.5,1797,15.3,Disturbed,South,South America,80,200,74,0.9166001302
+Miranda_etal_2012_04,33,-10.833607,-68.377228,25.5,1797,15.3,Disturbed,South,South America,80,200,61,0.9270013719
+Miranda_etal_2012_05,33,-10.951658,-68.320703,25.6,1796,15.3,Undisturbed,South,South America,80,200,63,0.9447425805
+Miranda_etal_2012_06,33,-10.9483,-68.323031,25.6,1796,15.3,Disturbed,South,South America,80,200,52,0.9412050271
+Miranda_etal_2012_07,33,-10.868429,-68.371221,25.5,1808,15.1,Undisturbed,South,South America,80,200,79,0.8903875724
+Miranda_etal_2012_08,33,-10.866808,-68.367152,25.5,1808,15.1,Disturbed,South,South America,80,200,74,0.920483511
+Miranda_etal_2012_09,33,-10.994073,-68.394889,25.4,1769,15.4,Undisturbed,South,South America,80,200,63,0.8647171371
+Miranda_etal_2012_10,33,-10.992272,-68.391713,25.4,1769,15.4,Disturbed,South,South America,80,200,58,0.6293753396
+Miranda_etal_2012_11,33,-10.905917,-68.357318,25.5,1795,15.3,Undisturbed,South,South America,80,200,67,0.9176888545
+Miranda_etal_2012_14,33,-10.897878,-68.3654,25.5,1795,15.3,Disturbed,South,South America,80,200,61,0.318026667
+Miranda_etal_2012_17,33,-10.977919,-68.348297,25.5,1777,15.4,Undisturbed,South,South America,80,200,49,0.9520096602
+Miranda_etal_2012_18,33,-10.977635,-68.351094,25.5,1777,15.4,Disturbed,South,South America,80,200,63,0.9133826321
+Munyai&Foord_2012_01,19,-22.94471667,29.43931667,20.2,433,24.8,Undisturbed,South,Africa,50,50,16,0.8445145505
+Munyai&Foord_2012_02,19,-22.94415,29.43658333,20.2,433,24.8,Undisturbed,South,Africa,50,50,13,0.833377624
+Munyai&Foord_2012_03,19,-22.94388333,29.43358333,20.2,433,24.8,Undisturbed,South,Africa,50,50,14,0.6726247962
+Munyai&Foord_2012_04,19,-22.94401667,29.43086667,20.2,433,24.8,Undisturbed,South,Africa,50,50,14,0.7267254288
+Munyai&Foord_2012_05,19,-23.0641,29.49,19.2,518,24.5,Disturbed,South,Africa,50,50,14,0.8877980364
+Munyai&Foord_2012_06,19,-23.06716667,29.4938,19.2,518,24.5,Disturbed,South,Africa,50,50,18,0.7909497356
+Munyai&Foord_2012_07,19,-23.06048333,29.4939,19.2,518,24.5,Disturbed,South,Africa,50,50,19,0.8215450559
+Munyai&Foord_2012_08,19,-23.057,29.4968,19.2,518,24.5,Disturbed,South,Africa,50,50,8,0.3728186145
+Munyai&Foord_2012_09,19,-22.96928333,29.41631667,18.7,578,23.9,Undisturbed,South,Africa,50,50,13,0.7520792078
+Munyai&Foord_2012_10,19,-22.96713333,29.4181,18.3,640,23.4,Undisturbed,South,Africa,50,50,8,0.8339920949
+Munyai&Foord_2012_11,19,-22.96693333,29.41426667,18.7,578,23.9,Undisturbed,South,Africa,50,50,17,0.7274251834
+Munyai&Foord_2012_12,19,-22.9677,29.41113333,18.7,578,23.9,Undisturbed,South,Africa,50,50,13,0.7580715533
+Munyai&Foord_2012_13,19,-23.04935,29.478,19.2,518,24.5,Undisturbed,South,Africa,50,50,10,0.6710875329
+Munyai&Foord_2012_14,19,-23.04828333,29.49,19.2,518,24.5,Undisturbed,South,Africa,50,50,16,0.8957122095
+Munyai&Foord_2012_15,19,-23.04846667,29.48603333,19.2,518,24.5,Undisturbed,South,Africa,50,50,18,0.8570480924
+Munyai&Foord_2012_16,19,-23.04588333,29.48641667,19.2,518,24.5,Undisturbed,South,Africa,50,50,16,0.8786346398
+Munyai&Foord_2012_17,19,-22.99173333,29.42368333,18.3,640,23.4,Undisturbed,South,Africa,50,50,12,0.8799100454
+Munyai&Foord_2012_18,19,-22.9903,29.42115,18.3,640,23.4,Undisturbed,South,Africa,50,50,13,0.4773908233
+Munyai&Foord_2012_19,19,-22.98781667,29.42236667,18.3,640,23.4,Undisturbed,South,Africa,50,50,10,0.7256566305
+Munyai&Foord_2012_20,19,-22.98918333,29.425,18.3,640,23.4,Undisturbed,South,Africa,50,50,19,0.9056776554
+Munyai&Foord_2012_21,19,-23.04028333,29.45055,16.6,852,22,Undisturbed,South,Africa,50,50,13,0.343454405
+Munyai&Foord_2012_22,19,-23.04396667,29.46151667,19.2,518,24.5,Undisturbed,South,Africa,50,50,10,0.8146441373
+Munyai&Foord_2012_23,19,-23.03963333,29.45325,16.6,852,22,Undisturbed,South,Africa,50,50,7,0.7265993269
+Munyai&Foord_2012_24,19,-23.03855,29.4768,16.6,867,21.9,Undisturbed,South,Africa,50,50,5,0.3859649128
+Munyai&Foord_2012_25,19,-23.04435,29.46448333,19.2,518,24.5,Undisturbed,South,Africa,50,50,13,0.756197113
+Munyai&Foord_2012_26,19,-23.04396667,29.46151667,19.2,518,24.5,Undisturbed,South,Africa,50,50,5,0.5632798576
+Munyai&Foord_2012_27,19,-23.04465,29.45863333,19.2,518,24.5,Undisturbed,South,Africa,50,50,5,1
+Munyai&Foord_2012_28,19,-23.06725,29.49385,19.2,518,24.5,Undisturbed,South,Africa,50,50,10,0.3538338521
+Munyai&Foord_2012_29,19,-23.0003,29.42575,16.6,852,22,Undisturbed,South,Africa,50,50,16,0.6923426489
+Munyai&Foord_2012_30,19,-23.0003,29.42858333,16.6,852,22,Undisturbed,South,Africa,50,50,14,0.8822954828
+Munyai&Foord_2012_31,19,-22.99821667,29.43051667,18.3,640,23.4,Undisturbed,South,Africa,50,50,13,0.8505572439
+Munyai&Foord_2012_32,19,-23.00336667,29.4247,16.6,852,22,Undisturbed,South,Africa,50,50,14,0.7648015179
+Munyai&Foord_2012_33,19,-23.03451667,29.43105,16.6,852,22,Undisturbed,South,Africa,50,50,16,0.5790333678
+Munyai&Foord_2012_34,19,-23.02638333,29.43751667,16.6,852,22,Undisturbed,South,Africa,50,50,12,0.6834383951
+Munyai&Foord_2012_35,19,-23.03141667,29.44248333,16.6,852,22,Undisturbed,South,Africa,50,50,19,0.8143662483
+Munyai&Foord_2012_36,19,-23.03388333,29.43455,16.6,852,22,Undisturbed,South,Africa,50,50,15,0.72401731
+Munyai&Foord_2012_37,19,-23.02258333,29.43388333,16.6,852,22,Undisturbed,South,Africa,50,50,8,0.7656447533
+Munyai&Foord_2012_38,19,-23.02521667,29.43301667,16.6,852,22,Undisturbed,South,Africa,50,50,12,0.5334751644
+Munyai&Foord_2012_39,19,-23.02625,29.4303,16.6,852,22,Undisturbed,South,Africa,50,50,14,0.7761506279
+Munyai&Foord_2012_40,19,-23.02081667,29.43613333,16.6,852,22,Undisturbed,South,Africa,50,50,14,0.7761506279
+Munyai&Foord_2012_41,19,-23.02408333,29.42908333,16.6,852,22,Undisturbed,South,Africa,50,50,10,0.5048459677
+Munyai&Foord_2012_42,19,-23.0243,29.42656667,16.6,852,22,Undisturbed,South,Africa,50,50,17,0.458640044
+Munyai&Foord_2012_43,19,-23.02263333,29.43138333,16.6,852,22,Undisturbed,South,Africa,50,50,9,0.4598735412
+Munyai&Foord_2012_44,19,-23.02433333,29.43168333,16.6,852,22,Undisturbed,South,Africa,50,50,9,0.6680634922
+Nash_etal_2000_01,48,32.6,-106.7,14.7,257,39.4,Transformed,North,North America,3528,636.4,27,0.7200311509
+Osunkoya_etal_2011_01,15,-28,152.98,19.5,965,24,Disturbed,South,Oceania,78,273.9,15,0.8526645772
+Osunkoya_etal_2011_02,15,-28,152.98,19.5,965,24,Undisturbed,South,Oceania,84,273.9,16,0.7528718414
+Osunkoya_etal_2011_03,15,-27.5,152.98,20.3,1152,22,Disturbed,South,Oceania,90,273.9,20,0.8903750328
+Osunkoya_etal_2011_04,15,-27.5,152.98,20.3,1152,22,Undisturbed,South,Oceania,72,273.9,18,0.6599630146
+Osunkoya_etal_2011_05,15,-28,153.33,19.7,1533,20.7,Disturbed,South,Oceania,90,273.9,13,0.8059000859
+Osunkoya_etal_2011_06,15,-28,153.33,19.7,1533,20.7,Undisturbed,South,Oceania,72,273.9,8,0.7118601745
+Osunkoya_etal_2011_07,15,-28.17,153.17,17.5,1655,19.7,Disturbed,South,Oceania,90,273.9,20,0.8874180084
+Osunkoya_etal_2011_08,15,-28.17,153.17,17.5,1655,19.7,Undisturbed,South,Oceania,90,273.9,23,0.639151863
+Osunkoya_etal_2011_09,15,-27.5,152.1,18.9,849,26.4,Disturbed,South,Oceania,72,273.9,12,0.5379444471
+Osunkoya_etal_2011_10,15,-27.5,152.1,18.9,849,26.4,Undisturbed,South,Oceania,60,273.9,24,0.8625519177
+Osunkoya_etal_2011_11,15,-28,152.68,19.2,916,25.4,Disturbed,South,Oceania,78,273.9,19,0.8418849295
+Osunkoya_etal_2011_12,15,-28,152.68,19.2,916,25.4,Undisturbed,South,Oceania,78,273.9,23,0.8644914216
+Osunkoya_etal_2011_13,15,-28.05,152.9,19,962,24,Disturbed,South,Oceania,84,273.9,22,0.9109195407
+Osunkoya_etal_2011_14,15,-28.05,152.9,19,962,24,Undisturbed,South,Oceania,78,273.9,21,0.8548228344
+Osunkoya_etal_2011_15,15,-27.53,152.7,19.9,975,24.5,Disturbed,South,Oceania,84,273.9,19,0.8904724498
+Osunkoya_etal_2011_16,15,-27.53,152.7,19.9,975,24.5,Undisturbed,South,Oceania,90,273.9,26,0.8970828529
+Parr_etal_2002_01,16,-25.26,27.09,19,643,27.5,Disturbed,South,Africa,120,40,39,0.9242866789
+Parr_etal_2002_02,16,-25.26,27.09,19,643,27.5,Disturbed,South,Africa,120,40,32,0.8659723993
+Parr_etal_2002_03,16,-25.26,27.09,19,643,27.5,Disturbed,South,Africa,120,40,31,0.652649345
+Parr_etal_2002_04,16,-25.26,27.09,19,643,27.5,Disturbed,South,Africa,120,40,29,0.3724448746
+Parr_etal_2002_05,16,-25.26,27.09,19,643,27.5,Disturbed,South,Africa,120,40,27,0.8700365874
+Parr_etal_2002_06,16,-25.26,27.09,19,643,27.5,Disturbed,South,Africa,120,40,23,0.6393266903
+Parr_etal_2004_01,19,-24.45,31.87,22.3,578,25.2,Disturbed,South,Africa,100,40,31,0.8486219594
+Parr_etal_2004_02,19,-24.45,31.87,22.3,578,25.2,Undisturbed,South,Africa,100,40,31,0.8542180969
+Parr_etal_2004_03,19,-24.54,31.78,22,593,24.6,Disturbed,South,Africa,100,40,25,0.8738426415
+Parr_etal_2004_04,19,-24.54,31.78,22,593,24.6,Undisturbed,South,Africa,100,40,30,0.900475259
+Parr_etal_2004_05,19,-24.4,31.75,22.3,568,25.3,Disturbed,South,Africa,100,40,30,0.7664060308
+Parr_etal_2004_06,19,-24.4,31.75,22.3,568,25.3,Undisturbed,South,Africa,100,40,28,0.4292302091
+Parr_etal_2004_07,19,-23.44,31.38,22.3,498,24.1,Disturbed,South,Africa,100,40,24,0.8697999362
+Parr_etal_2004_08,19,-23.44,31.38,22.3,498,24.1,Undisturbed,South,Africa,100,40,25,0.8218163416
+Parr_etal_2004_09,19,-23.58,31.46,22.6,484,24.7,Disturbed,South,Africa,100,40,22,0.7898436932
+Parr_etal_2004_10,19,-23.58,31.46,22.6,484,24.7,Undisturbed,South,Africa,100,40,18,0.2938588929
+Parr_etal_2004_11,19,-23.7,31.52,22.7,487,25.1,Disturbed,South,Africa,100,40,12,0.328756674
+Parr_etal_2004_12,19,-23.7,31.52,22.7,487,25.1,Undisturbed,South,Africa,100,40,16,0.7424729952
+Parr_etal_2004_13,19,-25.12,31.24,21.2,717,22.1,Disturbed,South,Africa,100,40,42,0.8818140607
+Parr_etal_2004_14,19,-25.12,31.24,21.2,717,22.1,Undisturbed,South,Africa,100,40,37,0.8493493286
+Parr_etal_2004_15,19,-25.13,31.21,20.9,752,21.6,Disturbed,South,Africa,100,40,51,0.929232021
+Parr_etal_2004_16,19,-25.13,31.21,20.9,752,21.6,Undisturbed,South,Africa,100,40,34,0.9030650727
+Parr_etal_2004_17,19,-25.16,31.26,21,737,21.6,Disturbed,South,Africa,100,40,43,0.9146463218
+Parr_etal_2004_18,19,-25.16,31.26,21,737,21.6,Undisturbed,South,Africa,100,40,27,0.8695800616
+Parr_noyearc_01,52,38.25,21.73,16.9,730,25.7,Undisturbed,North,Europe,84,30,16,0.8726832049
+Parr_noyearc_02,52,38.25,21.73,16.9,730,25.7,Disturbed,North,Europe,84,30,17,0.8191687367
+Parr_noyearc_03,52,38.25,21.73,16.9,730,25.7,Undisturbed,North,Europe,84,30,26,0.8863341972
+Parr_noyearc_04,52,38.25,21.73,16.9,730,25.7,Disturbed,North,Europe,84,30,33,0.862826725
+Parr_noyearc_05,52,38.25,21.73,16.9,730,25.7,Undisturbed,North,Europe,84,30,23,0.8575307184
+Parr_noyearc_06,52,38.25,21.73,16.9,730,25.7,Disturbed,North,Europe,84,30,30,0.8120907308
+Peixoto_etal_2010_02,39,2.7833,-60.6,27.3,1515,12.1,Disturbed,North,South America,200,100,48,0.8383242852
+Peixoto_etal_2010_06,39,2.6666,-60.8333,27.2,1613,12,Disturbed,North,South America,150,100,45,0.8801567785
+Pfeiffer_noyear_02,61,45.28917,113.8558,0.2,228,52.2,Disturbed,North,Asia,50,110,3,0.0162269783
+Philpott_noyear_01,57,41.67,-83.53,9.9,839,38.3,Transformed,North,North America,72,10,15,0.8293296731
+Philpott_noyear_02,57,41.64,-83.64,9.7,839,38.1,Transformed,North,North America,72,10,11,0.3804878052
+Philpott_noyear_03,57,41.67,-83.59,9.8,841,38.2,Transformed,North,North America,72,10,14,0.8512176558
+Philpott_noyear_04,57,41.69,-83.67,9.6,843,38,Transformed,North,North America,72,10,11,0.3531043666
+Philpott_noyear_05,57,41.66,-83.55,9.9,841,38.4,Transformed,North,North America,72,10,4,0.4047112656
+Philpott_noyear_06,57,41.68,-83.55,9.8,839,38.3,Transformed,North,North America,72,10,6,0.3576301219
+Philpott_noyear_07,57,41.67,-83.67,9.6,843,38,Transformed,North,North America,72,10,10,0.6984924623
+Philpott_noyear_08,57,41.66,-83.56,9.9,841,38.4,Transformed,North,North America,72,10,9,0.5942140436
+Philpott_noyear_09,57,41.66,-83.58,9.9,841,38.4,Transformed,North,North America,72,10,10,0.5671309595
+Philpott_noyear_10,57,41.68,-83.52,9.9,839,38.3,Transformed,North,North America,72,10,13,0.8544838035
+Philpott_noyear_11,57,41.67,-83.55,9.8,839,38.3,Transformed,North,North America,72,10,10,0.4222312539
+Philpott_noyear_12,57,41.64,-83.57,9.9,841,38.4,Transformed,North,North America,72,10,9,0.4093686145
+Radford_etal_2013_01,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,24,0.851048557
+Radford_etal_2013_02,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,35,0.8744795003
+Radford_etal_2013_03,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,22,0.5930719735
+Radford_etal_2013_04,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,26,0.6855005473
+Radford_etal_2013_05,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,16,0.7548720002
+Radford_etal_2013_06,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,21,0.4205296623
+Radford_etal_2013_07,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,11,0.2802345226
+Radford_etal_2013_08,29,-15.1,128.68,28.5,859,21.4,Disturbed,South,Oceania,40,40,11,0.7823098166
+Radford_etal_2013_09,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,35,0.8126426839
+Radford_etal_2013_10,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,42,0.8639654618
+Radford_etal_2013_11,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,28,0.6574630586
+Radford_etal_2013_12,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,32,0.8764725344
+Radford_etal_2013_13,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,28,0.8439141269
+Radford_etal_2013_14,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,24,0.6753092485
+Radford_etal_2013_15,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,33,0.891940202
+Radford_etal_2013_16,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,27,0.8040683986
+Radford_etal_2013_17,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,25,0.895889118
+Radford_etal_2013_18,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,25,0.884027999
+Radford_etal_2013_19,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,27,0.7990970658
+Radford_etal_2013_20,32,-13.43,132.42,27,1379,22.1,Undisturbed,South,Oceania,29.5833333333,40,32,0.8991238917
+Radford_etal_2013_21,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,27,0.8998326058
+Radford_etal_2013_22,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,28,0.9121581784
+Radford_etal_2013_23,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,32,0.8503759742
+Radford_etal_2013_24,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,30,0.8606072962
+Radford_etal_2013_25,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,28,0.8733982477
+Radford_etal_2013_26,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,27,0.8733712906
+Radford_etal_2013_27,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,23,0.744917012
+Radford_etal_2013_28,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,22,0.8815760603
+Radford_etal_2013_29,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,32,0.9238914927
+Radford_etal_2013_30,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,32,0.9115774915
+Radford_etal_2013_31,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,22,0.854525784
+Radford_etal_2013_32,32,-13.27,132.83,27.6,1356,21.4,Undisturbed,South,Oceania,29.5833333333,40,27,0.8955460995
+Read&Andersen_2000_01,9,-30.43,136.95,19.9,185,30.4,Disturbed,South,Oceania,540,10,42,0.9241555253
+Read&Andersen_2000_02,9,-30.43,136.95,19.9,185,30.4,Disturbed,South,Oceania,540,10,41,0.9149784633
+Read&Andersen_2000_03,9,-30.43,136.95,19.9,185,30.4,Disturbed,South,Oceania,540,10,48,0.9436781614
+Read&Andersen_2000_04,9,-30.43,136.95,19.9,185,30.4,Disturbed,South,Oceania,135,10,42,0.8858371401
+Rojas&Fragoso_2000_01,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,19,0.7897644074
+Rojas&Fragoso_2000_02,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,11,0.5106607935
+Rojas&Fragoso_2000_03,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,12,0.7643709508
+Rojas&Fragoso_2000_04,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,13,0.7972597599
+Rojas&Fragoso_2000_05,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,19,0.7995267656
+Rojas&Fragoso_2000_06,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,13,0.6937233858
+Rojas&Fragoso_2000_07,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,14,0.3497383793
+Rojas&Fragoso_2000_08,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,16,0.7485714285
+Rojas&Fragoso_2000_09,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,14,0.6979500324
+Rojas&Fragoso_2000_10,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,11,0.6488408357
+Rojas&Fragoso_2000_11,44,26.68,-103.63,19.1,295,29.6,Undisturbed,North,North America,175,40,21,0.5673126831
+Rossbach&Majer_1983_01,7,-31.8,115.8,18.5,775,21.7,Disturbed,South,Oceania,280,158.11,24,0.5512095743
+Rossbach&Majer_1983_03,7,-31.8,115.8,18.5,775,21.7,Disturbed,South,Oceania,280,158.11,20,0.5449688613
+Rossbach&Majer_1983_05,7,-31.8,115.9,18.4,776,22.7,Disturbed,South,Oceania,280,158.11,11,0.6201216144
+Rossbach&Majer_1983_07,7,-31.8,116,18.4,749,24,Disturbed,South,Oceania,280,158.11,24,0.8623806712
+Rossbach&Majer_1983_09,7,-31.8,116,18.4,749,24,Disturbed,South,Oceania,280,158.11,16,0.8125924236
+Rossbach&Majer_1983_11,7,-31.8,116.1,17.1,843,25.1,Disturbed,South,Oceania,280,158.11,21,0.6979044778
+Rossbach&Majer_1983_13,7,-32.28,115.8,18.4,853,21.7,Disturbed,South,Oceania,280,158.11,12,0.7438906598
+Rossbach&Majer_1983_15,7,-32.2,115.8,18.4,832,21.5,Disturbed,South,Oceania,280,158.11,28,0.8454052833
+Rossbach&Majer_1983_17,7,-32.2,115.9,18.3,883,22.2,Disturbed,South,Oceania,280,158.11,19,0.5900639039
+Rossbach&Majer_1983_19,7,-32.2,116,17.5,1004,23.5,Disturbed,South,Oceania,280,158.11,20,0.8117564927
+Rossbach&Majer_1983_21,7,-32.2,116,17.5,1004,23.5,Disturbed,South,Oceania,280,158.11,21,0.7928931798
+Rossbach&Majer_1983_23,7,-32.2,116.1,16.4,1120,24.6,Disturbed,South,Oceania,280,158.11,16,0.7693175045
+Santos_etal_2007_01,56,41.54,-7.13,14.3,777,27.1,Transformed,North,Europe,480,223.6,24,0.6303819302
+Tista_noyear_01,66,48.12,16.25,9.4,653,29.6,Disturbed,North,Europe,6,5,9,0.8096377307
+Tista_noyear_02,66,48.12,16.25,9.4,653,29.6,Disturbed,North,Europe,6,5,4,0.5741187386
+Tista_noyear_03,66,48.12,16.25,9.4,653,29.6,Disturbed,North,Europe,6,5,6,0.5939849624
+Tista_noyear_04,66,48.12,16.25,9.4,653,29.6,Undisturbed,North,Europe,6,5,4,0.6681379922
+Tista_noyear_05,66,48.12,16.25,9.4,653,29.6,Undisturbed,North,Europe,6,5,8,0.2912386356
+Tista_noyear_06,66,48.12,16.25,9.4,653,29.6,Disturbed,North,Europe,6,5,6,0.526617527
+Vanderwoude_etal_1997_01,15,-25.85,152.67,20.9,1158,21,Disturbed,South,Oceania,10584,10,73,0.868942624
+Vanderwoude_etal_1997_02,15,-25.85,152.67,20.9,1158,21,Disturbed,South,Oceania,10584,10,63,0.9155511307
+Vanderwoude_etal_1997_03,15,-25.85,152.67,20.9,1158,21,Disturbed,South,Oceania,10584,10,45,0.9030037842
+Vasconcelos 1999_ORF,35,-2.35,-59.98333,27,2506,10.4,Disturbed,South,South America,144,20,49,0.9306678925
+Vasconcelos_noyear_04,39,2.42,-59.87,27.2,1651,11.3,Undisturbed,North,South America,126,100,23,0.9050203525
+Vasconcelos_noyear_06,39,2.42,-59.87,27.2,1651,11.3,Undisturbed,North,South America,126,100,31,0.9475945015
+Vasconcelos_noyear_07,39,2.42,-59.87,27.2,1651,11.3,Undisturbed,North,South America,126,100,23,0.9394230767
+Vele_etal_2009_06,67,50.71,15.21,5.6,685,26.3,Transformed,North,Europe,12600,20,11,0.700115588
+Wallis_etal_2001_01,8,-31.04,121.11,17.9,275,27.7,Undisturbed,South,Oceania,70,100,27,0.106370423
+Wallis_etal_2001_03,8,-31.04,121.11,17.9,275,27.7,Undisturbed,South,Oceania,70,100,28,0.5543674145
+Wallis_etal_2001_05,8,-31.04,121.11,17.9,275,27.7,Undisturbed,South,Oceania,70,100,29,0.8895740536
+Wallis_etal_2001_07,8,-31.04,121.11,17.9,275,27.7,Disturbed,South,Oceania,70,100,17,0.7918763795
+Wallis_etal_2001_09,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,1,
+Wallis_etal_2001_11,8,-31.04,121.11,17.9,275,27.7,Disturbed,South,Oceania,70,100,7,0.1334452522
+Wallis_etal_2001_13,8,-31.04,121.11,17.9,275,27.7,Disturbed,South,Oceania,70,100,22,0.8712644556
+Wallis_etal_2001_15,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,2,0.1116355571
+Wallis_etal_2001_17,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,4,0.395872847
+Wallis_etal_2001_19,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,13,0.1009999516
+Wallis_etal_2001_21,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,18,0.8339424444
+Wallis_etal_2001_23,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,18,0.6605259486
+Wallis_etal_2001_25,8,-31.04,121.11,17.9,275,27.7,Transformed,South,Oceania,70,100,18,0.5113507166
+Wallis_etal_2001_27,8,-31.04,121.11,17.9,275,27.7,Disturbed,South,Oceania,70,100,10,0.5958046485
+Wallis_etal_2001_29,8,-31.04,121.11,17.9,275,27.7,Disturbed,South,Oceania,70,100,14,0.4048340308
+Ward_2009_01,2,-36.79,174.5,15,1348,17.3,Transformed,South,Oceania,1008,25,8,0.4755244753
+Ward_2009_03,2,-36.92,174.61,14.5,1265,17.4,Transformed,South,Oceania,1008,25,7,0.492381716
+Ward_2009_05,2,-36.88,174.56,14.4,1301,17.3,Transformed,South,Oceania,1008,25,7,0.5602875601
+Ward_2009_09,2,-36.89,174.62,14.9,1280,17.3,Transformed,South,Oceania,1008,25,9,0.5052219993
+Willis_etal_1992_01,10,-30.5,26.25,15.4,474,31.5,Disturbed,South,Africa,180,2,13,0.6919498461
+Willis_etal_1992_02,10,-30.5,26.25,15.4,474,31.5,Disturbed,South,Africa,180,2,14,0.6045567555
+Willis_etal_1992_03,10,-30.5,26.25,15.4,474,31.5,Disturbed,South,Africa,180,2,13,0.7033388104
+Willis_etal_1992_04,10,-30.5,26.25,15.4,474,31.5,Disturbed,South,Africa,180,2,13,0.7557731583
+Wittkuhn_etal_2011_01,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,17,0.8688391449
+Wittkuhn_etal_2011_02,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,15,0.2339599169
+Wittkuhn_etal_2011_03,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,21,0.8074155449
+Wittkuhn_etal_2011_04,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,11,0.8618250823
+Wittkuhn_etal_2011_05,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,15,0.8402699659
+Wittkuhn_etal_2011_06,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,14,0.6925757937
+Wittkuhn_etal_2011_07,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,26,0.8642644071
+Wittkuhn_etal_2011_08,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,11,0.1344959457
+Wittkuhn_etal_2011_09,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,16,0.7907672769
+Wittkuhn_etal_2011_10,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,18,0.7587065446
+Wittkuhn_etal_2011_11,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,11,0.3976195884
+Wittkuhn_etal_2011_12,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,15,0.3741013038
+Wittkuhn_etal_2011_13,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,17,0.821599205
+Wittkuhn_etal_2011_14,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,22,0.9028401892
+Wittkuhn_etal_2011_15,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,21,0.6937499127
+Wittkuhn_etal_2011_16,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,28,0.8163913432
+Wittkuhn_etal_2011_17,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,21,0.7146143374
+Wittkuhn_etal_2011_18,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,24,0.8594573598
+Wittkuhn_etal_2011_19,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,31,0.7560721977
+Wittkuhn_etal_2011_20,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,27,0.8089596479
+Wittkuhn_etal_2011_21,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,21,0.7939322742
+Wittkuhn_etal_2011_22,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,28,0.8037592555
+Wittkuhn_etal_2011_23,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,21,0.746495441
+Wittkuhn_etal_2011_24,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,24,0.6076555025
+Wittkuhn_etal_2011_25,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,26,0.7087430954
+Wittkuhn_etal_2011_26,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,29,0.768521138
+Wittkuhn_etal_2011_27,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,25,0.8553892994
+Wittkuhn_etal_2011_28,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,24,0.7898113206
+Wittkuhn_etal_2011_29,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,26,0.8415517141
+Wittkuhn_etal_2011_30,3,-34.77,117.08,15.4,939,19.3,Disturbed,South,Oceania,400,90,24,0.7490597483
