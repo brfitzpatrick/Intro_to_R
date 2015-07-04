@@ -210,7 +210,7 @@ CC.RCRS.PE <- data.frame(CC.RCRS,
 
 # Adding on the categorical covariates
 
-C.RCRS <- data.frame(CC.RCRS.PE, Data[, c('Disturbance', 'Hemisphere', 'Continent')])
+C.RCRS <- data.frame(CC.RCRS.PE, Data[, c('Disturbance', 'Hemi', 'Continent')])
 
 colnames(C.RCRS)
 
@@ -228,73 +228,13 @@ summary(C.RCRS)
 
 summary(Data$Species.richness)
 
-Full.lm <- lm(Data$Species.richness ~ . , data = C.RCRS)
-
-Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
-
-nrow(Data)
-
-S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
-
-summary(S.lm)
-
-par(mfcol = c(2,2))
-plot(S.lm)
-
-# now for a demonstration of what leverage means... let's drop the two observations with the highest leverage on the fit
-
-predict(S.lm)
-
-?step
-
-
-summary(Full.lm)
-
-
-
-
-
-
-###
-
-C.RCRS.OD <- C.RCRS[-c(189,117),]
-
-Full.lm <- lm(Data$Species.richness[-c(189,117)] ~ . , data = C.RCRS.OD)
-
-Empty.lm <- lm(Data$Species.richness[-c(189,117)] ~ +1 , data = C.RCRS.OD)
-
-nrow(Data)
-
-S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
-
-summary(S.lm)
-
-par(mfcol = c(2,2))
-plot(S.lm)
-
-###
-
-
-## Ok next up some interaction terms
-
-# Let's just do first order interactions for now
-
-Full.lm <- lm(Data$Species.richness[-c(189,117)] ~ . , data = C.RCRS.OD)
-
-Empty.lm <- lm(Data$Species.richness[-c(189,117)] ~ +1 , data = C.RCRS.OD)
-
-
-
-
-# Extensions:
-# Generalized Linear Model to use a better choice of error distribution
-# Generalized Linear Mixed Effects model to incorporate random effects for Cluster
-
+## Next to create some interaction terms
+# for simiplicity we'll create the interaction terms for the continuous covariates first:
 colnames(C.RCRS)
 
-Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
+CC.RCRS.Lin <- C.RCRS[,c('MAT', 'TAP', 'TR', 'PD', 'TL')] 
 
-CC.RCRS.Lin <- C.RCRS[,c('MAT', 'TAP', 'TR', 'PD', 'TL')] #, 'Disturbance', 'Hemisphere', 'Continent')]
+head(CC.RCRS.Lin)
 
 dim(CC.RCRS.Lin)
 
@@ -307,74 +247,86 @@ Int.Ind
 Int <- data.frame(matrix(data = NA, nrow = nrow(C.RCRS), ncol = choose(n = ncol(CC.RCRS.Lin), k = 2)))
 
 for(i in 1:ncol(Int.Ind)){    
-
     Var1 = colnames(CC.RCRS.Lin)[Int.Ind[1,i]]
     Var2 = colnames(CC.RCRS.Lin)[Int.Ind[2,i]]
-
     Int[,i] <- CC.RCRS.Lin[, Var1] * CC.RCRS.Lin[, Var2]
-
-    colnames(Int)[i] <- paste(Var1, Var2, sep = ':')
-
+    colnames(Int)[i] <- paste(Var1, Var2, sep = '.')
 }
-    
+
 head(Int)
 
-# Will have to do Cont:Discrete Interaction by hand, damit,
+C.RCRS.Int <- data.frame(C.RCRS, Int)
 
+head(C.RCRS.Int)
 
-Full.lm <- lm(Data$Species.richness ~ . , data = C.RCRS)
+# I can't think of how to avoid doing Cont:Discrete Interactions by hand unfortunately...
 
+# Let's set up for a stepwise variable selection
+# We need to bound the search of possible model with and 'empty' intercept only model
+# and a 'full' model that contains all the covariate terms
 
-, 'Disturbance', 'Hemisphere', 'Continent')]
+nrow(C.RCRS.Int)
 
-Test <- lm(Data$Species.richness ~ Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
+# as we have 1128 observations we have sufficient degrees of freedom to fit a full model here
+# this may not be the case with other data...
 
-Test <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
+Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS.Int)
 
-summary(Test)
+Full.lm <- lm(Data$Species.richness ~ . + Dist*Hemi + Dist*Cont + Hemi*Cont + Dist*MAT + Dist*TAP + Dist*TR + Dist*PD + Dist*TL + Hemi*MAT + Hemi*TAP + Hemi*TR + Hemi*PD + Hemi*TL + Cont*MAT + Cont*TAP + Cont*TR + Cont*PD + Cont*TL, data = C.RCRS.Int)
 
+summary(Full.lm)
 
-Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
+# Note we have some NA's in the estimated coefficients:
+  # don't worry, not that sort of singularity ;-)
 
-Full.lm <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL + Continent*MAT + Continent*TAP + Continent*TR + Continent*PD + Continent*TL, data = C.RCRS)
+C.RCRS.Int[C.RCRS.Int$Cont == 'Asia', ]
 
-S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
+# we just don't have much data from Asia we may need to abandon the idea of having Continent interaction terms with the other covariates:
+Empty1.lm <- lm(Data$Species.richness ~ +1, data = C.RCRS.Int)
+
+Full1.lm <- lm(Data$Species.richness ~ . + Dist*Hemi + Dist*MAT + Dist*TAP + Dist*TR + Dist*PD + Dist*TL + Hemi*MAT + Hemi*TAP + Hemi*TR + Hemi*PD + Hemi*TL, data = C.RCRS.Int)
+
+summary(Full1.lm)
+
+S1.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
 
 par(mfcol = c(2,2))
 plot(S.lm)
 
-##
-
-summary(S.lm)
-
-# so some combinations of continent and continuous covariates lack data so we'll drop those interaction terms
-
-Empty.lm <- lm(Data$Species.richness ~ +1 , data = C.RCRS)
-
-Full.lm <- lm(Data$Species.richness ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL, data = C.RCRS)
-
-S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
-
-par(mfcol = c(2,2))
-plot(S.lm)
-
-
-summary(S.lm)
+summary(S1.lm)
 
 ####
 
-Empty.lm <- lm(Data$Species.richness[-c(117,1075)] ~ +1 , data = C.RCRS[-c(117,1075),])
+# We could drop points with inordinately high leverage on the fit... this is somewhat controversial though
 
-Full.lm <- lm(Data$Species.richness[-c(117,1075)] ~ . + Disturbance*MAT + Disturbance*TAP + Disturbance*TR + Disturbance*PD + Disturbance*TL + Hemisphere*MAT + Hemisphere*TAP + Hemisphere*TR + Hemisphere*PD + Hemisphere*TL, data = C.RCRS[-c(117,1075),])
+Empty2.lm <- lm(Data$Species.richness[-c(113,117,189,616,940,989,1075)] ~ +1 , data = C.RCRS.Int[-c(113,117,189,616,940,989,1075),])
 
-S.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
+Full2.lm <- lm(Data$Species.richness[-c(113,117,189,616,940,989,1075)] ~ . + Dist*MAT + Dist*TAP + Dist*TR + Dist*PD + Dist*TL + Hemi*MAT + Hemi*TAP + Hemi*TR + Hemi*PD + Hemi*TL, data = C.RCRS.Int[-c(113,117,189,616,940,989,1075),])
+
+S2.lm <- step(object = Empty2.lm, scope = list(lower = Empty2.lm, upper = Full2.lm), direction = 'both')
 
 par(mfcol = c(2,2))
 plot(S.lm)
 
+# Droping observations with high leverage doesn't alter the number of covariates selected:
 
-summary(S.lm)
+length(coef(S1.lm))
+
+length(coef(S2.lm))
+
+# of the selected covariates only three are different:
+
+summary(names(coef(S1.lm)) %in% names(coef(S2.lm)))
+
+
+# Extensions:
+# Generalized Linear Model to use a better choice of error distribution
+# Generalized Linear Mixed Effects model to incorporate random effects for Cluster
+
 
 ?step # also works for objects of class glm( )
 ?glm
 ?family
+
+
+
