@@ -318,15 +318,28 @@ length(coef(S2.lm))
 
 summary(names(coef(S1.lm)) %in% names(coef(S2.lm)))
 
+##############################
+##                          ##
+##                          ##
+##        Extensions:       ##
+##                          ##
+##                          ##
+##                          ##
+##############################
 
-# Extensions:
-# Generalized Linear Model to use a better choice of error distribution
+# Generalized Linear Model to use a better choice of error distribution for the species richness
+
 # Generalized Linear Mixed Effects model to incorporate random effects for Cluster
-
 
 ?step # also works for objects of class glm( )
 ?glm
 ?family
+
+# how would you go about modelling PIE?
+# Recall PIE is a probability and so 0 <= PIE <= 1
+# how about a logit transform? this is what Gibb et al did
+# you'll need to add something to PIE before logit transforming it??? :-)
+
 
 
 
