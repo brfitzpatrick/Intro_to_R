@@ -32,70 +32,130 @@
 
 # Gibb H, Sanders NJ, Dunn RR, Watson S, Photakis M, Abril S, Andersen AN, Angulo E, Armbrecht I, Arnan X, Baccaro FB, Bishop TR, Boulay R, Castracani C, Del Toro I, Delsinne T, Diaz M, Donoso DA, Enríquez ML, Fayle TM, Feener DH, Fitzpatrick MC, Gómez C, Grasso DA, Groc S, Heterick B, Hoffmann BD, Lach L, Lattke J, Leponce M, Lessard J, Longino J, Lucky A, Majer J, Menke SB, Mezger D, Mori A, Munyai TC, Paknia O, Pearce-Duvet J, Pfeiffer M, Philpott SM, de Souza JLP, Tista M, Vasconcelos HL, Vonshak M, Parr CL (2015) Data from: Climate mediates the effects of disturbance on ant assemblage structure. Dryad Digital Repository. http://dx.doi.org/10.5061/dryad.r36n0
 
+# I have removed the second column ('Source') from the original file `Data.xlsx' before converting it to the file `Ants.csv' as we don't need the full references for each data source in the data we read into R.
+
+# Read the Data into R:
+
 Data <- read.csv(file = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Data/Ants.csv')
+
+# Examine the top six rows of all the columns:
 
 head(Data)
 
+# View the Column Names:
+
 colnames(Data)
 
-"Species.richness"
+# they're all pretty self explanatory except for PIE
+# PIE = Probability of Interspecific Encounter = Probability of Two randomly selected ants being of different species
+# PIE is another response variable we could attempt to model with environmental, spatial and survey characteristics
+# In this example I'm going to examine the correlations between the Ant Species Richness and the covariates:
+  # "Mean.annual.temperature"
+  # "Total.annual.precipitation"
+  # "Temperature.range"
+  # "Disturbance"               
+  # "Hemisphere"
+  # "Continent"                 
+  # "Pitfall.days"
+  # "Transect.length"           
 
-#
-
-"Mean.annual.temperature"
-"Temperature.range"
-"Disturbance"               
-"Total.annual.precipitation"
-"Hemisphere"
-"Continent"                 
-"Pitfall.days"
-"Transect.length"           
-
+# load the 'ggplot2' library
 
 library('ggplot2')
+
+install.packages('maps')
+install.packages('mapproj')
+
+# maps example from http://docs.ggplot2.org/current/coord_map.html
+
+library('maps')
+library('mapproj')
+
+world <- map_data("world")
+
+worldmap <- ggplot(world, aes(x=long, y=lat, group=group)) +
+  geom_polygon(fill = 'grey') +
+  scale_y_continuous(breaks=(-2:2) * 30) +
+  scale_x_continuous(breaks=(-4:4) * 45)
+
+# adding the sampled locations from the Ants data to this plot via an annotation layer
+
+worldmap +
+    theme(panel.background = element_rect(fill = 'darkblue')) +
+    annotate(geom = 'point', x = Data$Longitude, y = Data$Latitude, size =  2, colour = 'red')
+
+worldmap +
+    theme(panel.background = element_rect(fill = 'black'), plot.background = element_rect(fill = 'black')) +
+    annotate(geom = 'point', x = Data$Longitude, y = Data$Latitude, size =  3, colour = 'red') +
+    coord_map("ortho", orientation=c(0, -74, 0))
+
+worldmap.ants <- worldmap +
+    theme(panel.background = element_rect(fill = 'black'), plot.background = element_rect(fill = 'black')) +
+    annotate(geom = 'point', x = Data$Longitude, y = Data$Latitude, size =  3, colour = 'red')
+
+worldmap.ants + coord_map("ortho", orientation=c(0, 135, 0))
+
+worldmap.ants + coord_map("ortho", orientation=c(0, -70, 0))
+
+worldmap.ants + coord_map("ortho", orientation=c(0, -35, 0))
+
+worldmap.ants + coord_map("ortho", orientation=c(0, 0, 0))
+
+worldmap.ants + coord_map("ortho", orientation=c(0, 35, 0))
+
+# This takes a few minutes to run
+for(i in 1:361){
+    ggsave(filename = paste(i,'.png',sep =''),
+           plot = worldmap.ants + coord_map("ortho", orientation=c(0, 0, 0)) + coord_map("ortho", orientation=c(0, i - 180, 0)))}
+
+# Plot Species Richness against each of the potential covariates
 
 SR.MT <- ggplot(aes(x = Mean.annual.temperature, y = Species.richness, colour = Continent), data = Data)
 
 SR.MT + geom_point(alpha = 0.5)
 
-###
-
 SR.TP <- ggplot(aes(x = Total.annual.precipitation, y = Species.richness, colour = Continent), data = Data)
 
 SR.MP + geom_point(alpha = 0.5)
 
-###
-
 SR.TP <- ggplot(aes(x = Total.annual.precipitation, y = Species.richness, colour = Continent), data = Data)
 
 SR.MP + geom_point(alpha = 0.5)
-
-
-###
 
 SR.MAT <- ggplot(aes(x = Mean.annual.temperature, y = Species.richness), data = Data)
+
 SR.MAT + geom_point(alpha = 0.5)
 
 SR.TR <- ggplot(aes(x = Temperature.range, y = Species.richness), data = Data)
+
 SR.TR + geom_point(alpha = 0.5)
                 
 SR.D <- ggplot(aes(x = Disturbance, y = Species.richness), data = Data)
+
 SR.D + geom_boxplot()
                
 SR.TAP <- ggplot(aes(x = Total.annual.precipitation, y = Species.richness), data = Data)
+
 SR.TAP + geom_point(alpha = 0.5)
                  
 SR.H <- ggplot(aes(x = Hemisphere, y = Species.richness), data = Data)
+
 SR.H + geom_boxplot()
                
 SR.C <- ggplot(aes(x = Continent, y = Species.richness), data = Data)
+
 SR.C + geom_boxplot()
                
 SR.PD <- ggplot(aes(x = Pitfall.days, y = Species.richness), data = Data)
+
 SR.PD + geom_point(alpha = 0.5)
                 
 SR.TL <- ggplot(aes(x = Transect.length, y = Species.richness), data = Data)
+
 SR.TL + geom_point(alpha = 0.5)
+
+# It is good practise to recenter and rescale all the continuous covariates to the same mean and magnitude
+# This is especially important as we are going to be using polynomial and interaction terms
 
 Continuous.Covariates <- Data[ ,  c('Mean.annual.temperature', 'Total.annual.precipitation', 'Temperature.range', 'Pitfall.days', 'Transect.length')]
 
@@ -115,6 +175,8 @@ image(abs(cor(CC.RCRS)))
 
 colnames(CC.RCRS)
 
+# The covariate names are a bit long so to save time let's abreivate them
+
 # 'MAT' = 'Mean.annual.temperature'
 # 'TAP' = 'Total.annual.precipitation'
 # 'TR' = 'Temperature.range'
@@ -127,6 +189,8 @@ data.frame(Full.Name = colnames(CC.RCRS), Abbrv = c('MAT', 'TAP', 'TR', 'PD', 'T
 colnames(CC.RCRS) <- c('MAT', 'TAP', 'TR', 'PD', 'TL')
 
 class(CC.RCRS)
+
+# Creating a dataframe with polynomial effects up to order 3 for each continuous covariate term
 
 CC.RCRS <- data.frame(CC.RCRS)
 
@@ -144,9 +208,21 @@ CC.RCRS.PE <- data.frame(CC.RCRS,
                           TL.2 = CC.RCRS$TL^2 ,
                           TL.3 = CC.RCRS$TL^3)
 
+# Adding on the categorical covariates
+
 C.RCRS <- data.frame(CC.RCRS.PE, Data[, c('Disturbance', 'Hemisphere', 'Continent')])
 
 colnames(C.RCRS)
+
+colnames(C.RCRS)[(ncol(C.RCRS) - 2) : ncol(C.RCRS)] 
+
+# Renaming categorical covariates to have more abreviated names
+
+colnames(C.RCRS)[(ncol(C.RCRS) - 2) : ncol(C.RCRS)] <- c('Dist', 'Hemi', 'Cont')
+
+colnames(C.RCRS)
+
+# Examining a summary of our new dataframe
 
 summary(C.RCRS)
 
