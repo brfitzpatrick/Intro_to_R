@@ -36,6 +36,7 @@
 
 # Read the Data into R:
 
+
 Data <- read.csv(file = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Data/Ants.csv')
 
 # Examine the top six rows of all the columns:
@@ -340,6 +341,61 @@ summary(names(coef(S1.lm)) %in% names(coef(S2.lm)))
 # how about a logit transform? this is what Gibb et al did
 # you'll need to add something to PIE before logit transforming it??? :-)
 
+
+
+
+#####
+#
+#  Some Visualisation Extension
+#
+#
+
+
+
+world <- map_data("world")
+
+class(world)
+
+head(world)
+
+colnames(world)[1:2] <- c('Longitude', 'Latitude')
+
+
+worldmap <- ggplot(world, aes(x=Longitude, y=Latitude, group=group)) +
+  geom_polygon(fill = 'grey') +
+  scale_y_continuous(breaks=(-2:2) * 30, label = NULL) +
+  scale_x_continuous(breaks=(-4:4) * 45, label = NULL)
+
+worldmap
+
+Data2 <- Data
+
+Data2$group <- 1 # Dummy variable to satisfy ggplot2 when it looks for 'group' in Data2 we're not actually going to use it in the plot
+
+worldmap +
+    theme(panel.background = element_rect(fill = 'white')) +
+    geom_point(aes(x = Longitude, y = Latitude, size = Species.richness), colour = 'red', data = Data2) +
+    labs(size = 'Ant Species \nRichness')
+
+ant.map <- worldmap +
+        theme(panel.background = element_rect(fill = 'white'), text = element_text(size = 16)) +
+        geom_point(aes(x = Longitude, y = Latitude, size = Species.richness), colour = 'red', data = Data2) +
+        labs(size = 'Ant Species \nRichness')
+
+ant.map + coord_map("ortho", orientation=c(0, -74, 0))
+
+ggsave(filename = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Map.pdf')
+           
+##
+
+ant.map2 <- worldmap +        
+        labs(size = 'Ant Species \nRichness', x = NULL, y = NULL)
+library(grid)
+ants.map2 <- ant.map2 + geom_point(aes(x = Longitude, y = Latitude, size = Species.richness), colour = 'red', data = Data2) + coord_map("ortho", orientation=c(-30, 135, 0)) + theme(panel.background = element_rect(fill = 'white'), text = element_text(size = 16), axis.ticks.length = unit(0, units = 'cm') )
+
+ggsave(filename = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Globe_Map.pdf', plot = ants.map2)
+
+?units
 
 
 
