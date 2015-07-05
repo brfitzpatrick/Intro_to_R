@@ -841,99 +841,99 @@ Now we will attempt to merge `testing1' into current branch (master)
 \begin{block}{}
 \begin{lstlisting}
 > git merge testing1
-  Auto-merging Car_Bar_Charts.R
-  CONFLICT (content): Merge conflict in Car_Bar_Charts.R
-  Automatic merge failed; fix conflicts and then commit the result.
+  Auto-merging filename.R
+  CONFLICT (content): Merge conflict in 
+  filename.R
+  Automatic merge failed; 
+  fix conflicts and then commit the result.
 \end{lstlisting}
 \end{block}
 \end{frame}
 
-
 \begin{frame}[fragile]
 \frametitle{Resolving a Merge Conflict with a Merge Tool}
+\begin{block}{}
 \begin{lstlisting}
 git mergetool
 
-This message is displayed because 'merge.tool' is not configured.
-See 'git mergetool --tool-help' or 'git help config' for more details.
-'git mergetool' will now attempt to use one of the following tools:
-meld opendiff kdiff3 tkdiff xxdiff tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc3 codecompare emerge vimdiff
+This message is displayed because 'merge.tool' 
+is not configured.
+See 'git mergetool --tool-help' or 'git help
+ config' for more details.
+'git mergetool' will now attempt to use one
+of the following tools:
+meld opendiff kdiff3 tkdiff xxdiff 
+...
+emerge vimdiff
 Merging:
-Car_Bar_Charts.R
+filename.R
+\end{lstlisting}
+\end{block}
+\end{frame}
 
-Normal merge conflict for 'Car_Bar_Charts.R':
+\begin{frame}[fragile]
+\frametitle{Resolving a Merge Conflict with a Merge Tool}
+\begin{block}{}
+\begin{lstlisting}
+Normal merge conflict for 'filename.R':
   {local}: modified file
   {remote}: modified file
-Hit return to start merge resolution tool (meld): 
+Hit return to start merge resolution tool
+(meld): 
 \end{lstlisting}
+\end{block}
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Resolving a Merge Conflict with a Merge Tool}
 
-Insert Screen shot of \textbf{Meld} in action
+Demonstrate \textbf{Meld}
+%Insert Screen shot of \textbf{Meld} in action
 
 \end{frame}
 
-\begin{frame}
+%\begin{frame}[fragile]
+%\frametitle{Git}
+%\framesubtitle{Undoing things}
+%%%One way to safely experiment with past versions of a file is to create a new `branch' in the repository in which to do so
+%\newline
+%\newline
+%branches are separate lines of development of the same files
+%\newline
+%\newline
+%let's make a new `testing3' branch checking out a previous version of the file filename.R\\
+%\begin{lstlisting}
+%> git checkout 99d61f19d85ae7aec691feb81ca8aef59f6a0719 -b testing3
 
-Now open you're R file to see the results of your merge
-\newline
-\newline
-and open `filename.R' and our changes are gone
-\newline
-\newline
-checkout the most recent commit to get them back
-\newline
-\newline
-if you want to go back to a previous version of a file and try something new without overwriting your most recent versions you can `checkout' and old `commit' to a new `branch' of the repository
+%> git push --set-upstream origin testing3
+%\end{lstlisting}
+%we can then move between branches with the checkout command
+%\begin{lstlisting}
+%> git checkout master
 
-\end{frame}
+%> git checkout testing3
+%\end{lstlisting}
+%\end{frame}
 
+%\begin{frame}[fragile]
+%  \frametitle{Merging Branches}
+%To merge the `master' and `testing3' branches
+%\begin{block}{}
+%\begin{lstlisting}
+%> git checkout master
+%> git merge testing3
+%\end{lstlisting}
+%\end{block}
 
+%if you get a merge conflict use a mergetool to resolve the conflict\\
+%(you should have one installed by default from when you installed Git)
 
-\begin{frame}[fragile]
-\frametitle{Git}
-\framesubtitle{Undoing things}
-One way to safely experiment with past versions of a file is to create a new `branch' in the repository in which to do so
-\newline
-\newline
-branches are separate lines of development of the same files
-\newline
-\newline
-let's make a new `testing3' branch checking out a previous version of the file filename.R\\
-\begin{lstlisting}
-> git checkout 99d61f19d85ae7aec691feb81ca8aef59f6a0719 -b testing3
-
-> git push --set-upstream origin testing3
-\end{lstlisting}
-we can then move between branches with the checkout command
-\begin{lstlisting}
-> git checkout master
-
-> git checkout testing3
-\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Merging Branches}
-To merge the `master' and `testing3' branches
-\begin{block}{}
-\begin{lstlisting}
-> git checkout master
-> git merge testing3
-\end{lstlisting}
-\end{block}
-
-if you get a merge conflict use a mergetool to resolve the conflict\\
-(you should have one installed by default from when you installed Git)
-
-\begin{block}{}
-\begin{lstlisting}
-> git mergetool
-\end{lstlisting}
-\end{block}
-\end{frame}
+%\begin{block}{}
+%\begin{lstlisting}
+%> git mergetool
+%\end{lstlisting}
+%\end{block}
+%\end{frame}
 
 %\begin{frame}[fragile]
 %  \frametitle{Merging Branches}
@@ -969,9 +969,8 @@ if you get a merge conflict use a mergetool to resolve the conflict\\
 
 
 \begin{frame}
-\frametitle{Forking}
-Fork a repository
-Use the Sync button in Windows/MacOS client to get new changes from server (and submit any changes you have made)
+\frametitle{Collaborating}
+Forking a repository is creating a branch from a repository you don't own.
 \end{frame}
 
 \begin{frame}
@@ -995,9 +994,13 @@ Use the Sync button in Windows/MacOS client to get new changes from server (and 
 \frametitle{Fork a Friends Repository, Add Some Files}
 \begin{itemize}
 \item search for a friend's github repository
+\newline
 \item on their repository page click fork
+\newline
 \item clone your fork of their repository to your hard drive
+\newline
 \item edit one of their files
+\newline
 \item push your chages to their repo
 \end{itemize}
 \end{frame}
@@ -1005,6 +1008,13 @@ Use the Sync button in Windows/MacOS client to get new changes from server (and 
 \begin{frame}
 \frametitle{Accepting and rejecting Pull Requests}
 \framesubtitle{Merging your friends' branches}
+\begin{itemize}
+\item Create a new branch to merge your friend's changes into 
+\newline
+\item switch to that branch
+\newline
+\item merge their changes with \textbf{Meld}
+\end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -1014,7 +1024,6 @@ Use the Sync button in Windows/MacOS client to get new changes from server (and 
 \begin{figure}
 \includegraphics[height = 0.8\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_Resources/ProGitCover.pdf}
 \end{figure}
-\cite{Chacon2014}
 \end{center}
 
 \end{frame}
@@ -1032,19 +1041,12 @@ Use the Sync button in Windows/MacOS client to get new changes from server (and 
 
 \end{frame}
 
-
-\begin{frame}
-\frametitle{References}
-\bibliographystyle{apalike}
-\bibliography{~Intro_to_R/GitHub_Slides_Source/Bib/VC_with_GitHub}
-\end{frame}
-
 \begin{frame}
 \frametitle{Image Credits}
 \begin{itemize}
 \item Git Logo by Jason Long \url{http://git-scm.com/downloads/logos}
-\item GitHub Logo 
-\item R Logo
+\item GitHub Logo, \url{www.github.com}
+\item R Logo, \url{www.r-project.org}
 \end{itemize}
 \end{frame}
 
