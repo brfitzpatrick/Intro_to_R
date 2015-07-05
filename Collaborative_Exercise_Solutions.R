@@ -411,4 +411,12 @@ ants.map2 <- ant.map2 + geom_point(aes(x = Longitude, y = Latitude, size = Speci
 ggsave(filename = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Globe_Map.pdf', plot = ants.map2)
 
 
+## Producing LaTeX Tables for slides:
+
+library(xtable)
+xtable(head(Data[,2:ncol(Data)]))
+
+
+
+
 
