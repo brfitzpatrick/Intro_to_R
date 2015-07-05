@@ -151,10 +151,10 @@
 
 \begin{frame}
 \frametitle{Check Git is installed on MS Windows}
-Open a PowerShell and type $git$\\
+Open a PowerShell and type $git$ then press `Enter' and you should see output like that below:\\
 \begin{center}
 \begin{figure}
-\includegraphics[height = 0.9\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Installing_Git_on_MS_Windows/Check_Git_MS_Win.png}
+\includegraphics[height = 0.8\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Installing_Git_on_MS_Windows/Check_Git_MS_Win.png}
 \end{figure}
 \end{center}
 \end{frame}
@@ -227,9 +227,10 @@ If this makes you uncomfortable you're welcome to watch the session rather than 
 \begin{frame}
 \frametitle{Installing Git on MacsOS: Step 8}
 \framesubtitle{Check Git is installed:}
+Open a terminal, type $git$ and press `Return' and you should see output like that below:
 \begin{center}
 \begin{figure}
-\includegraphics[height = 0.9\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Install_Git_on_MacOS/GI_OSX_8.png}
+\includegraphics[height = 0.8\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Install_Git_on_MacOS/GI_OSX_8.png}
 \end{figure}
 \end{center}
 \end{frame}
@@ -260,92 +261,107 @@ Version Control Software:
 \end{frame}
 
 \begin{frame}
-\frametitle{Version Control when Working Alone}
-\begin{block}{Version Control for Solo Authoring File}
+\frametitle{Benefits of Using Version Control Software}
+\begin{block}{Version Control for Working Solo}
 \begin{itemize}
-\item You essentially have a time stamped undo button which will allow you to go review or revert to previous versions of the file
-\item you can even make multiple child versions fo the same file say for different audiences or to trial different orders and styles in which to write a report or program
+\item Easy to revert to previous versions of a file without loosing any of the subsequent revisions
+\item Simple to create multiple versions of a file and edit them in parallel with the option combine them again at a later date
 \end{itemize}
 \end{block}
 
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Version Control when Collaborating}
-Greatly simplifies your life
-Control over which changes different contributers make get added to the definitive version of a file
-support for file to split into two child copies which can then be edited towards very different end points but still having the option to systematically recombine them at any stage
+\begin{block}{Version Control for Collaborating}
+\begin{itemize}
+\item Greatly simplifies your life
+\item Different contributors can edit different versions of the same files concurrently 
+\item Tools exist to systematically combine versions of the same file from different contributors
+\item time stamped record of all changes from all contributors - if someone breaks something you can revert to when it last worked and work forward to discover the bug 
+\end{itemize}
+\end{block}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Why Git?}
-
-Git is free and open source
+\begin{itemize}
+\item Git is free and open source
 \newline
 \newline
-Git is available for most operating systems
+\item Git is available for most operating systems
 \newline
 \newline
-Git is Distributed and Fast
+\item Git is Distributed and Fast
 \newline
 \newline
-Two major code hosting services (GitHub \& BitBucket) support version control with Git and both services have free account options
+\item Two major code hosting services (GitHub \& BitBucket - both with free plans) support version control with Git
+\end{itemize}
 % \tiny $^1$ Google Code will close in 2016 as they have deemed it is no longer necessary given success of BitBucket and GitHub
 \end{frame}
 
 \begin{frame} 
 \frametitle{Git is Distributed Version Control}
-Every contributor has a copy of the entire database ( all revisions of all files)
-two contributors can both work on the files in their copy of the database independently then their combined modifications can be merged systematically
+Distributed Version Control means that:
+\begin{itemize}
+\item Every contributor has a copy of the entire database up to when they copied it (all revisions of all files)
+\newline
+\item two or more contributors can work on the files in their copy of the database independently then combine their modifications systematically at a later date
+\newline
+\newline
+\end{itemize}
+Results is a fast and flexible version control system: \begin{itemize}
+\item contributors can work independently offline connecting to the server sporadically to submit their changes
+\newline
+\item most operations are performed locally (on individual contributors' computers) so less waiting for the server
+\end{itemize}
+
 \end{frame} 
 
 \begin{frame}
 \frametitle{Why Git on the Command Line?}
-Makes discrete components of the workflow obvious this in turn will enable you to migrate easily to one of the many GUIs
+\begin{itemize}
+\item Makes discrete components of the workflows obvious.
 \newline
+\item This in turn will enable you to migrate easily to one of the many GUIs at a later date should you so desire.
 \newline
-The workflows we will practise today will work exactly the same way on MS Windows, MacOS and GNU+Linux
-\newline
-\newline
-We have now been using a command line interface for 1.5 days to interact with the R program it's time to take it to the next level
+\item The workflows we will practise today function identically at MS Windows, MacOS and GNU+Linux command line interfaces.
+\end{itemize}
 \end{frame}
 
 \begin{frame} 
-\frametitle{Plan for this Module - Part 1}
-\begin{block}{Solo Version Control}
-\begin{itemize}
-\item Set up Git on your laptops to communicate with the GitHub servers
-\item Create a local `clone' of a remote repository
-\item Make some changes to your local copy of the files
-\item commit these changes to the git version control system
-\item push these changes to your repository
+\frametitle{Plan for this Module}
+\framesubtitle{Part 1}
+\begin{block}{Version Control for Working Alone}
+\begin{enumerate}
+\item Set up Git on your laptop to communicate with the GitHub servers
+\item Create a local \textbf{clone} of a \textbf{remote repository}
+\item Make some changes to the files in your local copy of the repository
+\item \textbf{commit} these changes to your copy of the history of revisions of these files 
+\item \textbf{push} these changes to your local copy of the repository to the remote copy on the GitHub servers
 \item make some more changes
-\item revert to a previous version of the file
-\end{itemize}
+\item revert to a previous version of a file in this repository safely by \textbf{checking out} an previous \textbf{commit} to a new \textbf{branch} of the revision history of that file
+\end{enumerate}
 \end{block}
 \end{frame}
 
 \begin{frame} 
-\frametitle{Plan for this Module - Part 2}
-
+\frametitle{Plan for this Module}
+\framesubtitle{Part 2}
 \begin{block}{Collaborating with Git \& GitHub}
-\begin{itemize}
-\item fork
-\item branch 
-\item edit
-\item commit
-\item pull request
-\item merge
-\end{itemize}
+\begin{enumerate}
+\item fork the repository of a fellow course attendee
+\item clone your fork of their repository creating a local copy on your hard drive
+\item edit one of their files in your local copy of their repository
+\item commit your changes to your local copy of their repository
+\item summit a pull request - requesting the repository owner merge your changes with their branch of the repository
+\item watch the merge process on your fellow course attendee's computer 
+\item switch roles and repeat
+\end{enumerate}
 \end{block}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{Creating a Repository on the GitHub Servers}
-\framesubtitle{Log into the GitHub Web Service}
+\framesubtitle{Log into the GitHub Web Service \& Create a New Repository}
 \begin{center}
 \begin{figure}
 \includegraphics[width = \textwidth]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/New_Repo_1.png}
@@ -379,14 +395,14 @@ We have now been using a command line interface for 1.5 days to interact with th
 First, create a folder on your Hard Drive in which to store your Git Repositories.  
 \newline
 \newline
-We are now going to use the Git command line application to `clone' your new repository from the GitHub server to your hard drive.
+We are now going to use the Git command line application to `clone' your new repository from the GitHub servers to your hard drive.
 \newline
 \newline
-Git is distributed version control so a Git `clone' is a complete copy of the entirity of the repository i.e.\begin{itemize}
+Git uses distributed version control so a Git `clone' is a complete copy of the entirity of the repository i.e.\begin{itemize}
 \item all the files
-\item the entire history of snapshots of files states created each time you committed to the respository
+\item the entire history of snapshots of files states created each time you commit modifications to the respository
 \newline \end{itemize}
-Being a distributed version control system Git doesn't require you to be connected to the GitHub servers to work on your files and commit them to your branch of the repository.
+Being a distributed version control system Git doesn't require you to be connected to the GitHub servers to work on your files and commit them to your local clone of the repository.
 
 \end{frame}
 
@@ -437,8 +453,8 @@ Open a `Terminal'
 \end{frame}
 
 \begin{frame}
-\frametitle{Accessing a command line interface from MS Windows}
-\framesubtitle{Open a `PowerShell'Powershell}
+\frametitle{Accessing a command line interface in MS Windows}
+\framesubtitle{Open a `PowerShell'}
 \begin{center}
 \begin{figure}
 \includegraphics[height = 0.9\textheight]{/home/ben/Intro_to_R/GitHub_Slides_Source/Images/Git_on_MS_Windows_Powershell/Powershell.png}
@@ -447,7 +463,7 @@ Open a `Terminal'
 \end{frame}
 
 \begin{frame}
-\frametitle{Accessing a command line interface from MacOS}
+\frametitle{Accessing a command line interface in MacOS}
 \framesubtitle{Open a `Terminal'}
 \begin{center}
 \begin{figure}
@@ -500,12 +516,10 @@ Other Options: \begin{itemize}
 \begin{frame}[fragile]
 \frametitle{Configuring Git for the first time}
 \url{https://help.github.com/articles/associating-text-editors-with-git/}
-\newline
-\newline
-\begin{block}{Set a Text Editor of your choice (you'll need it installed}
-Use one of the below
+\begin{block}{Set a Text Editor of your choice as the global editor}
 %# TextEdit:
 %> git config --global core.editor 'open -t -n -W'
+You'll need relevant the text editor installed for the below to work:
 \begin{lstlisting}
 # Notepad:
 > git config --global core.editor notepad.exe
@@ -525,7 +539,7 @@ Use one of the below
 \begin{frame}[fragile]
 \frametitle{Cloning Your Repository from the GitHub Servers}
 
-Set the working directory to the location on your hard drive to which you would like the repository cloned:
+Set the working directory to the location on your hard drive to which you would like the repository cloned then list the files and folders present at that location:
 
 \begin{block}{Powershell Users}
 \begin{lstlisting}
@@ -537,7 +551,7 @@ Set the working directory to the location on your hard drive to which you would 
 
 \begin{block}{Terminal Users}
 \begin{lstlisting}
-> cd /home/ben/Documents/GitHub_Repos
+> cd /home/username/Documents/GitHub_Repos
 > ls 
 \end{lstlisting}
 \end{block}
@@ -574,23 +588,28 @@ Use the HTTPS URL you copied earlier:\\
 
 \begin{frame} 
 \frametitle{Git}
-\framesubtitle{The Three States of Files in a Git Tracked Directory}
-Files in a directory which you are version controlling with Git can exist in one of three states:
+\framesubtitle{The Four States of Files in a Directory Git is Tracking}
+Files in a directory which you are version controlling with Git can exist in one of four states:
 \begin{itemize}
 \item \textbf{committed} data stored in the database for the associted repository
 \item \textbf{modified} local copy of a file (in your working directory) is different to the most recent version of that file stored in the database for the associted repository i.e. you have changed something but not comitted the changes (yet)
 \item \textbf{staged} the local copy of a file which you have modified is marked to be added to the database in the next commit snapshot you send to the database
+\item \textbf{untracked} Git is not recording revisions to this file 
 \end{itemize}
 \end{frame}
 
 \begin{frame} 
 \frametitle{Git}
 \framesubtitle{Basic Git Workflow}
-\begin{itemize}
-\item you add files or modify existing files in your local copy of the repository
-\item you stage these modified files ready to be committed to the database for the repository
+\begin{enumerate}
+\item you add files to or modify existing files in your local copy of the repository
+\newline
+\item you stage these modified files to be committed to the database for the repository
+\newline
 \item you perform a commit which takes the files as they were when staged and stores a snapshot of them in the database for the repository
-\end{itemize}
+\newline
+\item you push the changes recorded in this commit to your remote copy of this repository on the GitHub servers
+\end{enumerate}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -598,15 +617,17 @@ Files in a directory which you are version controlling with Git can exist in one
 \framesubtitle{Adding New Files}
 \begin{enumerate}
 \item Open your favourite program for authoring R code (e.g. RStudio)
-\item Create an new R script 
-\item Save your R Script in the `clone' of your repository
+\newline
+\item Create an new R script (it can be very short) 
+\newline
+\item Save your R Script in the local version of your repository
 \end{enumerate}
 
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Git}
-\framesubtitle{Adding New Files}
+\framesubtitle{Adding New Files to the List of Tracked Files}
 
 \begin{block}{}
 \begin{lstlisting}
@@ -625,7 +646,7 @@ We have to tell Git that we want it to track the changes we make to this new fil
 
 \begin{frame}[fragile]
 \frametitle{Git}
-\framesubtitle{Adding New Files}
+\framesubtitle{Adding New Files to the List of Tracked Files}
 
 We have to tell Git that we want it to track the changes we make to this new file
 \begin{block}{}
@@ -646,7 +667,7 @@ We can still change our mind about adding the file to the repository at this sta
 
 \begin{frame}[fragile]
 \frametitle{Git}
-\framesubtitle{Adding New Files}
+\framesubtitle{Commiting Changes}
 Once you're ready to `commit' this change to the permanent record of changes in this repository we make a `commit'
 \begin{block}{}
 \begin{lstlisting}
@@ -656,8 +677,8 @@ Once you're ready to `commit' this change to the permanent record of changes in 
 (-) create mode 100644 filename.R
 \end{lstlisting}
 \end{block}
-You will be prompted to write a short description of the changes you are committing - these become invaluable as your project grows and if you are collaborating.
-Once you've written a commit message, save it (and close the text editor if you used one).\\
+You will be prompted to write a short description of the changes you are committing - these become invaluable as your project grows and if you are collaborating.\\
+Once you've written a commit message, save it and close the text editor you used to write it.\\
 You should see confirmation of the commit immediately below the git commit line.
 \end{frame}
 
@@ -677,7 +698,9 @@ Seeing as we are all currently connected to the internet, it's a good time to `p
 \end{frame}
 
 \begin{frame}[fragile]
-\begin{block}{pushing to the remote servers}
+\frametitle{Git}
+\framesubtitle{Pushing changes to local repository to remote repository}
+\begin{block}{}
 \begin{lstlisting}
 > git push
 Counting objects: 3, done.
@@ -693,8 +716,11 @@ If you return to the page for your repository on the GitHub website and refresh 
 \end{frame}
 
 \begin{frame}[fragile]
-\begin{block}{the whole process}
-Furthermore, now that we have `commited' and `pushed' our most recent changes our local copy of the repository and the remote copy of the repository on the GitHub servers will be identical
+\frametitle{Git}
+\framesubtitle{Pushing changes to local repository to remote repository}
+Furthermore, now that we have `pushed' our most recent changes our local copy of the repository to the remote copy of the repository on the GitHub servers these two versions of the repository will be identical
+\newline
+\begin{block}{}
 \begin{lstlisting}
 > git status
 On branch master
@@ -738,60 +764,88 @@ nothing to commit, working directory clean
 \begin{frame} 
 \frametitle{Undoing Things Safely}
 \framesubtitle{Checking out Previous Commits to a New Branch}
-To revert to a previous version of a file that you have `snapshot' of from a previous `commit'\\
+To revert to a previous version of a file that you have a `snapshot' of from a previous `commit'\\
 Click on the file name on the GitHub website and click the `History' button:
 \newline
 \newline
 Provided we have commited all changes to the file then it is safe to use the checkout command which will overwrite the file in the current local working directory with the file from the previous `commit'.
 \newline
 \newline
-You can think of commits a bit like save points, if we have two we can move between them but if we load and old save without first making a current save we will loose the unsaveed changes
+You can think of commits a bit like save points, if we have two we can move between them but if we load an old save without first making a current save we will loose the unsaveed changes
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Git}
 \framesubtitle{Undoing Things Safely}
-choose a commit you'd like to go back to...copy the SHA
-\newline
-\newline
+List existing branches of current repository:
+\begin{block}{}
 \begin{lstlisting}
-# List existing branches of current directory
 git branch
-
-# checkout a previous commit (SHA = 58...a44) 
-
-> git checkout -b testing 589172506c13572be6cc052706ab4129de2c7a44
+\end{lstlisting}
+\end{block}
+then, choose a commit you'd like to go back to, copy the corresponding SHA from the history tab on the website and checkout this previous commit to a new branch called `testing', here abbreviated to $(SHA = 58...a44)$:
+\begin{block}{}
+\begin{lstlisting}
+> git checkout -b testing 58...a44
   Switched to a new branch 'testing'
-
 > git branch
     master
   * testing
 \end{lstlisting}
-
-Now if you open your .R file you'll see that you have a previous version of the file without the new changes
+\end{block}
 
 \end{frame}
 
 \begin{frame}[fragile]
 \frametitle{Git}
 \framesubtitle{Undoing Things Safely}
-
+Now if you open your .R file you'll see that you have a previous version of the file without the new changes.\\
+Next up we'll make some changes to the version of this file on the branch `testing' so that it will diverge from the version on the branch `master'.\\
+Once again check you're on the branch called `testing'
+\begin{block}{}
 \begin{lstlisting}
 > git branch
-  # make some changes on testing branch
-  # push those changes upsteam to server
+\end{lstlisting}
+\end{block}
+then make some changes on testing branch by editing the version of the file currently in your working directory then save those changes, add them, commit them and push them `upsteam' to server:
+\begin{block}{}
+\begin{lstlisting}
 > git push --set-upstream origin testing
-  # check website - your repo should now have two branches
-  # Now to merge your changes from 'testing' back into 'master'
-  # to merge into a branch we must be on that branch:
+\end{lstlisting}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{itemize}
+\item Now if you check the website your repository should now have two branches.
+\newline
+\newline
+\item We also know that each branch contains a slightly different file now.
+\newline
+\newline
+\item Next we'll `merge' your changes from 'testing' back into the `master' branch.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+To merge into a branch we must be on that branch:\\
+\begin{block}{}
+\begin{lstlisting}
 > git checkout master
-  # merge testing1 into current branch (master)
+\end{lstlisting}
+\end{block}
+
+Now we will attempt to merge `testing1' into current branch (master)
+\begin{block}{}
+\begin{lstlisting}
 > git merge testing1
   Auto-merging Car_Bar_Charts.R
   CONFLICT (content): Merge conflict in Car_Bar_Charts.R
   Automatic merge failed; fix conflicts and then commit the result.
 \end{lstlisting}
-
+\end{block}
 \end{frame}
 
 
