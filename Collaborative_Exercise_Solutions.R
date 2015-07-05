@@ -36,7 +36,6 @@
 
 # Read the Data into R:
 
-
 Data <- read.csv(file = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Data/Ants.csv')
 
 # Examine the top six rows of all the columns:
@@ -346,11 +345,11 @@ summary(names(coef(S1.lm)) %in% names(coef(S2.lm)))
 
 #####
 #
+#
 #  Some Visualisation Extension
 #
 #
-
-
+#####
 
 world <- map_data("world")
 
@@ -387,15 +386,14 @@ ant.map + coord_map("ortho", orientation=c(0, -74, 0))
 ggsave(filename = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Map.pdf')
            
 ##
+library(grid)
 
 ant.map2 <- worldmap +        
         labs(size = 'Ant Species \nRichness', x = NULL, y = NULL)
-library(grid)
+
 ants.map2 <- ant.map2 + geom_point(aes(x = Longitude, y = Latitude, size = Species.richness), colour = 'red', data = Data2) + coord_map("ortho", orientation=c(-30, 135, 0)) + theme(panel.background = element_rect(fill = 'white'), text = element_text(size = 16), axis.ticks.length = unit(0, units = 'cm') )
 
 ggsave(filename = '/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Globe_Map.pdf', plot = ants.map2)
-
-?units
 
 
 
