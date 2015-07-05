@@ -210,7 +210,7 @@ CC.RCRS.PE <- data.frame(CC.RCRS,
 
 # Adding on the categorical covariates
 
-C.RCRS <- data.frame(CC.RCRS.PE, Data[, c('Disturbance', 'Hemi', 'Continent')])
+C.RCRS <- data.frame(CC.RCRS.PE, Data[, c('Disturbance', 'Hemisphere', 'Continent')])
 
 colnames(C.RCRS)
 
@@ -291,11 +291,9 @@ summary(Full1.lm)
 S1.lm <- step(object = Empty.lm, scope = list(lower = Empty.lm, upper = Full.lm), direction = 'both')
 
 par(mfcol = c(2,2))
-plot(S.lm)
+plot(S1.lm)
 
 summary(S1.lm)
-
-####
 
 # We could drop points with inordinately high leverage on the fit... this is somewhat controversial though
 
@@ -306,17 +304,34 @@ Full2.lm <- lm(Data$Species.richness[-c(113,117,189,616,940,989,1075)] ~ . + Dis
 S2.lm <- step(object = Empty2.lm, scope = list(lower = Empty2.lm, upper = Full2.lm), direction = 'both')
 
 par(mfcol = c(2,2))
-plot(S.lm)
+plot(S2.lm)
 
-# Droping observations with high leverage doesn't alter the number of covariates selected:
+# Droping observations with high leverage alters the number of covariates selected:
 
 length(coef(S1.lm))
 
 length(coef(S2.lm))
 
-# of the selected covariates only three are different:
+# of the selected covariates only 19 are different:
 
-summary(names(coef(S1.lm)) %in% names(coef(S2.lm)))
+summary(names(coef(S2.lm)) %in% names(coef(S1.lm)))
+
+###
+
+# Examine the predictions and associated uncertainty from the model
+
+head(predict(S2.lm, interval = 'confidence', level = 0.95))
+
+Pred.df <- data.frame(Observed = Data$Species.richness[-c(113,117,189,616,940,989,1075)],
+                      predict(S2.lm, interval = 'confidence', level = 0.95))
+
+
+head(Pred.df)
+
+Fit.Obs.p <- ggplot(aes(x = Observed, y = fit), data = Pred.df)
+
+Fit.Obs.p + geom_point() + geom_abline(slope = 1, intercept = 0) + coord_equal() + labs( y = 'Predicted') +  geom_ribbon(aes(ymin = lwr, ymax = upr), alpha = 0.5, data = Pred.df) + xlim(0,30) + ylim(0,30)
+
 
 ##############################
 ##                          ##
