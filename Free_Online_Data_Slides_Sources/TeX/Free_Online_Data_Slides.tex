@@ -1,0 +1,66 @@
+\documentclass[xcolor=dvipsnames]{beamer} 
+\usecolortheme[named=Blue]{structure} 
+\usetheme[height=10.5mm]{Rochester} 
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+\usepackage{bm}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+%\graphicspath{ {/home/ben/PhD/Armidale_Updates/2014_03_14/Figures/} }
+\begin{document}
+
+\begin{frame} %1
+% \frametitle{Addressing Common Challenges in Spatial Modeling of Ecologies and Environments}
+%\begin{center}
+\textbf{\huge Freely available Data}\\
+%\end{center}
+
+\begin{figure}
+\includegraphics[width = 0.35\textwidth]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/R_logo.png}
+\end{figure}
+\small Ben R. Fitzpatrick\\
+\tiny PhD Candidate, Statistical Science, Mathematical Sciences School, Queensland University of Technology
+\newline
+\begin{columns}
+\begin{column}{3cm}
+\tiny 0000-0003-1916-0939
+\end{column}
+\begin{column}{3cm}
+\tiny github.com/brfitzpatrick/
+\end{column}
+\begin{column}{3cm}
+\tiny @benrfitzpatrick
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Sources of Freely Available Data Online:}
+%\begin{itemize}
+\begin{block}{Data Sources Collated by Revolution Analytics}
+Many ready to read directly into R without any reformatting:
+\newline
+\newline
+\url{http://mran.revolutionanalytics.com/documents/data/}
+\newline
+\end{block}
+
+\begin{block}{Spreadsheet listing data repositories that are recommended by the open access data journal from Nature Publishing Group}
+\url{http://dx.doi.org/10.6084/m9.figshare.1434640}
+\newline
+\end{block}
+%\begin{verbatim} http://journals.plos.org/plosone/s/data-availability#loc-recommended-repositories \end{verbatim}
+%\newline
+%\end{itemize}
+\end{frame}
+
+\end{document}
