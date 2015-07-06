@@ -48,8 +48,10 @@ a language and environment for statistical computing and graphics %
 \frametitle{}
 \begin{itemize}
 \item Please sit in groups
+\newline
 \item Anyone who has used R before please spread yourselves around 1 per group
-\item so I can help you all more efficiently could the people using MacOS please sit together and the people using Windows alsoplease site together
+\newline
+\item so I can help you all more efficiently could the people using MacOS please sit together and the people using Windows also please site together
 \end{itemize}
 \end{frame}
 
@@ -62,7 +64,7 @@ a language and environment for statistical computing and graphics %
 \newline
 \item R is Free and Open Source Software
 \newline
-\item R will compile and run on most popular operating systems e.g. MS Windows, MacOS, UNIX, FreeBSD \& Linux
+\item R will compile and run on most popular operating systems e.g. MS Windows, MacOS, UNIX, FreeBSD \& GNU+Linux
 \end{itemize}
 \end{frame}
 
@@ -70,7 +72,7 @@ a language and environment for statistical computing and graphics %
 \frametitle{Why Use R?}
 \framesubtitle{R is Free in the Sense of Free Speach \& Free Beer}
 \begin{itemize}
-\item chance are if you have a computer and it is connected to the internet you will be able to download and install R on it
+\item chance are if you have a `modern' computer you will be able to install R on it
 \newline
 \item unlike software with paid licensing models you can use R anywhere free of charge
 \newline
@@ -80,17 +82,18 @@ a language and environment for statistical computing and graphics %
 
 \begin{frame} 
 \frametitle{Why Use R?}
-\framesubtitle{R has many packages implementing a broad range of statistical analyses}
-
+\framesubtitle{R is Popular with a Large \& Steadily Growing User Base}
+Subsequently packages have been written for R that implement a wide range of statistical analyses.
+Furthermore, more packages and functionality are continually being added and active forums exist on which to seek and find help.
 \begin{figure}
-\includegraphics[height = 0.95\textheight]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/CRAN_Task_Views.png}
+\includegraphics[height = 0.7\textheight]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/CRAN_Task_Views.png}
 \end{figure}
 
 \end{frame}
 
 \begin{frame} 
 \frametitle{Why Use R?}
-\framesubtitle{R has powerful graphic authoring capabilities}
+\framesubtitle{R has powerful graphics authoring capabilities}
 
 \begin{figure}
 \includegraphics[width = 0.95\textwidth]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/179.png}
@@ -102,34 +105,25 @@ a language and environment for statistical computing and graphics %
 
 \begin{frame} 
 \frametitle{Why Use R?}
-\framesubtitle{R has powerful graphic authoring capabilities}
+\framesubtitle{R has powerful graphics authoring capabilities}
 
 \begin{figure}
-\includegraphics[width = 0.95\textheight]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/desert.pdf}
+\includegraphics[width = 0.85\textheight]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/desert.pdf}
 \end{figure}
 
 \tiny Geospatial Visualisation produced with the R packages `raster' \& `ggplot2'
 
 \end{frame}
 
-
-
 \begin{frame} 
 \frametitle{Why Use R?}
-\framesubtitle{R has powerful graphic authoring capabilities}
-
+\framesubtitle{R has powerful graphics authoring capabilities}
+\begin{center}
 \begin{figure}
-\includegraphics[width = 0.95\textheight]{/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Globe_Map.pdf}
+\includegraphics[height = 0.75\textheight]{/home/ben/Intro_to_R/Capstone_Collaborative_Exercise/Capstone_Slides_Source/Images/Ant_Sp_Rich_Globe_Map.pdf}
 \end{figure}
-
+\end{center}
 \tiny Geospatial Visualisation produced with the R packages `maps \& `ggplot2'
-
-\end{frame}
-
-\begin{frame} 
-\frametitle{Why Use R?}
-\framesubtitle{R is Popular with Large \& Steadily Growing User Base}
-This equate to more packages and functionality being added and active forums on which to seek and find help.
 
 \end{frame}
 
@@ -137,23 +131,30 @@ This equate to more packages and functionality being added and active forums on 
 \frametitle{Ways to Use R}
 \begin{itemize}
 \item via a command line interface e.g. PowerShell or Terminal
+\newline
 \item via the default GUI clients for MS Windows \& Mac OS
-\item via one of the many Integrated Development Environments \begin{itemize}
+\newline
+\item via one of many Integrated Development Environments that either have been exclusively written for R or have R language modes e.g. \begin{itemize}
  \item RStudio
  \item Tinn-R
+ \item Sublime Text
+ \item Atom
  \item Emacs Speaks Statistics
  \item ...
+\newline
  \end{itemize}
+
+\item remotely i.e. submitting R scripts to a sever (e.g. HPC facility) to execute
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Ways to Use R:}
-\framesubtitle{In a termial e.g. on MS Windows}
+%\begin{frame}
+%\frametitle{Ways to Use R:}
+%\framesubtitle{In a termial e.g. on MS Windows}
 %\begin{figure}
 %\includegraphics[width = 0.35\textwidth]{~/Presents_Intro_to_R/Introductory_Slides_Source/Images/R_Console_MacOS.png}
 %\end{figure}
-\end{frame}
+%\end{frame}
 
 \begin{frame}
 \frametitle{Ways to Use R:}
@@ -204,14 +205,17 @@ This equate to more packages and functionality being added and active forums on 
 \end{frame}
 
 \begin{frame}
-\frametitle{For this course we'll use RStudio}
-Because it's comparatively :...
+\frametitle{For this course I encourage you to use the RStudio IDE}
+Because:...
 \begin{itemize}
-\item intuitive and easy to learn
+\item it's comparatively intuitive and easy to learn
+\newline
 \item feature rich
+\newline
 \item available for most major operating systems (MS Windows, Mac OS, various flavours of GNU+Linux)
-\item interacts with Git for version control via GitHub
+\newline
 \end{itemize}
+However, if you have already begun your journey learning R using a different IDE and wish to continue to use it please feel free to do so, provided you feel confident to open and execute .R files with this IDE.
 
 \end{frame}
 
@@ -227,7 +231,7 @@ Module: \begin{enumerate}
 \item Linear Modelling in R
 \item Programming in R
 \item Version Control for solo \& collaborative source code management with Git \& GitHub
-\item Collaborative Exercise
+\item Capstone Collaborative Exercise
 \end{enumerate}
 
 \end{frame}
@@ -254,7 +258,7 @@ Familiarisation with \begin{itemize}
 \framesubtitle{Graphics with `ggplot2'}
 \begin{block}{Key Learning Outcomes}
 The key concepts \& mechanics of the plotting with the Grammar of Graphics$^1$ inspired `ggplot2': \begin{itemize}
-\item the mechanics of \begin{verbatim} ggplot( ) \end{verbatim} command
+\item the mechanics of the \begin{verbatim} ggplot( ) \end{verbatim} command
 \item the concept of aesthetic mapping
 \item plotting geometries
 \item scales
@@ -275,8 +279,8 @@ The key concepts \& mechanics of the plotting with the Grammar of Graphics$^1$ i
 \item fit linear regression models
 \item produce \& examine model diagnostics
 \item plot data along with predictions of model and associated uncertainty
-\item stepwise variable selection
-\item summary statistics for model
+\item conduct stepwise variable selection
+\item produce summary statistics for model
 \end{itemize}
 \end{block}
 \end{frame}
@@ -290,7 +294,9 @@ Writing:
 \item conditional statements
 \item loops
 \item functions
+\newline
 \end{itemize}
+Solving problems by writing programs
 \end{block}
 \end{frame}
 
@@ -298,8 +304,9 @@ Writing:
 \frametitle{Module 5}
 \framesubtitle{Version Control with Git \& GitHub}
 \begin{block}{Key Learning Outcomes}
+Understand:
 \begin{itemize}
-\item Motivations for managaing a coding project via a version control system
+\item motivations for managaing a coding project via a version control system
 \item fundamentals of Git \& GitHub: \begin{itemize}
   \item local and remote repositories
   \item developing multiple versions of the same file
@@ -315,8 +322,7 @@ Writing:
 \frametitle{Module 6}
 \framesubtitle{Collaborative Exercise}
 \begin{block}{The Plan}
-Form small groups and collaboratively explore and analyse some data that interests you.
-This could be data from one of your projects or some freely available data from the internet.
+Form small groups and collaboratively explore and analyse some data on ant species richness around the globe.
 Please re-use as much of the code from the preceeding exercises as you would like to.
 \end{block}
 
@@ -339,6 +345,14 @@ tuning in occasionally for the sections that interest you.
 \newline
 I'll need to focus on delivering the course but I'll try to check in with you peridocially throughout the next 2.5 days.
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Let's begin}
+\begin{center} \huge Please open RStudio \end{center} 
+\end{frame}
+
+
 
 \begin{frame} 
 \frametitle{Image Credits}
