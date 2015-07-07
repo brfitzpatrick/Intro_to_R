@@ -269,12 +269,12 @@ Version Control Software:
 \end{itemize}
 \end{block}
 
-\begin{block}{Version Control for Collaborating}
+\begin{block}{Benefits of Distributed Version Control for Collaborating}
 \begin{itemize}
 \item Greatly simplifies your life
 \item Different contributors can edit different versions of the same files concurrently 
 \item Tools exist to systematically combine versions of the same file from different contributors
-\item time stamped record of all changes from all contributors - if someone breaks something you can revert to when it last worked and work forward to discover the bug 
+\item Time stamped record of all changes from all contributors - if someone breaks something you can revert to when it last worked and work forward to discover the bug 
 \end{itemize}
 \end{block}
 
@@ -301,7 +301,7 @@ Version Control Software:
 \frametitle{Git is Distributed Version Control}
 Distributed Version Control means that:
 \begin{itemize}
-\item Every contributor has a copy of the entire database up to when they copied it (all revisions of all files)
+\item every contributor has a copy of the entire database up to when they copied it (all revisions of all files)
 \newline
 \item two or more contributors can work on the files in their copy of the database independently then combine their modifications systematically at a later date
 \newline
@@ -320,7 +320,7 @@ Results is a fast and flexible version control system: \begin{itemize}
 \begin{itemize}
 \item Makes discrete components of the workflows obvious.
 \newline
-\item This in turn will enable you to migrate easily to one of the many GUIs at a later date should you so desire.
+\item This in turn will enable you to migrate easily to one of the many GUIs at a later date should you so desire (and these are generally well documented and easy to learn yourself esp. GitHub's GUI)
 \newline
 \item The workflows we will practise today function identically at MS Windows, MacOS and GNU+Linux command line interfaces.
 \end{itemize}
@@ -584,6 +584,9 @@ Use the HTTPS URL you copied earlier:\\
 > git status
 \end{lstlisting}
 \end{block}
+
+If you look in your file browser you'll be able to see your newly cloned repository as a directory in the location to which you cloned it.
+
 \end{frame}
 
 \begin{frame} 
@@ -771,7 +774,7 @@ Click on the file name on the GitHub website and click the `History' button:
 Provided we have commited all changes to the file then it is safe to use the checkout command which will overwrite the file in the current local working directory with the file from the previous `commit'.
 \newline
 \newline
-You can think of commits a bit like save points, if we have two we can move between them but if we load an old save without first making a current save we will loose the unsaveed changes
+You can think of commits a bit like save points, if we have two we can move between them but if we load an old save without first making a current save we will loose the unsaved changes
 \end{frame}
 
 \begin{frame}[fragile]
@@ -970,25 +973,28 @@ Demonstrate \textbf{Meld}
 
 \begin{frame}
 \frametitle{Collaborating}
-Forking a repository is creating a branch from a repository you don't own.
+\textbf{Forking} a repository is creating a branch from a repository you don't own.
+\newline
+\newline
+Demonstrate \textbf{Forking}
 \end{frame}
 
-\begin{frame}
-\frametitle{Create a Repository, Add Some Files}
-\begin{itemize}
-\item Log into your Github account
-\item Click the Repositories Tab
-\item Click the 'New' button (it's green)
-\item name your repository
-\item make it public (we can do a private one later)
-\item intialize repository with a README
-\item add a license GPL or MIT are easy FOSS licenses
-\item clone the repository to your hard drive
-\item add a file to your local clone of the repository
-\item commit it to the repository
-\item push your changes to the remote repository
-\end{itemize}
-\end{frame}
+%\begin{frame}
+%\frametitle{Create a Repository, Add Some Files}
+%\begin{itemize}
+%\item Log into your Github account
+%\item Click the Repositories Tab
+%\item Click the 'New' button (it's green)
+%\item name your repository
+%\item make it public (we can do a private one later)
+%\item intialize repository with a README
+%\item add a license GPL or MIT are easy FOSS licenses
+%\item clone the repository to your hard drive
+%\item add a file to your local clone of the repository
+%\item commit it to the repository
+%\item push your changes to the remote repository
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}
 \frametitle{Fork a Friends Repository, Add Some Files}
@@ -1011,9 +1017,9 @@ Forking a repository is creating a branch from a repository you don't own.
 \begin{itemize}
 \item Create a new branch to merge your friend's changes into 
 \newline
-\item switch to that branch
+\item switch to that branch and examine their changes
 \newline
-\item merge their changes with \textbf{Meld}
+\item for practise, merge their changes with your master branch with a merge tool e.g. \textbf{Meld} (you won't always want to do this)
 \end{itemize}
 \end{frame}
 
