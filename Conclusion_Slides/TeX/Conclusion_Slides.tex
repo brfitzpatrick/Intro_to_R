@@ -146,7 +146,7 @@ The key concepts \& mechanics of the plotting with the Grammar of Graphics$^1$ i
 \item saving plots
 \end{itemize}
 \end{block}
-
+Don't forget the best `ggplot2' manual pages are online: \url{http://docs.ggplot2.org/current/}\\
 \tiny $^1$ Leland Wilkinson, \textit{The Grammar of Graphics}, Statistics and Computing. Springer, 2nd edition, 2005.
 \end{frame}
 
@@ -156,11 +156,11 @@ The key concepts \& mechanics of the plotting with the Grammar of Graphics$^1$ i
 \begin{block}{Key Learning Outcomes}
 \begin{itemize}
 \item read data into R from an external file
-\item fit linear regression models
-\item produce \& examine model diagnostics
-\item plot data along with predictions of model and associated uncertainty
+\item fit multiple linear regression models including polynomial \& interaction terms
+\item produce \& intepret diagnostic plots for linear models
+\item plot data along with predictions of model \& associated uncertainty
 \item conduct stepwise variable selection
-\item produce summary statistics for model
+\item produce summary statistics for a fitted model
 \end{itemize}
 \end{block}
 \end{frame}
@@ -196,6 +196,7 @@ Understand:
   \end{itemize}
 \end{itemize}
 \end{block}
+The work flow we used to conduct version control via the Git command line application will function equally well using GitHub or BitBucket as a host for remote repositories.
 \end{frame}
 
 
@@ -204,23 +205,22 @@ Understand:
 
 \begin{block}{Free Courses on R}
 \begin{itemize}
-\item \url{http://www.lynda.com/R-tutorials/R-Statistics-Essential-Training/142447-2.html}
-\newline
-\item \url{https://www.coursera.org/course/rprog}
-\newline
-\item \url{https://www.coursera.org/course/compdata}
+\item \small \url{http://www.lynda.com/R-tutorials/R-Statistics-Essential-Training/142447-2.html}
+\item \small \url{https://www.coursera.org/course/rprog}
+\item \small \url{https://www.coursera.org/course/compdata}
 \end{itemize}
 \end{block}
 
 \begin{block}{Documentation the CRAN Website}
 Official documentation: \begin{itemize}
-\item \url{http://cran.r-project.org/manuals.html}
-\newline
+\item \small \url{http://cran.r-project.org/manuals.html}
 \end{itemize}
 
 Contributed documentation: \begin{itemize}
-\item \url{http://cran.r-project.org/other-docs.html}
-\newline
+\item \small \url{http://cran.r-project.org/other-docs.html} \end{itemize}
+\begin{itemize}
+\item Packages may include an vignette (essentially documents presenting a example analyses on data included in the package) e.g. \begin{itemize}
+ \item \small \url{http://cran.r-project.org/web/packages/gstat/index.html} \end{itemize}
 \end{itemize}
 \end{block}
 
@@ -231,9 +231,13 @@ Contributed documentation: \begin{itemize}
 \framesubtitle{Ideas for Continuing to Learn R}
 
 \begin{itemize}
-\item You could start with using R for graphics...
+\item one way to begin using R in your work could be to start using R for graphics jobs...
 \newline
-\item A group of you could band together and complete the Coursera course - you could collaborate on the coding exercises via GitHub or BitBucket
+\item then perhaps next time you need to fit a model you could do a quick Google to see if there is an R function/package for fitting such models
+\newline
+\item A group of you could band together and complete one or more of the Coursera courses - you could collaborate on the coding exercises via GitHub or BitBucket
+\newline
+\item if you have fellow students among this cohort with similar research interest you could identify a recent paper from your field which used R and shared the code and data and collaboratively try to replicate (or even extend) the analysis therein
 \end{itemize}
 
 \end{frame}
