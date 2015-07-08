@@ -1,0 +1,237 @@
+\documentclass[xcolor=dvipsnames]{beamer} 
+\usecolortheme[named=Blue]{structure} 
+\usetheme[height=10.5mm]{Rochester} 
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\setbeamertemplate{navigation symbols}{} 
+\usepackage{bm}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[absolute,overlay]{textpos}
+\newenvironment{reference}[2]{%
+  \begin{textblock*}{\textwidth}(#1,#2)
+      \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}}
+%\graphicspath{ {/home/ben/PhD/Armidale_Updates/2014_03_14/Figures/} }
+\begin{document}
+
+%\begin{frame} %1
+% \frametitle{Addressing Common Challenges in Spatial Modeling of Ecologies and Environments}
+%\begin{center}
+%\textbf{\huge Concluding this Introduction to R}\\
+%a language and environment for statistical computing and graphics %
+%\end{center}
+
+%\begin{figure}
+%\includegraphics[width = 0.35\textwidth]{/home/ben/Intro_to_R/Introductory_Slides_Source/Images/R_logo.png}
+%\end{figure}
+%\small Ben R. Fitzpatrick\\
+%\tiny PhD Candidate, Statistical Science, Mathematical Sciences School, Queensland University of Technology
+%\newline
+%\begin{columns}
+%\begin{column}{3cm}
+%\tiny 0000-0003-1916-0939
+%\end{column}
+%\begin{column}{3cm}
+%\tiny github.com/brfitzpatrick/
+%\end{column}
+%\begin{column}{3cm}
+%\tiny @benrfitzpatrick
+%\end{column}
+%\end{columns}
+%\end{frame}
+
+\begin{frame}
+\frametitle{Summing Up}
+\begin{block}{Why use R?}
+Revolution Analytics introduce R in 93 sec: 
+\newline
+\newline
+\url{https://youtu.be/TR2bHSJ_eck}
+\end{block}
+
+\begin{block}{What can R do?}
+Lots!:
+\newline
+\newline
+\url{http://cran.r-project.org/web/views/}
+\end{block}
+
+\begin{block}{Why use RStudio to use R}
+Key Features of the RStudio IDE: 
+\newline
+\newline
+\url{https://vimeo.com/97166163}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Module 1}
+\framesubtitle{Introduction to R \& RStudio}
+\begin{block}{Key Learning Outcomes}
+Familiarisation with \begin{itemize}
+\item Command Line Computing
+\item RStudio Integrated Development Environment
+\item Commands \& arguments
+\item Common Object Classes in R
+\item Assigning values to Objects
+\item Saving \& Loading R Workspaces
+\item R Base Graphics
+\item Data Input
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Module 2}
+\framesubtitle{Graphics with `ggplot2'}
+\begin{block}{Key Learning Outcomes}
+The key concepts \& mechanics of the plotting with the Grammar of Graphics$^1$ inspired `ggplot2': \begin{itemize}
+\item the mechanics of the \begin{verbatim} ggplot( ) \end{verbatim} command
+\item the concept of aesthetic mapping
+\item plotting geometries
+\item scales
+\item faceting
+\item saving plots
+\end{itemize}
+\end{block}
+
+\tiny $^1$ Leland Wilkinson, \textit{The Grammar of Graphics}, Statistics and Computing. Springer, 2nd edition, 2005.
+\end{frame}
+
+\begin{frame}
+\frametitle{Module 3}
+\framesubtitle{Linear Modelling in R}
+\begin{block}{Key Learning Outcomes}
+\begin{itemize}
+\item read data into R from an external file
+\item fit linear regression models
+\item produce \& examine model diagnostics
+\item plot data along with predictions of model and associated uncertainty
+\item conduct stepwise variable selection
+\item produce summary statistics for model
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Module 4}
+\framesubtitle{Programming in R}
+\begin{block}{Key Learning Outcomes}
+Writing:
+\begin{itemize}
+\item conditional statements
+\item loops
+\item functions
+\newline
+\end{itemize}
+Solving problems by writing programs
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Module 5}
+\framesubtitle{Version Control with Git \& GitHub}
+\begin{block}{Key Learning Outcomes}
+Understand:
+\begin{itemize}
+\item motivations for managaing a coding project via a version control system
+\item fundamentals of Git \& GitHub: \begin{itemize}
+  \item local and remote repositories
+  \item developing multiple versions of the same file
+  \item combining disparate versions of the same file
+  \item returning to previous version of a file without loosing the current version
+  \item collaboratively editing files
+  \end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Resources for learning R}
+
+\begin{block}{Free Courses on R}
+\begin{itemize}
+\item \url{http://www.lynda.com/R-tutorials/R-Statistics-Essential-Training/142447-2.html}
+\newline
+\item \url{https://www.coursera.org/course/rprog}
+\newline
+\item \url{https://www.coursera.org/course/compdata}
+\end{itemize}
+\end{block}
+
+\begin{block}{Documentation the CRAN Website}
+Official documentation: \begin{itemize}
+\item \url{http://cran.r-project.org/manuals.html}
+\newline
+\end{itemize}
+
+Contributed documentation: \begin{itemize}
+\item \url{http://cran.r-project.org/other-docs.html}
+\newline
+\end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{R in the news}
+R consortium announced:
+\begin{itemize}
+\item \tiny \url{https://www.r-consortium.org/}
+\newline
+\end{itemize}
+
+Plans to implement R into SQL:
+\begin{itemize}
+\item \tiny \url{http://blog.revolutionanalytics.com/2015/05/r-in-sql-server.html}
+\newline
+\end{itemize}
+
+Microsoft buys Revolution Analytics:
+\begin{itemize}
+\item \tiny \url{http://www.wired.com/2015/01/microsoft-acquires-open-source-data-science-company-revolution-analytics/}
+\newline
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Integrating R into your Workflow}
+You could start with using R for graphics...
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{R Academia}
+\begin{block}{Conferences about R:}
+\textbf{useR! 2015} Aalborg, Denmark: \begin{itemize}
+ \item http://user2015.math.aau.dk// 
+ \newline
+ \end{itemize}
+
+\textbf{earl2015} London \& Boston: \begin{itemize}
+\item \url{http://www.earl-conference.com/}
+\newline
+\end{itemize}
+\end{block}
+
+\begin{block}{A journal about R:}
+\begin{itemize}
+\item http://journal.r-project.org/
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\end{document}
+
+
