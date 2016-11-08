@@ -1,0 +1,4 @@
+GitHub_Slides_Source/TeX/*
+!GitHub_Slides_Source/TeX/*.tex
+!GitHub_Slides_Source/TeX/*.pdf
+							
